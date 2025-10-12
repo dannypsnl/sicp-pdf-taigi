@@ -1,4 +1,13 @@
-SICP
+SICP-Taigi
+===
+
+下kha是臺灣台語ê SICP（電腦程式ê結構kap解說）ê臺語譯本，輸出是PDF版本。
+
+
+##### 書寫形式？詞彙推薦表？
+* 見：https://hackmd.io/@qAg3RYSZQHamQjA6Y0OzIQ/B15qdHtTee
+
+Original README
 ====
 
 <img src="http://sicpebook.files.wordpress.com/2013/09/dreamsmile3.png"
