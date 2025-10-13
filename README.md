@@ -5,7 +5,7 @@ SICP-Taigi
 
 
 ##### 書寫形式？詞彙推薦表？
-* 見：https://hackmd.io/@qAg3RYSZQHamQjA6Y0OzIQ/B15qdHtTee
+* 見：https://hackmd.io/@sicp-taigi/r1TtTLF6xg
 
 Original README
 ====
