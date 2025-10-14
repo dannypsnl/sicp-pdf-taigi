@@ -16,15 +16,15 @@
 \defaultfontfeatures{%                                 %  of declarations
   Scale=MatchLowercase, % needed here ...              %  is important for
 }                                                      %  single quotes not
-\setmonofont{Inconsolata LGC}                          %  to turn out curly
+\setmonofont{FreeMono}                                 %  to turn out curly
                                                        %  ("typographic")
 \defaultfontfeatures{%                                 %  in verbatim blocks
   Scale=MatchLowercase, % ... and here again           %  of Scheme code.
   Mapping=tex-text,                                    %  Now the quote is
   SmallCapsFeatures={LetterSpace=2.5,WordSpace=1.05},  %  upright and safely
 }                                                      %  copy-pasteable to
-\setmainfont{Linux Libertine O}                        %  the REPL without
-\setsansfont{Linux Biolinum O} %-----------------------%  giving errors.
+\setmainfont{FreeSerif}                        %  the REPL without
+\setsansfont{FreeSans} %-----------------------%  giving errors.
 
 \usepackage{polyglossia}
 \setdefaultlanguage[variant=american]{english}
@@ -86,6 +86,17 @@
   linkcolor=LinkRed,
   urlcolor=LinkRed,
 }
+
+% CJK usage
+ \usepackage{xeCJK}
+ \setCJKmainfont{Noto Serif CJK TC}
+\setCJKsansfont{Noto Sans CJK TC} 
+ % CJK line-autobreaking
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+
+
 
 % Document colors
 \definecolor{SchemeLight}   {HTML} {686868}

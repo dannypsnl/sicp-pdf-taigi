@@ -4,8 +4,27 @@ SICP-Taigi
 下kha是臺灣台語ê SICP（電腦程式ê結構kap解說）ê臺語譯本，輸出是PDF版本。
 
 
-##### 書寫形式？詞彙推薦表？
+### 書寫形式？詞彙推薦表？
 * 見：https://hackmd.io/@sicp-taigi/r1TtTLF6xg
+
+### Án-nóa編出PDF？
+* 先安裝（佇Linux Ubuntu做例）
+  - latexmk
+  - xelatex (Ubuntu Linux 是佇 texlive-xetex 內底，下kha kâng)
+  - 下kha ê LaTeX套件
+    - xecjk (texlive-lang-cjk 內底)
+    - fontspec (texlive-latex-recommended 內底)
+  - 下kha ê 字型
+    - Noto Sans CJK TC, Noto Serif CJK TC (fonts-noto-cjk 內底)
+    - FreeSans (fonts-freefont-ttf 內底，下kha 2 ê mā是)
+    - FreeSerif
+    - FreeMono
+  - inkscape
+  - make
+* 編譯：
+  - `make all`
+* 清除編譯資料：
+  - `make clean`
 
 Original README
 ====

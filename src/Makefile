@@ -18,10 +18,11 @@ exercises.tex figures.tex: ex-fig-ref.pl
 	./ex-fig-ref.pl -f > figures.tex
 
 %.pdf: %.svg
-	inkscape -f ${DIR}/$< -C -A ${DIR}/$@
+	inkscape ${DIR}/$< --export-type=pdf ${DIR}/$@
 
 clean:
 	latexmk -CA
+	latexmk -c
 
 clean-all: clean
 	${RM} ${FIG} sicp.tex exercises.tex figures.tex coverpage.pdf

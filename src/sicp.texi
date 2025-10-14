@@ -418,7 +418,7 @@ An overview of the compiler
 @end menu
 
 @unnumbered Unofficial Texinfo Format
-@node    UTF, Dedication, Top, Top
+@node    UTF, Taigi, Top, Top
 
 This is the second edition @acronym{SICP} book, from Unofficial Texinfo
 Format.
@@ -492,8 +492,16 @@ to Info output. At the dawn of e-book readers and tablets, reading a
 @noindent
 @i{A.R, May, 2011}
 
+@unnumbered 非正式臺語譯本ê踏頭話
+@node    Taigi, Dedication, UTF, Top
+
+Che是電腦科學ê出名教科書《電腦程式ê結果kap解說》ê頭chi̍t本非正式ê臺語譯本，mā應該是頭chi̍t本臺語ê電腦科學長篇教科書。
+
+現代雖bóng臺語是現chú時臺灣上chē lâng講ê本土言語，但是真chē lâng bōe掠伊做時行、tòe ē著科技ê語言，甚至除了少少本土語言課程以外，就無出現佇教學現場內底。敢講臺語真正是chi̍t臺老moh-moh，hō͘時代棄sak ê老古董？應該毋是án-ne。Chit本冊是beh來證明，臺語m̄-nā ē當傳承古早ê智慧，mā是ē當傳揚新科技ê思想kap智識。
+
+
 @unnumbered Dedication
-@node    Dedication, Foreword, UTF, Top
+@node    Dedication, Foreword, Taigi, Top
 
 \lettrine{T}{his book is dedicated}, in respect and admiration, to the spirit that lives in
 the computer.
