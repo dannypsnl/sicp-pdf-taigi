@@ -990,6 +990,13 @@ evolution of a process is directed by a pattern of rules called a
 @newterm{program}.  People create programs to direct processes.  In effect, we
 conjure the spirits of the computer with our spells.
 
+@noindent
+阮beh研究@newterm{計算過程}ê概念。計算過程是電腦會當紡ê抽象事物。
+過程進行時會操作另一種號做@newterm{資料}ê抽象ê概念。
+有一樣號做@newterm{程式}，有模式ê一組規則指引過程ê進行。
+人建立程式來指引過程。
+其實uì效果來看，咱親像用咒語召喚電腦ê神魂。
+
 A computational process is indeed much like a sorcerer's idea of a spirit.  It
 cannot be seen or touched.  It is not composed of matter at all.  However, it
 is very real.  It can perform intellectual work.  It can answer questions.  It
@@ -999,12 +1006,23 @@ sorcerer's spells.  They are carefully composed from symbolic expressions in
 arcane and esoteric @newterm{programming languages} that prescribe the tasks we
 want our processes to perform.
 
+計算過程確實足像西方術士講ê神魂。
+它看無亦摸無，根本毋是由物質所構成。
+不過它非常真實。
+它會當行智力ê工課，會當回答問題，亦會當透過佇銀行提款抑是控制工廠內ê機械來影響世界。
+阮召喚過程ê程式著像西方術士ê咒語。
+由神秘深奧的程式語言中ê符號表達精心編寫所成，遮ê言語規定咱希望過程執行ê任務。
+
 A computational process, in a correctly working computer, executes programs
 precisely and accurately.  Thus, like the sorcerer's apprentice, novice
 programmers must learn to understand and to anticipate the consequences of
 their conjuring.  Even small errors (usually called @newterm{bugs} or
 @newterm{glitches}) in programs can have complex and unanticipated
 consequences.
+
+佇正確運作ê電腦內底，計算過程進行精確無誤。
+親像西方術士ê半桶師仔，工程師嘛愛學按怎理解kah臆in ê咒語ê後果。
+連足小ê錯誤（通常號做@newterm{bugs}抑是@newterm{glitches}）攏會造成複雜又閣歹臆ê結果。
 
 Fortunately, learning to program is considerably less dangerous than learning
 sorcery, because the spirits we deal with are conveniently contained in a
