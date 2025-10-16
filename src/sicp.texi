@@ -499,6 +499,10 @@ Che是電腦科學ê出名教科書《電腦程式ê結果kap解說》ê頭chi̍
 
 現代雖bóng臺語是現chú時臺灣上chē lâng講ê本土言語，但是真chē lâng bōe掠伊做時行、tòe ē著科技ê語言，甚至除了少少本土語言課程以外，就無出現佇教學現場內底。敢講臺語真正是chi̍t臺老moh-moh，hō͘時代棄sak ê老古董？應該毋是án-ne。Chit本冊是beh來證明，臺語m̄-nā ē當傳承古早ê智慧，mā是ē當傳揚新科技ê思想kap智識。
 
+為著推sak阿公阿媽kap pē母流傳落來ê話，真chē lâng開始用臺語寫世間kap社會ê chē-chē代誌，資訊領域mā是kâng款。向望chit本冊通幫chān逐ê想beh用臺語學程式ê lâng。
+
+有關書寫形式，本冊使用教會白話字(POJ) kap漢字lām寫。另外koh附術語表予逐家參考。另外為著追求翻譯ê進度kap準確性，gún使用本冊ê非官方日語版本做參考來源。
+
 
 @unnumbered Dedication
 @node    Dedication, Foreword, Taigi, Top
@@ -980,6 +984,12 @@ and thus all its general ideas are made.
 ---John Locke, @emph{An Essay Concerning Human Understanding} (1690)
 @end quotation
 
+@quotation
+心神ê行做，伊佇hia展伊ê能力佇簡單ê想法頂，主要有chit 3 項：1. Kā幾ê簡單ê想法組立做一ê複雜ê，就án-ne產生逐項複雜ê想法。2.第二就是kā無論簡單iah是複雜ê 2項想法tàu做伙，互相設定，方便一kái觀察in（毋免kā in合一），用án-ne得著所有in ê關係ê想法。第三是kā in tùi 所有其他 kap in佇in ê誠實存在內tàu陣ê想法拆開：che號做抽象化，就án-ne產生伊所有一般ê想法。
+
+---John Locke, @emph{關係人類理解ê論文 (An Essay Concerning Human Understanding)} (1690)
+@end quotation
+
 @c @sp 1.0
 
 @noindent
@@ -991,11 +1001,11 @@ evolution of a process is directed by a pattern of rules called a
 conjure the spirits of the computer with our spells.
 
 @noindent
-阮beh研究@newterm{計算過程}ê概念。計算過程是電腦會當紡ê抽象事物。
-過程進行時會操作另一種號做@newterm{資料}ê抽象ê概念。
-有一樣號做@newterm{程式}，有模式ê一組規則指引過程ê進行。
-人建立程式來指引過程。
-其實uì效果來看，咱親像用咒語召喚電腦ê神魂。
+Lán beh研究@newterm{計算過程}(compututational process) ê概念。計算過程是電腦會當pháng ê抽象事物。
+過程進化ê時陣，ē操作另一種號做@newterm{資料} (data) ê抽象ê概念。
+過程ê進行，是@newterm{程式} (program)所指引，伊是有模式ê一組規則。
+Lâng建立程式來指引過程。
+其實ùi效果來看，咱親像用咒語召喚電腦ê神魂。
 
 A computational process is indeed much like a sorcerer's idea of a spirit.  It
 cannot be seen or touched.  It is not composed of matter at all.  However, it
@@ -1006,12 +1016,12 @@ sorcerer's spells.  They are carefully composed from symbolic expressions in
 arcane and esoteric @newterm{programming languages} that prescribe the tasks we
 want our processes to perform.
 
-計算過程確實足像西方術士講ê神魂。
-它看無亦摸無，根本毋是由物質所構成。
+計算過程確實chiok像西方術士講ê神魂。
+它看無mā摸無，根本毋是由物質所構成。
 不過它非常真實。
 它會當行智力ê工課，會當回答問題，亦會當透過佇銀行提款抑是控制工廠內ê機械來影響世界。
 阮召喚過程ê程式著像西方術士ê咒語。
-由神秘深奧的程式語言中ê符號表達精心編寫所成，遮ê言語規定咱希望過程執行ê任務。
+由神秘深奧的@newterm{程式語言} (programming languages)中ê符號表達細膩編寫所成，chiah ê言語規定lán希望過程執行ê任務。
 
 A computational process, in a correctly working computer, executes programs
 precisely and accurately.  Thus, like the sorcerer's apprentice, novice
@@ -1021,8 +1031,8 @@ their conjuring.  Even small errors (usually called @newterm{bugs} or
 consequences.
 
 佇正確運作ê電腦內底，計算過程進行精確無誤。
-親像西方術士ê半桶師仔，工程師嘛愛學按怎理解kah臆in ê咒語ê後果。
-連足小ê錯誤（通常號做@newterm{bugs}抑是@newterm{glitches}）攏會造成複雜又閣歹臆ê結果。
+親像西方術士ê半桶師仔，工程師嘛愛學按怎理解kah ioh in ê咒語ê後果。
+連足小ê錯誤（通常號做 @newterm{bugs}抑是 @newterm{glitches}）攏會造成複雜又koh pháiⁿ ioh ê結果。
 
 Fortunately, learning to program is considerably less dangerous than learning
 sorcery, because the spirits we deal with are conveniently contained in a
@@ -1030,6 +1040,8 @@ secure way.  Real-world programming, however, requires care, expertise, and
 wisdom.  A small bug in a computer-aided design program, for example, can lead
 to the catastrophic collapse of an airplane or a dam or the self-destruction of
 an industrial robot.
+
+有幸，學程式設計hŏng掠做是比學魔法khah無危險，因為lán處理ê神靈是簡單包佇安全ê方法內底。但是真實世界ê程式設計需要注神、專精kap智慧。舉例，佇電腦幫chān設計ê，細細ê bug，可能致kàu機場iah是水壩ê崩去，或者是工業機器lâng家己毀滅。
 
 Master software engineers have the ability to organize programs so that they
 can be reasonably sure that the resulting processes will perform the tasks
@@ -1040,7 +1052,9 @@ their programs.  Well-designed computational systems, like well-designed
 automobiles or nuclear reactors, are designed in a modular manner, so that the
 parts can be constructed, replaced, and debugged separately.
 
-@subsubheading Programming in Lisp
+出師ê軟體工程師ē曉組織程式，予伊ē當合理確定結果ê過程ē運作目標ê任務。In知影án-nóa起做程式，予意外ê問題bē致kàu災難ê結果，起問題ê時陣，in通kā in ê程式@newterm{除去錯誤} (debug)。設計穩當ê運算系統，親像設計穩當ê汽車iah是核子反應爐，是module（模組）化設計，chiah ê部份通分開建築、取代kap除去錯誤。
+
+@subsubheading Programming in Lisp 用Lisp設計程式
 
 We need an appropriate language for describing processes, and we will use for
 this purpose the programming language Lisp.  Just as our everyday thoughts are
@@ -1052,6 +1066,10 @@ of certain kinds of logical expressions, called @newterm{recursion equations},
 as a model for computation.  The language was conceived by John McCarthy and is
 based on his paper ``Recursive Functions of Symbolic Expressions and Their
 Computation by Machine'' (@ref{McCarthy 1960}).
+
+Lán需要適當ê語言寫過程，為chit ê目的，ē用Lisp程式設計語言。就親像lán-lâng逐工思考常常用lán ê自然語言表達（比如英語、法語、日語），寫量化現象ē用數學ê符號，lán ê程序ê思考ē用Lisp表達。Lisp佇1950年代後期發明，成做推論邏輯表達式ê一寡型式（叫做 @newterm{遞迴方程式} (recursion equations)）ê使用ê形式，當做運算ê模型。Chit ê語言是由John McCarthy思想，khiā佇伊ê論文``Recursive Functions of Symbolic Expressions and Their
+Computation by Machine'' (@ref{McCarthy 1960}).
+
 
 Despite its inception as a mathematical formalism, Lisp is a practical
 programming language.  A Lisp @newterm{interpreter} is a machine that carries
