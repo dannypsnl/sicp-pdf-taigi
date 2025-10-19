@@ -1086,6 +1086,11 @@ integration of algebraic expressions.  It included for this purpose new data
 objects known as atoms and lists, which most strikingly set it apart from all
 other languages of the period.
 
+雖bóng伊tú開始是tuì數學ê形式主義，Lisp是應用ê程式語言。Lisp ê @newterm{直譯器} (interpreter)
+是機器，執行lán用Lisp語言寫ê過程。頭一ê Lisp直譯器是MaCarthy kap @acronym{MIT}電子研究實驗室以及運算中心ê人工智慧小組ê同事kap學生ê幫chān所實做。@footnote{The
+@cite{Lisp 1 Programmer's Manual} 佇1960年頭一改出，@cite{Lisp 1.5
+Programmer's Manual} (@ref{McCarthy et al. 1965})佇1962年出版。Lisp初期ê歷史佇 @ref{McCarthy 1978}內底有說明。}Lisp是「LISt Processing」（列單處理）ê頭字母簡略，hŏng設計做提供符號操作能力來解決比如符號微分、代數表達式ê積分等等ê程式問題。為著chit ê目的，伊包含原子(atom) kap 列單 (list)等等新ê資料物件，大大hām hit陣á所有ê語言有差別。
+
 Lisp was not the product of a concerted design effort.  Instead, it evolved
 informally in an experimental manner in response to users' needs and to
 pragmatic implementation considerations.  Lisp's informal evolution has
@@ -1114,6 +1119,11 @@ later reimplemented for instructional use at @acronym{MIT}.  Scheme became an
 (@ref{Steele 1982}, @ref{Steele 1990}) was developed by the Lisp community to combine
 features from the earlier Lisp dialects to make an industrial standard for
 Lisp.  Common Lisp became an @acronym{ANSI} standard in 1994 (@ref{ANSI 1994}).}
+
+Lisp毋是設計kah好勢á好勢ê產物。反轉是用實驗方式非正式進化ê，來回應用者ê需求kap應用上ê實做考慮。Lisp ê非正式進化繼續幾nā年，Lisp用者ê社群傳統上排斥任何公開chit ê語言「正式」定義ê意圖。Chit ê進化，hām初期概念ê靈活kap優雅kâng齊，予Lisp chit ê現chú時第二舊ê通用語言（kan-ta比Fortran較少年），有能力來繼續引用採用上現代ê程式設計(program design)思維。就án-ne，Lisp kàu taⁿ是方言ê家族，in雖bóng分享大部份原底ê功能，毋kú有可能佇重要方面無kâng。本冊所用ê Lisp方言是Scheme。@footnote{大部份1970年代Lisp程式所用ê 2款方言是  MacLisp (@ref{Moon 1978}; @ref{Pitman 1983})，佇
+@acronym{MIT} 計畫 @acronym{MAC}開發，kap Interlisp (@ref{Teitelman 1974}), 佇 Bolt Beranek and Newman Inc. and the Xerox Palo Alto 研究中心開發。
+Portable Standard Lisp (@ref{Hearn 1969}; @ref{Griss 1981})是一款Lisp方言，設計做ē當佇無kâng ê機器中間suá栽 (portable)。MacLisp thoàⁿ出一寡次方言，比如Franz Lisp，伊開發佇加州大學Berkeley分校，kap Zetalisp (@ref{Moon and Weinreb 1981})，伊chhāi佇由@acronym{MIT}人工智慧實驗室所設計，ē當有效率pháng Lisp ê特殊目的ê處理器面頂。本冊用ê Lisp方言號做Scheme (@ref{Steele and Sussman 1975})，佇1975年由@acronym{MIT}人工智慧實驗室ê Guy Lewis Steele Jr. kap
+Gerald Jay Sussman 發明，了後為著佇@acronym{MIT} ê教育目的koh實做。 Scheme佇1990年變做是@acronym{IEEE}標準(@ref{IEEE 1990})。Common Lisp 方言(@ref{Steele 1982}, @ref{Steele 1990})，是由Lisp社群開發，為著kā較早ê Lisp方言ê特點合做伙，成做Lisp ê工業標準。Common Lisp佇1994年變做@acronym{ANSI} 標準(@ref{ANSI 1994}).}
 
 Because of its experimental character and its emphasis on symbol manipulation,
 Lisp was at first very inefficient for numerical computations, at least in
