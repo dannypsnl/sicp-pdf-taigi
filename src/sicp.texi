@@ -189,6 +189,7 @@ Unofficial Texinfo Format version @value{utfversion} (@value{utfversiondate})
 
 @menu
 * UTF::              Unofficial Texinfo Format
+* Taigi::            Introduction of Taigi Translation
 * Dedication::       Dedication
 * Foreword::         Foreword
 * Preface::          Preface to the Second Edition
@@ -1143,6 +1144,9 @@ is not the central concern.  For example, Lisp has become a language of choice
 for operating-system shell languages and for extension languages for editors
 and computer-aided design systems.
 
+因為伊試驗ê特點兼強調符號操作，Lisp原起頭佇數值運算真無效率，上無kap Fortran比。毋kú隨著年冬leh過，Lisp編譯器有開發出ē當翻譯程式kàu機器碼，通合理有效率執行數值運算。針對特殊ê應用，有lâng使用伊，靠大大ê效能。@footnote{一ê特殊運用ê例是科學重要性ê突破ê運算——太陽系運動ê積分，伊擴展進前ê結果kàu beh 2 ê數量級 (order of magnitude)，mā展示太陽系ê動力學是混沌ê。新ê積分演算法、特殊目的ê編譯器kap特殊目的ê電腦，in lóng用Lisp寫ê家私來協助實做，予做chit ê運算會當成。(@ref{Abelson et al. 1992}; @ref{Sussman and Wisdom 1992}).}
+雖bóng Lisp iah bōe phah破伊以早無效率kàu無向望ê名聲，Lisp chit-má用佇真chē效率毋是中心考量ê應用。比如講，Lisp已經變做通揀ê作業系統ê shell ê語言，以及予編輯器kap電腦輔助設計系統用ê擴充語言。
+
 \enlargethispage{\baselineskip}
 
 If Lisp is not a mainstream language, why are we using it as the framework for
@@ -1161,13 +1165,15 @@ excellent language for writing programs that must manipulate other programs as
 data, such as the interpreters and compilers that support computer languages.
 Above and beyond these considerations, programming in Lisp is great fun.
 
+Nā準Lisp毋是主流語言，lán啥事用伊做lán程式討論ê框殼？因為chit ê語言有獨一ê特點，予伊變做kài好ê媒體，通學習重要ê程式起做kap資料結構，mā通kā in kap支持in ê語言ê特點相關聯。Chiah ê特點內底上明顯ê，是Lisp tùi過程ê敘述（叫做@newterm{程序} (procedure)），會當親像Lisp資料kâng款表達kap操作。伊ê重要是，有ê強大ê程式設計ê技術，倚靠kā「被動」資料kap「主動」過程ê傳統區別抹予霧霧。Lán會發現，Lisp 佇kā程序當做資料ê靈活性，予伊變做一種佇leh ê，上方便ê語言，來探查chiah ê技術。Kā程序表達做資料ê能力，iā予Lisp成做優秀ê語言，佇寫掠其他程式做資料操作ê程式，比如支持電腦語言ê直譯器kap編譯器。照頂懸kap下kha ê考量，用Lisp寫程序誠心適。
+
 @menu
 * 1-1::              The Elements of Programming
 * 1-2::              Procedures and the Processes They Generate
 * 1-3::              Formulating Abstractions with Higher-Order Procedures
 @end menu
 
-@section The Elements of Programming
+@section The Elements of Programming 程式設計ê要素
 @node	1.1, 1.2, Chapter 1, Chapter 1
 
 A powerful programming language is more than just a means for instructing a
@@ -1176,6 +1182,8 @@ which we organize our ideas about processes.  Thus, when we describe a
 language, we should pay particular attention to the means that the language
 provides for combining simple ideas to form more complex ideas.  Every powerful
 language has three mechanisms for accomplishing this:
+
+有能力ê程式語言毋nā是教電腦做任務ê家私。語言mā是框殼，用che，lán組織lán所想ê程序(process)。就án-ne，佇lán描述語言ê時，需要加注意語言提供ê手段，來kā簡單ê想法結合，成做koh較複雜ê想法。任何有能力ê語言有3 ê機制完成目標：
 
 @itemize @bullet
 
