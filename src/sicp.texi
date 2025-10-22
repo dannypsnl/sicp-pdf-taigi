@@ -1198,6 +1198,19 @@ by which compound elements can be named and manipulated as units.
 
 @end itemize
 
+@itemize @bullet
+
+@item @b{基礎表達式}，
+代表本語言關心ê上簡單ê實體，
+
+@item @b{組合方法}，
+用che，複合ê要素通tùi簡單ê起做，kap
+
+@item @b{抽象方法}，
+用che，複合ê要素通當做單元(unit)號名kap操作。
+
+@end itemize
+
 @noindent
 In programming, we deal with two kinds of elements: procedures and data. (Later
 we will discover that they are really not so distinct.)  Informally, data is
@@ -1205,6 +1218,8 @@ we will discover that they are really not so distinct.)  Informally, data is
 rules for manipulating the data.  Thus, any powerful programming language
 should be able to describe primitive data and primitive procedures and should
 have methods for combining and abstracting procedures and data.
+
+佇寫程式ê時陣，lán處理兩款要素：程序kap資料（以後lán會發現in實在無hiah-nī有差別）。無正式講，資料是lán beh操作ê「物件」，程序是敘述操作資料ê規則。就án-ne，任何有大功能ê程式語言應該會當描述基礎資料kap基礎程序，以及有方法組合kap抽象化程序kap資料。
 
 In this chapter we will deal only with simple numerical data so that we can
 focus on the rules for building procedures.@footnote{The characterization of
