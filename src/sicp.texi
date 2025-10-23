@@ -1002,7 +1002,7 @@ evolution of a process is directed by a pattern of rules called a
 conjure the spirits of the computer with our spells.
 
 @noindent
-Lán beh研究@newterm{計算過程}(compututational process) ê概念。計算過程是電腦會當pháng ê抽象事物。
+\lettrine[findent=1pt]{L}{án beh研究}@newterm{計算過程}(compututational process) ê概念。計算過程是電腦會當pháng ê抽象事物。
 過程進化ê時陣，ē操作另一種號做@newterm{資料} (data) ê抽象ê概念。
 過程ê進行，是@newterm{程式} (program)所指引，伊是有模式ê一組規則。
 Lâng建立程式來指引過程。
@@ -1241,8 +1241,10 @@ using arithmetic operations that preserve a limited number of decimal places of
 accuracy in noninteger operations.} In later chapters we will see that these
 same rules allow us to build procedures to manipulate compound data as well.
 
+佇本章lán kan-ta會處理簡單ê數值資料，án-ne 會當集中佇起做程序。@footnote{Kā數字特色化做「簡單資料」，是bōe見笑 ê háⁿ-hông。其實處理數字是任何程式語言上pháinn剃頭兼上花sà-sà ê方面。下kha是一寡典型ê例：一寡電腦系統kā@newterm{整數} (integer)，比如2，kap @newterm{實數}(real numbers)，比如2.71區別。實數2.00 kám kap整數2無siâng款？整數用ê算術操作kap實數用ê kám kâng款？6除以2是3，iah是3.0？Lán-lâng通表示ê上大數字是guā chē？整數ê範圍kap實數ê範圍kám siâng款？佇tsiah ê問題ê頂懸kap下kha，當然有有關@newterm{捨入誤差} (roundoff error) kap @newterm{切斷誤差} (truncation error) ê問題ê集合——屬佇kui ê數值分析ê技術。因為lán佇本冊ê焦點是佇大規模ê程式設計，毋是數值技術，lán會忽略tsiah ê問題。佇本章ê數值ê例會展示通常ê捨入行為，是照保留有限精準度ê十進位，毋是整數ê數位算術所操作ê。}落尾ê章lán會看見，tsiah ê規則mā允准lán起做程序，來操作複雜ê資料。
+
 @menu
-* 1-1-1::            Expressions
+* 1-1-1::            Expressions 表達式
 * 1-1-2::            Naming and the Environment
 * 1-1-3::            Evaluating Combinations
 * 1-1-4::            Compound Procedures
@@ -1252,7 +1254,7 @@ same rules allow us to build procedures to manipulate compound data as well.
 * 1-1-8::            Procedures as Black-Box Abstractions
 @end menu
 
-@subsection Expressions
+@subsection Expressions 表達式
 @node	1.1.1, 1.1.2, 1.1, 1.1
 
 One easy way to get started at programming is to examine some typical
@@ -1261,9 +1263,13 @@ you are sitting at a computer terminal.  You type an @newterm{expression}, and
 the interpreter responds by displaying the result of its @newterm{evaluating}
 that expression.
 
+Chi̍t款khah快ê方法來開始寫程式，是檢查有ê典型ê互動，用Lisp ê Scheme方言ê直譯器。想像lí坐佇電腦@newterm{終端機} (terminal)頭前，輸入@newterm{表達式}(expression)，直譯器顯示表達式@newterm{算值}(evaluating) ê結果來回應。
+
 One kind of primitive expression you might type is a number.  (More precisely,
 the expression that you type consists of the numerals that represent the number
 in base 10.)  If you present Lisp with a number
+
+一款基礎ê表達式lí可能phah ê是數字。（講koh khah準，是lí phah ê表達式，包含代表十進位ê數字ê數值。）Nā lí予Lisp數字
 
 @lisp
 486
@@ -1274,6 +1280,9 @@ the interpreter will respond by printing@footnote{Throughout this book, when
 we wish to emphasize the distinction between the input typed by the user and
 the response printed by the interpreter, we will show the latter in slanted
 characters.}
+
+@noindent
+直譯器ê印下kha ê，來回應：@footnote{這本冊內底，佇lán想beh強調用者ê輸入，kap編譯器ê回應ê差別ê時陣，lán會用 @newterm{chhoa̍h體} (slanted)字展示後壁ê。}
 
 @lisp
 @i{486}
@@ -36439,7 +36448,7 @@ that it has been prepared with the help of a computer.
 
 @printindex cp
 
-@unnumbered Colophon
+@unnumbered Colophon 版權頁
 @node    Colophon, , Index, Top
 
 \lettrine[lraise=-0.03,loversize=0.08]{O}{n the cover page} is Agostino Ramelli's bookwheel mechanism from 1588. It could be seen as an early hypertext navigation aid. This image of the engraving is hosted by J. E. Johnson of @url{http://newgottland.com/2012/02/09/before-the-ereader-there-was-the-wheelreader/ramelli_bookwheel_1032px/, New Gottland}.
@@ -36447,5 +36456,13 @@ that it has been prepared with the help of a computer.
 The typefaces are Linux Libertine for body text and Linux Biolinum for headings, both by Philipp H. Poll. Typewriter face is Inconsolata created by Raph Levien and supplemented by Dimosthenis Kaponis and Takashi Tanigawa in the form of Inconsolata @acronym{LGC}. The cover page typeface is Alegreya, designed by Juan Pablo del Peral.
 
 Graphic design and typography are done by Andres Raba. Texinfo source is converted to LaTeX by a Perl script and compiled to @acronym{PDF} by XeLaTeX. Diagrams are drawn with Inkscape.
+
+
+\lettrine[lraise=-0.03,loversize=0.08]{佇}{封面}是Agostino Ramelli佇1588年畫ê冊lián-á。伊會當掠做是較早ê超文字(hypertext)導覽ê協助。Chit pak版畫由J. E. Johnson（@url{http://newgottland.com/2012/02/09/before-the-ereader-there-was-the-wheelreader/ramelli_bookwheel_1032px/, New Gottland}）收藏。
+
+臺文版ê內文羅馬字（包含英語） ê字型是FreeSans、FreeSerif、FreeMono，是GNU FreeFont計畫（設計師：Primož Peterlin kap Steve White）所出。封面ê字型是Noto Sans CJK TC，內文ê漢字字型，是Noto Sans CJK TC kap Noto Serif CJK TC，是Adobe kap Google所推出。
+
+圖形設計kap排版由Andres Raba完成。Texinfo ê原始碼是由Perl ê script轉做 LaTeX，koh用XeLaTeX編譯做@acronym{PDF}。圖表用Inkscape畫。
+
 
 @bye
