@@ -1263,13 +1263,13 @@ you are sitting at a computer terminal.  You type an @newterm{expression}, and
 the interpreter responds by displaying the result of its @newterm{evaluating}
 that expression.
 
-Chi̍t款khah快ê方法來開始寫程式，是檢查有ê典型ê互動，用Lisp ê Scheme方言ê直譯器。想像lí坐佇電腦@newterm{終端機} (terminal)頭前，輸入@newterm{表達式}(expression)，直譯器顯示表達式@newterm{算值}(evaluating) ê結果來回應。
+Chi̍t款khah快ê方法來開始寫程式，是檢查有ê典型ê互動，用Lisp ê Scheme方言ê直譯器。想像汝坐佇電腦@newterm{終端機} (terminal)頭前，輸入@newterm{表達式}(expression)，直譯器顯示表達式@newterm{算值}(evaluating) ê結果來回應。
 
 One kind of primitive expression you might type is a number.  (More precisely,
 the expression that you type consists of the numerals that represent the number
 in base 10.)  If you present Lisp with a number
 
-一款基礎ê表達式lí可能phah ê是數字。（講koh khah準，是lí phah ê表達式，包含代表十進位ê數字ê數值。）Nā lí予Lisp數字
+一款基礎ê表達式汝可能拍ê是數字。（講koh較準，是汝拍ê表達式，包含代表十進位ê數字ê數值。）Nā 汝予Lisp數字
 
 @lisp
 486
@@ -1282,7 +1282,7 @@ the response printed by the interpreter, we will show the latter in slanted
 characters.}
 
 @noindent
-直譯器ê印下kha ê，來回應：@footnote{這本冊內底，佇lán想beh強調用者ê輸入，kap編譯器ê回應ê差別ê時陣，lán會用 @newterm{chhoa̍h體} (slanted)字展示後壁ê。}
+直譯器會印下kha ê，來回應：@footnote{這本冊內底，佇lán想beh強調用者ê輸入，kap編譯器ê回應ê差別ê時陣，lán會用 @newterm{chhoa̍h體} (slanted)字展示後壁ê。}
 
 @lisp
 @i{486}
