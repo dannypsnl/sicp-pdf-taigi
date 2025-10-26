@@ -1294,6 +1294,9 @@ representing a primitive procedure (such as @code{+} or @code{*}) to form a
 compound expression that represents the application of the procedure to those
 numbers.  For example:
 
+@noindent
+代表數字ê表達式會當用代表基礎程序（比如@code{+} iah是 @code{*}）ê表達式，來建立複合ê表達式，代表chit ê程序應用kàu chiah ê數字。比如：
+
 @lisp
 (+ 137 349)
 @i{486}
@@ -1327,12 +1330,20 @@ parentheses in order to denote procedure application, are called
 value of a combination is obtained by applying the procedure specified by the
 operator to the @newterm{arguments} that are the values of the operands.
 
+@noindent
+表達式親像chiah-ê ê，就是kā表達式ê列單隔開佇@newterm{括弧}(koat-hô͘, parenthesis)內底，來標記程序ê應用ê，號做@newterm{組合} (combinations)。上倒手pêng ê號做@newterm{運算子}(operator)，其他ê元素號做@newterm{運算數}(operand)。組合ê值是tuì kā運算子指定ê程序，應用kàu @newterm{引數} (argument)，就是運算數ê值，求出來ê。
+
+
 The convention of placing the operator to the left of the operands is known as
 @newterm{prefix notation}, and it may be somewhat confusing at first because it
 departs significantly from the customary mathematical convention.  Prefix
 notation has several advantages, however.  One of them is that it can
 accommodate procedures that may take an arbitrary number of arguments, as in
 the following examples:
+
+Kā運算元khǹg佇運算數倒pîng ê習慣，叫做@newterm{前置表示法}(chiân-tì piáu-sī-hoat, prefix notation)，頭一改看，可能會點á霧sà-sà，因為明顯離開慣勢ê數學傳統。但是前置表示法有幾項好處。其中一个是會當容允程序接受任何數量ê引數，親像下kha ê例：
+
+
 
 @lisp
 (+ 21 35 12 7)
@@ -1348,9 +1359,14 @@ the following examples:
 No ambiguity can arise, because the operator is always the leftmost element and
 the entire combination is delimited by the parentheses.
 
+@noindent
+程式bōe含糊，因為運算子不管時攏佇上倒爿，而且kui ê組合是用括弧隔開。
+
 A second advantage of prefix notation is that it extends in a straightforward
 way to allow combinations to be @i{nested}, that is, to have combinations whose
 elements are themselves combinations:
+
+第二項前置表示法ê優勢，是用直接ê方式擴展，允准組合ē當變做「siū型」(nested)，就是有元素mā是組合ê組合：
 
 @lisp
 (+ (* 3 5) (- 10 6))
@@ -1362,6 +1378,8 @@ There is no limit (in principle) to the depth of such nesting and to the
 overall complexity of the expressions that the Lisp interpreter can evaluate.
 It is we humans who get confused by still relatively simple expressions such as
 
+（原則上）無限制siū ê深度，Lisp ê直譯器通算出ê，整kô表達式ê複雜度，mā（原則上）無制限。毋過lán lâng mā是會予相對簡單ê表達式舞bōe清楚，比如
+
 @lisp
 (+ (* 3 (+ (* 2 4) (+ 3 5))) (+ (- 10 7) 6))
 @end lisp
@@ -1369,6 +1387,8 @@ It is we humans who get confused by still relatively simple expressions such as
 @noindent
 which the interpreter would readily evaluate to be 57.  We can help ourselves
 by writing such an expression in the form
+
+編譯器會當kā算值，得著57。Lán通幫chān家己，kā chit ê表達式寫做tsi̍t號形式
 
 @lisp
 (+ (* 3
@@ -1388,6 +1408,9 @@ automatically indents to the proper pretty-print position whenever a new line
 is started and one that highlights the matching left parenthesis whenever a
 right parenthesis is typed.}
 
+@noindent
+用號做 @newterm{súi氣輸出}(pretty-printing) ê格式化慣例，逐ê長ê組合內底ê運算元調整做直ê排列。Kiu-chōa (indentation) ê結果清楚展示表達式ê結構。@footnote{Lisp系統一般會提供幫chān用者格式化表達式ê功能。兩ê特別好用ê特點，一ê是自動kiu-chōa kàu適當ê súi氣輸出ê位，無論底時開新chōa，另外ê是佇正pêng ê括弧輸入ê時，會明顯標出(highlight)對應ê倒pêng ê括弧。}
+
 Even with complex expressions, the interpreter always operates in the same
 basic cycle: It reads an expression from the terminal, evaluates the
 expression, and prints the result.  This mode of operation is often expressed
@@ -1399,7 +1422,10 @@ the old reputation of Lisp as an inefficient language, is the source of the
 quip by Alan Perlis (paraphrasing Oscar Wilde) that ``Lisp programmers know the
 value of everything but the cost of nothing.''}
 
-@subsection Naming and the Environment
+就算有複雜ê表達式，直譯器一直操作佇kâng款ê基本循環：tùi終端機讀表達式，算表達式ê值，印出結果。Chit款操作模式通常表達做直譯器pháng佇@newterm{讀算印循環}(read-eval-print loop)。著特別觀察，明確教直譯器來印表達式ê值，是無必要。@footnote{Lisp遵趁任何表達式lóng有值ê慣例。Chit ê慣例，kap以早Lisp是無效率ê語言ê名聲，予Alan Perlis講chit句供體ê話（改tuì Oscar Wilde）：「Lisp ê程式設計師知影逐項物ê值，soah毋知in ê成本。」}
+
+
+@subsection Naming and the Environment 號名kap環境
 @node	1.1.2, 1.1.3, 1.1.1, 1.1
 
 A critical aspect of a programming language is the means it provides for using
