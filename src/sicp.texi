@@ -1432,7 +1432,11 @@ A critical aspect of a programming language is the means it provides for using
 names to refer to computational objects.  We say that the name identifies a
 @newterm{variable} whose @newterm{value} is the object.
 
+程式語言一个重要ê特徵是，伊所提供來指示運算ê物件ê方法。Lán-lâng講名指示@newterm{變數}(variable)，伊ê@newterm{值}(value)就是物件。
+
 In the Scheme dialect of Lisp, we name things with @code{define}.  Typing
+
+用Lisp ê Scheme方言，lán用 @code{define}號名。輸入
 
 @lisp
 (define size 2)
@@ -1444,6 +1448,9 @@ causes the interpreter to associate the value 2 with the name
 to evaluating definitions, since this is highly implementation-dependent.} Once
 the name @code{size} has been associated with the number 2, we can refer to the
 value 2 by name:
+
+@noindent
+予直譯器kā值2 kap名@code{size}關係起來。@footnote{本冊lán bōe展示直譯器算定義本身ê值ê回應，因為che kap實做非常有關聯。}名@code{size}一下kap數字2有關聯，lán通用名指2 chit个值：
 
 @lisp
 size
@@ -1457,6 +1464,10 @@ size
 
 @noindent
 Here are further examples of the use of @code{define}:
+
+@noindent
+Koh較chē ê使用 @code{define}ê例佇chia：
+
 
 @lisp
 (define pi 3.14159)
@@ -1482,6 +1493,9 @@ encourages the incremental development and testing of programs and is largely
 responsible for the fact that a Lisp program usually consists of a large number
 of relatively simple procedures.
 
+@noindent
+@code{define}是lán語言內底上簡單ê抽象方法，因為伊允准lán用簡單ê名指複合操作ê結果，比如頂懸所計算ê @code{circumference}（圓周）。一般來講，運算ê物件hoân-sè有真複雜ê結構，背in，kap當lán beh用ê時，逐擺重寫in ê詳細，有可能極其無方便。實際上，複雜ê程式是由一步一步建立運算ê物件，siâng時增加複雜度，所起做。直譯器予chit ê一步步ê起做程式變特別便利，因為名—物件ê關聯通漸漸á用連sòa ê互動建立。Chit ê功能鼓勵漸漸發展kap試程式，mā chiâⁿ通信任，因為Lisp程式常常包含大量較簡單ê程序。
+
 It should be clear that the possibility of associating values with symbols and
 later retrieving them means that the interpreter must maintain some sort of
 memory that keeps track of the name-object pairs.  This memory is called the
@@ -1491,7 +1505,9 @@ environments).@footnote{@ref{Chapter 3} will show that this notion of
 environment is crucial, both for understanding how the interpreter works and
 for implementing interpreters.}
 
-@subsection Evaluating Combinations
+通清楚知影ê是，關聯值kap符號(symbol)了後，koh kā in tshuē出來ê機會，代表直譯器著維持一款記憶體，追蹤名—物件ê對。Chit ê記憶體叫做@newterm{環境}(environment)（講較準就是@newterm{全範圍環境}(global environment)）機率，因為lán較停á會看見，運算可能干涉一寡無kâng ê環境。@footnote{@ref{第3章}會展示chit ê觀念真關鍵，無論是了解直譯器運作ê方法iah是實做直譯器。}
+
+@subsection Evaluating Combinations 算組合ê值
 @node	1.1.3, 1.1.4, 1.1.2, 1.1
 
 One of our goals in this chapter is to isolate issues about thinking
