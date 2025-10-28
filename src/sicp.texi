@@ -1366,7 +1366,7 @@ A second advantage of prefix notation is that it extends in a straightforward
 way to allow combinations to be @i{nested}, that is, to have combinations whose
 elements are themselves combinations:
 
-第二項前置表示法ê優勢，是用直接ê方式擴展，允准組合ē當變做「siū型」(nested)，就是有元素mā是組合ê組合：
+第二項前置表示法ê優勢，是用直接ê方式擴展，允准組合ē當變做「siū-á型」(nested)，就是有元素mā是組合ê組合：
 
 @lisp
 (+ (* 3 5) (- 10 6))
@@ -1514,7 +1514,11 @@ One of our goals in this chapter is to isolate issues about thinking
 procedurally.  As a case in point, let us consider that, in evaluating
 combinations, the interpreter is itself following a procedure.
 
+Lán佇本章ê一个目標就是照程序分離思考ê議題。舉一个相關ê例，佇算組合ê值，編譯器家己tuè一个程序。
+
 To evaluate a combination, do the following:
+
+Beh算組合ê值，著做下kha ê：
 
 @enumerate 1
 
@@ -1527,6 +1531,18 @@ operator) to the arguments that are the values of the other subexpressions (the
 operands).
 
 @end enumerate
+
+@enumerate 1
+
+@item
+算組合ê kiáⁿ表達式ê值。
+
+@item
+Kā程序，就是上倒pêng ê kiáⁿ表達式ê值（操作子），應用kah引數，就是其他kiáⁿ表達式ê值（操作數）。
+
+
+@end enumerate
+
 
 @noindent
 Even this simple rule illustrates some important points about processes in
@@ -1542,9 +1558,15 @@ procedure such as addition or multiplication.  We will see later that it is
 useful to be able to work with combinations whose operators are themselves
 compound expressions.}
 
+@noindent
+就算chit ê簡單ê規則mā展示一寡關係過程ê一般ê點。Tāi先，觀察頭一步命令，為著完成算組合ê值ê過程，lán著代先行算組合內底每一个要素ê值ê過程。就án-ne，算值ê規則自然是@newterm{遞迴}(recursive) ê。He就是，伊需要（準做伊ê一个手續）呼叫chit ê規則家己。@footnote{求值規則所講，親像第一步ê部份，lán著求組合上倒pêng ê要素ê值，chit句可能看起來怪怪，因為chit-má kan-ta@code{+} iah是 @code{*} 等，代表內底有ê基礎程序（比如加法iah是乘法）ê，chiah通當做操作子。Lán 了後會看見，nā會當操作伊ê操作子是複合表達式ê組合，是有路用ê。}
+
+
 Notice how succinctly the idea of recursion can be used to express what, in the
 case of a deeply nested combination, would otherwise be viewed as a rather
 complicated process.  For example, evaluating
+
+注意遞迴ê想法是gōa-nī簡明，佇深ê siū-á型組合ê案例，nā無用che，會看做不止á複雜ê過程。舉例，算下kha ê ê值：
 
 @lisp
 (* (+ 2 (* 4 6))
