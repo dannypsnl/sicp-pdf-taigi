@@ -1587,6 +1587,9 @@ technique for dealing with hierarchical, treelike objects.  In fact, the
 ``percolate values upward'' form of the evaluation rule is an example of a
 general kind of process known as @newterm{tree accumulation}.
 
+@noindent
+愛kā算值ê規則用佇4 ê無kâng ê組合。Lán通得著一幅圖，顯示hit ê過程，靠kā組合用樹á型表示，比如@ref{Figure 1.1}。逐ê組合用有對kàu操作子ê樹oe ê節點代表，末端（就是無pun-oe ê節點）代表操作子iah是數。Kā算值看做是樹，lán通想像操作數ê值滲起去，ùi末端ê節點，然後佇ná來ná懸ê所在相結合。一般來講，lán會看見，遞迴是非常有力ê技術處理階層式兼樹仔型ê物件。實際上，算值規則ê「滲透ê值peh起去」ê形式，是一般號做@newterm{樹累積}(tree accumulation) ê處理種類ê例。
+
 @float
 @quotation
 @anchor{Figure 1.1}
@@ -1610,7 +1613,7 @@ general kind of process known as @newterm{tree accumulation}.
 @sp 0.2
 @center @image{fig/chap1/Fig1.1g,31mm,,,.pdf}
 @sp 0.4
-@caption{@strong{Figure 1.1:} Tree representation, showing the value of each subcombination.}
+@caption{@strong{Figure 1.1:} Tree representation, showing the value of each subcombination. 樹ê表示，展示逐ê kiáⁿ組合ê值。}
 @sp 0.7
 @end iftex
 @end quotation
