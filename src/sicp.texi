@@ -1624,6 +1624,8 @@ point where we need to evaluate, not combinations, but primitive expressions
 such as numerals, built-in operators, or other names.  We take care of the
 primitive cases by stipulating that
 
+Sòa落來，觀察重複ê第一步ê應用，致使lán kàu需要算值ê重點，毋是組合，是基礎ê表達式，比如數值、內底有ê運算子，或者是其他ê名。Lán關注基礎ê案例，靠下kha ê約束：
+
 @itemize @bullet
 
 @item
@@ -1636,6 +1638,19 @@ carry out the corresponding operations, and
 @item
 the values of other names are the objects associated with those names in the
 environment.
+
+@end itemize
+
+@itemize @bullet
+
+@item
+數值ê值是in所號ê數字，
+
+@item
+內底有ê操作子ê值，是機器ê指令列，帶出對應ê操作，以及
+
+@item
+其他名ê值是佇環境內底，關聯hia ê名ê物件。
 
 @end itemize
 
