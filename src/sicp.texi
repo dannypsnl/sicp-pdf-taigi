@@ -1708,19 +1708,22 @@ Chit號tùi一般ê算值規則ê特例，叫做@newterm{特殊形式}(special f
 We have identified in Lisp some of the elements that must appear in any
 powerful programming language:
 
-Lán有佇Lisp辨別，一寡必須佇任何有能力ê程式語言出現ê要素：
+Lán有佇Lisp辨別，一寡ài佇任何有能力ê程式語言出現ê要素：
 
 @itemize @bullet
 
 @item
 Numbers and arithmetic operations are primitive data and procedures.
+數字kap算術運算是原始ê資料kap程序。
 
 @item
 Nesting of combinations provides a means of combining operations.
+組合ê岫á型提供結合運算ê方法。
 
 @item
 Definitions that associate names with values provide a limited means of
 abstraction.
+關聯名稱kap值ê定義提供有限制ê抽象方法。
 
 @end itemize
 
@@ -1744,14 +1747,13 @@ abstraction technique by which a compound operation can be given a name and
 then referred to as a unit.
 
 @noindent
-Chit-má lán學關係@newterm{程序定義}(procedure definitions)，是koh較有能力ê抽象技術，用che複合ê操作會當號名，iā會當指做一个單位。
+這馬lán欲o̍h一寡@newterm{程序定義}(procedure definitions)ê代誌，這是一種足有力ê抽象技術，會使kā複合ê操作號名，了後就會當指做一个單位。
 
 We begin by examining how to express the idea of ``squaring.''  We might say,
 ``To square something, multiply it by itself.''  This is expressed in our
 language as
 
-Lán用考察án-nóa表達「平方」ê想法做起頭。Lán可能講，「平方bó͘-mi̍h，就是伊乘以家己」，che用lán ê語言表示做
-
+lán先來看án-nóa表達 ``平方'' ê觀念。lán 會當講， ``欲kā啥物平方，就是kā伊kah家己相乘。'' 這 tī lán ê 語言內底寫做
 
 @lisp
 (define (square x) (* x x))
@@ -1761,12 +1763,13 @@ Lán用考察án-nóa表達「平方」ê想法做起頭。Lán可能講，「�
 We can understand this in the following way:
 
 @noindent
-Lán通用下kha ê方法，理解che：
+Lán 會當按呢來理解：
 
 @lisp
 (define (square    x)         (*      x         x))
   |        |       |           |      |         |
-定義    平方  bó͘-mi̍h  ，是  乘     伊    用伊家己。
+ To     square  something,  multiply  it  by  itself.
+欲kā     平方       啥物      相乘       伊       家己
 @end lisp
 
 @noindent
@@ -1782,7 +1785,12 @@ two notions---to create procedures without naming them, and to give names to
 procedures that have already been created.  We will see how to do this in
 @ref{1.3.2}.}
 
+遮lán有一个@newterm{複合程序}，號做 @code{square}。這个程序代表ê是kā啥物kah家己相乘ê操作。欲予乘ê物件號一个區域名 @code{x}，這kah自然語言內底ê代名詞扮演仝款ê角色。這个定義ê值會建立這个複合程序，而且kā伊kah @code{square} 這个名連起來。
+@footnote{注意遮有兩个無仝ê操作予組合做伙：lán teh 建立程序，而且 teh kā 伊號名做 @code{square}。會使kā這兩个概念分開是足重要ê---建立一个程序無kā伊號名，kah kā已建立ê程序號名。lán 會 tī @ref{1.3.2} 看著按怎做這件代誌。}
+
 The general form of a procedure definition is
+
+程序定義 ê 一般形式是
 
 @lisp
 (define (@math{\langle}@var{name}@math{\kern0.03em\rangle} @math{\langle}@var{formal parameters}@math{\kern0.02em\rangle})
@@ -1805,7 +1813,16 @@ expression as the value of the procedure application.}  The @math{\langle}@var{n
 the @math{\langle}@var{formal parameters}@math{\kern0.08em\rangle} are grouped within parentheses, just as they
 would be in an actual call to the procedure being defined.
 
+@math{\langle\hbox{\sl name}\kern0.08em\rangle} 是一个tī環境內底kah程序定義做伙連結 ê符號。
+@footnote{Tī 這本冊內底，lán 會用予角括弧框--起來 ê chhoa̍h 體符號---比論講 @math{\langle}@var{name}@math{\kern0.08em\rangle}---來表示表達式內底 ê「空位」，會tī實際使用這款表達式 ê 時陣予填入。}
+@math{\langle\hbox{\sl formal parameters}\kern0.08em\rangle} 是tī程序ê主體內底使用ê名，用來參考程序ê對應引數。
+@math{\langle\hbox{\sl body}\kern0.08em\rangle} 是一个表達式，當形式參數予實際引數替換ê時陣，會產生程序應用ê值。
+@footnote{較一般來講，程序ê主體會當是表達式ê序列。Tī這種情形，直譯器會àn順序算每一个表達式ê值，而且kā上尾ê表達式ê值當做程序應用ê值轉--來。}
+@math{\langle}@var{name}@math{\kern0.08em\rangle} kah @math{\langle}@var{formal parameters}@math{\kern0.08em\rangle} 用括弧組做伙，親像tī實際呼叫這个 teh 定義ê程序遐爾仝款。
+
 Having defined @code{square}, we can now use it:
+
+定義好 @code{square} 了後，lán 這馬會當用伊：
 
 @lisp
 (square 21)
@@ -1820,6 +1837,8 @@ Having defined @code{square}, we can now use it:
 We can also use @code{square} as a building block in defining other procedures.
 For example, @math{x^2 + y^2} can be expressed as
 
+lán mā 會當 kā @code{square} 當做建構區塊來定義其他程序。比論講，@math{x^2 + y^2} 會當寫做
+
 @lisp
 (+ (square x) (square y))
 @end lisp
@@ -1827,6 +1846,8 @@ For example, @math{x^2 + y^2} can be expressed as
 @noindent
 We can easily define a procedure @code{sum-of-squares} that, given any two
 numbers as arguments, produces the sum of their squares:
+
+lán 會當輕鬆定義一个程序 @code{sum-of-squares}，予兩个數做引數 ê 時陣，會產生 in ê 平方 ê 和：
 
 @lisp
 (define (sum-of-squares x y)
@@ -1838,6 +1859,8 @@ numbers as arguments, produces the sum of their squares:
 @noindent
 Now we can use @code{sum-of-squares} as a building block in constructing
 further procedures:
+
+這馬 lán 會當 kā @code{sum-of-squares} 當做建構區塊來建構別項程序：
 
 @lisp
 (define (f a)
@@ -1851,6 +1874,9 @@ Compound procedures are used in exactly the same way as primitive procedures.
 Indeed, one could not tell by looking at the definition of
 @code{sum-of-squares} given above whether @code{square} was built into the
 interpreter, like @code{+} and @code{*}, or defined as a compound procedure.
+
+複合程序 kah 原始程序 ê 用法完全仝款。
+實際上，看頂懸寫 ê @code{sum-of-squares} ê 定義，講袂出 @code{square} 是像 @code{+} kah @code{*} 按呢寫tī直譯器內底，抑是一个複合程序定義。
 
 @subsection The Substitution Model for Procedure Application
 @node	1.1.5, 1.1.6, 1.1.4, 1.1
