@@ -1263,7 +1263,7 @@ you are sitting at a computer terminal.  You type an @newterm{expression}, and
 the interpreter responds by displaying the result of its @newterm{evaluating}
 that expression.
 
-Chi̍t款khah快ê方法來開始寫程式，是檢查有ê典型ê互動，用Lisp ê Scheme方言ê直譯器。想像汝坐佇電腦@newterm{終端機} (terminal)頭前，輸入@newterm{表達式}(expression)，直譯器顯示表達式@newterm{算值}(evaluating) ê結果來回應。
+Chi̍t款khah快來開始寫程式ê方法，是檢查一寡佮Lisp ê Scheme方言ê直譯器典型ê互動。想像汝坐佇電腦@newterm{終端機} (terminal)頭前，輸入@newterm{表達式}(expression)，直譯器顯示表達式@newterm{算值}(evaluating) ê結果來回應。
 
 One kind of primitive expression you might type is a number.  (More precisely,
 the expression that you type consists of the numerals that represent the number
