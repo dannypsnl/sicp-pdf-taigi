@@ -1814,11 +1814,12 @@ the @math{\langle}@var{formal parameters}@math{\kern0.08em\rangle} are grouped w
 would be in an actual call to the procedure being defined.
 
 @math{\langle\hbox{\sl name}\kern0.08em\rangle} 是一个tī環境內底kah程序定義做伙連結 ê符號。
-@footnote{Tī 這本冊內底，lán 會用予角括弧框--起來 ê chhoa̍h 體符號---比論講 @math{\langle}@var{name}@math{\kern0.08em\rangle}---來表示表達式內底 ê「空位」，會tī實際使用這款表達式 ê 時陣予填入。}
+@footnote{Tī 這本冊內底，lán 會用予角括弧框--起來 ê chhoa̍h 體符號---比論講 @math{\langle}@var{name}@math{\kern0.08em\rangle}---來表示表達式內底 ê「空位」，會tī實際使用這款表達式 ê 時陣予添入。}
 @math{\langle\hbox{\sl formal parameters}\kern0.08em\rangle} 是tī程序ê主體內底使用ê名，用來參考程序ê對應引數。
 @math{\langle\hbox{\sl body}\kern0.08em\rangle} 是一个表達式，當形式參數予實際引數替換ê時陣，會產生程序應用ê值。
-@footnote{較一般來講，程序ê主體會當是表達式ê序列。Tī這種情形，直譯器會àn順序算每一个表達式ê值，而且kā上尾ê表達式ê值當做程序應用ê值轉--來。}
-@math{\langle}@var{name}@math{\kern0.08em\rangle} kah @math{\langle}@var{formal parameters}@math{\kern0.08em\rangle} 用括弧組做伙，親像tī實際呼叫這个 teh 定義ê程序遐爾仝款。
+@footnote{較一般來講，程序ê主體會當是表達式ê序列。Tī這種情形，直譯器會àn順序算每一个表達式ê值，而且kā上尾ê表達式ê值當做程序應用ê值the̍h來。}
+@math{\langle}@var{name}@math{\kern0.08em\rangle} kah @math{\langle}@var{formal parameters}@math{\kern0.08em\rangle} 用括弧組做伙ê方式，
+著像tī實際呼叫這个程序ê寫法。
 
 Having defined @code{square}, we can now use it:
 
@@ -1860,7 +1861,7 @@ lán 會當輕鬆定義一个程序 @code{sum-of-squares}，予兩个數做引�
 Now we can use @code{sum-of-squares} as a building block in constructing
 further procedures:
 
-這馬 lán 會當 kā @code{sum-of-squares} 當做建構區塊來建構別項程序：
+這馬 lán 會當 kā @code{sum-of-squares} 當做建構區塊，來建構別項程序：
 
 @lisp
 (define (f a)
