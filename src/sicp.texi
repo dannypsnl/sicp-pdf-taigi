@@ -1708,6 +1708,8 @@ Chit號tùi一般ê算值規則ê特例，叫做@newterm{特殊形式}(special f
 We have identified in Lisp some of the elements that must appear in any
 powerful programming language:
 
+Lán有佇Lisp辨別，一寡必須佇任何有能力ê程式語言出現ê要素：
+
 @itemize @bullet
 
 @item
@@ -1722,14 +1724,34 @@ abstraction.
 
 @end itemize
 
+@itemize @bullet
+
+@item
+數字kap算術操作是基礎資料kap程序。
+
+@item
+組合ê siū-á結果提供組合操作ê方法
+
+@item
+關聯名kap值ê定義，提供有限ê抽象ê方法。
+
+@end itemize
+
+
 @noindent
 Now we will learn about @newterm{procedure definitions}, a much more powerful
 abstraction technique by which a compound operation can be given a name and
 then referred to as a unit.
 
+@noindent
+Chit-má lán學關係@newterm{程序定義}(procedure definitions)，是koh較有能力ê抽象技術，用che複合ê操作會當號名，iā會當指做一个單位。
+
 We begin by examining how to express the idea of ``squaring.''  We might say,
 ``To square something, multiply it by itself.''  This is expressed in our
 language as
+
+Lán用考察án-nóa表達「平方」ê想法做起頭。Lán可能講，「平方bó͘-mi̍h，就是伊乘以家己」，che用lán ê語言表示做
+
 
 @lisp
 (define (square x) (* x x))
@@ -1738,10 +1760,13 @@ language as
 @noindent
 We can understand this in the following way:
 
+@noindent
+Lán通用下kha ê方法，理解che：
+
 @lisp
 (define (square    x)         (*      x         x))
   |        |       |           |      |         |
- To     square  something,  multiply  it  by  itself.
+定義    平方  bó͘-mi̍h  ，是  乘     伊    用伊家己。
 @end lisp
 
 @noindent
