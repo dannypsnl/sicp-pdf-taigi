@@ -1006,7 +1006,7 @@ conjure the spirits of the computer with our spells.
 過程進化ê時陣，ē操作另一種號做@newterm{資料} (data) ê抽象ê概念。
 過程ê進行，是@newterm{程式} (program)所指引，伊是有模式ê一組規則。
 Lâng建立程式來指引過程。
-其實ùi效果來看，咱親像用咒語召喚電腦ê神魂。
+其實ùi效果來看，lán親像用咒語召喚電腦ê神魂。
 
 A computational process is indeed much like a sorcerer's idea of a spirit.  It
 cannot be seen or touched.  It is not composed of matter at all.  However, it
