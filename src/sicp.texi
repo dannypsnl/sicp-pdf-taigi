@@ -1700,7 +1700,7 @@ uniform, end up causing more trouble than they are worth when programs become
 large and complex.  In the words of Alan Perlis, ``Syntactic sugar causes
 cancer of the semicolon.''}
 
-Chit號tùi一般ê算值規則ê特例，叫做@newterm{特殊形式}(special forms)。@code{define}是lán所見著ê唯一ê特殊形式，毋過無gōa久會看著別ê。任何特殊形式有家己ê算值規則。表達式ê chē-chē種類（kap 伊ê算值規則）造就程式語言ê句法。kap大部份別ê程式語言比較，Lisp有非常簡單ê句法，就是表達式ê算值規則通用簡單ê一般規則，kap一寡特殊形式用ê例外規則。@footnote{有簡單方便ê，通揀ê表面結構，通用koh較統一寫ê方法ê，語法ê形式，有時á號做@newterm{語法糖}(syntactic sugar)，由Peter Landin所號。kap其他語言ê用者比較，Lisp ê程式設計師，一般來講，較少關心語法ê代誌。（顛倒，nā是調查任何Pascal ê手冊，通注意語法ê描述佔gōa大ê部份）。Chit款輕視句法，部份因為Lisp ê靈活性，予伊快改表面ê句法，予語言較無統一，落尾致kàu佇程式變大koh複雜ê時，產生比利益koh較chē ê麻煩。像Alan Perlis所講ê，「語法糖á致kàu分號ê癌症。」}
+Chit號tùi一般ê算值規則ê特例，叫做@newterm{專門形式}(special forms)。@code{define}是lán所見著ê唯一ê專門形式，毋過無gōa久會看著別ê。任何專門形式有家己ê算值規則。表達式ê chē-chē種類（kap 伊ê算值規則）造就程式語言ê句法。kap大部份別ê程式語言比較，Lisp有非常簡單ê句法，就是表達式ê算值規則通用簡單ê一般規則，kap一寡專門形式用ê例外規則。@footnote{有簡單方便ê，通揀ê表面結構，通用koh較統一寫ê方法ê，語法ê形式，有時á號做@newterm{語法糖}(syntactic sugar)，由Peter Landin所號。kap其他語言ê用者比較，Lisp ê程式設計師，一般來講，較少關心語法ê代誌。（顛倒，nā是調查任何Pascal ê手冊，通注意語法ê描述佔gōa大ê部份）。Chit款輕視句法，部份因為Lisp ê靈活性，予伊快改表面ê句法，予語言較無統一，落尾致kàu佇程式變大koh複雜ê時，產生比利益koh較chē ê麻煩。像Alan Perlis所講ê，「語法糖á致kàu分號ê癌症。」}
 
 @subsection Compound Procedures 複合ê程序
 @node	1.1.4, 1.1.5, 1.1.3, 1.1
