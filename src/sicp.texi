@@ -1538,7 +1538,7 @@ operands).
 算組合ê kiáⁿ表達式ê值。
 
 @item
-Kā程序，就是上倒pêng ê kiáⁿ表達式ê值（操作子），應用kah引數，就是其他kiáⁿ表達式ê值（操作數）。
+Kā程序，就是上倒pêng ê kiáⁿ表達式ê值（運算子），應用kah引數，就是其他kiáⁿ表達式ê值（運算數）。
 
 
 @end enumerate
@@ -1559,7 +1559,7 @@ useful to be able to work with combinations whose operators are themselves
 compound expressions.}
 
 @noindent
-就算chit ê簡單ê規則mā展示一寡關係過程ê一般ê點。Tāi先，觀察頭一步命令，為著完成算組合ê值ê過程，lán著代先行算組合內底每一个要素ê值ê過程。就án-ne，算值ê規則自然是@newterm{遞迴}(recursive) ê。He就是，伊需要（準做伊ê一个手續）呼叫chit ê規則家己。@footnote{求值規則所講，親像第一步ê部份，lán著求組合上倒pêng ê要素ê值，chit句可能看起來怪怪，因為chit-má kan-ta@code{+} iah是 @code{*} 等，代表內底有ê基礎程序（比如加法iah是乘法）ê，chiah通當做操作子。Lán 了後會看見，nā會當操作伊ê操作子是複合表達式ê組合，是有路用ê。}
+就算chit ê簡單ê規則mā展示一寡關係過程ê一般ê點。Tāi先，觀察頭一步命令，為著完成算組合ê值ê過程，lán著代先行算組合內底每一个要素ê值ê過程。就án-ne，算值ê規則自然是@newterm{遞迴}(recursive) ê。He就是，伊需要（準做伊ê一个手續）呼叫chit ê規則家己。@footnote{求值規則所講，親像第一步ê部份，lán著求組合上倒pêng ê要素ê值，chit句可能看起來怪怪，因為chit-má kan-ta@code{+} iah是 @code{*} 等，代表內底有ê基礎程序（比如加法iah是乘法）ê，chiah通當做運算子。Lán 了後會看見，nā會當操作伊ê運算子是複合表達式ê組合，是有路用ê。}
 
 
 Notice how succinctly the idea of recursion can be used to express what, in the
@@ -1588,7 +1588,7 @@ technique for dealing with hierarchical, treelike objects.  In fact, the
 general kind of process known as @newterm{tree accumulation}.
 
 @noindent
-愛kā算值ê規則用佇4 ê無kâng ê組合。Lán通得著一幅圖，顯示hit ê過程，靠kā組合用樹á型表示，比如@ref{Figure 1.1}。逐ê組合用有對kàu操作子ê樹oe ê節點代表，末端（就是無pun-oe ê節點）代表操作子iah是數。Kā算值看做是樹，lán通想像操作數ê值滲起去，ùi末端ê節點，然後佇ná來ná懸ê所在相結合。一般來講，lán會看見，遞迴是非常有力ê技術處理階層式兼樹仔型ê物件。實際上，算值規則ê「滲透ê值peh起去」ê形式，是一般號做@newterm{樹累積}(tree accumulation) ê處理種類ê例。
+愛kā算值ê規則用佇4 ê無kâng ê組合。Lán通得著一幅圖，顯示hit ê過程，靠kā組合用樹á型表示，比如@ref{Figure 1.1}。逐ê組合用有對kàu運算子ê樹oe ê節點代表，末端（就是無pun-oe ê節點）代表運算子iah是數。Kā算值看做是樹，lán通想像運算數ê值滲起去，ùi末端ê節點，然後佇ná來ná懸ê所在相結合。一般來講，lán會看見，遞迴是非常有力ê技術處理階層式兼樹仔型ê物件。實際上，算值規則ê「滲透ê值peh起去」ê形式，是一般號做@newterm{樹累積}(tree accumulation) ê處理種類ê例。
 
 @float
 @quotation
@@ -1647,7 +1647,7 @@ environment.
 數值ê值是in所號ê數字，
 
 @item
-內底有ê操作子ê值，是機器ê指令列，帶出對應ê操作，以及
+內底有ê運算子ê值，是機器ê指令列，帶出對應ê操作，以及
 
 @item
 其他名ê值是佇環境內底，關聯hia ê名ê物件。
@@ -1753,7 +1753,7 @@ We begin by examining how to express the idea of ``squaring.''  We might say,
 ``To square something, multiply it by itself.''  This is expressed in our
 language as
 
-lán先來看án-nóa表達 ``平方'' ê觀念。lán 會當講， ``欲kā啥物平方，就是kā伊kah家己相乘。'' 這 tī lán ê 語言內底寫做
+Lán先來看án-nóa表達 ``平方'' ê觀念。lán 會當講， ``欲kā啥物平方，就是kā伊kah家己相乘。'' 這 tī lán ê 語言內底寫做
 
 @lisp
 (define (square x) (* x x))
@@ -1785,7 +1785,7 @@ two notions---to create procedures without naming them, and to give names to
 procedures that have already been created.  We will see how to do this in
 @ref{1.3.2}.}
 
-遮lán有一个@newterm{複合程序}，號做 @code{square}。這个程序代表ê是kā啥物kah家己相乘ê操作。欲予乘ê物件號一个區域名 @code{x}，這kah自然語言內底ê代名詞扮演仝款ê角色。這个定義ê值會建立這个複合程序，而且kā伊kah @code{square} 這个名連起來。
+遮lán有一个 @newterm{複合程序}，號做 @code{square}。這个程序代表ê是kā啥物kah家己相乘ê操作。欲予乘ê物件號一个區域名 @code{x}，這kah自然語言內底ê代名詞扮演仝款ê角色。這个定義ê值會建立這个複合程序，而且kā伊kah @code{square} 這个名連起來。
 @footnote{注意遮有兩个無仝ê操作予組合做伙：lán teh 建立程序，而且 teh kā 伊號名做 @code{square}。會使kā這兩个概念分開是足重要ê---建立一个程序無kā伊號名，kah kā已建立ê程序號名。lán 會 tī @ref{1.3.2} 看著按怎做這件代誌。}
 
 The general form of a procedure definition is
@@ -1819,7 +1819,7 @@ would be in an actual call to the procedure being defined.
 @math{\langle\hbox{\sl body}\kern0.08em\rangle} 是一个表達式，當形式參數予實際引數替換ê時陣，會產生程序應用ê值。
 @footnote{較一般來講，程序ê主體會當是表達式ê序列。Tī這種情形，直譯器會àn順序算每一个表達式ê值，而且kā上尾ê表達式ê值當做程序應用ê值the̍h來。}
 @math{\langle}@var{name}@math{\kern0.08em\rangle} kah @math{\langle}@var{formal parameters}@math{\kern0.08em\rangle} 用括弧組做伙ê方式，
-著像tī實際呼叫這个程序ê寫法。
+著親像tī實際呼叫這个程序ê寫法。
 
 Having defined @code{square}, we can now use it:
 
@@ -1838,7 +1838,7 @@ Having defined @code{square}, we can now use it:
 We can also use @code{square} as a building block in defining other procedures.
 For example, @math{x^2 + y^2} can be expressed as
 
-lán mā 會當 kā @code{square} 當做建構區塊來定義其他程序。比論講，@math{x^2 + y^2} 會當寫做
+Lán mā 會當 kā @code{square} 當做建構區塊來定義其他程序。比論講，@math{x^2 + y^2} 會當寫做
 
 @lisp
 (+ (square x) (square y))
@@ -1848,7 +1848,7 @@ lán mā 會當 kā @code{square} 當做建構區塊來定義其他程序。比�
 We can easily define a procedure @code{sum-of-squares} that, given any two
 numbers as arguments, produces the sum of their squares:
 
-lán 會當輕鬆定義一个程序 @code{sum-of-squares}，予兩个數做引數 ê 時陣，會產生 in ê 平方 ê 和：
+Lán 會當輕鬆定義一个程序 @code{sum-of-squares}，予兩个數做引數 ê 時陣，會產生 in ê 平方 ê 和：
 
 @lisp
 (define (sum-of-squares x y)
@@ -1879,7 +1879,7 @@ interpreter, like @code{+} and @code{*}, or defined as a compound procedure.
 複合程序 kah 原始程序 ê 用法完全仝款。
 實際上，看頂懸寫 ê @code{sum-of-squares} ê 定義，講袂出 @code{square} 是像 @code{+} kah @code{*} 按呢寫tī直譯器內底，抑是一个複合程序定義。
 
-@subsection The Substitution Model for Procedure Application
+@subsection The Substitution Model for Procedure Application Hōo 程序應用ê取代模型
 @node	1.1.5, 1.1.6, 1.1.4, 1.1
 
 To evaluate a combination whose operator names a compound procedure, the
@@ -1889,17 +1889,29 @@ the interpreter evaluates the elements of the combination and applies the
 procedure (which is the value of the operator of the combination) to the
 arguments (which are the values of the operands of the combination).
 
+Beh kā運算子ê名表示複合程序ê組合算值，編譯器差不多跟tòe lán佇@ref{1.1.3}說明ê，kā運算子ê名是基礎運算符號ê組合算值ê過程kâng款。就是編譯器算值組合ê要素，應用程序（組合ê運算元）kàu引數（組合ê運算數）。
+
 We can assume that the mechanism for applying primitive procedures to arguments
 is built into the interpreter.  For compound procedures, the application
 process is as follows:
+
+Lán會當想像tsit款應用基礎程序kàu引數ê機制佇直譯器內底有收khǹg。針對複合程序，應用ê過程ná下kha：
+
 
 @quotation
 To apply a compound procedure to arguments, evaluate the body of the procedure
 with each formal parameter replaced by the corresponding argument.
 @end quotation
 
+@quotation
+Beh引用複合ê程序kàu因素，先kā程序ê任何正式ê參數用對應ê引數取代了後，kā程序ê本體(body)算值。
+@end quotation
+
 @noindent
 To illustrate this process, let's evaluate the combination
+
+@noindent
+為著描述tsit ê過程，lán做伙算值tsit ê組合
 
 @lisp
 (f 5)
@@ -1909,12 +1921,18 @@ To illustrate this process, let's evaluate the combination
 where @code{f} is the procedure defined in @ref{1.1.4}.  We begin by
 retrieving the body of @code{f}:
 
+@noindent
+其中@code{f}是佇@ref{1.1.4}定義ê程序。Lán開始用取得@code{f}ê本體：
+
 @lisp
 (sum-of-squares (+ a 1) (* a 2))
 @end lisp
 
 @noindent
 Then we replace the formal parameter @code{a} by the argument 5:
+
+@noindent
+Sòa落來lán kā正式參數@code{a} 用引數5替代：
 
 @lisp
 (sum-of-squares (+ 5 1) (* 5 2))
@@ -1930,12 +1948,21 @@ applied, and we must evaluate the operands to get the arguments.  Now @code{(+
 the formal parameters @code{x} and @code{y} in the body of
 @code{sum-of-squares}, reducing the expression to
 
+
+@noindent
+就án-ne，問題縮小kàu kā有2 ê運算數kap一ê運算子 @code{sum-of-squares} ê組合算值。算值tsit ê組合干涉三ê kiáⁿ問題。Lán愛算值來the̍h著引數。Taⁿ @code{(+
+5 1)} 產出 6 ， @code{(* 5 2)} 產出 10，lán一定愛應用 @code{sum-of-squares} 程序kàu 6 kap 10。Chiah ê 值the̍h來取代@code{sum-of-squares} ê主體內底ê正式參數 @code{x} kap @code{y}，表達式縮小kàu
+
+
 @lisp
 (+ (square 6) (square 10))
 @end lisp
 
 @noindent
 If we use the definition of @code{square}, this reduces to
+
+@noindent
+Nā是lán用 @code{square} ê定義，che ē縮小kàu
 
 @lisp
 (+ (* 6 6) (* 10 10))
@@ -1944,12 +1971,18 @@ If we use the definition of @code{square}, this reduces to
 @noindent
 which reduces by multiplication to
 
+@noindent
+用乘法ē當koh縮小kàu
+
 @lisp
 (+ 36 100)
 @end lisp
 
 @noindent
 and finally to
+
+@noindent
+落尾得著
 
 @lisp
 136
@@ -1960,6 +1993,9 @@ The process we have just described is called the @newterm{substitution model}
 for procedure application.  It can be taken as a model that determines the
 ``meaning'' of procedure application, insofar as the procedures in this chapter
 are concerned.  However, there are two points that should be stressed:
+
+@noindent
+Lán所描述ê chit ê過程號做@newterm{取代模型}(substitution model)，予程式應用使用。伊會當準做模型，決定程序應用ê「意義」，kàu目前lán所關心ê本章ê程序。毋過，chia有兩點愛注意ê：
 
 @itemize @bullet
 
@@ -1994,6 +2030,18 @@ may be applied.  Indeed, there is a long history of erroneous definitions of
 See @ref{Stoy 1977} for a careful discussion of substitution.}
 
 @end itemize
+
+@itemize @bullet
+
+@item
+取代ê目的是幫chān lán想有關程序應用，毋是提供直譯器實際運作ê方法ê描述。一般ê直譯器無用操作程序ê文字來kā形式參數用值替代ê方法，kā程序應用算值。實際上，「取代」是用表示正式ê參數ê本地環境達成。Lán會佇@ref{第3章}kap@ref{第4章}全面討論，當lán詳細考察直譯器ê實做ê時。
+
+
+@item
+通過本冊ê課程，lán會展示增加koh詳細ê，講直譯器運作方法ê模型，上尾kàu完全實做出來ê直譯器kap編譯器，佇 @ref{第5章}。替代模型kan-ta是chiah ê模型ê頭一ê——開始正式想算值過程ê一ê方法。一般來講，nā beh kā科學kap工程ê現象起做模型，lán ê先用簡略ê，無完全ê模型開始。隨著lán考察代誌koh khah幼路，chiah ê簡單模型變無夠用，tio̍h用khah精巧ê模型取代。取代模型mā kâng款。特別是，若是lán佇@ref{第3章}提起程序kap「可變資料」ê使用，lán 會看見取代模型會崩去，需要koh khah複雜ê程序應用ê模型。@footnote{雖然取代ê想法khah簡單，提供取代過程ê嚴密ê數學定義反轉複雜kah予lâng驚。有可能因為程序ê正式參數ê名kap（可能chhiăng-póng ê）程序所應用ê表達式ê名分bōe清，chiah會出問題。論真，佇邏輯kap程式語義ê文獻內底，出現tuì取代ê毋著ê定義，歷史真長。有關取代ê詳細討論，請看@ref{Stoy 1977}。}
+
+@end itemize
+
 
 @subsubheading Applicative order versus normal order
 
