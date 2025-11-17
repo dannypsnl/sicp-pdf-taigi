@@ -2109,7 +2109,7 @@ The general form of a conditional expression is
 @noindent
 consisting of the symbol @code{cond} followed by parenthesized pairs of
 expressions
-由符號 @code{cond} kah幾若ê用一對括弧框起來ê表達式組成
+由符號 @code{cond} kah幾若ê用一對括弧箍起來ê表達式組成
 
 @lisp
 (@math{\langle}@var{p}@math{\rangle} @math{\langle}@var{e}@math{\rangle})
@@ -2125,7 +2125,7 @@ value, it interprets @code{\#f} as false.  Any other value is treated as true.
 (Thus, providing @code{\#t} is logically unnecessary, but it is convenient.)  In
 this book we will use names @code{true} and @code{false}, which are associated
 with the values @code{\#t} and @code{\#f} respectively.}
-號做 @newterm{子句} (clause)s。逐个子句內底第一ê表達式號做 @newterm{謂詞} (predicate)---也就是講，表達式ê值ê解釋若毋是真就是假。@footnote{``若毋是真就是假'' ê意思是：Scheme 有兩个無仝款ê值，予常數 @code{\#t} kah @code{\#f} 代表。當直譯器檢查 predicate ê值ê時陣，@code{\#f} 解釋做假，其他lóng解釋做真。（所以，提供@code{\#t}佇邏輯上是無必要ê，但是比較方便。）佇這本冊內底，lán會用名 @code{true} kah @code{false}，分別表示值 @code{\#t} kah @code{\#f}。}
+號做 @newterm{子句} (clause)。逐个子句內底第一ê表達式號做 @newterm{謂詞} (predicate)---也就是講，表達式ê值ê解釋若毋是真就是假。@footnote{``若毋是真就是假'' ê意思是：Scheme 有兩个無仝款ê值，予常數 @code{\#t} kah @code{\#f} 代表。當直譯器檢查 predicate ê值ê時陣，@code{\#f} 解釋做假，其他lóng解釋做真。（所以，提供@code{\#t}佇邏輯上是無必要ê，但是較方便。）佇這本冊內底，lán會用名 @code{true} kah @code{false}，分別表示值 @code{\#t} kah @code{\#f}。}
 
 Conditional expressions are evaluated as follows.  The predicate @math{\langle{p_1}\rangle} is
 evaluated first.  If its value is false, then @math{\langle{p_2}\rangle} is evaluated.  If
@@ -2135,7 +2135,7 @@ interpreter returns the value of the corresponding @newterm{consequent
 expression} @math{\langle{e}\rangle} of the clause as the value of the conditional expression.
 If none of the @math{\langle{p}\rangle}'s is found to be true, the value of the @code{cond} is
 undefined.
-條件表達式ê算值方式如下。先算謂詞 @math{\langle{p_1}\rangle}。若伊ê值是假，就算 @math{\langle{p_2}\rangle}。若 @math{\langle{p_2}\rangle} ê值mā是假，就算 @math{\langle{p_3}\rangle}。這个過程會試到謂詞ê值是真為止，這个時陣，直譯器會kā對應ê子句內底ê @newterm{後項表達式} (consequent expression) @math{\langle{e}\rangle} ê值當做條件表達式ê值the̍h來。若逐个 @math{\langle{p}\rangle} lóng是假，@code{cond} ê值就無定義。
+條件表達式ê算值方式如下。先算謂詞 @math{\langle{p_1}\rangle}。若伊ê值是假，就算 @math{\langle{p_2}\rangle}。若 @math{\langle{p_2}\rangle} ê值mā是假，就算 @math{\langle{p_3}\rangle}。這个過程會試到謂詞ê值是真為止，這个時陣，直譯器會kā對應ê子句內底ê @newterm{結果表達式} (consequent expression) @math{\langle{e}\rangle} ê值當做條件表達式ê值the̍h來。若逐个 @math{\langle{p}\rangle} lóng是假，@code{cond} ê值就無定義。
 
 The word @newterm{predicate} is used for procedures that return true or false,
 as well as for expressions that evaluate to true or false.  The absolute-value
@@ -2248,7 +2248,7 @@ evaluates to false, and false otherwise.
 Notice that @code{and} and @code{or} are special forms, not procedures, because
 the subexpressions are not necessarily all evaluated.  @code{not} is an
 ordinary procedure.
-注意 @code{and} kah @code{or} 是專門形式，毋是程序，因為子表達式無一定愛全部算出來。
+注意 @code{and} kah @code{or} 是專門形式，毋是程序，因為囝表達式無一定愛全部算出來。
 @code{not} 是一般 ê 程序。
 
 As an example of how these are used, the condition that a number @math{x} be in
@@ -2360,7 +2360,7 @@ Use this observation to describe the behavior of the following procedure:
 to determine whether the interpreter he is faced with is using
 applicative-order evaluation or normal-order evaluation.  He defines the
 following two procedures:
-阿班發明一个測試來判斷伊用ê直譯器是用應用序（applicative-order）算值抑是正規序（normal-order）算值。伊定義下底兩个程序：
+阿班(Ben Bitdiddle)發明一个測試來判斷伊用ê直譯器是用應用序（applicative-order）算值抑是正規序（normal-order）算值。伊定義下底兩个程序：
 
 @lisp
 (define (p) (p))
