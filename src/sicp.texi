@@ -2184,7 +2184,7 @@ value, it interprets @code{\#f} as false.  Any other value is treated as true.
 (Thus, providing @code{\#t} is logically unnecessary, but it is convenient.)  In
 this book we will use names @code{true} and @code{false}, which are associated
 with the values @code{\#t} and @code{\#f} respectively.}
-號做 @newterm{子句} (clause)。逐个子句內底第一ê表達式號做 @newterm{謂詞} (predicate)---也就是講，表達式ê值ê解釋若毋是真就是假。@footnote{``若毋是真就是假'' ê意思是：Scheme 有兩个無仝款ê值，予常數 @code{\#t} kah @code{\#f} 代表。當直譯器檢查 predicate ê值ê時陣，@code{\#f} 解釋做假，其他lóng解釋做真。（所以，提供@code{\#t}佇邏輯上是無必要ê，但是較方便。）佇這本冊內底，lán會用名 @code{true} kah @code{false}，分別表示值 @code{\#t} kah @code{\#f}。}
+號做 @newterm{子句} (clause)。逐个子句內底第一ê表達式號做 @newterm{謂詞} (predicate)---也就是講，表達式ê值ê解釋若毋是真就是假。@footnote{``若毋是真就是假'' ê意思是：Scheme 有兩个無仝款ê值，予常數 @code{\#t} kah @code{\#f} 代表。當直譯器檢查謂詞 ê值ê時陣，@code{\#f} 解釋做假，其他lóng解釋做真。（所以，提供@code{\#t}佇邏輯上是無必要ê，但是較方便。）佇這本冊內底，lán會用名 @code{true} kah @code{false}，分別表示值 @code{\#t} kah @code{\#f}。}
 
 Conditional expressions are evaluated as follows.  The predicate @math{\langle{p_1}\rangle} is
 evaluated first.  If its value is false, then @math{\langle{p_2}\rangle} is evaluated.  If
@@ -2446,7 +2446,7 @@ expression.)
 @end quotation
 
 @endpage
-@subsection Example: Square Roots by Newton's Method
+@subsection Example: Square Roots by Newton's Method 例：用Newton法算平方根
 @node	1.1.7, 1.1.8, 1.1.6, 1.1
 
 Procedures, as introduced above, are much like ordinary mathematical functions.
@@ -2454,8 +2454,13 @@ They specify a value that is determined by one or more parameters.  But there
 is an important difference between mathematical functions and computer
 procedures.  Procedures must be effective.
 
+程序親像頂懸紹介ê，足sêng一般ê數學函數。In指定一个值，由一个以上ê參數決定。毋過數學ê函數kap電腦ê程序有重要ê無kâng。程序愛有效率。
+
 As a case in point, consider the problem of computing square roots.  We can
 define the square-root function as
+
+舉一个例，考慮算平方根ê問題。Lán通定義平方根函數做
+
 @ifinfo
 
 @example
@@ -2474,6 +2479,9 @@ not describe a procedure.  Indeed, it tells us almost nothing about how to
 actually find the square root of a given number.  It will not help matters to
 rephrase this definition in pseudo-Lisp:
 
+Che定義完美koh有效ê數學函數。Lán 會當用che辨別一个數敢是別个數ê平方根，á是推論關係平方根ê一般事實。另外方面，定義bōe當描述程序。確實，
+伊強強無講任何chhōe一个數ê平方根ê方法。共定義用假Lisp碼寫mā無幫chān：
+
 @lisp
 (define (sqrt x)
   (the y (and (>= y 0)
@@ -2482,6 +2490,9 @@ rephrase this definition in pseudo-Lisp:
 
 @noindent
 This only begs the question.
+
+@noindent
+Che kan-ta求乞問題。
 
 The contrast between function and procedure is a reflection of the general
 distinction between describing properties of things and describing how to do
