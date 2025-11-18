@@ -2120,6 +2120,8 @@ different operations depending on the result of a test.  For instance, we
 cannot define a procedure that computes the absolute value of a number by
 testing whether the number is positive, negative, or zero and taking different
 actions in the different cases according to the rule
+Kàu這馬為止，lán會當定義 ê 程序種類，表達力真有限，因為lán無法度做測試，也無法度照試驗結果來執行無仝ê運算。
+比論講，lán無法度定義一个程序，憑數是正數、負數抑是零，做無仝ê反應，算出絕對值。
 @ifinfo
 
 @example
@@ -2142,6 +2144,8 @@ $$
 This construct is called a @newterm{case analysis}, and there is a special form
 in Lisp for notating such a case analysis.  It is called @code{cond} (which
 stands for ``conditional''), and it is used as follows:
+這个構造號做 @newterm{案例分析}，Lisp 有一个專門形式來表示這個功能。
+伊號做 @code{cond}（是 ``conditional'' 條件ê意思），用法如下：
 
 @lisp
 (define (abs x)
@@ -2152,6 +2156,7 @@ stands for ``conditional''), and it is used as follows:
 
 @noindent
 The general form of a conditional expression is
+條件表達式 ê 一般形式如下：
 
 @lisp
 (cond (@math{\langle}@var{p}@math{_{\mono{1}}\rangle} @math{\langle}@var{e}@math{_{\mono{1}}\rangle})
@@ -2163,6 +2168,7 @@ The general form of a conditional expression is
 @noindent
 consisting of the symbol @code{cond} followed by parenthesized pairs of
 expressions
+由符號 @code{cond} kah幾若ê用一對括弧箍起來ê表達式組成
 
 @lisp
 (@math{\langle}@var{p}@math{\rangle} @math{\langle}@var{e}@math{\rangle})
@@ -2178,6 +2184,7 @@ value, it interprets @code{\#f} as false.  Any other value is treated as true.
 (Thus, providing @code{\#t} is logically unnecessary, but it is convenient.)  In
 this book we will use names @code{true} and @code{false}, which are associated
 with the values @code{\#t} and @code{\#f} respectively.}
+號做 @newterm{子句} (clause)。逐个子句內底第一ê表達式號做 @newterm{謂詞} (predicate)---也就是講，表達式ê值ê解釋若毋是真就是假。@footnote{``若毋是真就是假'' ê意思是：Scheme 有兩个無仝款ê值，予常數 @code{\#t} kah @code{\#f} 代表。當直譯器檢查 predicate ê值ê時陣，@code{\#f} 解釋做假，其他lóng解釋做真。（所以，提供@code{\#t}佇邏輯上是無必要ê，但是較方便。）佇這本冊內底，lán會用名 @code{true} kah @code{false}，分別表示值 @code{\#t} kah @code{\#f}。}
 
 Conditional expressions are evaluated as follows.  The predicate @math{\langle{p_1}\rangle} is
 evaluated first.  If its value is false, then @math{\langle{p_2}\rangle} is evaluated.  If
@@ -2187,6 +2194,7 @@ interpreter returns the value of the corresponding @newterm{consequent
 expression} @math{\langle{e}\rangle} of the clause as the value of the conditional expression.
 If none of the @math{\langle{p}\rangle}'s is found to be true, the value of the @code{cond} is
 undefined.
+條件表達式ê算值方式如下。先算謂詞 @math{\langle{p_1}\rangle}。若伊ê值是假，就算 @math{\langle{p_2}\rangle}。若 @math{\langle{p_2}\rangle} ê值mā是假，就算 @math{\langle{p_3}\rangle}。這个過程會試到謂詞ê值是真為止，這个時陣，直譯器會kā對應ê子句內底ê @newterm{結果表達式} (consequent expression) @math{\langle{e}\rangle} ê值當做條件表達式ê值the̍h來。若逐个 @math{\langle{p}\rangle} lóng是假，@code{cond} ê值就無定義。
 
 The word @newterm{predicate} is used for procedures that return true or false,
 as well as for expressions that evaluate to true or false.  The absolute-value
@@ -2196,8 +2204,10 @@ which, when used with a single operand, as in @code{(- x)}, indicates
 negation.} These take two numbers as arguments and test whether the first
 number is, respectively, greater than, less than, or equal to the second
 number, returning true or false accordingly.
+@newterm{謂詞} (predicate) chit个詞，用來指結果是真抑是假ê程序，mā用來指算值是真抑是假ê表達式。絕對值程序 @code{abs} 有使用原始謂詞 @code{>}、@code{<} kah @code{=}。@footnote{@code{abs} mā有使用「減」運算子 @code{-}，當伊只用一个運算數ê時陣，像 @code{(- x)}，表示「0 - x」。} 伊接受兩个數字做引數，測試頭一个數字是毋是分別大過、小過抑是等於第二个數字，照值the̍h來。
 
 Another way to write the absolute-value procedure is
+絕對值程序ê另外一種寫法是
 
 @lisp
 (define (abs x)
@@ -2213,8 +2223,10 @@ causes the @code{cond} to return as its value the value of the corresponding
 @math{\langle{e}\rangle} whenever all previous clauses have been bypassed.  In fact, any
 expression that always evaluates to a true value could be used as the @math{\langle{p}\rangle}
 here.
+口頭會使講做「若 @math{x} 小過零就kā @math{-x} the̍h來；無就kā @math{x} the̍h來。」@code{else} 是專門符號，用佇 @code{cond} ê上尾子句內底來代替 @math{\langle{p}\rangle}。這會予 @code{cond} 佇頭前逐个子句lóng無滿足ê時陣，kā後項ê @math{\langle{e}\rangle} ê值the̍h來。實際上，任何值是真ê表達式lóng會使用做遮ê @math{\langle{p}\rangle}。
 
 Here is yet another way to write the absolute-value procedure:
+這是絕對值程序ê又閣一種寫法是
 
 @lisp
 (define (abs x)
@@ -2227,6 +2239,7 @@ Here is yet another way to write the absolute-value procedure:
 This uses the special form @code{if}, a restricted type of conditional that can
 be used when there are precisely two cases in the case analysis.  The general
 form of an @code{if} expression is
+這个有使用專門形式 @code{if}，是有限制ê案例分析，只有兩个案例ê時陣會使使用。@code{if} 表達式ê一般形式是
 
 @lisp
 (if @math{\langle\kern0.07em}@var{predicate}@math{\kern0.06em\rangle} @math{\langle\kern0.07em}@var{consequent}@math{\kern0.05em\rangle} @math{\langle\kern0.06em}@var{alternative}@math{\kern0.06em\rangle})
@@ -2244,10 +2257,16 @@ expressions @math{\langle{e}\rangle} are evaluated in sequence and the value of 
 expression in the sequence is returned as the value of the @code{cond}.  In an
 @code{if} expression, however, the @math{\langle}@var{consequent}@math{\kern0.04em\rangle} and @math{\langle}@var{alternative}@math{\kern0.04em\rangle}
 must be single expressions.}
+算 @code{if} 表達式，直譯器先算表達式內底ê @math{\langle}@var{predicate}@math{\kern0.04em\rangle} 部分。
+若 @math{\langle}@var{predicate}@math{\kern0.04em\rangle} ê值是真，直譯器就算 @math{\langle}@var{consequent}@math{\kern0.04em\rangle} kah kā伊ê值the̍h來。
+無，就算 @math{\langle}@var{alternative}@math{\kern0.04em\rangle} kah kā伊ê值the̍h來。
+@footnote{@code{if} kah @code{cond} ê小差別是，逐个 @code{cond} 子句內底ê @math{\langle{e}\rangle} 部分會使是表達式ê序列。若對應ê @math{\langle{p}\rangle} 是真，表達式 @math{\langle{e}\rangle} 會照排列算值，kā上尾hit个表達式ê值當做 @code{cond} ê值the̍h來。但是佇 @code{if} 表達式內底，@math{\langle}@var{consequent}@math{\kern0.04em\rangle} kah @math{\langle}@var{alternative}@math{\kern0.04em\rangle} 一定愛是一个表達式。}
 
 In addition to primitive predicates such as @code{<}, @code{=}, and @code{>},
 there are logical composition operations, which enable us to construct compound
 predicates.  The three most frequently used are these:
+@code{<}、@code{=}、kah @code{>} 這款原始謂詞掠外，嘛有邏輯組合運算，予 lán 會當建構複合謂詞。
+上定用 ê 三个是:
 
 @itemize @bullet
 
@@ -2259,6 +2278,9 @@ left-to-right order.  If any @math{\langle{e}\kern0.08em\rangle} evaluates to fa
 @code{and} expression is false, and the rest of the @math{\langle{e}\kern0.08em\rangle}'s are not
 evaluated.  If all @math{\langle{e}\kern0.08em\rangle}'s evaluate to true values, the value of the
 @code{and} expression is the value of the last one.
+直譯器會一个一个算遮ê表達式 @math{\langle{e}\kern0.08em\rangle} ê值，照倒爿到正爿ê排列。
+若有任何一个 @math{\langle{e}\kern0.08em\rangle} 算值是假，@code{and} 表達式 ê 值就是假，而且賰ê @math{\langle{e}\kern0.08em\rangle} 就袂koh算啊。
+若所有 ê @math{\langle{e}\kern0.08em\rangle} lóng 算值是真，@code{and} 表達式 ê 值就是上尾彼个表達式 ê 值。
 
 @item
 @math{\hbox{\tt(or }\langle{e_1}\rangle\;\;\dots\;\;\langle{e_n}\rangle\hbox{\tt)}}
@@ -2268,12 +2290,16 @@ left-to-right order.  If any @math{\langle{e}\kern0.08em\rangle} evaluates to a 
 returned as the value of the @code{or} expression, and the rest of the
 @math{\langle{e}\kern0.08em\rangle}'s are not evaluated.  If all @math{\langle{e}\kern0.08em\rangle}'s evaluate to false, the value
 of the @code{or} expression is false.
+直譯器會一个一个算遮ê表達式 @math{\langle{e}\kern0.08em\rangle} ê值，照倒爿到正爿ê排列。
+若有任何一个 @math{\langle{e}\kern0.08em\rangle} 算值是真，就kah伊ê值the̍h來，賰ê @math{\langle{e}\kern0.08em\rangle} 就袂koh算啊。
+若所有 ê @math{\langle{e}\kern0.08em\rangle} lóng 算值是假，@code{or} 表達式 ê 值就是假。
 
 @item
 @math{\hbox{\tt(not }\langle{e}\rangle\hbox{\tt)}}
 
 The value of a @code{not} expression is true when the expression @math{\langle{e}\kern0.08em\rangle}
 evaluates to false, and false otherwise.
+@code{not} 表達式ê值，當表達式 @math{\langle{e}\kern0.08em\rangle} 算值是假 ê 時是真，若無就是假。
 
 @end itemize
 
@@ -2281,9 +2307,12 @@ evaluates to false, and false otherwise.
 Notice that @code{and} and @code{or} are special forms, not procedures, because
 the subexpressions are not necessarily all evaluated.  @code{not} is an
 ordinary procedure.
+注意 @code{and} kah @code{or} 是專門形式，毋是程序，因為囝表達式無一定愛全部算出來。
+@code{not} 是一般 ê 程序。
 
 As an example of how these are used, the condition that a number @math{x} be in
 the range @math{5 < x < 10} may be expressed as
+舉例來講，數字 @math{x} tī 範圍 @math{5 < x < 10} 內ê條件會當表達做
 
 @lisp
 (and (> x 5) (< x 10))
@@ -2292,6 +2321,7 @@ the range @math{5 < x < 10} may be expressed as
 @noindent
 As another example, we can define a predicate to test whether one number is
 greater than or equal to another as
+又閣有，lán 會當定義一个謂詞來試一个數字是毋是大於抑是等於別个數字
 
 @lisp
 (define (>= x y) (or (> x y) (= x y)))
@@ -2299,6 +2329,7 @@ greater than or equal to another as
 
 @noindent
 or alternatively as
+抑是
 
 @lisp
 (define (>= x y) (not (< x y)))
@@ -2309,6 +2340,9 @@ or alternatively as
 What is the result printed by the interpreter in response to each expression?
 Assume that the sequence is to be evaluated in the order in which it is
 presented.
+下底是一寡表達式。
+逐个表達式ê直譯器印出結果是啥物？
+準做這个序列照呈現ê排列來算值。
 
 @lisp
 10
@@ -2346,6 +2380,7 @@ presented.
 @quotation
 @strong{@anchor{Exercise 1.2}Exercise 1.2:} Translate the following expression
 into prefix form:
+Kā 下底 ê 表達式寫做前置形式：
 @ifinfo
 
 @example
@@ -2364,12 +2399,14 @@ $${5 + 4 + (2 - (3 - (6 + {4\over5})))\over3(6 - 2)(2 - 7)}.$$
 @strong{@anchor{Exercise 1.3}Exercise 1.3:} Define a procedure that takes three
 numbers as arguments and returns the sum of the squares of the two larger
 numbers.
+定義一个程序，接受三个數字做引數，kah較大ê兩个數ê平方和傳轉來。
 @end quotation
 
 @quotation
 @strong{@anchor{Exercise 1.4}Exercise 1.4:} Observe that our model of
 evaluation allows for combinations whose operators are compound expressions.
 Use this observation to describe the behavior of the following procedure:
+注意lán ê算值模型允許運算子是複合表達式ê組合。用這个觀察來描述下底ê程序ê行為：
 
 @lisp
 (define (a-plus-abs-b a b)
@@ -2382,6 +2419,7 @@ Use this observation to describe the behavior of the following procedure:
 to determine whether the interpreter he is faced with is using
 applicative-order evaluation or normal-order evaluation.  He defines the
 following two procedures:
+阿班(Ben Bitdiddle)發明一个測試來判斷伊用ê直譯器是用應用序（applicative-order）算值抑是正規序（normal-order）算值。伊定義下底兩个程序：
 
 @lisp
 (define (p) (p))
@@ -2402,6 +2440,9 @@ rule for the special form @code{if} is the same whether the interpreter is
 using normal or applicative order: The predicate expression is evaluated first,
 and the result determines whether to evaluate the consequent or the alternative
 expression.)
+阿班用一个應用序算值ê直譯器會看著啥物行為？
+若是用一个正規序算值ê直譯器會看著啥物行為？
+解說汝ê答案。（準做專門形式 @code{if} ê規則，無論直譯器是用正規序抑是應用序lóng仝款：謂詞表達式先算，閣有伊ê結果決定是ài算後件抑是算替代表達式。）
 @end quotation
 
 @endpage
