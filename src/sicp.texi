@@ -2145,7 +2145,7 @@ which, when used with a single operand, as in @code{(- x)}, indicates
 negation.} These take two numbers as arguments and test whether the first
 number is, respectively, greater than, less than, or equal to the second
 number, returning true or false accordingly.
-@newterm{謂詞} (predicate) chit个詞，用來指結果是真抑是假ê程序，mā用來指算值是真抑是假ê表達式。絕對值程序 @code{abs} 有使用原始謂詞 @code{>}、@code{<} kah @code{=}。@footnote{@code{abs} mā有使用「減」運算子 @code{-}，當伊只用一个運算數ê時陣，像 @code{(- x)}，表示取負。} 伊接受兩个數字做引數，測試頭一个數字是毋是分別大過、小過抑是等於第二个數字，照值the̍h來。
+@newterm{謂詞} (predicate) chit个詞，用來指結果是真抑是假ê程序，mā用來指算值是真抑是假ê表達式。絕對值程序 @code{abs} 有使用原始謂詞 @code{>}、@code{<} kah @code{=}。@footnote{@code{abs} mā有使用「減」運算子 @code{-}，當伊只用一个運算數ê時陣，像 @code{(- x)}，表示「0 - x」。} 伊接受兩个數字做引數，測試頭一个數字是毋是分別大過、小過抑是等於第二个數字，照值the̍h來。
 
 Another way to write the absolute-value procedure is
 絕對值程序ê另外一種寫法是
