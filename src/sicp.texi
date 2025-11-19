@@ -2523,9 +2523,10 @@ kap命令式智識之間ê區別。佇數學lán定定關注有宣告式（是�
 令式（按nóa做）ê描述。@footnote{宣告式kap命令式描述ê關係密密密，親像數學kap電腦科學ê，確實仝款。
 比如講，講程式產出ê答案「正確」，就是寫一个關係程式ê宣告式ê陳述。有有夠chē研究協助佇成立證明程式正
 確ê技術，chit ê主題ê技術困難，chē-chē是佇應對命令式陳述（程式tùi che建構）kap宣告式陳述（會當演
-繹物件）中間ê變換。Chit ê想法是予直譯器有夠額ê經驗，佇the̍h著程式設計師指定ê「是啥物」ê智識了後，會
-當自動產出「按nóa做」ê智識。一般bōe當完成，但是有重要ê有進步ê所在。Lán會佇@ref{第4章}koh探討chit
-ê想法。}
+繹物件）中間ê變換。Mā siâng款，一个現chú時佇程式語言設計內底重要ê所在是，所謂ê蓋懸階ê語言ê研
+究。用chit款語言，lâng實際用描述式ê陳述寫程式。Chit ê想法是予直譯器有夠額ê經驗，佇the̍h著程式設
+計師指定ê「是啥物」ê智識了後，會當自動產出「按nóa做」ê智識。一般bōe當完成，但是有重要ê有進步ê所
+在。Lán會佇@ref{第4章}koh探討chit ê想法。}
 
 How does one compute square roots?  The most common way is to use Newton's
 method of successive approximations, which says that whenever we have a guess
