@@ -2617,8 +2617,8 @@ the question mark is just an ordinary character.}
 
 
 @noindent
-Lán mā定著愛講「有夠好」指ê是siáⁿ。下kha會做說明，但是毋是真正好ê試驗（請看@ref{Exercise 1.7}。）
-Chit ê想法是改善答案，直到伊有夠接近，致kàu伊ê平方kap受平方數差，無夠進前指定ê誤差（chia是0.001）：
+Lán mā定著愛講「有夠好」指ê是siáⁿ。下kha會做說明，但是毋是真正ê好試驗（請看@ref{Exercise 1.7}。）
+Chit ê想法是改善答案，直到伊有夠接近，致kàu伊ê平方kap受平方數ê差，無夠進前指定ê誤差（chia是0.001）：
 @footnote{Lán會定定kā謂詞ê名用問號?收soah，來幫chān lán記得in是謂詞。
 Tùi直譯器來講，問號是一般ê字元nā定。}
 
