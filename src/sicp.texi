@@ -2454,7 +2454,8 @@ They specify a value that is determined by one or more parameters.  But there
 is an important difference between mathematical functions and computer
 procedures.  Procedures must be effective.
 
-程序親像頂懸紹介ê，足sêng一般ê數學函數。In指定一个值，由一个以上ê參數決定。毋過數學ê函數kap電腦ê程序有重要ê無kâng。程序愛有效率。
+程序親像頂懸紹介ê，足sêng一般ê數學函數。In指定一个值，由一个以上ê參數決定。毋過數學ê函數kap
+電腦ê程序有重要ê無kâng。程序愛有效率。
 
 As a case in point, consider the problem of computing square roots.  We can
 define the square-root function as
@@ -2479,8 +2480,9 @@ not describe a procedure.  Indeed, it tells us almost nothing about how to
 actually find the square root of a given number.  It will not help matters to
 rephrase this definition in pseudo-Lisp:
 
-Che定義完美koh有效ê數學函數。Lán 會當用che辨別一个數敢是別个數ê平方根，á是推論關係平方根ê一般事實。另外方面，定義bōe當描述程序。確實，
-伊強強無講任何chhōe一个數ê平方根ê方法。共定義用假Lisp碼寫mā無幫chān：
+Che定義完美koh有效ê數學函數。Lán 會當用che辨別一个數敢是別个數ê平方根，á是推論關係平方根ê
+一般事實。另外方面，定義bōe當描述程序。確實，伊強強無講任何chhōe一个數ê平方根ê方法。共定義
+用假Lisp碼寫mā無幫chān：
 
 @lisp
 (define (sqrt x)
@@ -2516,6 +2518,15 @@ knowledge automatically.  This cannot be done in general, but there are
 important areas where progress has been made.  We shall revisit this idea in
 @ref{Chapter 4}.}
 
+函數kap程序ê對比是一般佇描述代誌ê性質kap按怎做ê方法之間ê區別ê反映。或者親像有時á所指ê，宣告式智識
+kap命令式智識之間ê區別。佇數學lán定定關注有宣告式（是啥物）描述ê智識，毋過佇電腦科學lán定定關心命
+令式（按nóa做）ê描述。@footnote{宣告式kap命令式描述ê關係密密密，親像數學kap電腦科學ê，確實仝款。
+比如講，講程式產出ê答案「正確」，就是寫一个關係程式ê宣告式ê陳述。有有夠chē研究協助佇成立證明程式正
+確ê技術，chit ê主題ê技術困難，chē-chē是佇應對命令式陳述（程式tùi che建構）kap宣告式陳述（會當演
+繹物件）中間ê變換。Chit ê想法是予直譯器有夠額ê經驗，佇the̍h著程式設計師指定ê「是啥物」ê智識了後，會
+當自動產出「按nóa做」ê智識。一般bōe當完成，但是有重要ê有進步ê所在。Lán會佇@ref{第4章}koh探討chit
+ê想法。}
+
 How does one compute square roots?  The most common way is to use Newton's
 method of successive approximations, which says that whenever we have a guess
 @math{y} for the value of the square root of a number @math{x}, we can perform a
@@ -2528,9 +2539,17 @@ express the general Newton's method as a Lisp procedure in @ref{1.3.4}.}
 For example, we can compute the square root of 2 as follows.
 Suppose our initial guess is 1:
 
+按nóa算平方根？上chia̍p用ê方法是，用相連sòa近似ê Newton法，講不管時lán ioh @math{x} ê平方根是
+@math{y}，lán通行基本操作，來the̍h著較好ê ioh ê值（較近倚實際ê平方根），就是算 @math{y} kap
+@math{x / y} ê平均。@footnote{Chit ê平方根演算法實際上是Newton法ê特例，he是用來chhōe方程式
+ê根ê一般技術。Chit ê平方根演算法是由亞歷山大城ê Heron佇西元一世紀所發展。Lán會佇@ref{1.3.4}
+看著按nóa kā 一般ê Newton法表達做Lisp程序。}
+比如，lán通計算2 ê平方根ná下kha。
+設使lán原起頭所ioh ê是1:
+
 @sp -0.8
 @smallexample
-Guess       Quotient                 Average
+所ioh       商數                     平均
 1           (2/1) = 2                ((2 + 1)/2) = 1.5
 1.5         (2/1.5) = 1.3333         ((1.3333 + 1.5)/2) = 1.4167
 1.4167      (2/1.4167) = 1.4118      ((1.4167 + 1.4118)/2) = 1.4142
@@ -2541,11 +2560,19 @@ Guess       Quotient                 Average
 Continuing this process, we obtain better and better approximations to the
 square root.
 
+@noindent
+繼續chit ê過程，lán得著愈來愈好ê平方根ê近似。
+
 Now let's formalize the process in terms of procedures.  We start with a value
 for the radicand (the number whose square root we are trying to compute) and a
 value for the guess.  If the guess is good enough for our purposes, we are
 done; if not, we must repeat the process with an improved guess.  We write this
 basic strategy as a procedure:
+
+Chit-má lán著用程序形式化chit ê過程。Lán開始用一个值當做受平方數（radicand，lán beh算chit ê數
+ê平方根），kap一个當做所ioh ê值。若是所ioh ê好kah合lán ê目的，就完成；a̍h無，lán愛用改進ê所ioh，
+來重複chit ê過程。Lán kā chit ê基礎策略寫做程序：
+
 
 @lisp
 (define (sqrt-iter guess x)
@@ -2558,6 +2585,10 @@ basic strategy as a procedure:
 A guess is improved by averaging it with the quotient of the radicand and the
 old guess:
 
+@noindent
+所ioh是由平均伊以及「受平方數kap早前ioh ê」ê商數所改善：
+
+
 @lisp
 (define (improve guess x)
   (average guess (/ x guess)))
@@ -2565,6 +2596,9 @@ old guess:
 
 @noindent
 where
+
+@noindent
+其中
 
 @lisp
 (define (average x y)
@@ -2580,6 +2614,13 @@ predetermined tolerance (here 0.001):@footnote{We will usually give predicates
 names ending with question marks, to help us remember that they are predicates.
 This is just a stylistic convention.  As far as the interpreter is concerned,
 the question mark is just an ordinary character.}
+
+
+@noindent
+Lán mā定著愛講「有夠好」指ê是siáⁿ。下kha會做說明，但是毋是真正好ê試驗（請看@ref{Exercise 1.7}。）
+Chit ê想法是改善答案，直到伊有夠接近，致kàu伊ê平方kap受平方數差，無夠進前指定ê誤差（chia是0.001）：
+@footnote{Lán會定定kā謂詞ê名用問號?收soah，來幫chān lán記得in是謂詞。
+Tùi直譯器來講，問號是一般ê字元nā定。}
 
 @lisp
 (define (good-enough? guess x)
