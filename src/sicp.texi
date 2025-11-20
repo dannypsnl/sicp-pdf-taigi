@@ -1241,7 +1241,7 @@ using arithmetic operations that preserve a limited number of decimal places of
 accuracy in noninteger operations.} In later chapters we will see that these
 same rules allow us to build procedures to manipulate compound data as well.
 
-佇本章lán kan-ta會處理簡單ê數值資料，án-ne 會當集中佇起做程序。@footnote{Kā數字特色化做「簡單資料」，是bōe見笑 ê háⁿ-hông。其實處理數字是任何程式語言上pháinn剃頭兼上花sà-sà ê方面。下kha是一寡典型ê例：一寡電腦系統kā@newterm{整數} (integer)，比如2，kap @newterm{實數}(real numbers)，比如2.71區別。實數2.00 kám kap整數2無siâng款？整數用ê算術操作kap實數用ê kám kâng款？6除以2是3，iah是3.0？Lán-lâng通表示ê上大數字是guā chē？整數ê範圍kap實數ê範圍kám siâng款？佇tsiah ê問題ê頂懸kap下kha，當然有有關@newterm{捨入誤差} (roundoff error) kap @newterm{切斷誤差} (truncation error) ê問題ê集合——屬佇kui ê數值分析ê技術。因為lán佇本冊ê焦點是佇大規模ê程式設計，毋是數值技術，lán會忽略tsiah ê問題。佇本章ê數值ê例會展示通常ê捨入行為，是照保留有限精準度ê十進位，毋是整數ê數位算術所操作ê。}落尾ê章lán會看見，tsiah ê規則mā允准lán起做程序，來操作複雜ê資料。
+佇本章lán kan-ta會處理簡單ê數值資料，án-ne 會當集中佇起做程序。@footnote{Kā數字特色化做「簡單資料」，是bōe見笑 ê háⁿ-hông。其實處理數字是任何程式語言上pháinn剃頭兼上花sà-sà ê方面。下kha是一寡典型ê例：一寡電腦系統kā@newterm{整數} (integer)，比如2，kap @newterm{實數}(real numbers)，比如2.71區別。實數2.00 kám kap整數2無siâng款？整數用ê算術操作kap實數用ê kám kâng款？6用2除是3，iah是3.0？Lán-lâng通表示ê上大數字是guā chē？整數ê範圍kap實數ê範圍kám siâng款？佇tsiah ê問題ê頂懸kap下kha，當然有有關@newterm{捨入誤差} (roundoff error) kap @newterm{切斷誤差} (truncation error) ê問題ê集合——屬佇kui ê數值分析ê技術。因為lán佇本冊ê焦點是佇大規模ê程式設計，毋是數值技術，lán會忽略tsiah ê問題。佇本章ê數值ê例會展示通常ê捨入行為，是照保留有限精準度ê十進位，毋是整數ê數位算術所操作ê。}落尾ê章lán會看見，tsiah ê規則mā允准lán起做程序，來操作複雜ê資料。
 
 @menu
 * 1-1-1::            Expressions 表達式
@@ -2643,6 +2643,15 @@ will be rational numbers rather than decimals.  Mixed operations on rational
 numbers and decimals always yield decimals, so starting with an initial guess
 of 1.0 forces all subsequent values to be decimals.}
 
+@noindent
+尾á，lán需要一个開始ê方法。比如，lán通一直ioh講任何數ê平方根是1：@footnote{請觀察lán表達lán
+原起頭所ioh ê是1.0毋是1，che佇chē-chē Lisp ê實做內底lóng無差。但是 @acronym{MIT} Scheme
+區別準確ê整數kap十進位小數ê值，兩ê整數相除產出有理數，毋是十進位小數。比如講，10用6除the̍h著
+5/3，毋過10.0用6.0除the̍h著 1.6666666666666667（Lán ê佇@ref{2.1.1}學按nóa實做有理數ê算術）
+Nā lán開始佇lán ê平方根程式，用1做起頭所ioh ê值，x是精確ê整數，所有佇平方根演算所出ê相sòa ê值會
+是有理數毋是小數。因為kā有理數kap十進位小數濫leh運算會一直得著十進位小數，所以開始kā 1.0掠做起頭所
+ioh ê值，會強制予相sòa ê值變做十進位小數。}
+
 @lisp
 (define (sqrt x)
   (sqrt-iter 1.0 x))
@@ -2651,6 +2660,9 @@ of 1.0 forces all subsequent values to be decimals.}
 @noindent
 If we type these definitions to the interpreter, we can use @code{sqrt} just as
 we can use any procedure:
+
+@noindent
+Nā是lán phah chiah-ê定義kàu直譯器，lán通用@code{sqrt} 親像lán用任何程序：
 
 @lisp
 (sqrt 9)
@@ -2678,12 +2690,23 @@ who are worried about the efficiency issues involved in using procedure calls
 to implement iteration should note the remarks on ``tail recursion'' in
 @ref{1.2.1}.}
 
+@noindent
+ @code{sqrt} 程式mā解說lán目前為止所紹介ê簡單ê程序式語言，tùi寫任何會當佇C iah是Pascal
+寫ê純ê數值程式是真夠額。Che可能通驚著儂，因為lán無佇lán ê語言包含任何直接指導電腦做代誌
+幾nā擺ê反覆(loop)建構。另外方面，@code{sqrt-iter}，展示反覆通按nóa kan-ta用叫函數ê一
+般能力，無用其他特殊ê構造，來完成。@footnote{煩惱用叫程序來實做反覆，會有效率問題ê讀者，應
+該佇@ref{1.2.1}注意「尾遞迴」ê重點。}
+
 @quotation
 @strong{@anchor{Exercise 1.6}Exercise 1.6:} Alyssa P. Hacker doesn't see why
 @code{if} needs to be provided as a special form.  ``Why can't I just define it
 as an ordinary procedure in terms of @code{cond}?'' she asks.  Alyssa's friend
 Eva Lu Ator claims this can indeed be done, and she defines a new version of
 @code{if}:
+
+@strong{@anchor{Exercise 1.6}Exercise 1.6:} Alyssa P. Hacker 看無siáⁿ事 @code{if}
+需要用專門形式提供。伊問：「是按nóa我bōe當kan-ta用@code{cond}，親像一般ê程序kā定義？」
+In朋友Eva Lu Ator主張che當然會當做，koh定義新版ê @code{if}：
 
 @lisp
 (define (new-if predicate then-clause else-clause)
@@ -2692,6 +2715,8 @@ Eva Lu Ator claims this can indeed be done, and she defines a new version of
 @end lisp
 
 Eva demonstrates the program for Alyssa:
+
+Eva kā Elyssa展示chit ê程序：
 
 @lisp
 (new-if (= 2 3) 0 5)
@@ -2702,6 +2727,8 @@ Eva demonstrates the program for Alyssa:
 
 Delighted, Alyssa uses @code{new-if} to rewrite the square-root program:
 
+Alyssa真歡喜，就用 @code{new-if} 重寫平方根ê程式： 
+
 @lisp
 (define (sqrt-iter guess x)
   (new-if (good-enough? guess x)
@@ -2711,6 +2738,8 @@ Delighted, Alyssa uses @code{new-if} to rewrite the square-root program:
 
 What happens when Alyssa attempts to use this to compute square roots?
 Explain.
+
+若是Alyssa用che算平方根，會出siáⁿ代誌？請解說。
 @end quotation
 
 @quotation
@@ -2727,9 +2756,25 @@ kind of end test.  Does this work better for small and large numbers?
 @end quotation
 
 @quotation
+@strong{@anchor{Exercise 1.7}Exercise 1.7:} @code{good-enough?}測試用佇算平方
+根，tùi算蓋細ê數字ê來講，無真有效率。而且，佇真實ê電腦，算術運算差不多攏佇有限精度進行。
+Che予lán ê測試tùi非常大ê數字來講無適合。解說chiah ê陳述，用例展示是按nóa數字傷大iah是
+傷細ê時測試會失敗。別款實作@code{good-enough?} 策略，是觀察所ioh ê值tuì頂一个kàu下一个
+反覆之間ê差，nā是差kap所ioh ê值ê比例誠細，就停止反覆。設計一款用che測試ê平方根程序。Che
+kám kā細ê數字kap大ê，處理kah koh khah好？
+@end quotation
+
+
+@quotation
 @strong{@anchor{Exercise 1.8}Exercise 1.8:} Newton's method for cube roots is
 based on the fact that if @math{y} is an approximation to the cube root of @math{x},
 then a better approximation is given by the value
+
+@strong{@anchor{Exercise 1.8}Exercise 1.8:} 立方根ê Newton法是chhāi佇chit ê事
+實：nā準 @math{y} 是 @math{x} ê立方根ê近似值，較好ê近似當用che the̍h著：
+
+
+
 @ifinfo
 
 @example
@@ -2747,6 +2792,13 @@ Use this formula to implement a cube-root procedure analogous to the
 square-root procedure.  (In @ref{1.3.4} we will see how to implement
 Newton's method in general as an abstraction of these square-root and cube-root
 procedures.)
+
+@noindent
+用chit ê公式實做立方根程序，kap平方根程序相siâng。（佇 @ref{1.3.4} lán
+會看著按nóa實做Newton法ê一般化ê形式，當做chiah-ê平方根kap立方根程序ê抽象化。）
+
+
+
 @end quotation
 
 @subsection Procedures as Black-Box Abstractions
