@@ -2801,7 +2801,7 @@ procedures.)
 
 @end quotation
 
-@subsection Procedures as Black-Box Abstractions
+@subsection Procedures as Black-Box Abstractions 程序當做烏盒仔ê抽象
 @node	1.1.8,  , 1.1.7, 1.1
 
 @code{sqrt} is our first example of a process defined by a set of mutually
@@ -2813,12 +2813,20 @@ much less specify a well-defined process to be carried out by a computer.  This
 will be addressed more carefully in @ref{1.2}.  But first let's
 consider some other important points illustrated by the @code{sqrt} example.
 
+@code{sqrt} 是lán ê頭一个用相定義ê程序ê集合定義ê過程ê例。注意 @code{sqrt-iter} ê定義
+是@newterm{遞迴}(recursive) ê；就是，程序用伊家己定義。通用程序家己定義程序tsit ê想法
+可能真煩；Hit款「圓箍型ê」定義會當合理ê方法可能霧霧無明，mā毋免講電腦所運轉ê好好定義ê過程。
+Che會佇 @ref{1.2} 斟酌提起。但是代先lán看一寡其他@code{sqrt} 案例說明ê重點。
+
 Observe that the problem of computing square roots breaks up naturally into a
 number of subproblems: how to tell whether a guess is good enough, how to
 improve a guess, and so on.  Each of these tasks is accomplished by a separate
 procedure.  The entire @code{sqrt} program can be viewed as a cluster of
 procedures (shown in @ref{Figure 1.2}) that mirrors the decomposition of the
 problem into subproblems.
+
+請觀察計算平方根ê問題自然拆做一寡kiáⁿ問題：按nóa講一个所ioh ê有夠好，按nóa改善所ioh ê，等等。
+其中ê逐ê任務是由分離ê程序完成（展示佇@ref{Figure 1.2}）反映問題拆做kiáⁿ問題：
 
 @float
 @quotation
@@ -2840,7 +2848,7 @@ problem into subproblems.
 @sp 0.5
 @center @image{fig/chap1/Fig1.2,44mm,,,.pdf}
 @sp 0.5
-@center @caption{@strong{Figure 1.2:} Procedural decomposition of the @code{sqrt} program.}
+@center @caption{@strong{Figure 1.2:} Procedural decomposition of the @code{sqrt} program. @code{sqrt} 程式ê程序分解}
 @sp 0.7
 @end iftex
 @end quotation
