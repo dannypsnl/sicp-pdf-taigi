@@ -2869,6 +2869,8 @@ later time.  Indeed, as far as the @code{good-enough?} procedure is concerned,
 procedure, a so-called @newterm{procedural abstraction}.  At this level of
 abstraction, any procedure that computes the square is equally good.
 
+分解策略ê重要m̄-nā是kā程式簡單分做部份。總是，lán會當kā任何sài-suh ê程式切做幾nā部份—頭前10 chōa、後10 chōa、後10 chōa 等等。顛倒上重要是，逐ê程序完成唯一ê，ē當佇定義其他ê程序ê內底，準做module ê任務。舉例，當lán用 @code{square} 定義 @code{good-enough?} ê時陣，lán通kā @code{square} 掠做「烏盒á」。佇chit時lán無關心chit ê程序「按nóa」算結果，kan-ta關心伊算平方ê事實。平方按nóa算ê詳細通khàm掉，以後koh考慮。確實，tùi @code{good-enough?} 程序來講，@code{square}毋是程序，反轉是程序ê抽象，所謂ê @newterm{程序抽象化}(procedural abstraction)。佇chit層抽象，任何算平方ê程序lóng平好。
+
 Thus, considering only the values they return, the following two procedures for
 squaring a number should be indistinguishable.  Each takes a numerical argument
 and produces the square of that number as the value.@footnote{It is not even
