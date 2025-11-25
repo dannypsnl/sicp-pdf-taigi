@@ -2825,7 +2825,7 @@ procedure.  The entire @code{sqrt} program can be viewed as a cluster of
 procedures (shown in @ref{Figure 1.2}) that mirrors the decomposition of the
 problem into subproblems.
 
-請觀察計算平方根ê問題自然拆做一寡kiáⁿ問題：按nóa講一个所ioh ê有夠好，按nóa改善所ioh ê，等等。
+觀察計算平方根ê問題自然拆做一寡kiáⁿ問題：按nóa講一个所ioh ê有夠好，按nóa改善所ioh ê，等等。
 其中ê逐ê任務是由分離ê程序完成（展示佇@ref{Figure 1.2}）反映問題拆做kiáⁿ問題：
 
 @float
@@ -2885,6 +2885,11 @@ depends upon the hardware available.  There are machines for which the
 ``obvious'' implementation is the less efficient one.  Consider a machine that
 has extensive tables of logarithms and antilogarithms stored in a very
 efficient manner.}
+
+就án-ne，kan-ta考慮傳轉來ê值，下kha ê兩ê kā一个數平方ê程序應該無差別。逐ê the̍h一个數值
+引數，產出ê值是chit ê數ê平方。@footnote{甚至iah無清楚佗一个是khah有效率ê。Che倚靠會當用ê硬體。
+有對伊來講，上「明顯」ê實做是khah無效率ê機器。想像chit臺機器，伊有大張ê對數表kap反對數表，
+用誠有效率ê方法儲存。}
 
 @lisp
 (define (square x) (* x x))
