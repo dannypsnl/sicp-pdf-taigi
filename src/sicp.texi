@@ -2903,12 +2903,18 @@ procedure may not have written the procedure themselves, but may have obtained
 it from another programmer as a black box.  A user should not need to know how
 the procedure is implemented in order to use it.
 
-@subsubheading Local names
+所以，程序ê定義應該通kā詳細teh牢。程序用者可能無家己寫，毋過通tùi別ê程式設計師收著che，當做烏盒á。
+用者無應該需要知影程序按怎實做，chiah通用。
+
+@subsubheading Local names 區域變數
 
 One detail of a procedure's implementation that should not matter to the user
 of the procedure is the implementer's choice of names for the procedure's
 formal parameters.  Thus, the following procedures should not be
 distinguishable:
+
+程序有一个無應該kap伊ê用者有交插ê實做詳細，是實做ê kā程序ê正式參數按nóa號名。就án-ne，
+下kha兩ê程序無應該有差別：
 
 @lisp
 (define (square x) (* x x))
@@ -2922,6 +2928,11 @@ but its consequences are profound.  The simplest consequence is that the
 parameter names of a procedure must be local to the body of the procedure.  For
 example, we used @code{square} in the definition of @code{good-enough?} in our
 square-root procedure:
+
+
+Chit ê原則——程序ê意義應該kap 伊ê作者所號ê名獨立——假若佇外表上，通家己做證，毋過伊ê結果，影響誠深
+。上簡單ê結果是，參數定著是程序主體ê區域變數。比如講，lán佇lán ê平方根內底ê，
+@code{good-enough?} ê定義，用@code{square}：
 
 @lisp
 (define (good-enough? guess x)
@@ -2941,6 +2952,14 @@ in @code{square}.  Running the procedure @code{square} must not affect the
 value of @code{x} that is used by @code{good-enough?}, because that value of
 @code{x} may be needed by @code{good-enough?} after @code{square} is done
 computing.
+
+作者佇  @code{good-enough?} ê強調，是決定第一个引數ê平方kap第二个引數ê差，kám是佇誤差內底。
+Lán看出 @code{good-enough?} ê作者用@code{guess} chit ê名，來指頭一个引數，koh用
+@code{x} chit ê名，來指第二个引數。
+Nā @code{square} ê作者用 @code{x}（像面頂）指chit ê引數，
+lán通看著佇@code{good-enough?} ê @code{x} kap @code{square} ê 無kâng。
+Pháng chit ê程序 @code{square}無應該影響@code{good-enough?} 所用ê @code{x} ê值，
+因為佇@code{square}算出了後，@code{good-enough?}可能需要 @code{x} ê值。
 
 If the parameters were not local to the bodies of their respective procedures,
 then the parameter @code{x} in @code{square} could be confused with the
