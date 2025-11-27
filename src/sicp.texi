@@ -1879,7 +1879,7 @@ interpreter, like @code{+} and @code{*}, or defined as a compound procedure.
 複合程序 kah 原始程序 ê 用法完全仝款。
 實際上，看頂懸寫 ê @code{sum-of-squares} ê 定義，講袂出 @code{square} 是像 @code{+} kah @code{*} 按呢寫tī直譯器內底，抑是一个複合程序定義。
 
-@subsection The Substitution Model for Procedure Application Hōo 程序應用ê取代模型
+@subsection The Substitution Model for Procedure Application 予程序應用ê取代模型
 @node	1.1.5, 1.1.6, 1.1.4, 1.1
 
 To evaluate a combination whose operator names a compound procedure, the
@@ -2966,6 +2966,10 @@ then the parameter @code{x} in @code{square} could be confused with the
 parameter @code{x} in @code{good-enough?}, and the behavior of
 @code{good-enough?} would depend upon which version of @code{square} we used.
 Thus, @code{square} would not be the black box we desired.
+
+Nā參數毋是對in家己ê程序主體是區域ê，@code{square} ê參數@code{x} 會 kap
+@code{good-enough?} ê 參數 @code{x}舞亂去，@code{good-enough?} ê行為會予lán所用ê
+@code{square} ê版本所影響。就án-ne，@code{square} 毋是lán所意愛ê烏盒á。
 
 A formal parameter of a procedure has a very special role in the procedure
 definition, in that it doesn't matter what name the formal parameter has.  Such
