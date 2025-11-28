@@ -2984,6 +2984,14 @@ The set of expressions for which a binding defines a name is called the
 declared as the formal parameters of the procedure have the body of the
 procedure as their scope.
 
+
+程序ê正式參數有佇程序定義內底非常特別ê角色，佇內底正式參數號siánn物名lóng無要緊。Chit款ê名號
+做@newterm{束縛變數}(bound variable)，lán講chit ê程序ê定義@newterm{束縛}(bind)伊ê正式參數。
+程序ê意義無改變，nā是束縛變數佇定義內底重號名，而且lóng一致。@footnote{一致重號名實際上誠微妙koh
+oh得形式定義。出名ê邏輯學家佇chia有創礙虐ê錯誤。}Nā是變數無束縛，lán講伊是@newterm{自由ê}
+(free)。表達式ê集合，佇chia束縛定義chit ê變數ê名，號做chit ê名ê@newterm{作用範圍}(scope)。
+束縛變數佇程序ê定義宣告做程序ê形式參數，in ê作用範圍就是chit ê程序ê主體。
+
 In the definition of @code{good-enough?} above, @code{guess} and @code{x} are
 bound variables but @code{<}, @code{-}, @code{abs}, and @code{square} are free.
 The meaning of @code{good-enough?} should be independent of the names we choose
@@ -2997,7 +3005,17 @@ the symbol @code{abs} names a procedure for computing the absolute value of a
 number.  @code{good-enough?} will compute a different function if we substitute
 @code{cos} for @code{abs} in its definition.
 
-@subsubheading Internal definitions and block structure
+佇面頂ê @code{good-enough?} ê定義，@code{guess} kap @code{x} 是束縛變數，但是
+@code{<}、 @code{-}、 @code{abs}kap @code{square}是自由ê。@code{good-enough?} ê意義
+應該kap lán所揀予 @code{guess} kap @code{x} ê名獨立，只要in hām @code{<}、@code{-}、 @code{abs}
+kap @code{square}有區別koh kap in無kâng。（Nā是lán重kā @code{guess}號做@code{abs}，會加添bug，
+因為會@newterm{掠}(capturing)變數@code{abs}。Che會kā自由ê束縛）。毋過，@code{good-enough?} ê意義
+無hām伊ê自由變數ê名獨立。伊誠實倚靠chit ê事實，就是符號@code{abs} the̍h來kā算數字ê絕對值ê程序號名
+（佇chit ê定義外面）。Nā lán kā@code{good-enough?} ê定義內底ê @code{abs}改做@code{cos}，
+伊會計算無kâng ê函數。
+
+
+@subsubheading Internal definitions and block structure 內部ê定義kap塊ê結構
 
 We have one kind of name isolation available to us so far: The formal
 parameters of a procedure are local to the body of the procedure.  The
