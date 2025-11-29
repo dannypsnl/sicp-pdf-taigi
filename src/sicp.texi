@@ -1815,9 +1815,9 @@ would be in an actual call to the procedure being defined.
 
 @math{\langle\hbox{\sl name}\kern0.08em\rangle} 是一个tī環境內底kah程序定義做伙連結 ê符號。
 @footnote{Tī 這本冊內底，lán 會用予角括弧框--起來 ê chhoa̍h 體符號---比論講 @math{\langle}@var{name}@math{\kern0.08em\rangle}---來表示表達式內底 ê「空位」，會tī實際使用這款表達式 ê 時陣予添入。}
-@math{\langle\hbox{\sl formal parameters}\kern0.08em\rangle} 是tī程序ê主體內底使用ê名，用來參考程序ê對應引數。
+@math{\langle\hbox{\sl formal parameters}\kern0.08em\rangle} 是tī程序ê本體內底使用ê名，用來參考程序ê對應引數。
 @math{\langle\hbox{\sl body}\kern0.08em\rangle} 是一个表達式，當形式參數予實際引數替換ê時陣，會產生程序應用ê值。
-@footnote{較一般來講，程序ê主體會當是表達式ê序列。Tī這種情形，直譯器會àn順序算每一个表達式ê值，而且kā上尾ê表達式ê值當做程序應用ê值the̍h來。}
+@footnote{較一般來講，程序ê本體會當是表達式ê序列。Tī這種情形，直譯器會àn順序算每一个表達式ê值，而且kā上尾ê表達式ê值當做程序應用ê值the̍h來。}
 @math{\langle}@var{name}@math{\kern0.08em\rangle} kah @math{\langle}@var{formal parameters}@math{\kern0.08em\rangle} 用括弧組做伙ê方式，
 著親像tī實際呼叫這个程序ê寫法。
 
@@ -1951,7 +1951,7 @@ the formal parameters @code{x} and @code{y} in the body of
 
 @noindent
 就án-ne，問題縮小kàu kā有2 ê運算數kap一ê運算子 @code{sum-of-squares} ê組合算值。算值tsit ê組合干涉三ê kiáⁿ問題。Lán愛算值來the̍h著引數。Taⁿ @code{(+
-5 1)} 產出 6 ， @code{(* 5 2)} 產出 10，lán一定愛應用 @code{sum-of-squares} 程序kàu 6 kap 10。Chiah ê 值the̍h來取代@code{sum-of-squares} ê主體內底ê正式參數 @code{x} kap @code{y}，表達式縮小kàu
+5 1)} 產出 6 ， @code{(* 5 2)} 產出 10，lán一定愛應用 @code{sum-of-squares} 程序kàu 6 kap 10。Chiah ê 值the̍h來取代@code{sum-of-squares} ê本體內底ê正式參數 @code{x} kap @code{y}，表達式縮小kàu
 
 
 @lisp
@@ -2931,7 +2931,7 @@ square-root procedure:
 
 
 Chit ê原則——程序ê意義應該kap 伊ê作者所號ê名獨立——假若佇外表上，通家己做證，毋過伊ê結果，影響誠深
-。上簡單ê結果是，參數定著是程序主體ê區域變數。比如講，lán佇lán ê平方根內底ê，
+。上簡單ê結果是，參數定著是程序本體ê區域變數。比如講，lán佇lán ê平方根內底ê，
 @code{good-enough?} ê定義，用@code{square}：
 
 @lisp
@@ -2967,7 +2967,7 @@ parameter @code{x} in @code{good-enough?}, and the behavior of
 @code{good-enough?} would depend upon which version of @code{square} we used.
 Thus, @code{square} would not be the black box we desired.
 
-Nā參數毋是對in家己ê程序主體是區域ê，@code{square} ê參數@code{x} 會 kap
+Nā參數毋是對in家己ê程序本體是區域ê，@code{square} ê參數@code{x} 會 kap
 @code{good-enough?} ê 參數 @code{x}舞亂去，@code{good-enough?} ê行為會予lán所用ê
 @code{square} ê版本所影響。就án-ne，@code{square} 毋是lán所意愛ê烏盒á。
 
@@ -2990,7 +2990,7 @@ procedure as their scope.
 程序ê意義無改變，nā是束縛變數佇定義內底重號名，而且lóng一致。@footnote{一致重號名實際上誠微妙koh
 oh得形式定義。出名ê邏輯學家佇chia有創礙虐ê錯誤。}Nā是變數無束縛，lán講伊是@newterm{自由ê}
 (free)。表達式ê集合，佇chia束縛定義chit ê變數ê名，號做chit ê名ê@newterm{作用範圍}(scope)。
-束縛變數佇程序ê定義宣告做程序ê形式參數，in ê作用範圍就是chit ê程序ê主體。
+束縛變數佇程序ê定義宣告做程序ê形式參數，in ê作用範圍就是chit ê程序ê本體。
 
 In the definition of @code{good-enough?} above, @code{guess} and @code{x} are
 bound variables but @code{<}, @code{-}, @code{abs}, and @code{square} are free.
@@ -3021,6 +3021,9 @@ We have one kind of name isolation available to us so far: The formal
 parameters of a procedure are local to the body of the procedure.  The
 square-root program illustrates another way in which we would like to control
 the use of names.  The existing program consists of separate procedures:
+
+目前Lán有一款kā名孤立ê方法通用：程序ê正式參數對程序ê本體是區域ê。平方根程式說明別款方法
+佇hia lán beh愛控制名ê使用。Chit ê 佇leh ê程式包含分開ê程序：
 
 @lisp
 (define (sqrt x)
