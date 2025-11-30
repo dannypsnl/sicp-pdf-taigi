@@ -3055,6 +3055,16 @@ own private @code{good-enough?} procedure.  To make this possible, we allow a
 procedure to have internal definitions that are local to that procedure.  For
 example, in the square-root problem we can write
 
+@noindent
+程式ê問題是，對@code{sqrt} ê用者來講，kan-ta @code{sqrt} chiah重要。其他ê程序
+（@code{sqrt-iter}、@code{good-enough?} kap @code{improve}）kan-ta kā用者ê心舞予亂。
+In bē當定義任何其他號做 @code{good-enough?} 程式，因為@code{sqrt}需要che。Chit ê問題
+佇起做chē-chē個別ê程式設計師所寫ê大ê系統ê時，特別嚴重。比如講，佇起做大ê數值程序ê函式庫ê時，
+真chē數值函數用一步一步近似ê方式計算，可能有號做@code{good-enough?} kap @code{improve} ê
+程序，當做輔助程序。Beh予che可能，lán允准一个程序內底有定義，對chit ê程序是區域ê。舉例，
+佇平方根問題，lán通寫：
+
+
 @lisp
 (define (sqrt x)
   (define (good-enough? guess x)
