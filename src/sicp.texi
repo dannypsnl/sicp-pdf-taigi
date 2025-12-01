@@ -3094,6 +3094,18 @@ procedure definitions; that is, they are looked up in the environment in which t
 procedure was defined. We will see how this works in detail in chapter 3 when we study
 environments and the detailed behavior of the interpreter.@anchor{Footnote 28}}
 
+@noindent
+Chit款ê siū-á型定義，叫做@newterm{塊結構}(tè-kiat-kò͘, block structure)，基本上是包裹名ê問題ê正確解法。
+但是chia chhàng koh較好ê想法。除了kā輔助程序ê定義sóa kàu內部，lán會當予khah簡單。因為 @code{x} 束縛佇
+@code{sqrt} ê定義內底，程序@code{good-enough?}、@code{improve} kap @code{sqrt-iter}，in lóng定義佇
+@code{sqrt} 內底，mā佇 @code{x} ê作用範圍內底。就án-ne，無必要 kā @code{x} 明白sòa予chia ê所有程序。
+Lán 反轉允准 @code{x} 成做佇chiah ê內部定義ê自由變數，ná下kha所展示。了後，@code{x} tùi引數得著伊ê值，
+kā所有總包ê程序 @code{sqrt} 用chit ê引數叫。Chit ê約束號做@newterm{詞法使用範圍}。@footnote{詞法使用
+範圍決定程序內底ê自由變數，hŏng the̍h來指包ê程序定義所做ê束縛；就是，in佇程序佇內底定義ê環境，受chhiau-chhōe。
+當lán學環境kap直譯器ê詳細行為ê時，會佇第3章看見che詳細ê運作方法。@anchor{Footnote 28}}
+
+
+
 @lisp
 (define (sqrt x)
   (define (good-enough? guess)
@@ -3118,6 +3130,12 @@ The idea of block structure originated with the programming language
 Algol 60. It appears in most advanced programming languages and is an
 important tool for helping to organize the construction of large
 programs.
+
+@noindent
+Lán會用擴展塊結構來幫chān lán kā大ê程式拆做好處理ê koe̍h。@footnote{鬥入去ê程序著愛
+佇程序本體代先來。管理無對定義kap使用相tîⁿ ê，所pháng ê程式ê結果負責。}
+塊結構ê想法kap 程式語言 Algol 60做伙開始。伊出現佇大部份ê進階語言，mā是重要ê家私，
+幫chān組織起做大ê程式。
 
 @section Procedures and the Processes They @w{Generate}
 @node	1.2, 1.3, 1.1, Chapter 1
