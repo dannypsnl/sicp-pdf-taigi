@@ -3197,6 +3197,10 @@ procedures we will consider are very simple.  Their role is like that played by
 test patterns in photography: as oversimplified prototypical patterns, rather
 than practical examples in their own right.
 
+佇chit段lán會考察一寡chia̍p-chia̍p看著ê，簡單過程所生成ê程序ê「形」。Lán mā會調查chiah-ê過程
+所開時間kap空間ê重要運算資源ê比率。Lán beh考慮ê程序非常簡單。In ê角色像攝影ê測試模樣所演ê：假若
+過度簡化ê原形ê模樣，毋是靠本身ê應用案例。
+
 @menu
 * 1-2-1::            Linear Recursion and Iteration
 * 1-2-2::            Tree Recursion
@@ -3206,10 +3210,14 @@ than practical examples in their own right.
 * 1-2-6::            Example: Testing for Primality
 @end menu
 
-@subsection Linear Recursion and Iteration
+@subsection Linear Recursion and Iteration 線性遞迴kap反覆
 @node	1.2.1, 1.2.2, 1.2, 1.2
 
+@noindent
 We begin by considering the factorial function, defined by
+
+Lán tùi考慮階乘函數開始，伊án-ne定義：
+
 @ifinfo
 
 @example
