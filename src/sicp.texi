@@ -3231,6 +3231,9 @@ $$n! = n \cdot (n - 1) \cdot (n - 2) \cdots 3 \cdot 2 \cdot 1.$$
 There are many ways to compute factorials.  One way is to make use of the
 observation that @math{n!} is equal to @math{n} times @math{(n - 1)!} for any positive
 integer @math{n}:
+
+有chē-chē方法算階乘。一款方法是用觀察對所有正整數 @math{n}，@math{n!} 等於 @math{n} 乘以 @math{(n - 1)!}：
+
 @ifinfo
 
 @example
