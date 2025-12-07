@@ -3248,6 +3248,10 @@ Thus, we can compute @math{n!} by computing @math{(n - 1)!} and multiplying the
 result by @math{n}.  If we add the stipulation that 1! is equal to 1, this
 observation translates directly into a procedure:
 
+就án-ne，lán 會當用kā @math{(n - 1)!} 算出來ê結果乘以 @math{n} 來算 @math{n!}。
+Nā是lán加添1!等於1規定，chit ê觀察直接翻譯做程序會是：
+
+
 @lisp
 (define (factorial n)
   (if (= n 1)
@@ -3259,11 +3263,14 @@ observation translates directly into a procedure:
 We can use the substitution model of @ref{1.1.5} to watch this
 procedure in action computing 6!, as shown in @ref{Figure 1.3}.
 
+@noindent 
+Lán通用@ref{1.1.5} ê 替代模型來觀察chi̍t ê程序佇計算 6! ê行動，顯示佇@ref{Figure 1.3}。
+
 @float
 @quotation
 @anchor{Figure 1.3}
 @ifinfo
-@strong{Figure 1.3:} A linear recursive process for computing 6!.
+@strong{Figure 1.3:} A linear recursive process for computing 6!. 算 6! ê 線性遞迴過程
 
 @example
 (factorial 6)        ----------------
@@ -3284,7 +3291,7 @@ procedure in action computing 6!, as shown in @ref{Figure 1.3}.
 @sp 0.4
 @center @image{fig/chap1/Fig1.3c,82mm,,,.pdf}
 @sp 0.7
-@center @caption{@strong{Figure 1.3:} A linear recursive process for computing 6!.}
+@center @caption{@strong{Figure 1.3:} A linear recursive process for computing 6!. 算 6! ê 線性遞迴過程}
 @sp 1.0
 @end iftex
 @end quotation
@@ -3298,6 +3305,11 @@ counts from 1 up to @math{n}.  We can describe the computation by saying that th
 counter and the product simultaneously change from one step to the next
 according to the rule
 
+Chit-má lán用別款角度看算階乘。Lán通用指定lán先kā 1乘以2，了後乘以3，乘以4，等等，直到lán拄著
+@math{n}，來描述算 @math{n!} 規則。Koh較正式ê方法是，lán維持pháng ê乘積(product)，kap 一个
+ùi 1 siàu kah @math{n} ê siàu數器(counter)。Lán通用講siàu數器kap乘積對一步kàu下一步仝時改
+變，根據下kha ê規則，描述chit ê運算：
+
 @lisp
 product @math{\gets} counter * product
 counter @math{\gets} counter + 1
@@ -3307,13 +3319,16 @@ counter @math{\gets} counter + 1
 and stipulating that @math{n!} is the value of the product when the counter
 exceeds @math{n}.
 
+@noindent
+Koh規定@math{n!}是當siàu數器超過 @math{n} ê時，乘積ê值。
+
 \enlargethispage{\baselineskip}
 
 @float
 @quotation
 @anchor{Figure 1.4}
 @ifinfo
-@strong{Figure 1.4:} A linear iterative process for computing 6!.
+@strong{Figure 1.4:} A linear iterative process for computing 6!. 算 6! ê線性反覆過程
 
 @example
 (factorial 6)   -----.
@@ -3331,7 +3346,7 @@ exceeds @math{n}.
 @sp 0.4
 @center @image{fig/chap1/Fig1.4c,36mm,,,.pdf}
 @sp 0.7
-@center @caption{@strong{Figure 1.4:} A linear iterative process for computing 6!.}
+@center @caption{@strong{Figure 1.4:} A linear iterative process for computing 6!.算 6! ê線性反覆過程}
 @sp 1.0
 @end iftex
 @end quotation
@@ -3354,6 +3369,22 @@ structure introduced in the last section to hide the definition of
 
 We avoided doing this here so as to minimize the number of things to think
 about at once.}
+
+Koh來，lán通重寫lán ê算階乘ê描述，用程序ê方式：@footnote{佇真ê程式內底，lán
+hoân-sè用頂節紹介ê塊結構，來khàm掉 @code{fact-iter} ê定義：
+
+@lisp
+(define (factorial n)
+  (define (iter product counter)
+    (if (> counter n)
+        product
+        (iter (* counter product)
+              (+ counter 1))))
+  (iter 1 1))
+@end lisp
+
+Lán避免佇chia做che，為著beh kā一改愛想ê代誌ê量，降kah上kē。}
+
 
 @lisp
 (define (factorial n)
