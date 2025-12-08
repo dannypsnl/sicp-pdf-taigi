@@ -3401,6 +3401,9 @@ Lán避免佇chia做che，為著beh kā一改愛想ê代誌ê量，降kah上kē�
 As before, we can use the substitution model to visualize the process of
 computing 6!, as shown in @ref{Figure 1.4}.
 
+@noindent
+親像進前ê，lán通用替代模型來視覺化算6! ê過程，展示佇 @ref{Figure 1.4}。
+
 Compare the two processes.  From one point of view, they seem hardly different
 at all.  Both compute the same mathematical function on the same domain, and
 each requires a number of steps proportional to @math{n} to compute @math{n!}.
@@ -3408,6 +3411,10 @@ Indeed, both processes even carry out the same sequence of multiplications,
 obtaining the same sequence of partial products.  On the other hand, when we
 consider the ``shapes'' of the two processes, we find that they evolve quite
 differently.
+
+比較chit兩个程序。對一方面看，in差不多仝款。兩个佇仝款ê定義域算仝款ê函數，而且lóng需要kap 
+@math{n} 仝比例ê步數，來算 @math{n!}。兩个過程誠實lóng行仝款ê乘法ê列，得著仝款ê部份乘積ê列。
+另外方面，lán考慮兩个過程ê「形」ê時陣，發現in展開ê方式非常無仝。
 
 Consider the first process.  The substitution model reveals a shape of
 expansion followed by contraction, indicated by the arrow in @ref{Figure 1.3}.
@@ -3422,6 +3429,12 @@ needed to keep track of it, grows linearly with @math{n} (is proportional to
 @math{n}), just like the number of steps.  Such a process is called a
 @newterm{linear recursive process}.
 
+考慮頭一个過程。替代模型顯露擴展了後收縮ê形，佇 @ref{Figure 1.3} ê箭頭有指示。當過程建立
+@newterm{延遲運算} (deferred operations)（Chit ê例指乘法ê鏈）ê鍊ê時，擴展就會出現。
+行chit ê過程需要直譯器追蹤了後chiah做ê操作。佇算 @math{n!} ê時，延遲乘法ê鏈ê長度，kap 就án-ne
+所愛追蹤ê資訊量，tòe @math{n} 線性成長（hām @math{n} 仝比例），親像步數仝款。Chit款程序號做
+@newterm{線性遞迴過程}(linear recursive process)。
+
 By contrast, the second process does not grow and shrink.  At each step, all we
 need to keep track of, for any @math{n}, are the current values of the variables
 @code{product}, @code{counter}, and @code{max-count}.  We call this an
@@ -3432,6 +3445,14 @@ updated as the process moves from state to state and an (optional) end test
 that specifies conditions under which the process should terminate.  In
 computing @math{n!}, the number of steps required grows linearly with @math{n}.  Such
 a process is called a @newterm{linear iterative process}.
+
+對反ê是，第二ê過程無成長koh kiu水。對所有 @math{n}， 逐步lán所beh追蹤ê，是變數
+@code{product}、 @code{counter}、 @code{max-count} chit-má ê值。Lán kā che號做
+@newterm{反覆過程} (iterative process)。一般來講，反覆過程是一个過程，伊ê狀態會當用固定數
+量ê @newterm{狀態變數}(state variables)摘要，koh有固定ê規矩，描述狀態變數án-nóa tòe過程
+轉移ê狀態更新，kap（無必要ê）結尾測試，指定佇siáⁿ物狀況過程應該結束。佇算 @math{n!} ê時，
+步數需要kap @math{n} 線性成長。Chit款程序號做@newterm{線性反覆過程}(linear iterative
+process)。
 
 @endpage
 The contrast between the two processes can be seen in another way.  In the
@@ -3448,6 +3469,14 @@ register machines in @ref{Chapter 5}, we will see that any iterative process
 can be realized ``in hardware'' as a machine that has a fixed set of registers
 and no auxiliary memory.  In contrast, realizing a recursive process requires a
 machine that uses an auxiliary data structure known as a @newterm{stack}.}
+
+Chit兩个過程ê比較會當對別面來看。佇反覆ê，程式變數佇逐位提供過程ê完全ê狀態描述。Nā lán
+停止階段之間ê計算，所有lán著做來恢復運算ê方法，是供應直譯器chit 3 ê程式ê變數。但是對遞迴過程
+毋是án-ne。佇chit ê例，有一寡所附ê「隱藏」ê資訊，由直譯器維護，無包佇程式變數，伊指示佇處理
+延遲運算ê鏈內底，「過程佇toeh」。鍊愈長，著維護愈chē資訊。@footnote{佇lán佇@ref{第5章}討論程
+序佇暫存器機器實做ê時陣，lán會看見任何反覆過程會當「佇硬體」實現，成做一臺有有限暫存器集合，無
+輔助記憶體ê機器，實現遞迴過程顛倒需要用號做 @newterm{stack} (su-tá-khuh) ê輔助資料結構ê機器。}
+
 
 In contrasting iteration and recursion, we must be careful not to confuse the
 notion of a recursive @newterm{process} with the notion of a recursive
