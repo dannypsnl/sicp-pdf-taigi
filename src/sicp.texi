@@ -3533,8 +3533,8 @@ Scheme ê實做無chit ê缺點。伊會佇固定空間執行反覆過程，就�
 特殊ê反覆建構kan-ta佇做語法糖ê時chiah有路用。@footnote{尾遞迴長久予lâng掠做是編譯器最佳化ê手路。
 尾遞迴整kô ê語義基礎，是由Carl提供@ref{Hewitt (1977)}，伊用「sòa訊息」(message-passing)ê
 計算模型（Lán會佇@ref{第3章}討論）解說。Gerald Jay Sussman kap Guy Lewis Steele Jr.
-（看@ref{Steele and Sussman 1975}）予伊啟發，建立一个尾遞迴ê Scheme 直譯器。Steel以後展示
-尾遞迴an-nóa是自然ê方法來編譯程序呼叫ê結果（@ref{Steele 1977}）。佇Scheme ê @acronym{IEEE}
+（看@ref{Steele and Sussman 1975}）予伊啟發，建立一个尾遞迴ê Scheme 直譯器。Steele 以後展示
+尾遞迴an-nóa是自然ê方法，來編譯程序呼叫ê結果（@ref{Steele 1977}）。佇Scheme ê @acronym{IEEE}
 標準內底，實做需要尾遞迴。}
 
 @quotation
@@ -3600,7 +3600,7 @@ Give concise mathematical definitions for the functions computed by the
 procedures @code{f}, @code{g}, and @code{h} for positive integer values of
 @math{n}.  For example, @code{(k n)} computes @math{5n^2}.
 
-提供一致ê由 程序 @code{f}、@code{g}kap @code{h}（引數 @math{n} lóng是正整數）所算ê，
+提供一致ê由 程序 @code{f}、@code{g} kap @code{h}（引數 @math{n} lóng是正整數）所算ê，
 函數ê數學定義。舉例，@code{(k n)} 是算 @math{5n^2}。
 
 @end quotation
@@ -3611,6 +3611,11 @@ procedures @code{f}, @code{g}, and @code{h} for positive integer values of
 Another common pattern of computation is called @newterm{tree recursion}.  As
 an example, consider computing the sequence of Fibonacci numbers, in which each
 number is the sum of the preceding two:
+
+@noindent
+另外一款運算ê模樣號做@newterm{樹遞迴}(tree recursion)。比如講，考慮算Fibonacci數ê列，佇
+chia，逐个數是伊進前兩个數ê和：
+
 @ifinfo
 @center 0, 1, 1, 2, 3, 5, 8, 13, 21, @dots{}
 @end ifinfo
@@ -3618,6 +3623,9 @@ number is the sum of the preceding two:
 $$ 0,\; 1,\; 1,\; 2,\; 3,\; 5,\; 8,\; 13,\; 21,\; \dots. $$
 @end tex
 In general, the Fibonacci numbers can be defined by the rule
+
+一般來講，Fibonacci數會當用下kha ê規則定義
+
 @ifinfo
 
 @example
@@ -3639,6 +3647,8 @@ $$ {\rm Fib}(n) =
 @end tex
 We can immediately translate this definition into a recursive procedure for
 computing Fibonacci numbers:
+
+Lán通連鞭翻譯chit ê定義做遞迴ê程序，來算Fibonacci數：
 
 @lisp
 (define (fib n)
