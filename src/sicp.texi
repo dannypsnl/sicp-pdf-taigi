@@ -3666,6 +3666,14 @@ looks like a tree, as shown in @ref{Figure 1.5}.  Notice that the branches
 split into two at each level (except at the bottom); this reflects the fact
 that the @code{fib} procedure calls itself twice each time it is invoked.
 
+@noindent
+考慮chit ê運算ê模樣。Beh算 @code{(fib 5)}，lán 著算@code{(fib 4)} kap
+@code{(fib 3)}。Beh算 @code{(fib 4)}，lán著算@code{(fib 3)} kap
+@code{(fib 2)}。Lán一般講，擴展過程看起來像一欉樹á，若@ref{Figure 1.5}。注意
+分支佇逐層分做兩oe（除了上下底ê）；Che反應 @code{fib} 程序當leh呼叫ê時，伊呼叫家己
+兩改ê事實。
+
+
 This procedure is instructive as a prototypical tree recursion, but it is a
 terrible way to compute Fibonacci numbers because it does so much redundant
 computation.  Notice in @ref{Figure 1.5} that the entire computation of
