@@ -3684,6 +3684,13 @@ precisely Fib(@math{n+1}).  To get an idea of how bad this is, one can
 show that the value of Fib(@math{n}) grows exponentially with @math{n}.  More
 precisely (see @ref{Exercise 1.13}), Fib(@math{n}) is the closest integer
 to @math{\varphi^n / \sqrt{5}}, where
+
+Chit ê程序當做原形ê樹遞迴有教育性，但是對算Fibonacci數來講，非常害，因為伊做傷chōe加做
+ê運算。注意佇 @ref{Figure 1.5}，@code{(fib 3)}規个運算（強欲佔一半）是重複ê。實際上，展示chit ê程序
+會算 @code{(fib 1)} á是 @code{(fib 0)} ê 次數（一般來講是頂懸樹á ê葉á數）無困難。Beh得著che有gōa bái
+ê概念，lâng會當展示 Fib(@math{n}) ê值tòe @math{n} 用指數方式成長。較準確來講（看 @ref{Exercise 1.13}），
+Fib(@math{n})是 @math{\varphi^n / \sqrt{5}} ê上近ê整數，其中
+
 @ifinfo
 
 @example
@@ -3696,6 +3703,12 @@ $$\varphi = {1 + \sqrt{5}\over2} \approx 1.6180 $$
 @end tex
 @noindent
 is the @newterm{golden ratio}, which satisfies the equation
+
+@noindent
+是@newterm{黃金比例}(golden ratio)，滿足方程式
+
+
+
 @ifinfo
 
 @example
@@ -3712,6 +3725,7 @@ $$\varphi^2 = \varphi + 1. $$
 @anchor{Figure 1.5}
 @ifinfo
 @strong{Figure 1.5:} The tree-recursive process generated in computing @code{(fib 5)}.
+算 @code{(fib 5)} 生成ê樹遞迴過程
 
 @example
 
@@ -3739,7 +3753,7 @@ V     /  . \   . 1  .  . 1  .  . 0  .  . 1  .  . 0  ..
 @sp 0.3
 @center @image{fig/chap1/Fig1.5c,90mm,,,.pdf}
 @sp 0.5
-@caption{@strong{Figure 1.5:} The tree-recursive process generated in computing @code{(fib 5)}.}
+@caption{@strong{Figure 1.5:} The tree-recursive process generated in computing @code{(fib 5)}. 算 @code{(fib 5)} 生成ê樹遞迴過程}
 @sp 0.0
 @end iftex
 @end quotation
