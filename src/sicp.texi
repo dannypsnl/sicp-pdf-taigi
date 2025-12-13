@@ -3767,6 +3767,10 @@ at any point in the computation.  In general, the number of steps required by a
 tree-recursive process will be proportional to the number of nodes in the tree,
 while the space required will be proportional to the maximum depth of the tree.
 
+就án-ne，chit ê過程用ê手續數是tòe輸入用指數形式成長。另外方面，空間kan-ta需要tòe輸入用線性
+成長，因為lán kan-ta需要追蹤佇樹á內底，siáⁿ物節 (node) 佇lán頂懸，佇運算ê任何點。一般來講，
+樹遞迴需要ê手續數會kap樹á ê節數成比例關係，hit時需要ê空間會kap樹á ê上大ê深度成比例關係。
+
 We can also formulate an iterative process for computing the Fibonacci numbers.
 The idea is to use a pair of integers @math{a} and @math{b}, initialized to
 Fib(1) = 1 and Fib(0) = 0, and to repeatedly apply the
