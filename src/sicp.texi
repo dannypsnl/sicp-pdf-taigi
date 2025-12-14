@@ -3776,6 +3776,10 @@ We can also formulate an iterative process for computing the Fibonacci numbers.
 The idea is to use a pair of integers @math{a} and @math{b}, initialized to
 Fib(1) = 1 and Fib(0) = 0, and to repeatedly apply the
 simultaneous transformations
+
+Lán mā通制定反覆ê過程來算Fibonacci數。Chit ê想法是用一對整數 @math{a} kap @math{b}，開始設做
+Fib(1) = 1 kap Fib(0) = 0，而且重覆仝齊應用轉換
+
 @ifinfo
 
 @example
@@ -3798,6 +3802,10 @@ It is not hard to show that, after applying this transformation @math{n} times,
 Fib(@math{n}).  Thus, we can compute Fibonacci numbers iteratively using
 the procedure
 
+@noindent
+展示佇應用chit ê轉換 @math{n} 改以後，@math{a} kap @math{b} 會個別等於 Fib(@math{n+1}) kap
+Fib(@math{n})，無困難。就án-ne，lán 會當反覆用下kha ê程序計算Fibonacci數
+
 @lisp
 (define (fib n)
   (fib-iter 1 0 n))
@@ -3812,6 +3820,10 @@ This second method for computing Fib(@math{n}) is a linear iteration.  The
 difference in number of steps required by the two methods---one linear in
 @math{n}, one growing as fast as Fib(@math{n}) itself---is enormous, even for
 small inputs.
+
+@noindent
+第二个計算Fib(@math{n}) ê方法是線性反覆。佇chit兩个方法需要ê手續數ê無仝——一个是kap @math{n}
+成線性，一个kap Fib(@math{n})家己成長平緊——差別蓋大，就算用較細ê輸入。
 
 One should not conclude from this that tree-recursive processes are useless.
 When we consider processes that operate on hierarchically structured data
