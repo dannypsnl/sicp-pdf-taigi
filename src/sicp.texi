@@ -3838,7 +3838,14 @@ definition of the Fibonacci sequence.  To formulate the iterative algorithm
 required noticing that the computation could be recast as an iteration with
 three state variables.
 
-@subsubheading Example: Counting change
+Lâng無應該ùi chia落結論講，樹遞迴無路用。Lán考慮操作階層ê，結構資料，毋是數ê過程ê時，會發現
+樹遞迴是自然kap有力ê家私@footnote{Che ê例佇 @ref{1.1.3} 受提示。直譯器家己算表達式是用樹
+遞迴ê過程。}毋過就算佇數值操作，樹遞迴過程會當佇幫贊lán了解kap設計程序，有路用。舉例，雖罔頭一
+个 @code{fib} 程序比第二个koh較無效率，但是較直覺，kan-ta比Fibonacci數列ê定義翻做Lisp
+koh加一屑á。Beh規範反覆演算法，需要注意計算會當重換做有三ê狀態變數ê反覆。
+
+
+@subsubheading Example: Counting change 例：計算改變
 
 It takes only a bit of cleverness to come up with the iterative Fibonacci
 algorithm.  In contrast, consider the following problem: How many different
