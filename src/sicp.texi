@@ -3845,7 +3845,7 @@ Lâng無應該ùi chia落結論講，樹遞迴無路用。Lán考慮操作階層
 koh加一屑á。Beh規範反覆演算法，需要注意計算會當重換做有三ê狀態變數ê反覆。
 
 
-@subsubheading Example: Counting change 例：計算改變
+@subsubheading Example: Counting change 例：計算找ê錢
 
 It takes only a bit of cleverness to come up with the iterative Fibonacci
 algorithm.  In contrast, consider the following problem: How many different
@@ -3853,9 +3853,15 @@ ways can we make change of $1.00, given half-dollars, quarters, dimes,
 nickels, and pennies?  More generally, can we write a procedure to compute the
 number of ways to change any given amount of money?
 
+想出反覆ê Fibonacci演算法，kan-ta需要一寡巧路。對比來講，考慮下kha ê問題：beh找$1.00（譯註：
+美金）有幾種方法，準講有5角(half-dollar)、2.5角 (quarter)、1角 (dime)、5 sián (nickel) kap
+1 sián (penny)？較一般來講，lán敢會當寫程序，算找任何數額ê錢方法數？
+
 This problem has a simple solution as a recursive procedure.  Suppose we think
 of the types of coins available as arranged in some order.  Then the following
 relation holds:
+
+Chit ê問題有簡單ê遞迴程序解。假使lán想會當用ê銀角á ê款有順序leh排。然後就保持下kha ê關係：
 
 The number of ways to change amount @math{a} using @math{n} kinds of coins equals
 
@@ -3871,6 +3877,20 @@ coins, where @math{d} is the denomination of the first kind of coin.
 
 @end itemize
 
+Kā數額 @math{a} 用 @math{n} 款銀角á找ê方法數等於
+
+
+@itemize @bullet
+
+@item
+Kā數額 @math{a} 用所有（除了頭一款）ê銀角á找ê方法數，
+加
+
+@item
+Kā數額 @math{a-d} 用所有 @math{n} 款ê銀角á找ê方法數，其中 @math{d} 是頭一款銀角ê面額。
+
+@end itemize
+
 @noindent
 To see why this is true, observe that the ways to make change can be divided
 into two groups: those that do not use any of the first kind of coin, and those
@@ -3881,12 +3901,21 @@ do use the first kind of coin.  But the latter number is equal to the number of
 ways to make change for the amount that remains after using a coin of the first
 kind.
 
+@noindent
+Nā beh看出這是真ê ê原因，觀察找錢ê方法會當分做2種：無用頭一款銀角á ê，kap有用ê。所以，找一寡
+數額ê方法總數，是無用頭一款銀角á找chit ê數額ê方法數，加添假使lán用頭一款銀角á找錢ê方法數。但是
+後壁ê數等於假使lán用了一个頭一款ê銀角以後，chhun ê數額找錢ê方法數。
+
 Thus, we can recursively reduce the problem of changing a given amount to the
 problem of changing smaller amounts using fewer kinds of coins.  Consider this
 reduction rule carefully, and convince yourself that we can use it to describe
 an algorithm if we specify the following degenerate cases:@footnote{For
 example, work through in detail how the reduction rule applies to the problem
 of making change for 10 cents using pennies and nickels.}
+
+就án-ne，lán會當遞迴減少chit ê找所予ê數額問題，kàu用較少ê種類ê銀角，找較細ê數額ê問題。斟酌
+考慮chit ê規則，說服家己lán會當用這描述演算法，Nā lán指定下kha ê退化ê例：@footnote{舉例，
+詳細解決減少ê規則應用kàu 用1 sián kap 5 sián 找10 sián ê問題。}
 
 @itemize @bullet
 
@@ -3901,8 +3930,25 @@ If @math{n} is 0, we should count that as 0 ways to make change.
 
 @end itemize
 
+
+@itemize @bullet
+
+@item
+Nā @math{a} 的確是 0，lán 應該當做有 1 種方法來找錢。
+
+@item
+Nā @math{a} 較少 0，lán 應該當做有 0 種方法來找錢。
+
+@item
+Nā @math{n} 是 0，lán 應該當做有 0 種方法來找錢。
+
+@end itemize
+
 @noindent
 We can easily translate this description into a recursive procedure:
+
+@noindent
+Lán通容易kā chit ê描述翻譯做遞迴程序：
 
 @lisp
 (define (count-change amount) (cc amount 5))
