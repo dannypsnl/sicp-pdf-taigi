@@ -3976,6 +3976,10 @@ thinking of the coins as arranged in order from largest to smallest, but any
 order would do as well.)  We can now answer our original question about
 changing a dollar:
 
+@noindent
+（@code{first-denomination} 程序the̍h會當用ê銀角種類，傳轉頭一種ê面額。佇chia lán想銀角á是對
+大kàu細排列，但是任何排列mā會使。）Lán chit-má通回答lán原本ê找錢ê問題：
+
 @lisp
 (count-change 100)
 @i{292}
