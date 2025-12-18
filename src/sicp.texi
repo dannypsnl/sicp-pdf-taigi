@@ -4005,6 +4005,17 @@ transform processes that require an exponential number of steps (such as
 @code{count-change}) into processes whose space and time requirements grow
 linearly with the input.  See @ref{Exercise 3.27}.}
 
+@noindent
+@code{count-change}生成有重頭算ê樹遞迴，像lán頭一改實做ê @code{fib}。（Che會開一段時間來算
+292）。另外方面，設計較好ê演算法算結果ê方法無明顯，lán留che做挑戰。樹遞迴ê過程可能真無效率，但是
+定定較快指定kap了解ê觀察，致kàu lâng提議，倚靠設計「巧ê編譯器」有可能得著一兼二顧ê結果。
+@footnote{一个方法來應對重頭算，是安排代誌，予lán會當主動佇值算出ê時建立in ê表。逐改lán予lâng
+問著愛應用程序kàu一寡值ê時陣，lán先看值敢有tiông佇表內底，避免行重覆ê運算。Chit ê策略號
+做@newterm{表化}(tabulation) á是@newterm{記持化}(memoization)，會當用直接ê方法實做。
+表化有時陣通用來變換手續需要指數時間ê過程（比如@code{count-change}）變做時間kap空間需要
+kap輸入線性成長ê過程。看@ref{Exercise 3.27}。
+}
+
 @quotation
 @strong{@anchor{Exercise 1.11}Exercise 1.11:} A function @math{f} is defined by
 the rule that
