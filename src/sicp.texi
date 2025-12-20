@@ -4089,7 +4089,7 @@ to prove that @math{\text{Fib}(n) = (\varphi^n - \psi^n) / \sqrt{5}}.
 @math{\text{Fib}(n) = (\varphi^n - \psi^n) / \sqrt{5}}。
 @end quotation
 
-@subsection Orders of Growth
+@subsection Orders of Growth 成長率
 @node	1.2.3, 1.2.4, 1.2.2, 1.2
 
 The previous examples illustrate that processes can differ considerably in the
