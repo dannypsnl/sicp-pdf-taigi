@@ -4019,6 +4019,8 @@ kap輸入線性成長ê過程。看@ref{Exercise 3.27}。
 @quotation
 @strong{@anchor{Exercise 1.11}Exercise 1.11:} A function @math{f} is defined by
 the rule that
+
+函數 @math{f} 用下kha ê規則定義
 @tex
 $$
 f(n) =
@@ -4030,11 +4032,15 @@ $$
 @end tex
 Write a procedure that computes @math{f} by means of a recursive process.  Write a procedure that
 computes @math{f} by means of an iterative process.
+
+寫一个程序，用遞迴過程計算 @math{f}。寫一个程序，用反覆過程計算 @math{f}。
 @end quotation
 
 @quotation
 @strong{@anchor{Exercise 1.12}Exercise 1.12:} The following pattern of numbers
 is called @newterm{Pascal's triangle}.
+
+下kha ê數ê模樣號做 @newterm{Pascal三角形}(Pascal's triangle)。
 
 @example
         1
@@ -4058,6 +4064,16 @@ the works of the twelfth-century Persian poet and mathematician Omar Khayyam,
 and in the works of the twelfth-century Hindu mathematician Bh@'ascara
 @'Ach@'arya.} Write a procedure that computes elements of Pascal's triangle by
 means of a recursive process.
+
+三角形ê邊á ê角攏總是1，逐个佇三角形內底ê數，是伊頂懸ê兩个數ê和。@footnote{Pascal
+三角形內底ê元素號做 @newterm{二項係數}(binomial coefficients)，因為第 @math{n} ê列包含
+@math{(x + y)^n} ê擴展式ê項ê係數。Chit ê計算係數模樣出現佇Blaise Pascal 1653年佇機
+率理論方面ê深遠著作，就是 @cite{Trait@'e du triangle arithm@'etique}，根據
+@ref{Knuth (1973)}，仝款ê模樣出現佇由中國數學家朱世傑(Chu Shih-chieh)佇1303年出
+版ê《四元玉鑑》 (@cite{Szu-yuen Y@"u-chien})，12 世紀波斯詩人kap數學家Omar Khayyam
+ê作品，kap ê 12 世紀ê印度數學家 Bh@'ascara @'Ach@'arya ê作品內底。寫一个程序，用遞迴方法
+算Pascal三角形。}
+
 @end quotation
 
 @quotation
@@ -4066,6 +4082,11 @@ the closest integer to @math{\varphi^n / \sqrt{5}}, where @math{\varphi = (1 +
 \sqrt{5}) / 2}.  Hint: Let @math{\psi = (1 - \sqrt{5}) / 2}.
 Use induction and the definition of the Fibonacci numbers (see @ref{1.2.2})
 to prove that @math{\text{Fib}(n) = (\varphi^n - \psi^n) / \sqrt{5}}.
+
+證明 Fib(@math{n})是上接近@math{\varphi^n / \sqrt{5}} ê整數，其中 @math{\varphi = (1 +
+\sqrt{5}) / 2}。提示：予 @math{\psi = (1 - \sqrt{5}) / 2}。
+用歸納kap Fibonacci數ê定義（看@ref{1.2.2}）來證明
+@math{\text{Fib}(n) = (\varphi^n - \psi^n) / \sqrt{5}}。
 @end quotation
 
 @subsection Orders of Growth
