@@ -4098,6 +4098,10 @@ describe this difference is to use the notion of @newterm{order of growth} to
 obtain a gross measure of the resources required by a process as the inputs
 become larger.
 
+@noindent
+頂懸ê例說明過程會當佇in開運算計算資源ê使用率有gōa無仝。一个方便描述chit ê無仝ê方法，是用
+@newterm{成長率}ê概念，來the̍h當輸入變大ê時陣，大概所需要ê資源ê測量。
+
 Let @math{n} be a parameter that measures the size of the problem, and let
 @math{R(n)} be the amount of resources the process requires for a problem of
 size @math{n}.  In our previous examples we took @math{n} to be the number for which
