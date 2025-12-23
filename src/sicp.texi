@@ -4116,6 +4116,15 @@ number of elementary machine operations performed, and so on.  In computers
 that do only a fixed number of operations at a time, the time required will be
 proportional to the number of elementary machine operations performed.
 
+
+予 @math{n} 當做量問題sài-suh ê參數，@math{R(n)}當做過程處理sài-suh是 @math{n}問題需
+要ê資源量。佇lán進前ê例，lán the̍h @math{n} 當做是函數所算ê次數，但是koh有其他可能。比如講，
+若是lán ê目標是算一个數ê平方根ê近似值，lán可能掠 @math{n} 做需要ê精確數位。對矩陣運算，lán可能
+掠 @math{n}做矩陣ê列數。一般來講，有關係問題特性ê數，分析過程用che真理想。仝款，@math{R(n)} 可能
+the̍h來量內部儲存暫存器所用ê量、基本機器操作次數，等等。佇一改kan-ta做固定操作量ê電腦，需要ê時間會
+hām所行ê基本機器操作量成比例關係。
+
+
 We say that @math{R(n)} has order of growth @math{\Theta(f(n))}, written
 @math{R(n)} = @math{\Theta(f(n))} (pronounced ``theta of
 @math{f(n)}''), if there are positive constants @math{k_1} and @math{k_2}
@@ -4123,6 +4132,11 @@ independent of @math{n} such that @math{k_1f(n) \le R(n) \le k_2f(n)}
 for any sufficiently large value of @math{n}.  (In other words, for large @math{n},
 the value @math{R(n)} is sandwiched between @math{k_1f(n)} and
 @math{k_2f(n)}.)
+
+Lán講 @math{R(n)} 有成長率 @math{\Theta(f(n))}，寫做@math{R(n)} = @math{\Theta(f(n))}
+（讀做「theta of @math{f(n)}」），若是有正數 @math{k_1} kap @math{k_2}，kap @math{n}獨立，
+滿足 @math{k_1f(n) \le R(n) \le k_2f(n)}，對任何夠大ê @math{n} 值（別个方法講，對大ê
+@math{n}， @math{R(n)} ê值予lâng giap佇@math{k_1f(n)} kap @math{k_2f(n)}中間。）
 
 \enlargethispage{\baselineskip}
 
