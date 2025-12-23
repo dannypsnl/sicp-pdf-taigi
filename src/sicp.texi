@@ -4942,7 +4942,8 @@ Lán已經看著，程序其實是描述對數字ê複合運算ê抽象，而且
 we are not talking about the cube of a particular number, but rather about a
 method for obtaining the cube of any number.  Of course we could get along
 without ever defining this procedure, by always writing expressions such as
-Lán毋是teh講佗一个數字ê立方，煞是teh講，求任何數字ê立方ê方法。當然，lán亦會當mài定義tsit-ê程序，逐擺著寫出來
+Lán毋是teh講佗一个數字ê立方，煞是teh講，求任何數字ê立方ê方法。當然，lán亦會當mài定義chit-
+ê程序，逐擺著寫出來
 
 @lisp
 (* 3 3 3)
