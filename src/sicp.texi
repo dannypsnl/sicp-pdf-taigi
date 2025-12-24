@@ -4157,6 +4157,16 @@ tree-recursive Fibonacci computation requires @math{\Theta(\varphi^n)}
 steps and space @math{\Theta(n)}, where @math{\varphi} is the golden ratio
 described in @ref{1.2.2}.
 
+舉例，佇 @ref{1.2.1} 提起ê算階乘ê線性遞迴過程，手續數kap輸入 @math{n} 成比例成長。就án-ne，
+chit ê過程需要ê手續，成長若 @math{\Theta(n)}。Lá mā看著需要ê空間成長若 @math{\Theta(n)}。
+佇反覆ê階乘，手續數iáu是@math{\Theta(n)}，但是空間是@math{\Theta(1)}，就是常數。
+@footnote{Chiah ê句khàm掉真chē過度簡化ê所在。比如講，若是lán用「機器操作」算過程手續，
+lán teh設使需要行ê機器操作數，比如乘法，hām受乘數獨立，毋過若是數字足大就毋著。佇空間ê估計
+mā相siâng。親像過程ê設計kap描述，分析過程會當佇chē-chē款ê抽象層級行。}樹遞迴ê Fibonacci計算，需要
+@math{\Theta(\varphi^n)} 步手續kap空間 @math{\Theta(n)}，其中@math{\varphi}是佇
+@ref{1.2.2}描述ê黃金比例。
+
+
 Orders of growth provide only a crude description of the behavior of a process.
 For example, a process requiring @math{n^2} steps and a process requiring
 @math{1000n^2} steps and a process requiring @math{3n^2 + 10n + 17} steps all
