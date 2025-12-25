@@ -4180,6 +4180,13 @@ the resource utilization by a constant factor.  In the remainder of
 so that doubling the problem size increases the resource requirement by a
 constant amount.
 
+成長率kan-ta提供粗ê過程行為ê描述。舉例，需要@math{n^2} ê手續ê過程、需要@math{1000n^2} 
+ê手續ê kap 需要 @math{3n^2 + 10n + 17} ê程序，成長率lóng是@math{\Theta(n^2)}。另外方面，
+成長率提供有路用ê指示，對若準講lán改變問題ê sài-suh，lán ê期待過程ê行為án-nóa改變。對
+@math{\Theta(n)}（線性）ê過程，sài-suh加一倍，資源大約會加一倍。對指數ê過程，問題sài-suh
+ê增加會kā資源使用率乘以常數因子。佇@ref{1.2} ê chhun ê部份，lán ê檢查兩个演算法，in ê成長率是
+對數ê，致kàu kā問題sài-suh加一倍，增加常數ê量ê資源需求。
+
 @endpage
 @quotation
 @strong{@anchor{Exercise 1.14}Exercise 1.14:} Draw the tree illustrating the
