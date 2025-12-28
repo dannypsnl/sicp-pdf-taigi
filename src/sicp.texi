@@ -4260,6 +4260,10 @@ Consider the problem of computing the exponential of a given number.  We would
 like a procedure that takes as arguments a base @math{b} and a positive integer
 exponent @math{n} and computes @math{b^n}.  One way to do this is via the
 recursive definition
+
+考慮計算數ê指數函數ê問題。Lán beh愛一个程序，the̍h底數 @math{b} kap正整數指數 @math{n}，算
+出@math{b^n}。一个方法是用遞迴定義
+
 @ifinfo
 
 @example
@@ -4278,6 +4282,8 @@ $$
 @end tex
 which translates readily into the procedure
 
+翻譯做程序就是
+
 @lisp
 (define (expt b n)
   (if (= n 0)
@@ -4289,6 +4295,10 @@ which translates readily into the procedure
 This is a linear recursive process, which requires @math{\Theta(n)} steps and
 @math{\Theta(n)} space.  Just as with factorial, we can readily formulate an
 equivalent linear iteration:
+
+@noindent
+Che是線性遞迴過程，需要 @math{\Theta(n)} ê手續kap @math{\Theta(n)} ê空間。親像函數，
+lán通規範做等價ê線性反覆：
 
 @lisp
 (define (expt b n)
@@ -4304,8 +4314,14 @@ equivalent linear iteration:
 @noindent
 This version requires @math{\Theta(n)} steps and @math{\Theta(1)} space.
 
+@noindent
+Chit ê版本需要 @math{\Theta(n)} 手續kap @math{\Theta(1)} 空間。
+
 We can compute exponentials in fewer steps by using successive squaring.  For
 instance, rather than computing @math{b^8} as
+
+倚靠連sòa平方ê方法，lán會當用較少ê手續計算指數。比如講，無kā @math{b^8} án-ne算
+
 @ifinfo
 
 @example
@@ -4317,6 +4333,8 @@ b * (b * (b * (b * (b * (b * (b * b))))))
 $$ b\cdot (b\cdot (b\cdot (b\cdot (b\cdot (b\cdot (b\cdot b))))))\,, $$
 @end tex
 we can compute it using three multiplications:
+
+Lán顛倒會當用三个乘法計算：
 @ifinfo
 
 @example
@@ -4338,23 +4356,29 @@ $$
 This method works fine for exponents that are powers of 2.  We can also take
 advantage of successive squaring in computing exponentials in general if we use
 the rule
+
+Chit ê方法佇指數是2 ê 冪 (be̍k) ê時陣運作誠好。Nā是用下kha ê規則，lán mā通利用連sòa平方ê方
+法佇一般算指數ê過程：
+
 @ifinfo
 
 @example
-b^n = (b^(n/2))^2    if n is even
-b^n = b * b^(n - 1)  if n is odd
+b^n = (b^(n/2))^2    if n is even nā n是雙數
+b^n = b * b^(n - 1)  if n is odd  nā n是單數
 @end example
 
 @end ifinfo
 @tex
 $$
 \begin{array}{l@{{}={}}lr@{\ n\ }l}
-  b^n & (b^{n / 2})^2  \;\; & \mbox{if\,} & \mbox{\,is\, even}, \\
-  b^n & b\cdot b^{n-1} \;\; & \mbox{if\,} & \mbox{\,is\, odd}.
+  b^n & (b^{n / 2})^2  \;\; & \mbox{if\,} & \mbox{\,is\, even (nā n是雙數)}, \\
+  b^n & b\cdot b^{n-1} \;\; & \mbox{if\,} & \mbox{\,is\, odd (nā n是單數)}.
 \end{array}
 $$
 @end tex
 We can express this method as a procedure:
+
+Lán通用程序方式，表達chit ê方法：
 
 @lisp
 (define (fast-expt b n)
