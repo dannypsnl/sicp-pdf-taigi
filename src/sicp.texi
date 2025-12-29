@@ -4391,6 +4391,8 @@ Lán通用程序方式，表達chit ê方法：
 where the predicate to test whether an integer is even is defined in terms of
 the primitive procedure @code{remainder} by
 
+其中測試一个整數敢是雙數ê謂詞，是用基礎程序 @code{remainder} 所定義，ná下kha：
+
 @lisp
 (define (even? n)
   (= (remainder n 2) 0))
