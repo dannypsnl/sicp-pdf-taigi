@@ -4414,6 +4414,16 @@ less than twice the log base 2 of @math{n}.  The arbitrary constants @math{k_1} 
 process, the base to which logarithms are taken does not matter, so all such
 processes are described as @math{\Theta(\log n)}.}
 
+@noindent
+@code{fast-expt} 所擴展ê過程佇空間kap手續數方面,kap @math{n}成對數方式成長。Beh看che，觀察
+用 @code{fast-expt} 計算 @math{b^{2n}}，比 @math{b^n}，kan-ta需要加一改乘法。所以若是lán會
+當加用乘法，lán通算ê指數ê sài-suh 會變雙倍。就án-ne，@math{n} ê 指數所需要ê乘法數成長大約kap
+ @math{n} ê 以 2 為底ê對數平緊。Chit ê過程ê成長率是@math{\Theta(\log n)}。
+@footnote{較準確來講，需要ê乘法數等於@math{n} ê 以 2 為底ê對數減1，koh加 @math{n} ê二進位表示ê 1 ê數量。
+總計定著較少@math{n} ê 2 為底ê對數 ê 2倍。任何佇成長率定義ê表示法ê常數@math{k_1} kap @math{k_2}
+chhàng著對對數過程，對數ê底無要緊ê意思，所以任何chit款ê過程lóng用 @math{\Theta(\log n)} 描述。}
+
+
 The difference between @math{\Theta(\log n)} growth and
 @math{\Theta(n)} growth becomes striking as @math{n} becomes large.  For
 example, @code{fast-expt} for @math{n} = 1000 requires only 14
