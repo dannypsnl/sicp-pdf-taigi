@@ -4438,6 +4438,14 @@ iterative algorithm is ancient.  It appears in the @cite{Chandah-sutra} by
 4.6.3, for a full discussion and analysis of this and other methods of
 exponentiation.}
 
+@math{\Theta(\log n)} ê成長 kap @math{\Theta(n)} ê成長 ê差別佇@math{n}變koh較大ê時陣
+會誠明顯。舉例，若是@math{n} = 1000，@code{fast-expt} kan-ta需要14 ê乘法。@footnote{lí可能
+好奇，是án-nóa有lâng會關心kā數字giâ kàu伊ê 1000次方。看@ref{1.2.6}。} Mā是有可能用相sòa
+ê平方ê想法來設計反覆ê，用對數ê手續數算指數ê演算法。（看@ref{Exercise 1.16}），雖bóng就親像
+反覆ê演算法ê例，寫che無像遞迴演算法hiah直接。@footnote{Chit ê反覆演算法誠古早。伊出現佇
+@'Ach@'arya Pingala 佇西元前200年進前寫ê @cite{Chandah-sutra}。看@ref{Knuth 1981}，第
+4.6.3 節，來得著chit ê kap其他指數運算ê方法ê 全面討論kap分析。}
+
 @quotation
 @strong{@anchor{Exercise 1.16}Exercise 1.16:} Design a procedure that evolves
 an iterative exponentiation process that uses successive squaring and uses a
