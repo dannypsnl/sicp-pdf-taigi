@@ -4439,7 +4439,7 @@ iterative algorithm is ancient.  It appears in the @cite{Chandah-sutra} by
 exponentiation.}
 
 @math{\Theta(\log n)} ê成長 kap @math{\Theta(n)} ê成長 ê差別佇@math{n}變koh較大ê時陣
-會誠明顯。舉例，若是@math{n} = 1000，@code{fast-expt} kan-ta需要14 ê乘法。@footnote{lí可能
+會誠明顯。舉例，若是@math{n} = 1000，@code{fast-expt} kan-ta需要14 ê乘法。@footnote{Lí可能
 好奇，是án-nóa有lâng會關心kā數字giâ kàu伊ê 1000次方。看@ref{1.2.6}。} Mā是有可能用相sòa
 ê平方ê想法來設計反覆ê，用對數ê手續數算指數ê演算法。（看@ref{Exercise 1.16}），雖bóng就親像
 反覆ê演算法ê例，寫che無像遞迴演算法hiah直接。@footnote{Chit ê反覆演算法誠古早。伊出現佇
@@ -4458,6 +4458,15 @@ is unchanged from state to state.  At the beginning of the process
 end of the process.  In general, the technique of defining an
 @newterm{invariant quantity} that remains unchanged from state to state is a
 powerful way to think about the design of iterative algorithms.)
+
+設計一个程序，擴展反覆ê指數過程，伊使用相連sòa ê平方kap用對數ê手續數，親像 @code{fast-expt}
+所行ê。（提示：用觀察@math{(b^{n / 2})^2 = (b^2)^{n / 2}}，kap保持 指數 @math{n}、底數
+@math{b}，以及加添ê狀態變數 @math{a} ，而且定義狀態變換，致使狀態變換中間， @math{ab^n}
+ê乘積lóng無變。佇過程起頭，@math{a}設做1，佇過程soah ê時陣，@math{a} ê值就是答案。一般
+來講，定義佇狀態變換之內維持不變ê @newterm{不變量}(invariant quantity) 是有力ê方法，來考慮
+反覆演算法ê設計。
+
+
 @end quotation
 
 @quotation
@@ -4467,6 +4476,9 @@ multiplication.  In a similar way, one can perform integer multiplication by
 means of repeated addition.  The following multiplication procedure (in which
 it is assumed that our language can only add, not multiply) is analogous to the
 @code{expt} procedure:
+
+本節ê指數演算法是用重覆乘法運算。用相siâng ê方法，會當用重覆加法來行整數乘法。下kha ê乘法
+程序（佇chia假設lán ê語言會當加，bē當乘），kap @code{expt} 程序比並：
 
 @lisp
 (define (* a b)
@@ -4480,6 +4492,10 @@ we include, together with addition, operations @code{double}, which doubles an
 integer, and @code{halve}, which divides an (even) integer by 2.  Using these,
 design a multiplication procedure analogous to @code{fast-expt} that uses a
 logarithmic number of steps.
+
+Chit ê程序the̍h線性ê手續數佇 @code{b}。Chit-má假設lán包含加法、操作  @code{double}（kā
+整數乘以2倍），kap @code{halve}（kā雙數除以2）。用chiah-ê，設計一个乘法程序，kap 
+@code{fast-expt} 比並，而且使用對數ê手續數。
 @end quotation
 
 @quotation
