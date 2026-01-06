@@ -4507,6 +4507,12 @@ which is sometimes known as the ``Russian peasant method'' of multiplication,
 is ancient.  Examples of its use are found in the Rhind Papyrus, one of the two
 oldest mathematical documents in existence, written about 1700 @acronym{B.C.}
 (and copied from an even older document) by an Egyptian scribe named A@math{\!}'h-mose.}
+
+使用@ref{Exercise 1.16} kap @ref{Exercise 1.17} ê 結果，想出一个程序，生成反覆ê，kā兩个
+整數相乘ê過程，使用加、kā整數乘以2倍  kap kā 雙數除以2 ê方式，而且用對數ê手續數。@footnote{Chit
+ê演算法，有時仔號做乘法ê「露西亞作穡lâng方法」(Russian peasant method)，是古早ê方法。Chit ê
+方法ê例會當佇Rhind紙草紙 (Papyrus)揣著，伊是兩篇佇leh ê上古早ê數學文件之一，由埃及書記A@math{\!}'h-mose
+寫佇大約西元前1700年（伊家己mā是較早ê文件ê抄本）。}
 @end quotation
 
 \enlargethispage{\baselineskip}
