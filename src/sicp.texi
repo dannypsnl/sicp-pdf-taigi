@@ -4510,9 +4510,9 @@ oldest mathematical documents in existence, written about 1700 @acronym{B.C.}
 
 使用@ref{Exercise 1.16} kap @ref{Exercise 1.17} ê 結果，想出一个程序，生成反覆ê，kā兩个
 整數相乘ê過程，使用加、kā整數乘以2倍  kap kā 雙數除以2 ê方式，而且用對數ê手續數。@footnote{Chit
-ê演算法，有時仔號做乘法ê「露西亞作穡lâng方法」(Russian peasant method)，是古早ê方法。Chit ê
-方法ê例會當佇Rhind紙草紙 (Papyrus)揣著，伊是兩篇佇leh ê上古早ê數學文件之一，由埃及書記A@math{\!}'h-mose
-寫佇大約西元前1700年（伊家己mā是較早ê文件ê抄本）。}
+ê演算法，有時仔號做乘法ê「露西亞choh-sit-lâng方法」(Russian peasant method)，是古早ê方法。Chit ê
+方法ê例會當佇Rhind紙草紙 (Papyrus)揣著，伊是兩篇佇leh ê上古早ê數學文件之一，由埃及書
+記A@math{\!}'h-mose寫佇大約西元前1700年（伊家己mā是較早ê文件ê抄本）。}
 @end quotation
 
 \enlargethispage{\baselineskip}
@@ -4539,6 +4539,16 @@ procedure.  Put this all together to complete the following procedure, which
 runs in a logarithmic number of steps:@footnote{This exercise was suggested to
 us by Joe Stoy, based on an example in @ref{Kaldewaij 1990}.}
 
+有巧ê演算法來用對數ê手續數算Fibonacci數。回想佇 @ref{1.2.2}內底，@code{fib-iter} 
+程序內底ê狀態變數 @math{a} kap @math{b} ê變換：@math{a \gets a + b} kap
+@math{b \gets a}。Kā chit ê 變換號做 @math{T}，觀察直直應用 @math{T} @math{n} 改，用
+1 kap 0 開始，產生數對Fib(@math{n+1}) kap Fib(@math{n})。換別句話講，Fibonacci數是kā開始ê數列 (1,0) 應用 @math{T^n}，就是變換 @math{T} ê @math{n^{\mathrm{th}}} 次方來生成。Chit-má kā @math{T}掠做@math{p=0} kap @math{q=1} ê時ê變換 @math{T_{pq}} ê特殊形式，其中@math{T_{pq}} 根據 @math{a \gets bq + aq + ap} kap @math{b \gets bp + aq} 變換數對 
+@math{(a, b)}。展示若是lán應用chit款變換 @math{T_{pq}} 2改，效果kap用一个
+kâng形ê變換 @math{T_{p'\!q'}} kâng款。用 @math{p} kap @math{q} ê形式算出 @math{p'\!}
+ kap @math{q'\!}。Che予lán明顯ê方法來平方chiah ê變換，lán就án-ne會當用相連sòa ê平方計算 @math{T^n}，親像佇  @code{fast-expt} 程序。請kā逐个鬥做伙完成下kha ê程序，伊用對數ê手續數pháng：@footnote{Chit ê練習是Joe Stoy由推薦予lán，根據佇 @ref{Kaldewaij 1990} ê例。}
+
+
+
 @lisp
 (define (fib n)
   (fib-iter 1 0 0 1 n))
@@ -4558,7 +4568,7 @@ us by Joe Stoy, based on an example in @ref{Kaldewaij 1990}.}
 @end lisp
 @end quotation
 
-@subsection Greatest Common Divisors
+@subsection Greatest Common Divisors 上大公約數
 @node	1.2.5, 1.2.6, 1.2.4, 1.2
 
 The greatest common divisor (@acronym{GCD}) of two integers @math{a} and @math{b} is
@@ -4572,10 +4582,19 @@ both the numerator and the denominator by their @acronym{GCD}.  For example,
 factor them and search for common factors, but there is a famous algorithm that
 is much more efficient.
 
+@noindent
+整數@math{a} kap @math{b} ê上大公約數 (@acronym{GCD}) ê定義是，上大ê整數kā @math{a} kap 
+@math{b} 除，lóng無餘數。比如講，16 kap 28 ê 上大公約數是 4。佇@ref{Chapter 2}，當lán
+調查按怎實做有理數運算，lán會需要會曉計算上大公約數，為著欲約分(reduce)有理數kàu上短ê形式(lowest terms)（欲約分有理數kàu上短ê形式，lán tio̍h kā 分子kap分母lóng予上大公約數除，比如 16/28約分變做4/7。）一款chhiau兩个整數ê上大公約數ê方法是kā in因數分解了後，chhōe in ê公約數。
+但是有出名ê演算法，koh較有效率。
+
 The idea of the algorithm is based on the observation that, if @math{r} is the
 remainder when @math{a} is divided by @math{b}, then the common divisors of @math{a} and
 @math{b} are precisely the same as the common divisors of @math{b} and @math{r}.  Thus,
 we can use the equation
+
+Chit ê演算法ê想法徛起佇chit ê觀察，就是nā @math{r} 是 @math{a} 予 @math{b} 除ê餘數， @math{a}
+kap @math{b} ê 公約數就準確是 @math{b} kap @math{r} ê 公約數。就án-ne，lán通用方程式
 
 @example
 GCD(a,b) = GCD(b,r)
@@ -4585,6 +4604,9 @@ GCD(a,b) = GCD(b,r)
 to successively reduce the problem of computing a @acronym{GCD} to the problem
 of computing the @acronym{GCD} of smaller and smaller pairs of integers.  For
 example,
+
+@noindent
+來相連sòa縮小計算上大公約數ê問題，kàu別个愈來愈細ê數對ê上大公約數ê問題。比如，
 
 @example
 GCD(206,40) = GCD(40,6)
@@ -4608,7 +4630,17 @@ older, but, as Knuth explains, Euclid's algorithm is the oldest known to have
 been presented as a general algorithm, rather than as a set of illustrative
 examples.}
 
+@acronym{GCD(206, 40)} 就縮小kàu @acronym{GCD(2, 0)}，就是 2。有可能展示用2 ê
+正整數開始，而且行重覆縮小就定著落尾會產生一个數對，其中第二个數是0。上大公因數就是數對
+ê另外一个數。Chit ê計算上大公因數ê方法號做@newterm{Euclid ê 演算法}(Euclid's
+Algorithm)。@footnote{號做Euclid ê演算法是因為伊出現佇 Euclid ê @cite{Elements}
+ (Book 7, ca. 300 @acronym{B.C.}). 根據 @ref{Knuth (1973)}，伊通掠做是上早ê非自
+明(nontrivial)演算法。乘法ê古早ê埃及方法(@ref{Exercise 1.18})當然較早，但是，像
+Knuth所解說，Euclid ê演算法是上早用一般演算法ê形式所展示ê，毋是說明性ê案例ê集合。}
+
 It is easy to express Euclid's Algorithm as a procedure:
+
+Euclid ê演算法用程序來表示，是真快：
 
 @lisp
 (define (gcd a b)
