@@ -4653,8 +4653,13 @@ Euclid ê演算法用程序來表示，是真快：
 This generates an iterative process, whose number of steps grows as the
 logarithm of the numbers involved.
 
+@noindent
+Che生成反覆ê過程，伊ê手續數照輸入ê數字ê對數成長。
+
 The fact that the number of steps required by Euclid's Algorithm has
 logarithmic growth bears an interesting relation to the Fibonacci numbers:
+
+Euclid ê演算法成對數成長ê事實，送出一个kap Fibonacci數ê趣味ê關係：
 
 @quotation
 @strong{Lam@'e's Theorem:} If Euclid's Algorithm requires @math{k} steps to
