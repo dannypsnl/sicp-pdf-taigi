@@ -4693,7 +4693,26 @@ together with the definition of the Fibonacci numbers gives @math{b_{k+1} \ge
 b_k + b_{k-1} \ge {\rm Fib}(k) + {\rm Fib}(k-1) =
 {\rm Fib}(k+1)}, which completes the proof of Lam@'e's Theorem.}
 
-（著愛做）
+@strong{Lam@'e ê定理} 若是Euclid ê演算法需要 @math{k} 步來算一个數對ê上大公約數，
+數對內底上細ê數一定無比第 @math{k} ê Fibonacci 數較細。
+@footnote{Chit ê定理由Gabriel Lam@'e佇1845年證明，伊是法國數學家 kap 工程師，
+主要因為伊對數學物理ê貢獻出名。Beh證明chit ê定理，lán考慮數對(@math{a_k, b_k})，
+其中@math{a_k \ge b_k}，對che，Euclid ê演算法佇@math{k}步內中止。證明是chhāi佇
+若 @math{(a_{k+1}, b_{k+1}) \to
+(a_k, b_k) \to (a_{k-1}, b_{k-1})} 是3 ê佇縮小ê過程相sòa ê數對，lán定著有 @math{b_{k+1} \ge
+b_k + b_{k-1}} ê主張。Beh驗證chit ê主張，考慮減少ê手續是由應用轉換「@math{a_{k-1} = b_k,
+b_{k-1} =}  @math{a_k} 予 @math{b_k} 除ê餘數」所定義。第二ê程式意思是
+ @math{a_k = qb_k + b_{k-1}} 對正整數 @math{q}。而且因為 @math{q} 上少一定是 1，lán有 @math{a_k
+= qb_k + b_{k-1} \ge b_k + b_{k-1}}。毋過佇頂一ê縮小ê手續lán有 @math{b_{k+1} = a_k}。
+因此，@math{b_{k+1} = a_k \ge b_k + b_{k-1}}。Che驗證chit ê主張。Chit-má lán通用佇 @math{k}
+（演算法beh停止所愛ê手續數）ê歸納，來證明chit ê定理。對 @math{k =1}，結果是真ê，因為
+這kan-ta需要 @math{b} 上少kap Fib(1)（伊ê值是1） 平大。Chit-má，設使對所有無超過
+  @math{k} ê整數是真ê，而且成立對 @math{k + 1} ê結果。Lán kā  @math{(a_{k+1},
+b_{k+1}) \to (a_k, b_k) \to (a_{k-1}, b_{k-1})} 準做佇縮小過程內底相連sòa ê 數對。
+靠lán ê歸納假設，lán有 @math{b_{k-1} \ge {\rm Fib}(k - 1)} kap
+@math{b_k \ge {\rm Fib}(k)}。就án-ne，應用chit ê頭拄á證明ê主張kap Fibonacci數ê定義，得著
+ @math{b_{k+1} \ge b_k + b_{k-1} \ge {\rm Fib}(k) + {\rm Fib}(k-1) =
+{\rm Fib}(k+1)}，完成證明 Lam@'e ê定理。}
 
 @end quotation
 
