@@ -4743,6 +4743,12 @@ order), illustrate the process generated in evaluating @code{(gcd 206 40)} and
 indicate the @code{remainder} operations that are actually performed.  How many
 @code{remainder} operations are actually performed in the normal-order
 evaluation of @code{(gcd 206 40)}?  In the applicative-order evaluation?
+
+@strong{@anchor{Exercise 1.20}Exercise 1.20:} 程序生成ê過程當然倚佇直譯器所用ê規則。比如講，
+考慮面頂ê反覆ê @code{gcd} 程序。設使lán beh用正規序直譯chit ê程序，親像佇@ref{1.1.5}所討論ê。
+（@code{if} ê正規序算值佇 @ref{Exercise 1.5}有描述）用替代法（正規序），請說明佇算
+@code{(gcd 206 40)}ê值生出來ê過程，koh標示實際行ê @code{remainder} 操作。佇用正規序算
+@code{(gcd 206 40)} ê 值中， @code{remainder} 實際行gōa chē改？佇應用序算值是gōa chē改？
 @end quotation
 
 @subsection Example: Testing for Primality
