@@ -4751,7 +4751,7 @@ evaluation of @code{(gcd 206 40)}?  In the applicative-order evaluation?
 @code{(gcd 206 40)} ê 值中， @code{remainder} 實際行gōa chē改？佇應用序算值是gōa chē改？
 @end quotation
 
-@subsection Example: Testing for Primality
+@subsection Example: Testing for Primality 例：判定質數
 @node	1.2.6,  , 1.2.5, 1.2
 
 This section describes two methods for checking the primality of an integer
@@ -4760,7 +4760,12 @@ This section describes two methods for checking the primality of an integer
 The exercises at the end of this section suggest programming projects based on
 these algorithms.
 
-@subsubheading Searching for divisors
+@noindent
+Chit節描述兩个檢查整數 @math{n} 敢是指數ê方法，一个ê成長率是 @math{\Theta(\sqrt{n})}，
+kap 另外一个「機率性ê」演算法，伊ê成長率是@math{\Theta(\log n)}。本節尾á ê練習提出chhāi
+佇chiah ê演算法ê程式設計專案。
+
+@subsubheading Searching for divisors Chhiau約數
 
 Since ancient times, mathematicians have been fascinated by problems concerning
 prime numbers, and many people have worked on the problem of determining ways
@@ -4769,6 +4774,10 @@ the number's divisors.  The following program finds the smallest integral
 divisor (greater than 1) of a given number @math{n}.  It does this in a
 straightforward way, by testing @math{n} for divisibility by successive integers
 starting with 2.
+
+對古早時代，數學家就痴迷佇關係質數ê問題，chē-chē lâng骨力佇決定判定數字敢是質數ê方法ê問題。
+Chit ê判定數敢是質數ê方法，是chhōe著數字ê因數。下kha ê程式chhōe數字 @math{n} ê上細ê整除ê除數
+（超過1）。伊行佇直接ê方式，用對2開始相sòa ê整數，試伊對 @math{n} ê整除性。
 
 @lisp
 (define (smallest-divisor n) (find-divisor n 2))
