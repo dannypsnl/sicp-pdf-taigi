@@ -4792,6 +4792,10 @@ Chit ê判定數敢是質數ê方法，是chhōe著數字ê因數。下kha ê程
 We can test whether a number is prime as follows: @math{n} is prime if and only if
 @math{n} is its own smallest divisor.
 
+@noindent
+Lán會當用下kha ê方法測試一个數敢是質數：@math{n} 是質數，若而且kan-ta若 @math{n}是伊家己上細ê
+約數（譯註：而且超過1）。
+
 @lisp
 (define (prime? n)
   (= n (smallest-divisor n)))
@@ -4807,7 +4811,14 @@ between 1 and @math{\sqrt{n}}.  Consequently, the number of steps required
 to identify @math{n} as prime will have order of growth
 @math{\Theta(\sqrt{n})}.
 
-@subsubheading The Fermat test
+@noindent
+@code{find-divisor} 上尾ê測試是chhāi佇chit ê事實，就是若 @math{n} 毋是質數，定著有
+約數無超過 @math{\sqrt{n}}。@footnote{若是 @math{d} 是 @math{n} ê約數，
+@math{n / d} mā是。但是 @math{d} kap @math{n / d} bōe當同時超過 @math{\sqrt{n}}。}
+Che意思是chit ê演算法kan-ta需要試1 kàu @math{\sqrt{n}}之間ê約數。結果，判定 @math{n}
+是質數需要ê手續數ē有成長率 @math{\Theta(\sqrt{n})}。
+
+@subsubheading The Fermat test Fermat測試
 
 The @math{\Theta(\log n)} primality test is based on a result from
 number theory known as Fermat's Little Theorem.@footnote{Pierre de Fermat
