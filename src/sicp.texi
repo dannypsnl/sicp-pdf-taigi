@@ -4835,6 +4835,15 @@ small to contain it.''  Finding a proof of Fermat's Last Theorem became one of
 the most famous challenges in number theory.  A complete solution was finally
 given in 1995 by Andrew Wiles of Princeton University.}
 
+@math{\Theta(\log n)} ê質數測試是chhāi佇對號做Fermat ê 小定理ê數論ê結果來ê。
+@footnote{Pierre de Fermat
+(1601-1665)受掠做現代數論ê創立者。伊the̍h著chē-chē重要ê數論結果，但是伊定定kan-ta宣佈結果，
+無提供伊ê證明。Fermat ê 小定理是寫佇伊佇1640年寫ê phoe。頭一个出版ê證明是由Euler佇1736年推出。
+（較早ê，siâng款ê證明mā佇Leibniz無出版ê手稿內發現）。上出名ê Fermat ê結果——號做Fermat 上尾ê定理
+是佇1637年緊緊記佇 伊ê @cite{Arithmetic}（第三世紀ê希臘數學家 Diophantus 寫ê）chit本冊ê
+khó͘-pih，koh寫註：「我有發現真ê無四常ê記錄，但是邊á傷細，beh當總寫。」chhiau-chhōe Fermat ê上尾ê定理
+成做數論內底上出名ê挑戰之一。全面ê解落尾由Princeton大學ê Andrew Wiles佇1995年提出。}
+
 @quotation
 @strong{Fermat's Little Theorem:} If @math{n} is a prime number and @math{a} is any
 positive integer less than @math{n}, then @math{a} raised to the @math{n^{\mathrm{th}}} power is
