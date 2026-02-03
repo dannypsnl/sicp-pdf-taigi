@@ -4917,6 +4917,15 @@ of @math{b^{e / 2}} modulo @math{m}, square this, and take the remainder modulo
 computation without ever having to deal with numbers much larger than @math{m}.
 (Compare @ref{Exercise 1.25}.)}
 
+Che kap @ref{1.2.4} ê @code{fast-expt} 程序真sêng。伊用相sòa ê平方，致kàu手續數綴指數照
+對數成長。@footnote{佇指數@math{e}超過1 ê例內底，縮小ê手續是根據chit ê事實，就是對任何整
+數@math{x}、@math{y} kap @math{m}，lán通用分別算@math{x} 予 @math{m} 除ê餘數kap @math{y}
+ 予 @math{m} 除ê餘數，然後kā chit 兩个餘數相乘，koh 算伊予 @math{m}除ê餘數，來chhōe著
+@math{(x \times y)}予@math{m}除ê餘數。比論，佇@math{e}是雙數ê時陣，lán算 @math{b^{e / 2}}
+ 予 @math{m} 除ê餘數，koh kā平方，koh算出伊予@math{m}除ê餘數。Chit ê技術chiâⁿ有路用，
+因為伊代表lán毋免tāi先處理比 @math{m} 較大ê數，chiah 通行lán ê運算。（比較
+@ref{Exerxise 1.25}）}
+
 The Fermat test is performed by choosing at random a number @math{a} between 1 and
 @math{n-1} inclusive and checking whether the remainder modulo @math{n} of the
 @math{n^{\mathrm{th}}} power of @math{a} is equal to @math{a}.  The random number @math{a} is chosen
@@ -4924,6 +4933,12 @@ using the procedure @code{random}, which we assume is included as a primitive
 in Scheme. @code{random} returns a nonnegative integer less than its integer
 input.  Hence, to obtain a random number between 1 and @math{n-1}, we call
 @code{random} with an input of @math{n-1} and add 1 to the result:
+
+Fermat ê測試ê行法，是對 1 kàu @math{n-1}（包含）之間chhìn-chhái揀一个整數，檢查
+@math{a} ê @math{n} 次方予@math{n}除ê餘數敢等於@math{a}。隨機數 @math{a} 用
+程序 @code{random} 揀，設使伊是佇Scheme內底ê基礎運算。@code{random}傳轉去比輸入ê整數
+較細ê，毋是負數ê整數。就án-ne，beh chhìn-chhái the̍h著佇 1 kap @math{n-1}之間ê數，lán
+kā @math{n-1} 傳入去 @code{random}，koh kā 輸出ê結果加1：
 
 @lisp
 (define (fermat-test n)
@@ -4936,6 +4951,9 @@ input.  Hence, to obtain a random number between 1 and @math{n-1}, we call
 The following procedure runs the test a given number of times, as specified by
 a parameter.  Its value is true if the test succeeds every time, and false
 otherwise.
+
+@noindent
+下kha ê程序行測試幾lo̍h改（由參數決定）。若是測試逐擺lóng成功，伊ê值就是真ê，a̍h無就是假ê。
 
 @lisp
 (define (fast-prime? n times)
