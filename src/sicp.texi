@@ -4962,7 +4962,7 @@ otherwise.
         (else false)))
 @end lisp
 
-@subsubheading Probabilistic methods
+@subsubheading Probabilistic methods 機率法
 
 The Fermat test differs in character from most familiar algorithms, in which
 one computes an answer that is guaranteed to be correct.  Here, the answer
@@ -4973,6 +4973,14 @@ guarantee that @math{n} is prime.  What we would like to say is that for any
 number @math{n}, if we perform the test enough times and find that @math{n} always
 passes the test, then the probability of error in our primality test can be
 made as small as we like.
+
+@noindent
+Fermat ê 測試kap大部份熟似ê，算出來ê答案保證精確ê演算法無kâng款。
+佇tsia，所得著ê答案kan-ta是可能正確ê。Koh較準確來講，若是 @math{n}捌佇Fermat ê 測試失敗，
+lán會當有把握@math{n}毋是質數。但是@math{n}通過測試，而且有極其強ê標示（譯註：就是測試ê數
+真chē，致kàu lán有蓋大ê信心來信）是事實，mā無保證@math{n}是質數。Lán想beh講ê是，對所有ê數
+字 @math{n}，若lán行測試有夠chē改，而且發現@math{n} lóng通過chit ê測試，佇lán ê質數判
+定ê錯誤機率會當細kah lán意愛ê標準。
 
 Unfortunately, this assertion is not quite correct.  There do exist numbers
 that fool the Fermat test: numbers @math{n} that are not prime and yet have the
