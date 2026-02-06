@@ -4976,7 +4976,7 @@ made as small as we like.
 
 @noindent
 Fermat ê 測試kap大部份熟似ê，算出來ê答案保證精確ê演算法無kâng款。
-佇tsia，所得著ê答案kan-ta是可能正確ê。Koh較準確來講，若是 @math{n}捌佇Fermat ê 測試失敗，
+佇chia，所得著ê答案kan-ta是可能正確ê。Koh較準確來講，若是 @math{n}捌佇Fermat ê 測試失敗，
 lán會當有把握@math{n}毋是質數。但是@math{n}通過測試，而且有極其強ê標示（譯註：就是測試ê數
 真chē，致kàu lán有蓋大ê信心來信）是事實，mā無保證@math{n}是質數。Lán想beh講ê是，對所有ê數
 字 @math{n}，若lán行測試有夠chē改，而且發現@math{n} lóng通過chit ê測試，佇lán ê質數判
@@ -4997,6 +4997,15 @@ in carrying out a ``correct'' algorithm.  Considering an algorithm to be
 inadequate for the first reason but not for the second illustrates the
 difference between mathematics and engineering.}
 
+這个宣稱不幸無精確。Chia就有數字ē騙過Fermat ê測試：數字 @math{n}毋是質數，毋koh有chit ê
+性質，就是對逐个整數 @math{a<n}，@math{a^n} kap @math{a} 予 @math{n}除，有kâng款ê餘數。
+Chit款數極其少，Fermat 測試佇應用內底chiah ē真通倚靠。@footnote{@anchor{Footnote 1.47}
+Ē騙過Fermat ê數號做 @newterm{Carmichael數}(Carmichael numbers)，除了in chiâⁿ 罕得有以外
+，lán所知ê chiâⁿ有限。比1億較細ê Carmichael數有255 ê。上細ê幾个有561、1105、1729、2465、
+2821 kap 6601。佇測誠chhìn-chhái揀ê大ê整數敢是質數ê過程，tú好tú著一个騙過Fermat ê測試ê
+數ê機率，比宇宙輻射予電腦佇行「正確」ê演算法ê時thut-chhê ê機率較細。Kā演算法因為頭一ê，毋是
+第二ê原因，掠做無蓋好，說明數學kap工程無kâng。}
+
 There are variations of the Fermat test that cannot be fooled.  In these tests,
 as with the Fermat method, one tests the primality of an integer @math{n} by
 choosing a random integer @math{a < n} and checking some condition that depends
@@ -5008,6 +5017,15 @@ On the other hand, in contrast to the Fermat test, one can prove that, for any
 the test for two random choices of @math{a}, the chances are better than 3 out of
 4 that @math{n} is prime. By running the test with more and more randomly chosen
 values of @math{a} we can make the probability of error as small as we like.
+
+有其他Fermat 測試ê變形，bōe予伊騙。佇chiah ê測試，kap Fermat ê方法kâng款，lâng用隨機揀一个
+數@math{a < n}，koh檢查一寡倚靠@math{n} kap @math{a} ê狀況，來測試數@math{n}敢是質數（看
+@ref{Exercise 1.28}，內底有chit號測試ê例。）另外方面，kap Fermat ê測試相對ê，ē當證明
+對所有@math{n}，而且對大多數整數 @math{a < n}， 條件無成立，除非@math{n}是整數。就án-ne，
+若是對一寡chhìn-chhái 揀ê @math{a}，@math{n}通過測試，@math{n}是質數ê機會ē比五成五成koh
+較chē。若準講 @math{n} 對兩ê隨機選擇ê @math{a} 通過測試，@math{n}是質數ê機會ē超過四分三。
+若是用愈來愈chē chhìn-chhái 揀 ê @math{a}來 pháng chit ê測試，lán通予thut-chhê ê機率kiu水kàu
+lán所意愛ê程度。
 
 The existence of tests for which one can prove that the chance of error becomes
 arbitrarily small has sparked interest in algorithms of this type, which have
@@ -5025,6 +5043,16 @@ this and related developments, the study of prime numbers, once considered the
 epitome of a topic in ``pure'' mathematics to be studied only for its own sake,
 now turns out to have important practical applications to cryptography,
 electronic funds transfer, and information retrieval.}
+
+予人會當證明têng-tâⁿ 出現ê機會變做任意細ê測試ê存在，致使對chi̍t款演算法ê興趣，in號
+做@newterm{機率演算法}(probabilistic algorithms)。Chit ê領域不止仔chē ê研究活動，
+機率演算法mā昌盛應用kàu真chē範圍。@footnote{上得lâng注意ê機率質數測試應用，其中一个就
+是@newterm{暗碼學}(cryptography)。雖bóng chit-má計算中bōe當kā任何200位ê數因數分解，毋koh
+一个數敢是質數ê問題，會當佇幾秒鐘內底用Fermat ê測試來判斷。Chit ê事實形成起造「bōe分解ê碼」ê技術基
+礎，由@ref{Rivest et al. (1977)}所提議。
+結果ê @newterm{RSA演算法}(RSA algorithm)，變做使用真闊ê技術，來加強電子通信ê安全。因為
+che hām關聯ê發展，質數ê研究捌掠做是「純」數學ê主題ê典範，kan-ta為著家kī ê目的來研究，chit-má
+成做一个暗碼學、電子轉siàu kap 資訊檢索ê重要ê實際應用。}
 
 @quotation
 @strong{@anchor{Exercise 1.21}Exercise 1.21:} Use the @code{smallest-divisor}
