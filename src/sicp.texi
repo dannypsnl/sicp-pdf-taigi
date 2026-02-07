@@ -5251,7 +5251,7 @@ and non-primes.  Hint: One convenient way to make @code{expmod} signal is to
 have it return 0.
 
 @strong{@anchor{Exercise 1.28}Exercise 1.28:} 一个bōe騙得ê Fermat ê測試ê變形，
-號做@newterm{Miller-Rabin ê測試} (Miller-Rabin test)@ref{Miller 1976};
+號做@newterm{Miller-Rabin ê測試} (Miller-Rabin test)(@ref{Miller 1976};
 @ref{Rabin 1980})。Che對Fermat小定理ê別个形式開始，伊陳述，若是@math{n} 是質數，
 而且 @math{a}是比 @math{n} 較細ê正整數，@math{a} ê @math{n-1}次方kap 1 予 @math{n}
 除，就有kâng款ê餘數。Beh用 Miller-Rabin ê測試，試數 @math{n} 敢是質數，lán chhìn-chhái
