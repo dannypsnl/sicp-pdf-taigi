@@ -5021,9 +5021,9 @@ values of @math{a} we can make the probability of error as small as we like.
 有其他Fermat 測試ê變形，bōe予伊騙。佇chiah ê測試，kap Fermat ê方法kâng款，lâng用隨機揀一个
 數@math{a < n}，koh檢查一寡倚靠@math{n} kap @math{a} ê狀況，來測試數@math{n}敢是質數（看
 @ref{Exercise 1.28}，內底有chit號測試ê例。）另外方面，kap Fermat ê測試相對ê，ē當證明
-對所有@math{n}，而且對大多數整數 @math{a < n}， 條件無成立，除非@math{n}是整數。就án-ne，
-若是對一寡chhìn-chhái 揀ê @math{a}，@math{n}通過測試，@math{n}是質數ê機會ē比五成五成koh
-較chē。若準講 @math{n} 對兩ê隨機選擇ê @math{a} 通過測試，@math{n}是質數ê機會ē超過四分三。
+對所有@math{n}，而且對大多數整數 @math{a < n}， 條件無成立，除非@math{n}是質數。就án-ne，
+若是對一寡chhìn-chhái 揀ê @math{a}，@math{n}通過測試，@math{n}是質數ê機會ē過半。
+若準講 @math{n} 對兩ê隨機選擇ê @math{a} 通過測試，@math{n}是質數ê機會ē超過四分三。
 若是用愈來愈chē chhìn-chhái 揀 ê @math{a}來 pháng chit ê測試，lán通予thut-chhê ê機率kiu水kàu
 lán所意愛ê程度。
 
@@ -5048,16 +5048,19 @@ electronic funds transfer, and information retrieval.}
 做@newterm{機率演算法}(probabilistic algorithms)。Chit ê領域不止仔chē ê研究活動，
 機率演算法mā昌盛應用kàu真chē範圍。@footnote{上得lâng注意ê機率質數測試應用，其中一个就
 是@newterm{暗碼學}(cryptography)。雖bóng chit-má計算中bōe當kā任何200位ê數因數分解，毋koh
-一个數敢是質數ê問題，會當佇幾秒鐘內底用Fermat ê測試來判斷。Chit ê事實形成起造「bōe分解ê碼」ê技術基
+一个數敢是質數ê問題，會當佇幾秒鐘內底用Fermat ê測試來判斷。Chit ê事實形成起造「bōe破得ê碼」ê技術基
 礎，由@ref{Rivest et al. (1977)}所提議。
 結果ê @newterm{RSA演算法}(RSA algorithm)，變做使用真闊ê技術，來加強電子通信ê安全。因為
-che hām關聯ê發展，質數ê研究捌掠做是「純」數學ê主題ê典範，kan-ta為著家kī ê目的來研究，chit-má
+che hām關聯ê發展，質數ê研究對捌掠做是「純」數學ê主題ê典範，kan-ta為著家kī ê目的來研究，chit-má
 成做一个暗碼學、電子轉siàu kap 資訊檢索ê重要ê實際應用。}
 
 @quotation
 @strong{@anchor{Exercise 1.21}Exercise 1.21:} Use the @code{smallest-divisor}
 procedure to find the smallest divisor of each of the following numbers: 199,
 1999, 19999.
+
+@strong{@anchor{Exercise 1.21}Exercise 1.21:} 用 @code{smallest-divisor} 程序，
+來chhōe 下kha ê數 ê上細ê約數：199、1999、19999。
 @end quotation
 
 @quotation
@@ -5068,6 +5071,11 @@ microseconds).  The following @code{timed-prime-test} procedure, when called
 with an integer @math{n}, prints @math{n} and checks to see if @math{n} is prime.  If
 @math{n} is prime, the procedure prints three asterisks followed by the amount of
 time used in performing the test.
+
+@strong{@anchor{Exercise 1.22}Exercise 1.22:} 大部份 Lisp ê實做kâⁿ一个號做
+@code{runtime} ê基礎函數，通傳轉去指示pháng系統所開ê時間量（比論，用微秒(1/1000秒)量）ê整數。
+下kha ê @code{timed-prime-test} 程序，若是用 @math{n} 呼叫，ē印出 @math{n}，koh檢查 @math{n}
+敢是質數。若 @math{n} 是質數，程序印三粒星號(***)，了後印行測試所開ê時間量。
 
 @lisp
 (define (timed-prime-test n)
@@ -5093,6 +5101,15 @@ primes around 1000.  Do your timing data bear this out?  How well do the data
 for 100,000 and 1,000,000 support the @math{\Theta(\sqrt{n})} prediction?  Is your
 result compatible with the notion that programs on your machine run in time
 proportional to the number of steps required for the computation?
+
+用chit ê程序，寫 @code{search-for-primes} 程序，來檢查指定ê範圍內底，連sòa ê奇數敢是質數。
+用汝ê程序chhiau超過1,000 ê上細ê三ê質數；然後是超過10,000 ê 上細ê三ê、超過100,000 ê kap 超過
+1,000,000 ê。注意試逐个質數著開ê時間。因為測試ê演算法ê成長率是 @math{\Theta(\sqrt{n})}，所以汝
+應該期待測試sài-suh 10,000左右ê質數所開ê時間，大概是測試sài-suh 1,000左右ê質數ê ê
+@math{\sqrt{10}} 倍。汝ê時間資料敢會當kā做干證？若資料對100,000 變kàu 1,000,000，敢有真支持
+@math{\Theta(\sqrt{n})} chit ê預測？汝ê結果敢符合chit ê 主張，就是汝ê機器所pháng ê程所開ê時間，
+是對計算所愛ê手續數，有比例關係？
+
 @end quotation
 
 @quotation
@@ -5111,6 +5128,17 @@ returns its input plus 2.  Modify the @code{smallest-divisor} procedure to use
 you should expect it to run about twice as fast.  Is this expectation
 confirmed?  If not, what is the observed ratio of the speeds of the two
 algorithms, and how do you explain the fact that it is different from 2?
+
+@strong{@anchor{Exercise 1.23}Exercise 1.23:} 本節頂展示ê @code{smallest-divisor}程序
+做真chē 無需要ê測試：佇伊檢查chit ê數敢會當予 2 除了後，就毋免檢查che 敢會當予較大ê雙數除。
+Che建議 @code{test-divisor} 所用ê數無應該是 2, 3, 4, 5, 6，顛倒是, 3, 5, 7, 9, @dots{}。
+Beh實做chit ê改變，定義程序 @code{next} 若是伊ê輸入等於2，a̍h無就傳轉去「輸入+2」。改
+@code{smallest-divisor} 程序，mài用 @code{(+ test-divisor 1)}，顛倒改用
+@code{(next test-divisor)}。用@code{timed-prime-test}  hām @code{smallest-divisor} ê
+chit ê修改版本，pháng chit ê測試佇 @ref{Exercise 1.22} 所講ê 12 ê質數。因為chit ê改變kā
+試ê手續數減半，所以汝應該期待伊 pháng koh較緊一倍。Chit ê期待敢有確認？若無，所觀察ê chit兩个
+演算法ê速度ê比例是gōa chē？比例 kap 2 無kâng，汝beh án-nóa解說？
+
 @end quotation
 
 @quotation
@@ -5121,12 +5149,22 @@ found in that exercise.  Since the Fermat test has @math{\Theta(\log n)}
 growth, how would you expect the time to test primes near 1,000,000 to
 compare with the time needed to test primes near 1000?  Do your data bear this
 out?  Can you explain any discrepancy you find?
+
+@strong{@anchor{Exercise 1.24}Exercise 1.24:} 改 @ref{Exercise 1.22} ê
+@code{timed-prime-test} 程序，來用 @code{fast-prime?}（Fermat方法），koh試汝佇chit ê測試
+發現ê 12 ê質數。因為Fermat ê測試ê成長率是 @math{\Theta(\log n)} ，kap 試接近 1000 ê質數所
+開ê時間相比，汝án-nóa期待試接近 1,000,000 ê質數所開ê時間？汝ê資料敢kā做干證？汝敢ē當解說所chhōe
+著ê出入？
 @end quotation
 
 @quotation
 @strong{@anchor{Exercise 1.25}Exercise 1.25:} Alyssa P. Hacker complains that
 we went to a lot of extra work in writing @code{expmod}.  After all, she says,
 since we already know how to compute exponentials, we could have simply written
+
+@strong{@anchor{Exercise 1.25}Exercise 1.25:} Alyssa P. Hacker 怨講lán佇寫 
+@code{expmod} ê時，做真chē額外ê khang-khòe。伊講，總是因為lán已經知án-nóa算指數，
+lán 通簡單寫做
 
 @lisp
 (define (expmod base exp m)
@@ -5135,15 +5173,23 @@ since we already know how to compute exponentials, we could have simply written
 
 Is she correct?  Would this procedure serve as well for our fast prime tester?
 Explain.
+
+伊敢正確？Chit ê程序敢ē當kap起頭ê質數測試程序kâng款有路用？請解說。
 @end quotation
 
 @quotation
+
 @strong{@anchor{Exercise 1.26}Exercise 1.26:} Louis Reasoner is having great
 difficulty doing @ref{Exercise 1.24}.  His @code{fast-prime?} test seems to run
 more slowly than his @code{prime?} test.  Louis calls his friend Eva Lu Ator
 over to help.  When they examine Louis's code, they find that he has rewritten
 the @code{expmod} procedure to use an explicit multiplication, rather than
 calling @code{square}:
+
+@strong{@anchor{Exercise 1.26}Exercise 1.26:} Louis Reasoner 做 @ref{Exercise 1.24} ê時陣
+拄著蓋大ê困難。伊ê @code{fast-prime?} 測試假若比伊ê @code{prime?} 測試明顯pháng koh較慢。Louis khà予in朋友
+ Eva Lu Ator 來tàu相kang。當in檢查 Louis ê程式碼ê時，揣著伊重寫 @code{expmod} 程序，用明顯ê乘法，顛倒毋是
+呼叫 @code{square}：
 
 @lisp
 (define (expmod base exp m)
@@ -5162,6 +5208,11 @@ calling @code{square}:
 Eva.  ``By writing the procedure like that, you have transformed the
 @math{\Theta(\log n)} process into a @math{\Theta(n)} process.''
 Explain.
+
+Louis講：「我看無in兩个有siáⁿ物無仝」。
+
+「我看有，」Eva講：「Kā程序án-ne寫，汝著kā @math{\Theta(\log n)} ê過程，
+變做 @math{\Theta(n)} ê過程。」請解說。
 @end quotation
 
 @quotation
@@ -5170,6 +5221,10 @@ numbers listed in @ref{Footnote 1.47} really do fool the Fermat test.  That is,
 write a procedure that takes an integer @math{n} and tests whether @math{a^n} is
 congruent to @math{a} modulo @math{n} for every @math{a < n}, and try your procedure
 on the given Carmichael numbers.
+
+@strong{@anchor{Exercise 1.27}Exercise 1.27:} 展示佇 @ref{Footnote 1.47} 所列ê Carmichael
+數，chiâⁿ實ē當騙過 Fermat ê測試。就是，寫一个程序，輸入整數 @math{n}，測試對所有ê @math{a < n}，
+@math{a^n} kap @math{a} 予 @math{n} 除，敢lóng有kâng款ê餘數，koh用所列ê Carmichael 數試汝ê程序。
 @end quotation
 
 @quotation
@@ -5194,15 +5249,32 @@ is not prime, then, for at least half the numbers @math{a < n}, computing
 to @code{fermat-test}.  Check your procedure by testing various known primes
 and non-primes.  Hint: One convenient way to make @code{expmod} signal is to
 have it return 0.
+
+@strong{@anchor{Exercise 1.28}Exercise 1.28:} 一个bōe騙得ê Fermat ê測試ê變形，
+號做@newterm{Miller-Rabin ê測試} (Miller-Rabin test)@ref{Miller 1976};
+@ref{Rabin 1980})。Che對Fermat小定理ê別个形式開始，伊陳述，若是@math{n} 是質數，
+而且 @math{a}是比 @math{n} 較細ê正整數，@math{a} ê @math{n-1}次方kap 1 予 @math{n}
+除，就有kâng款ê餘數。Beh用 Miller-Rabin ê測試，試數 @math{n} 敢是質數，lán chhìn-chhái
+揀一个數 @math{a < n}，koh用 @code{expmod}程序算出@math{a} ê @math{n-1} 次方予@math{n}
+除ê餘數。毋koh，lán lóng ē佇 @code{expmod}行平方ê手續 ê時陣，檢查敢有發現
+「1予 @math{n} 除ê餘數ê，非自明ê平方根」。就是，毋是1 iah是 @math{n-1} ê 數字，伊ê平方等於1 予
+ @math{n} 除ê餘數。 有可能證明若非自明ê 1 ê平方根佇leh，@math{n}就毋是質數。Mā有可能證明若 @math{n}是
+毋是質數ê奇數，對上無一半ê數字 @math{a < n}，用chit ê方法計算@math{a^{n-1}}，就ē展示
+非自明ê，1 予 @math{n} 除 ê餘數ê平方根。（Che是Miller-Rabin ê測試bōe予lâng騙ê原因。）改
+@code{expmod} 程序來指示伊敢發現非自明ê 1 ê 平方根，koh用che來實做 Miller-Rabin ê測試，用
+kap @code{fermat-test} 相siâng ê程式。The̍h chē-chē款所知ê質數kap非質數，來檢查汝ê程序。
+提示：一个便利ê方法來創造 @code{expmod} ê訊號，是予伊kā 0傳倒轉。
+
 @end quotation
 
 @sp 0.5
-@section Formulating Abstractions@* with Higher-Order Procedures
+@section Formulating Abstractions@* with Higher-Order Procedures 用高階程序來形式化抽象
 @node	1.3,  , 1.2, Chapter 1
 
 We have seen that procedures are, in effect, abstractions that describe
 compound operations on numbers independent of the particular numbers.  For
-example, when we
+example, when we declare
+
 Lán已經看著，程序其實是描述對數字ê複合運算ê抽象，而且毋管特定ê數字是啥。比論，lán若寫
 
 @lisp
@@ -5213,6 +5285,9 @@ Lán已經看著，程序其實是描述對數字ê複合運算ê抽象，而且
 we are not talking about the cube of a particular number, but rather about a
 method for obtaining the cube of any number.  Of course we could get along
 without ever defining this procedure, by always writing expressions such as
+
+
+@noindent
 Lán毋是teh講佗一个數字ê立方，煞是teh講，求任何數字ê立方ê方法。當然，lán亦會當mài定義chit-
 ê程序，逐擺著寫出來
 
