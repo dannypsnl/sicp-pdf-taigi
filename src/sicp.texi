@@ -5261,7 +5261,7 @@ have it return 0.
  @math{n} 除ê餘數。 有可能證明若非自明ê 1 ê平方根佇leh，@math{n}就毋是質數。Mā有可能證明若 @math{n}是
 毋是質數ê奇數，對上無一半ê數字 @math{a < n}，用chit ê方法計算@math{a^{n-1}}，就ē展示
 非自明ê，1 予 @math{n} 除 ê餘數ê平方根。（Che是Miller-Rabin ê測試bōe予lâng騙ê原因。）改
-@code{expmod} 程序來指示伊敢發現非自明ê 1 ê 平方根，koh用che來實做 Miller-Rabin ê測試，用
+@code{expmod} 程序來指示伊敢有發現非自明ê 1 ê 平方根，koh用che來實做 Miller-Rabin ê測試，用
 kap @code{fermat-test} 相siâng ê程式。The̍h chē-chē款所知ê質數kap非質數，來檢查汝ê程序。
 提示：一个便利ê方法來創造 @code{expmod} ê訊號，是予伊kā 0傳倒轉。
 
