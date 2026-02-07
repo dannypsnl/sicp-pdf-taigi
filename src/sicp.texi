@@ -502,7 +502,7 @@ Che是電腦科學ê出名教科書《電腦程式ê結果kap解說》ê頭chi̍
 
 為著推sak阿公阿媽kap pē母流傳落來ê話，真chē lâng開始用臺語寫世間kap社會ê chē-chē代誌，資訊領域mā是kâng款。向望chit本冊通幫chān逐ê想beh用臺語學程式ê lâng。
 
-有關書寫形式，本冊使用教會白話字(POJ) kap漢字lām寫。另外koh附術語表予逐家參考。另外為著追求翻譯ê進度kap準確性，gún使用本冊ê非官方日語版本做參考來源。
+關係書寫形式，本冊使用教會白話字(POJ) kap漢字lām寫。另外koh附術語表予逐家參考。另外為著追求翻譯ê進度kap準確性，gún使用本冊ê非官方日語版本做參考來源。
 
 
 @unnumbered Dedication
@@ -3605,7 +3605,7 @@ procedures @code{f}, @code{g}, and @code{h} for positive integer values of
 
 @end quotation
 
-@subsection Tree Recursion
+@subsection Tree Recursion 樹遞迴
 @node	1.2.2, 1.2.3, 1.2.1, 1.2
 
 Another common pattern of computation is called @newterm{tree recursion}.  As
