@@ -4775,6 +4775,7 @@ divisor (greater than 1) of a given number @math{n}.  It does this in a
 straightforward way, by testing @math{n} for divisibility by successive integers
 starting with 2.
 
+@noindent
 對古早時代，數學家就痴迷佇關係質數ê問題，chē-chē lâng骨力佇決定判定數字敢是質數ê方法ê問題。
 Chit ê判定數敢是質數ê方法，是chhōe著數字ê因數。下kha ê程式chhōe數字 @math{n} ê上細ê整除ê除數
 （超過1）。伊行佇直接ê方式，用對2開始相sòa ê整數，試伊對 @math{n} ê整除性。
@@ -5275,7 +5276,7 @@ We have seen that procedures are, in effect, abstractions that describe
 compound operations on numbers independent of the particular numbers.  For
 example, when we declare
 
-Lán已經看著，程序其實是描述對數字ê複合運算ê抽象，而且毋管特定ê數字是啥。比論，lán若寫
+Lán已經看著，程序其實是描述對數字ê複合運算ê抽象，而且毋管特定ê數字是siáⁿ。比論，lán若寫
 
 @lisp
 (define (cube x) (* x x x))
@@ -5288,8 +5289,8 @@ without ever defining this procedure, by always writing expressions such as
 
 
 @noindent
-Lán毋是teh講佗一个數字ê立方，煞是teh講，求任何數字ê立方ê方法。當然，lán亦會當mài定義chit-
-ê程序，逐擺著寫出來
+Lán毋是teh講tó一个數字ê立方，煞是teh講，求任何數字ê立方ê方法。當然，lán亦會當mài定義chit-ê
+程序，逐擺tiō寫出來
 
 @lisp
 (* 3 3 3)
@@ -5308,6 +5309,13 @@ programming language is the ability to build abstractions by assigning names to
 common patterns and then to work in terms of the abstractions directly.
 Procedures provide this ability.  This is why all but the most primitive
 programming languages include mechanisms for defining procedures.
+
+@noindent
+而且毋捌明確提起 @code{cube} chit ê程序。Che ē 予lán 陷入嚴重不便ê狀況，逼lán一直著處理
+屬佇chit ê語言ê基礎運算ê操作（佇chit ê例指乘法），soah無用koân階ê操作。Lán ê程式ē當算立方，
+但是lán ê語言欠表達立方概念ê能力。Lán應該要求有chē-chē路用ê程式語言ê代誌，其中一个就是用
+kā名分配kàu一般ê模式來建立抽象，koh直接用chiah ê抽象工作ê能力。程序提供chit ê能力。Che是
+除了上基礎ê以外，程式語言lóng提供定義程序ê機制ê原因。
 
 Yet even in numerical processing we will be severely limited in our ability to
 create abstractions if we are restricted to procedures whose parameters must be
