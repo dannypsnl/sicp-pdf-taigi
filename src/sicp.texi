@@ -496,20 +496,34 @@ to Info output. At the dawn of e-book readers and tablets, reading a
 @unnumbered 非正式臺語譯本ê踏頭話
 @node    Taigi, Dedication, UTF, Top
 
-Che是電腦科學ê出名教科書《電腦程式ê結果kap解說》ê頭chi̍t本非正式ê臺語譯本，mā應該是頭chi̍t本臺語ê電腦科學長篇教科書。
+Che是電腦科學ê出名教科書《電腦程式ê結果kap解說》(SICP)ê頭一本非正式ê臺語譯本，
+mā應該是頭chi̍t本臺語ê電腦科學長篇教科書。
 
-現代雖bóng臺語是現chú時臺灣上chē lâng講ê本土言語，但是真chē lâng bōe掠伊做時行、tòe ē著科技ê語言，甚至除了少少本土語言課程以外，就無出現佇教學現場內底。敢講臺語真正是chi̍t臺老moh-moh，hō͘時代棄sak ê老古董？應該毋是án-ne。Chit本冊是beh來證明，臺語m̄-nā ē當傳承古早ê智慧，mā是ē當傳揚新科技ê思想kap智識。
+現代雖bóng臺語是現chú時臺灣上chē lâng講ê本土言語，但是真chē lâng bōe掠伊
+做時行、tòe ē著科技ê語言，甚至除了少少本土語言課程以外，就無出現佇教學現場內
+底。敢講臺語真正是chi̍t臺老moh-moh，hō͘時代棄sak ê老古董？應該毋是án-ne。Chit
+本冊是beh來證明，臺語m̄-nā ē當傳承古早ê智慧，mā是ē當傳揚新科技ê思想kap智識。
 
-為著推sak阿公阿媽kap pē母流傳落來ê話，真chē lâng開始用臺語寫世間kap社會ê chē-chē代誌，資訊領域mā是kâng款。向望chit本冊通幫chān逐ê想beh用臺語學程式ê lâng。
+這本冊是翻譯對SICP ê 非正式Texinfo 格式版，版本號碼 @utfversion（2016年2月2日版）
+，感謝整理ê團隊，予guán有一个好ê起頭點。
 
-關係書寫形式，本冊使用教會白話字(POJ) kap漢字lām寫。另外koh附術語表予逐家參考。另外為著追求翻譯ê進度kap準確性，gún使用本冊ê非官方日語版本做參考來源。
+為著推sak阿公阿媽kap pē母流傳落來ê話，真chē lâng開始用臺語寫世間kap社會ê
+chē-chē代誌，資訊領域mā是kâng款。向望chit本冊通幫chān逐ê想beh用臺語學程式ê
+lâng。
+
+關係書寫形式，本冊使用教會白話字kap漢字lām寫。另外koh附術語表予逐家參
+考。另外為著追求翻譯ê進度kap準確性，gún使用本冊ê非官方日語版本做參考翻譯來源。
+因為beh予較ē曉教育部台羅拼音熟sāi羅馬字，冊ê後壁附白話字kap臺羅拼音對照說明
+提供參考。
 
 
-@unnumbered Dedication
+@unnumbered Dedication 獻詞
 @node    Dedication, Foreword, Taigi, Top
 
 \lettrine{T}{his book is dedicated}, in respect and admiration, to the spirit that lives in
 the computer.
+
+\lettrine{C}{hit本冊，用尊敬kap o-ló ê心，獻予}活佇chit臺電腦內底ê神魂。
 
 @quotation
 ``I think that it's extraordinarily important that we in computer science keep
@@ -526,6 +540,14 @@ learn.  Don't feel as if the key to successful computing is only in your hands.
 What's in your hands, I think and hope, is intelligence: the ability to see the
 machine as more than when you were first led up to it, that you can make it
 more.''
+
+「我認為lán佇電腦科學保持對計算ê趣味上蓋重要，當伊tú開始，伊是夭壽趣味，當然納錢ê lâng客
+不管時ē予lâng kòng，一tia̍p-á久，lán就認真處理in所投ê。Lán開始感覺lán親像chiâⁿ實對成功、
+無thut-chhê、完美用chiah ê機器來負責。我無認為是án-ne。我想lán是對chhun in、
+予in對新ê方向開始，佇chhù內保持心適。我向望電腦科學ê領域bōe失去伊ê趣味。總是，我向望lán mài
+成做宣教師。毋通感覺家己是賣聖經ê。世間已經有傷chē位ah。別lâng ē學關係運算lí所知影ê。毋通
+感覺計算成功ê鎖匙kan-ta佇lí ê手頭。我認為kap向望，佇lí ê手頭ê，是靈通：看機器比lí tú開始
+看著伊ê時koh較chē ê能力，lí就ē當做koh較chē ah。」
 
 \enlargethispage{\baselineskip}
 
@@ -1042,7 +1064,7 @@ wisdom.  A small bug in a computer-aided design program, for example, can lead
 to the catastrophic collapse of an airplane or a dam or the self-destruction of
 an industrial robot.
 
-有幸，學程式設計hŏng掠做是比學魔法khah無危險，因為lán處理ê神靈是簡單包佇安全ê方法內底。但是真實世界ê程式設計需要注神、專精kap智慧。舉例，佇電腦幫chān設計ê，細細ê bug，可能致kàu機場iah是水壩ê崩去，或者是工業機器lâng家己毀滅。
+有幸，學程式設計予lâng掠做是比學魔法khah無危險，因為lán處理ê神靈是簡單包佇安全ê方法內底。但是真實世界ê程式設計需要注神、專精kap智慧。舉例，佇電腦幫chān設計ê，細細ê bug，可能致kàu機場iah是水壩ê崩去，或者是工業機器lâng家己毀滅。
 
 Master software engineers have the ability to organize programs so that they
 can be reasonably sure that the resulting processes will perform the tasks
@@ -1090,7 +1112,7 @@ other languages of the period.
 雖bóng伊tú開始是tuì數學ê形式主義，Lisp是應用ê程式語言。Lisp ê @newterm{直譯器} (interpreter)
 是機器，執行lán用Lisp語言寫ê過程。頭一ê Lisp直譯器是MaCarthy kap @acronym{MIT}電子研究實驗室以及運算中心ê人工智慧小組ê同事kap學生ê幫chān所實做。@footnote{The
 @cite{Lisp 1 Programmer's Manual} 佇1960年頭一改出，@cite{Lisp 1.5
-Programmer's Manual} (@ref{McCarthy et al. 1965})佇1962年出版。Lisp初期ê歷史佇 @ref{McCarthy 1978}內底有說明。}Lisp是「LISt Processing」（列單處理）ê頭字母簡略，hŏng設計做提供符號操作能力來解決比如符號微分、代數表達式ê積分等等ê程式問題。為著chit ê目的，伊包含原子(atom) kap 列單 (list)等等新ê資料物件，大大hām hit陣á所有ê語言有差別。
+Programmer's Manual} (@ref{McCarthy et al. 1965})佇1962年出版。Lisp初期ê歷史佇 @ref{McCarthy 1978}內底有說明。}Lisp是「LISt Processing」（列單處理）ê頭字母簡略，予lâng設計做提供符號操作能力來解決比如符號微分、代數表達式ê積分等等ê程式問題。為著chit ê目的，伊包含原子(atom) kap 列單 (list)等等新ê資料物件，大大hām hit陣á所有ê語言有差別。
 
 Lisp was not the product of a concerted design effort.  Instead, it evolved
 informally in an experimental manner in response to users' needs and to
@@ -2111,7 +2133,7 @@ normal-order variant of Scheme.}
 
 Lisp用應用序算值，部份因為毋免重複算比如頂懸所寫ê  @code{(+ 5 1)} kap @code{(* 5 2)} ê表達式所加添ê效率，koh khah明顯ê是，因為當lán離開通用替代建立模型ê程序ê領域ê時，正規序算值變做傷過複雜oh處理。另外一面，正規序算值會當是極其有價值ê家私，lán會佇@ref{第3章} kap @ref{第4章}調查伊可能ê結果。@footnote{佇@ref{第3章} lán 會紹介 @newterm{流處理} (stream processing)，是一種用kā有限形式ê正規序算值ê包入去，處理明顯是「無限」ê資料結構ê方法。佇@ref{4.2}，lán會改Scheme ê直譯器，來做出Scheme ê正規序變種。}
 
-@subsection Conditional Expressions and Predicates
+@subsection Conditional Expressions and Predicates 條件表達式kap謂詞
 @node	1.1.6, 1.1.7, 1.1.5, 1.1
 
 The expressive power of the class of procedures that we can define at this
@@ -3101,7 +3123,7 @@ Chit款ê siū-á型定義，叫做@newterm{塊結構}(tè-kiat-kò͘, block str
 @code{sqrt} 內底，mā佇 @code{x} ê作用範圍內底。就án-ne，無必要 kā @code{x} 明白sòa予chia ê所有程序。
 Lán 反轉允准 @code{x} 成做佇chiah ê內部定義ê自由變數，ná下kha所展示。了後，@code{x} tùi引數得著伊ê值，
 kā所有總包ê程序 @code{sqrt} 用chit ê引數叫。Chit ê約束號做@newterm{詞法使用範圍}。@footnote{詞法使用
-範圍決定程序內底ê自由變數，hŏng the̍h來指包ê程序定義所做ê束縛；就是，in佇程序佇內底定義ê環境，受chhiau-chhōe。
+範圍決定程序內底ê自由變數，予lâng the̍h來指包ê程序定義所做ê束縛；就是，in佇程序佇內底定義ê環境，受chhiau-chhōe。
 當lán學環境kap直譯器ê詳細行為ê時，會佇第3章看見che詳細ê運作方法。@anchor{Footnote 28}}
 
 
@@ -5327,6 +5349,12 @@ procedures as values.  Procedures that manipulate procedures are called
 procedures can serve as powerful abstraction mechanisms, vastly increasing the
 expressive power of our language.
 
+但是就算是數值處理，若是lán寫程序ê時，參數受限制著愛用數字，lí ê能力佇建立抽象ē非常受限制。
+Kâng款ê程式設計模式定定ē用佇一寡無kâng ê程序。Beh kā chit款ê模式表達做觀念，lán著愛建構程序
+，會當接受程序當做參數，或者是kā程序準做值傳轉來。操作程序ê程序號做@newterm{高階程序}
+(higher-order procedures)。Chit節展示高階程序án-nóa通當做有大能力ê抽象機制，非常增加
+lán ê語言ê表現力。
+
 @menu
 * 1-3-1::            Procedures as Arguments
 * 1-3-2::            Constructing Procedures Using @code{lambda}
@@ -5334,11 +5362,14 @@ expressive power of our language.
 * 1-3-4::            Procedures as Returned Values
 @end menu
 
-@subsection Procedures as Arguments
+@subsection Procedures as Arguments 
 @node	1.3.1, 1.3.2, 1.3, 1.3
 
 Consider the following three procedures.  The first computes the sum of the
 integers from @code{a} through @code{b}:
+
+@noindent
+考慮下kha三ê程序。頭一个算 @code{a} kàu @{code{b} ê整數ê和：
 
 @lisp
 (define (sum-integers a b)
@@ -5350,6 +5381,9 @@ integers from @code{a} through @code{b}:
 @noindent
 The second computes the sum of the cubes of the integers in the given range:
 
+@noindent
+第二个算指定ê範圍內ê數ê立方和：
+
 @lisp
 (define (sum-cubes a b)
   (if (> a b)
@@ -5360,6 +5394,11 @@ The second computes the sum of the cubes of the integers in the given range:
 
 @noindent
 The third computes the sum of a sequence of terms in the series
+
+@noindent
+
+第三个算下kha ê級數，逐項ê列ê和：
+
 @ifinfo
 
 @example
@@ -5378,6 +5417,11 @@ written in the equivalent form
 @math{{\pi\over4} = 1 - {1\over3} + {1\over5} - {1\over7} + \dots},
 is due to Leibniz.  We'll see how to use this as the basis for some
 fancy numerical tricks in @ref{3.5.3}.}
+
+@noindent
+伊ē收斂kàu @math{\pi / 8} （chiâⁿ實慢）:@footnote{Chit ê級數，常常寫做等式形式
+@math{{\pi\over4} = 1 - {1\over3} + {1\over5} - {1\over7} + \dots}，
+是因為 Leibniz。Lán ē佇 @ref{3.5.3}看見beh án-nóa用che，當做一寡奇巧ê數值把戲ê基礎。}
 
 @lisp
 (define (pi-sum a b)
@@ -37490,21 +37534,21 @@ Kluwer Academic Publishers.
 
 \fontspec[Numbers={Lining}]{FreeSerif}
 
-@unnumbered List of Exercises
+@unnumbered List of Exercises 練習ê列單
 @node    List of Exercises, List of Figures, References, Top
 
 @c @include exercises.texi
 \input{exercises}
 
-@unnumbered List of Figures
+@unnumbered List of Figures 圖片ê列單
 @node    List of Figures, Index, List of Exercises, Top
 
 @c @include figures.texi
 \input{figures}
 
 @ifinfo
-@unnumbered Index
-@node    Index, Colophon, List of Figures, Top
+@unnumbered Index 索引
+@node    Index, Romanization Comparison, List of Figures, Top
 
 @sp 0.8
 
@@ -37522,13 +37566,33 @@ that it has been prepared with the help of a computer.
 \setindexprenote{\normalsize \begin{quote} Any inaccuracies in this index may be explained by the fact
 that it has been prepared with the help of a computer.
 
+佇chit篇索引，任何無正確ê所在，會當解說是因為伊受電腦協助。
+
 ---Donald E. Knuth, \textit{Fundamental Algorithms}\\
 (Volume 1 of \textit{The Art of Computer Programming}) \end{quote}}
 
 @printindex cp
 
+@unnumbered 教會白話字kap教育部台羅拼音ê比較
+@node     Romanization Comparison, Colophon, Index, Top
+
+Chit本chheh是kā聖經巴克禮譯本使用ê教會白話字 (Pe̍h-ōe-jī; POJ)規範，當做書寫ê羅馬字(Romanization)標準，伊是chit-má koh teh用ê歷史上
+久長ê臺語羅馬字系統。因為教育部訂ê台羅拼音(Tâi-lô; TL)標準有參考che，所以有真chē相siâng ê所在。但是為著予對教育部拼音較熟ê讀者較快讀，下kha列出
+2款羅馬字ê差別：
+
+\begin{enumerate}
+    \item 白話字ê「ch」就是台羅ê「ts」；「chh」就是「tsh」。比論：chū-iû\textsuperscript{POJ} = tsū-iû\textsuperscript{TL}、
+chhia\textsuperscript{POJ} = tshia\textsuperscript{TL}。
+    \item 白話字ê「o͘」就是台羅ê「oo」，其中「o͘」ê調號標佇台羅頭一个「o」。比論：o͘~\textsuperscript{POJ} = oo\textsuperscript{TL}、hō͘~\textsuperscript{POJ} = hōo\textsuperscript{TL}
+    \item 白話字ê鼻化母音標記「ⁿ」，就是台羅ê「nn」。比論：saⁿ~\textsuperscript{POJ} = sann\textsuperscript{TL}、kiàⁿ~\textsuperscript{POJ} = kiànn\textsuperscript{TL}。毋koh白話字ê「hⁿ」，寫做台羅「nnh」。比論： hiahⁿ~\textsuperscript{POJ} = hiannh\textsuperscript{TL}。
+    \item 白話字ê「oa」就是台羅ê「ua」。Kap台羅kā調號lóng寫佇「a」面頂無kâng，白話字ê「oa」，kā調號寫佇「o」面頂，除非後壁koh有字母，chiah寫佇「a」面頂。比論：góa\textsuperscript{POJ} = guá\textsuperscript{TL}、joa̍h\textsuperscript{POJ} = jua̍h\textsuperscript{TL}、hoâiⁿ~\textsuperscript{POJ} = huâinn\textsuperscript{TL}、koân\textsuperscript{POJ} = kuân\textsuperscript{TL}。
+    \item 白話字ê「oe」就是台羅ê「ue」。比論：koe\textsuperscript{POJ} = kue\textsuperscript{TL}、goe̍h\textsuperscript{POJ} = gue̍h\textsuperscript{TL}。
+    \item 白話字ê「ui」，Kap台羅kā調號lóng寫佇「i」面頂無kâng，白話字ê「ui」，kā調號lóng寫佇「u」面頂。比論：súi\textsuperscript{POJ} = suí\textsuperscript{TL}。
+
+\end{enumerate}
+
 @unnumbered Colophon 版權頁
-@node    Colophon, , Index, Top
+@node    Colophon, , Romanization Comparison, Top
 
 \lettrine[lraise=-0.03,loversize=0.08]{O}{n the cover page} is Agostino Ramelli's bookwheel mechanism from 1588. It could be seen as an early hypertext navigation aid. This image of the engraving is hosted by J. E. Johnson of @url{http://newgottland.com/2012/02/09/before-the-ereader-there-was-the-wheelreader/ramelli_bookwheel_1032px/, New Gottland}.
 
