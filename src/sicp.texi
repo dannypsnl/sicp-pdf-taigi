@@ -5363,14 +5363,14 @@ lán ê語言ê表現力。
 * 1-3-4::            Procedures as Returned Values
 @end menu
 
-@subsection Procedures as Arguments 
+@subsection Procedures as Arguments 程序當做引數
 @node	1.3.1, 1.3.2, 1.3, 1.3
 
 Consider the following three procedures.  The first computes the sum of the
 integers from @code{a} through @code{b}:
 
 @noindent
-考慮下kha三ê程序。頭一个算 @code{a} kàu @{code{b} ê整數ê和：
+考慮下kha三ê程序。頭一个算 @code{a} kàu @code{b} ê整數ê和：
 
 @lisp
 (define (sum-integers a b)
@@ -5397,7 +5397,6 @@ The second computes the sum of the cubes of the integers in the given range:
 The third computes the sum of a sequence of terms in the series
 
 @noindent
-
 第三个算下kha ê級數，逐項ê列ê和：
 
 @ifinfo
@@ -5438,6 +5437,11 @@ the most part identical, differing only in the name of the procedure, the
 function of @code{a} used to compute the term to be added, and the function
 that provides the next value of @code{a}.  We could generate each of the
 procedures by filling in slots in the same template:
+
+@noindent
+Chit 3 ê程序清楚分享隱藏ê模式。In大部份lóng kâng款，kan-ta無kâng佇程序ê名、the̍h來算beh加
+起來ê項ê @code{a} ê函數，kap提供@code{a} ê後一个值ê函數。Lán通用添kâng形ê枋模ê框á，來生成
+個別ê程序：
 
 @lisp
 (define (@math{\langle}@var{name}@math{\rangle} a b)
