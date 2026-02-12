@@ -4,7 +4,7 @@ SICP-Taigi
 下kha是臺灣台語ê SICP（電腦程式ê結構kap解說）ê臺語譯本，輸出是PDF版本。
 
 
-**PDF檔：<b>Direct link: [sicp.pdf](https://github.com/yoxem/sicp-pdf-taigi/raw/master/sicp.pdf)</b>**
+**PDF檔：<b>[sicp.pdf](https://github.com/yoxem/sicp-pdf-taigi/raw/master/sicp.pdf)</b>**
 
 
 ### 書寫形式？詞彙推薦表？
