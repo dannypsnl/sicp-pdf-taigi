@@ -104,8 +104,11 @@ second edition
 
 @sp 1.26
 @noindent
-Harold Abelson and Gerald Jay Sussman@*
-with Julie Sussman, foreword by Alan J. Perlis
+原作：Harold Abelson、Gerald Jay Sussman kap Julie Sussman
+
+踏頭話：Alan J. Perlis
+
+翻譯：Tân Kiàn-ting、Lîm Tsú-thuàn
 
 @sp 1.6
 @noindent
@@ -159,11 +162,11 @@ based on @url{http://www.neilvandyke.org/sicp-texi/, 2.neilvandyke4} (January 10
 @titlepage
 @titlefont{Structure and Interpretation}
 @title  of Computer Programs
-@subtitle Second Edition
-@subtitle Unofficial Texinfo Format @value{utfversion}
-@author Harold Abelson and Gerald Jay Sussman
-@author with Julie Sussman
-@author foreword by Alan J. Perlis
+@subtitle 第2版
+@subtitle 臺文翻譯版
+@author 原作：Harold Abelson、Gerald Jay Sussman kap with Julie Sussman
+@author 踏頭話：Alan J. Perlis
+@author Tân Kiàn-ting、Lîm Tsú-thuàn
 @end titlepage
 
 @everyheading @| @| @thispage
@@ -496,7 +499,7 @@ to Info output. At the dawn of e-book readers and tablets, reading a
 @unnumbered 非正式臺語譯本ê踏頭話
 @node    Taigi, Dedication, UTF, Top
 
-Che是電腦科學ê出名教科書《電腦程式ê結果kap解說》(SICP)ê頭一本非正式ê臺語譯本，
+Che是電腦科學ê出名教科書《電腦程式ê結果kap解說》(SICP) ê頭一本非正式ê臺語譯本，
 mā應該是頭chi̍t本臺語ê電腦科學長篇教科書。
 
 現代雖bóng臺語是現chú時臺灣上chē lâng講ê本土言語，但是真chē lâng bōe掠伊
@@ -504,7 +507,7 @@ mā應該是頭chi̍t本臺語ê電腦科學長篇教科書。
 底。敢講臺語真正是chi̍t臺老moh-moh，hō͘時代棄sak ê老古董？應該毋是án-ne。Chit
 本冊是beh來證明，臺語m̄-nā ē當傳承古早ê智慧，mā是ē當傳揚新科技ê思想kap智識。
 
-這本冊是翻譯對SICP ê 非正式Texinfo 格式版，版本號碼 @utfversion（2016年2月2日版）
+這本冊是翻譯對SICP ê 非正式Texinfo 格式版，版本號碼 @value{utfversion}（2016年2月2日版）
 ，感謝整理ê團隊，予guán有一个好ê起頭點。另外beh予使用者對照原文，guán kā英語
 原文留落來通參考。
 
@@ -513,7 +516,8 @@ chē-chē代誌，資訊領域mā是kâng款。向望chit本冊通幫chān逐ê�
 lâng。
 
 關係書寫形式，本冊使用教會白話字kap漢字lām寫。另外koh附術語表予逐家參
-考。另外為著追求翻譯ê進度kap準確性，gún使用本冊ê非官方日語版本做參考翻譯來源。
+考。另外為著追求翻譯ê進度kap準確性，gún使用本冊ê非官方日語版本、Rev. J. Macgowan ê
+  \textit{English and Chinese Dictionary of Amoy Dialect}等辭典，做參考翻譯來源。
 因為beh予較ē曉教育部台羅拼音熟sāi羅馬字，冊ê後壁附白話字kap臺羅拼音對照說明
 提供參考。
 
@@ -575,6 +579,15 @@ collection.  In this book the use of ``program'' is focused on the creation,
 execution, and study of programs written in a dialect of Lisp for execution on
 a digital computer.  Using Lisp we restrict or limit not what we may program,
 but only the notation for our program descriptions.
+
+\lettrine{教}{育者、將軍、營養師}、心理學家、兩親設計計畫。
+@footnote{英語 to program 除了有「程式設計」ê意思以外，mā有
+「規畫計畫kap程序等」ê意思}軍隊、學生、kap一寡社會受規畫。大ê問題ê衝擊應用連sòa ê程式，in大半
+liâm-mī佇路ni̍h佇leh。Chiah ê程式充滿出現佇手頭ê特別ê問題。Beh 欣賞伊家kī準做智力活動ê程式設計，
+Lí著oat轉來寫程式；lí著讀kap寫電腦程式——chē-chē篇。程式ê目的kap應用lóng無siáⁿ差別。有差ê是
+in pháng gōa好勢kap in有gōa合別个程序，佇創造iah koh較大ê程式。程式設計師愛chhōe求部份ê完
+美kap kui个ê夠額。佇chit本冊內，「程式」ê使用，聚集佇程式建立、執行kap研究，用Lisp ê方言寫，佇
+數位ê電腦pháng。用Lisp，lán ē當限制ê，毋是lán通寫ê程式內容，卻是lán ê程式描述ê記號。
 
 Our traffic with the subject matter of this book involves us with three foci of
 phenomena: the human mind, collections of computer programs, and the computer.
@@ -992,7 +1005,7 @@ from @acronym{DARPA}, made possible by Bob Kahn.
 
 \mainmatter
 
-@chapter Building Abstractions with Procedures
+@chapter Building Abstractions with Procedures 用程序起造抽象
 @node    Chapter 1, Chapter 2, Acknowledgments, Top
 
 @quotation
@@ -5456,6 +5469,11 @@ The presence of such a common pattern is strong evidence that there is a useful
 abstraction waiting to be brought to the surface.  Indeed, mathematicians long
 ago identified the abstraction of @newterm{summation of a series} and invented
 ``sigma notation,'' for example
+
+@noindent
+Chit款一般ê模式出現，是真強ê證據，反映有有路用ê抽象，等待予lâng chhōa kàu表面。數學家的確佇
+足久以前辨別@newterm{級數和}(summation of a series) ê抽象，發明「Σ標記」，比如：
+
 @ifinfo
 
 @example
@@ -5476,11 +5494,20 @@ mathematicians to deal with the concept of summation itself rather than only
 with particular sums---for example, to formulate general results about sums
 that are independent of the particular series being summed.
 
+@noindent
+來表達chit个概念。Σ標記（譯註：Σ讀做 /ˈsɪɡmə/ ）ê能力是允准數學家處理
+總和ê概念家kī，毋是干焦部份ê和——舉例，形式化和ê一般結果，chit ê和kap受
+總計ê特定級數獨立。
+
 Similarly, as program designers, we would like our language to be powerful
 enough so that we can write a procedure that expresses the concept of summation
 itself rather than only procedures that compute particular sums.  We can do so
 readily in our procedural language by taking the common template shown above
 and transforming the ``slots'' into formal parameters:
+
+做著一个程式設計者，lán siâng款kah意lán ê語言有夠額ê能力，來予lán寫一个程序，表達總計ê概念伊家kī，
+毋是算特定ê和ê程序niâ-niâ。Lán ē當佇lán ê程序語言，用the̍h頂koân ê枋模，kā框á變換做正式ê參數，
+來緊緊做che：
 
 @lisp
 (define (sum term a next b)
@@ -5497,6 +5524,11 @@ We can use @code{sum} just as we would any procedure.  For example, we can use
 it (along with a procedure @code{inc} that increments its argument by 1) to
 define @code{sum-cubes}:
 
+@noindent
+注意@code{sum} 除了the̍h ē界 @code{a} kap頂界 @code{b}做引數以外，koh有程序
+@code{term} kap @code{next}。Lán ē當用@code{sum}，像用程序。比如講，lán通用伊
+（kap @code{inc} 程序，伊kā伊ê引數加1）來定義 @code{sum-cubes}：
+
 @lisp
 (define (inc n) (+ n 1))
 (define (sum-cubes a b)
@@ -5505,6 +5537,9 @@ define @code{sum-cubes}:
 
 @noindent
 Using this, we can compute the sum of the cubes of the integers from 1 to 10:
+
+@noindent
+用che，lán ē當算1 kàu 10之間ê整數ê立方和：
 
 @lisp
 (sum-cubes 1 10)
@@ -5515,6 +5550,10 @@ Using this, we can compute the sum of the cubes of the integers from 1 to 10:
 With the aid of an identity procedure to compute the term, we can define
 @code{sum-integers} in terms of @code{sum}:
 
+@noindent
+有「相kâng」(identity)函數幫chān算項，lán ē當用 @code{sum}定
+義@code{sum-integers}：
+
 @lisp
 (define (identity x) x)
 (define (sum-integers a b)
@@ -5523,6 +5562,9 @@ With the aid of an identity procedure to compute the term, we can define
 
 @noindent
 Then we can add up the integers from 1 to 10:
+
+@noindent
+Soah落來lán通總計1 kàu 10之間ê整數：
 
 @lisp
 (sum-integers 1 10)
@@ -5536,6 +5578,11 @@ used block structure (@ref{1.1.8}) to embed the definitions of
 are unlikely to be useful for any other purpose.  We will see how to get rid of
 them altogether in @ref{1.3.2}.}
 
+@noindent
+Lán mā ē當照kâng款ê方式定義 @code{pi-sum}：@footnote{注意lán有用塊結構(@ref{1.1.8})來
+kā @code{pi-next} kap @code{pi-term} ê 定義tàu入去 @code{pi-sum}，因為chiah ê 程序
+無可能對其他ê目的有路用。Lán ē佇 @ref{1.3.2} 看見án-nóa做伙kā in piàⁿ掉。}
+
 @lisp
 (define (pi-sum a b)
   (define (pi-term x)
@@ -5548,6 +5595,9 @@ them altogether in @ref{1.3.2}.}
 @noindent
 Using these procedures, we can compute an approximation to @math{\pi}:
 
+@noindent
+用chiah ê程序，lán ē當算@math{\pi} 大概ê值：
+
 @lisp
 (* 8 (pi-sum 1 1000))
 @i{3.139592655589783}
@@ -5558,6 +5608,10 @@ Once we have @code{sum}, we can use it as a building block in formulating
 further concepts.  For instance, the definite integral of a function @math{f}
 between the limits @math{a} and @math{b} can be approximated numerically using the
 formula
+
+@noindent
+Lán一下有 @code{sum}，lán ē當kā伊佇形式化較遠ê概念內，準做起造ê塊。舉例，函數 @math{f}
+佇極限@math{a} kap @math{b} 之間ê定積分ē當用下底ê公式，數值算出大概ê值（近似）：
 @ifinfo
 
 @example
@@ -5574,6 +5628,9 @@ $${\int_a^b \!\!\! f} = {\left[\;f\! \left(a + {dx \over 2}\right)
 @end tex
 @noindent
 for small values of @math{dx}.  We can express this directly as a procedure:
+
+@noindent
+若是@math{dx} ê值真細。Lán ē當直接用程序表達che：
 
 @lisp
 (define (integral f a b dx)
@@ -5592,11 +5649,17 @@ for small values of @math{dx}.  We can express this directly as a procedure:
 @noindent
 (The exact value of the integral of @code{cube} between 0 and 1 is 1/4.)
 
+@noindent
+（@code{cube}佇0 kap 1之間ê積分ê精確值是1/4）。
+
 @quotation
 @strong{@anchor{Exercise 1.29}Exercise 1.29:} Simpson's Rule is a more accurate
 method of numerical integration than the method illustrated above.  Using
 Simpson's Rule, the integral of a function @math{f} between @math{a} and @math{b} is
 approximated as
+
+@strong{Exercise 1.29:} Simpson ê法則是比頂懸說明ê較準ê數值積分方法。用Simpson ê法則，函數
+@math{f}佇 @math{a} kap @math{b} 之間ê積分ê近似ē當是
 @ifinfo
 
 @example
@@ -5617,6 +5680,12 @@ accuracy of the approximation.)  Define a procedure that takes as arguments
 using Simpson's Rule.  Use your procedure to integrate @code{cube} between 0
 and 1 (with @math{n = 100} and @math{n = 1000}), and compare the results to those of
 the @code{integral} procedure shown above.
+
+@noindent
+其中 @math{h = (b - a) / n}，@math{n} 是雙數，而且 @math{y_k = f(a + kh)}（加添 @math{n}
+增加近似ê精度。）定義一个程序，引數是 @math{f}、@math{a}、@math{b} kap @math{n}，
+用Simpson ê法則計算積分，傳轉伊ê值。用lí ê程序算 @code{cube} 佇 0 kap 1 之間ê值（用 @math{n = 100}
+kap @math{n = 1000})，koh kap頂懸ê @math{intergal}算出ê結果相比。
 @end quotation
 
 @quotation
@@ -5624,6 +5693,9 @@ the @code{integral} procedure shown above.
 generates a linear recursion.  The procedure can be rewritten so that the sum
 is performed iteratively.  Show how to do this by filling in the missing
 expressions in the following definition:
+
+@strong{Exercise 1.30:} 頂懸ê @code{sum} 程序生出線性遞迴。程序ē當重寫予總和ē當照
+反覆行。佇下kha ê程序添失去ê表達式，來展示án-nóa做：
 
 @lisp
 (define (sum term a next b)
@@ -5656,6 +5728,20 @@ function at points over a given range.  Show how to define @code{factorial} in
 terms of @code{product}.  Also use @code{product} to compute approximations to
 @math{\pi} using the formula@footnote{This formula was discovered by the
 seventeenth-century English mathematician John Wallis.}
+
+@noindent
+@code{sum} 程序kan-ta是巨額相siâng ê，ē當掠做kôan階程序ê抽象內底，上簡單ê。
+@footnote{@ref{Exercise 1.31} kàu  @ref{Exercise 1.33} 強調ê是，通
+用適當ê抽象，kā看起來無關聯ê操作khōng起來，來表現。毋kú，雖bóng累積kap過濾
+是優美ê想法，chit時使用in，ē小kóa縛牢lán ê手，因為lán iáu koh無資料結構來
+kā適當ê組合方法續予in。Lán ē佇 @ref{2.2.3} 轉去chiah ê想法，當lán展示
+án-nóa掠@newterm{列} (sequence)做界面，來組合過濾器 kap 累積器，起造koh較有能力ê
+抽象。Lán ē佇hia看，chiah ê方法án-nóa確實顯明路用，成做有能力kap優
+美ê，設計程式ê方法。}寫相siâng ê程序，號做 @code{product}，kā函數佇指定範
+圍內底ê所有點ê值ê積傳轉。展示用 @code{product} 定義 @code{factorial} ê方法
+。Mā用 @code{product} kap下kha ê公式算 @math{\pi} ê 近似
+@footnote{Chit ê公式是由十七世紀ê英國數學家John Wallis 發現ê。}
+
 @ifinfo
 
 @example
@@ -5674,6 +5760,9 @@ If your @code{product} procedure generates a recursive process, write one that
 generates an iterative process.  If it generates an iterative process, write
 one that generates a recursive process.
 
+若是lí ê @code{product} 程序生成遞迴ê過程，寫出一个生成反覆ê過程ê。若是伊生成反覆ê
+過程，寫一个生成遞迴ê過程ê。
+
 @end enumerate
 @end quotation
 
@@ -5684,6 +5773,9 @@ one that generates a recursive process.
 Show that @code{sum} and @code{product} (@ref{Exercise 1.31}) are both special
 cases of a still more general notion called @code{accumulate} that combines a
 collection of terms, using some general accumulation function:
+
+展示 @code{sum} kap @code{product}（@ref{Exercise 1.31}）兩个lóng是koh 較一般ê，號做
+@code{accumulate}（譯註：累積）ê概念ê特例。@code{accumulate}合併項ê集合，用一般ê累積函數：
 
 @lisp
 (accumulate combiner null-value term a next b)
@@ -5697,10 +5789,18 @@ base value to use when the terms run out.  Write @code{accumulate} and show how
 @code{sum} and @code{product} can both be defined as simple calls to
 @code{accumulate}.
 
+@code{accumulate} the̍h kâng款ê指定項kap範圍當做引數（像 @code{sum} kap @code{product}），
+kap @code{combiner}（有兩个引數）程序，指定chit-má ê項kap進前ê項ê累積án-nóa合併，koh有
+@code{null-value}，指定若是項lóng算了ê時ê基準值。寫 @code{accumulate} ，展示@code{sum}
+kap @code{product} án-nóa 兩个ē當定義做 @code{accumulate} ê簡單呼叫。
+
 @item
 If your @code{accumulate} procedure generates a recursive process, write one
 that generates an iterative process.  If it generates an iterative process,
 write one that generates a recursive process.
+
+若是lí ê @code{accumulate} 程序生成遞迴ê過程，寫出一个生成反覆ê過程ê。若是伊生成反覆ê
+過程，寫一个生成遞迴ê過程ê。
 
 @end enumerate
 @end quotation
@@ -5715,21 +5815,32 @@ arguments as accumulate, together with an additional predicate of one argument
 that specifies the filter.  Write @code{filtered-@/accumulate} as a procedure.
 Show how to express the following using @code{filtered-accumulate}:
 
+@strong{Exercise 1.33:} Líē當用引入佇beh組合ê項應用@newterm{過濾器}(fliter) ê概念
+，來the̍h著閣較一般ê @code{accumulate} ê版本（@ref{Exercise 1.32}）。就是，kan-ta組合
+對滿足指定條件ê範圍內ê值來ê項。結果ê @code{filtered-accumulate} 抽象the̍h kap 
+accumulate 仝款ê引數，koh有加一个單引數謂詞，伊指定過濾器。
+展示án-nóa用 @code{filtered-accumulate} 表示下kha ê：
+
 @enumerate a.
 
 @item
 the sum of the squares of the prime numbers in the interval @math{a} to @math{b}
 (assuming that you have a @code{prime?} predicate already written)
 
+區間 @math{a} kàu @math{b} 中間ê質數ê平方和（假使lí已經有寫 @code{prime?}謂詞）
+
 @item
 the product of all the positive integers less than @math{n} that are relatively
 prime to @math{n} (i.e., all positive integers @math{i < n} such that
 @math{\textsc{gcd}(i, n) = 1}).
 
+逐ê比 @math{n} 較細ê，kap @math{n} 互質ê正整數（就是逐ê正整數 @math{i < n}滿足
+@math{\textsc{gcd}(i, n) = 1}）ê乘積
+
 @end enumerate
 @end quotation
 
-@subsection Constructing Procedures Using @code{lambda}
+@subsection Constructing Procedures Using @code{lambda} 用 @code{lambda} 建構程序
 @node	1.3.2, 1.3.3, 1.3.1, 1.3
 
 In using @code{sum} as in @ref{1.3.1}, it seems terribly awkward to
