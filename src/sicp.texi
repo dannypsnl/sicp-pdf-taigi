@@ -6291,7 +6291,13 @@ we discuss two more elaborate examples---general methods for finding zeros and
 fixed points of functions---and show how these methods can be expressed
 directly as procedures.
 
-@subsubheading Finding roots of equations by the half-interval method
+@noindent
+Lán佇@ref{1.1.4}紹介合成程序當做數值操作ê抽象模式ê機制，來予in kap干涉ê特定數字獨立。
+有koân階程序，比如 @ref{1.3.1} ê @code{integral}程序，lán開始看koh較有路用ê抽象ê款：
+程序the̍h來表達計算ê一般方法，kap干涉ê特定程序獨立。佇chit節，lán討論兩个閣較用工做ê例——揣0
+kap函數ê不動點ê一般方法，koh展示chit兩个方法án-nóa ē當直接表達做程序。
+
+@subsubheading Finding roots of equations by the half-interval method 用半區間法chhōe方程式ê根
 
 The @newterm{half-interval method} is a simple but powerful technique for
 finding roots of an equation @math{f(x) = 0}, where @math{f} is a continuous
@@ -6308,6 +6314,17 @@ required grows as @math{\Theta(\log(L / T))}, where @math{L} is the
 length of the original interval and @math{T} is the error tolerance (that is, the
 size of the interval we will consider ``small enough'').  Here is a procedure
 that implements this strategy:
+
+@noindent
+@newterm{半區間法}(half-interval method)是簡單但是有能力ê技術，來chhōe方程式
+@math{f(x) = 0} ê根，其中@math{f} 是連續函數。想法是，lán若有@math{a} kap @math{b}，
+滿足 @math{f(a) < 0 < f(b)}，佇@math{a} kap  @math{b}中間，@math{f}會有上少一个0。Beh
+chhōe 0 對ê位置，就 kā @math{x} 設做 @math{a} kap @math{b} ê平均，算出 @math{f(x)}。
+若是@math{f(x)>0}，@math{a} kap @math{x} 之間，@math{f} ê值定著有0；若是@math{f(x)<0}，
+@math{x} kap @math{b} 之間，@math{f} ê值定著有0。若是án-ne繼續，lán ē當kā @math{f}定著
+有0 ê區間kiu kah愈來愈細。若是lán kàu區間有夠細ê點，程序就soah。因為佇過程ê逐步，區間ê無確定範圍
+ē kiu半，所以需要ê手續數tòe @math{\Theta(\log(L / T))} 成長，其中 @math{L} 是開始ê區間長度，
+@math{T}是錯誤ê公差（就是lán掠做「有夠細」ê區間sài-suh）。Che是實做chit ê策略ê程序：
 
 @lisp
 (define (search f neg-point pos-point)
@@ -6334,6 +6351,12 @@ continue with the interval from the midpoint to the positive point.  Finally,
 there is the possibility that the test value is 0, in which case the midpoint
 is itself the root we are searching for.
 
+@noindent
+Lán設使tú開始有函數 @math{f} kap予函數值是負kap正ê點。Lán tāi先計算chit兩點ê中點。續落來
+lán檢查區間敢有夠細，若是，就傳倒中點成做lán ê答案。A̍h無，lán算 @math{f} 佇中點ê值，掠做測試ê值。若是
+試ê值是正ê，lán繼續過程，毋koh用ê新ê區間是對原來負ê點kàu中點；若是負ê，lán繼續，用ê新ê區間
+是對中點kàu正ê點。落尾，試ê值mā有可能是0，chit時中點就是lán beh chhiau ê根。
+
 To test whether the endpoints are ``close enough'' we can use a procedure
 similar to the one used in @ref{1.1.7} for computing square
 roots:@footnote{We have used 0.001 as a representative ``small'' number to
@@ -6342,6 +6365,10 @@ appropriate tolerance for a real calculation depends upon the problem to be
 solved and the limitations of the computer and the algorithm.  This is often a
 very subtle consideration, requiring help from a numerical analyst or some
 other kind of magician.}
+
+Beh試端點之間敢「有夠倚」，lán通用kap @ref{1.1.7} ê相siâng ê程序來算平方根：
+@footnote{Lán有用0.001當做代表ê「細」ê數字來指示佇計算內允准ê公差。實際運算ê適當ê公差受
+決定佇beh解決ê問題kap電腦hām演算法ê限制。Che定定是微妙ê考慮，需要數值分析師á是一寡別款ê魔術師。}
 
 @lisp
 (define (close-enough? x y) (< (abs (- x y)) 0.001))
@@ -6357,6 +6384,13 @@ accordingly.  If the function has the same sign on the two given points, the
 half-interval method cannot be used, in which case the procedure signals an
 error.@footnote{This can be accomplished using @code{error}, which takes as
 arguments a number of items that are printed as error messages.}
+
+@noindent
+直接用@code{search} ē真gāi-gio̍h，因為lán可能無細膩予伊@math{f} ê值ê正負號無符合ê點，án-ne
+ē the̍h著無精確ê答案。Lán soah通過下kha ê程序用 @code{search}，伊檢查tó一个端點有負ê函數值，
+tó一个是正ê，chiah適當呼叫 @code{search}。若是函數佇chit兩个點lóng kâng正負號，半區間法就bōe
+當用，chit時程序送錯誤訊號。@footnote{Che通用 @code{error} 完成，伊the̍h一寡ē印佇錯誤訊息ê項
+目做引數。}
 
 @lisp
 (define (half-interval-method f a b)
@@ -6374,6 +6408,9 @@ arguments a number of items that are printed as error messages.}
 The following example uses the half-interval method to approximate @math{\pi} as
 the root between 2 and 4 of @math{\sin x = 0}:
 
+@noindent
+下kha ê例用半區間法來近似 @math{\pi}，當做 @math{\sin x = 0} 佇2 kap 4之間ê值：
+
 @lisp
 (half-interval-method sin 2.0 4.0)
 @i{3.14111328125}
@@ -6383,6 +6420,9 @@ the root between 2 and 4 of @math{\sin x = 0}:
 Here is another example, using the half-interval method to search for a root of
 the equation @math{x^3 - 2x - 3 = 0} between 1 and 2:
 
+@noindent
+Che是別ê例，用半區間法chhōe方程式 @math{x^3 - 2x - 3 = 0} 佇 1 kap 2 之間ê根：
+
 @lisp
 (half-interval-method (lambda (x) (- (* x x x) (* 2 x) 3))
                       1.0
@@ -6390,7 +6430,7 @@ the equation @math{x^3 - 2x - 3 = 0} between 1 and 2:
 @i{1.89306640625}
 @end lisp
 
-@subsubheading Finding fixed points of functions
+@subsubheading Finding fixed points of functions Chhōe函數ê不動點
 
 A number @math{x} is called a @newterm{fixed point} of a function @math{f} if @math{x}
 satisfies the equation @math{f(x) = x}.  For some functions @math{f} we can
