@@ -9,8 +9,8 @@ SICP-Taigi
 
 ### 書寫形式？詞彙推薦表？
 * 見：
- - [相關規定](https://hackmd.io/@sicp-taigi/r1TtTLF6xg)
- - [術語表](https://hackmd.io/@sicp-taigi/rJ37yUCpxl)
+  - [相關規定](https://hackmd.io/@sicp-taigi/r1TtTLF6xg)
+  - [術語表](https://hackmd.io/@sicp-taigi/rJ37yUCpxl)
 
 
 ### Án-nóa編出PDF？
