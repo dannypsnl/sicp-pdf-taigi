@@ -1294,7 +1294,7 @@ using arithmetic operations that preserve a limited number of decimal places of
 accuracy in noninteger operations.} In later chapters we will see that these
 same rules allow us to build procedures to manipulate compound data as well.
 
-佇本章lán kan-ta會處理簡單ê數值資料，án-ne 會當集中佇起做程序。@footnote{Kā數字特色化做「簡單資料」，是bōe見笑 ê háⁿ-hông。其實處理數字是任何程式語言上pháinn剃頭兼上花sà-sà ê方面。下kha是一寡典型ê例：一寡電腦系統kā@newterm{整數} (integer)，比如2，kap @newterm{實數}(real numbers)，比如2.71區別。實數2.00 kám kap整數2無siâng款？整數用ê算術操作kap實數用ê kám kâng款？6用2除是3，iah是3.0？Lán-lâng通表示ê上大數字是guā chē？整數ê範圍kap實數ê範圍kám siâng款？佇tsiah ê問題ê頂懸kap下kha，當然有有關@newterm{捨入誤差} (roundoff error) kap @newterm{切斷誤差} (truncation error) ê問題ê集合——屬佇kui ê數值分析ê技術。因為lán佇本冊ê焦點是佇大規模ê程式設計，毋是數值技術，lán會忽略tsiah ê問題。佇本章ê數值ê例會展示通常ê捨入行為，是照保留有限精準度ê十進位，毋是整數ê數位算術所操作ê。}落尾ê章lán會看見，tsiah ê規則mā允准lán起做程序，來操作複雜ê資料。
+佇本章lán kan-ta會處理簡單ê數值資料，án-ne 會當集中佇起做程序。@footnote{Kā數字特色化做「簡單資料」，是bōe見笑 ê háⁿ-hông。其實處理數字是任何程式語言上pháinn剃頭兼上花sà-sà ê方面。下kha是一寡典型ê例：一寡電腦系統kā@newterm{整數} (integer)，比如2，kap @newterm{實數}(real numbers)，比如2.71區別。實數2.00 kám kap整數2無siâng款？整數用ê算術操作kap實數用ê kám kâng款？6用2除是3，iah是3.0？Lán-lâng通表示ê上大數字是guā chē？整數ê範圍kap實數ê範圍kám siâng款？佇chiah ê問題ê頂懸kap下kha，當然有有關@newterm{捨入誤差} (roundoff error) kap @newterm{切斷誤差} (truncation error) ê問題ê集合——屬佇kui ê數值分析ê技術。因為lán佇本冊ê焦點是佇大規模ê程式設計，毋是數值技術，lán會忽略chiah ê問題。佇本章ê數值ê例會展示通常ê捨入行為，是照保留有限精準度ê十進位，毋是整數ê數位算術所操作ê。}落尾ê章lán會看見，chiah ê規則mā允准lán起做程序，來操作複雜ê資料。
 
 @menu
 * 1-1-1::            Expressions 表達式
@@ -1441,7 +1441,7 @@ It is we humans who get confused by still relatively simple expressions such as
 which the interpreter would readily evaluate to be 57.  We can help ourselves
 by writing such an expression in the form
 
-編譯器會當kā算值，得著57。Lán通幫chān家己，kā chit ê表達式寫做tsi̍t號形式
+編譯器會當kā緊緊算值，得著57。Lán通幫chān家己，kā chit ê表達式寫做tsi̍t號形式
 
 @lisp
 (+ (* 3
@@ -1948,7 +1948,7 @@ We can assume that the mechanism for applying primitive procedures to arguments
 is built into the interpreter.  For compound procedures, the application
 process is as follows:
 
-Lán會當想像tsit款應用基礎程序kàu引數ê機制佇直譯器內底有收khǹg。針對複合程序，應用ê過程ná下kha：
+Lán會當想像chit款應用基礎程序kàu引數ê機制佇直譯器內底有收khǹg。針對複合程序，應用ê過程ná下kha：
 
 
 @quotation
@@ -1964,7 +1964,7 @@ Beh引用複合ê程序kàu因素，先kā程序ê任何正式ê參數用對應�
 To illustrate this process, let's evaluate the combination
 
 @noindent
-為著描述tsit ê過程，lán做伙算值tsit ê組合
+為著描述chit ê過程，lán做伙算值chit ê組合
 
 @lisp
 (f 5)
@@ -2003,7 +2003,7 @@ the formal parameters @code{x} and @code{y} in the body of
 
 
 @noindent
-就án-ne，問題縮小kàu kā有2 ê運算數kap一ê運算子 @code{sum-of-squares} ê組合算值。算值tsit ê組合干涉三ê kiáⁿ問題。Lán愛算值來the̍h著引數。Taⁿ @code{(+
+就án-ne，問題縮小kàu kā有2 ê運算數kap一ê運算子 @code{sum-of-squares} ê組合算值。算值chit ê組合干涉三ê kiáⁿ問題。Lán愛算值來the̍h著引數。Taⁿ @code{(+
 5 1)} 產出 6 ， @code{(* 5 2)} 產出 10，lán一定愛應用 @code{sum-of-squares} 程序kàu 6 kap 10。Chiah ê 值the̍h來取代@code{sum-of-squares} ê本體內底ê正式參數 @code{x} kap @code{y}，表達式縮小kàu
 
 
@@ -2867,7 +2867,7 @@ will be addressed more carefully in @ref{1.2}.  But first let's
 consider some other important points illustrated by the @code{sqrt} example.
 
 @code{sqrt} 是lán ê頭一个用相定義ê程序ê集合定義ê過程ê例。注意 @code{sqrt-iter} ê定義
-是@newterm{遞迴}(recursive) ê；就是，程序用伊家己定義。通用程序家己定義程序tsit ê想法
+是@newterm{遞迴}(recursive) ê；就是，程序用伊家己定義。通用程序家己定義程序chit ê想法
 可能真煩；Hit款「圓箍型ê」定義會當合理ê方法可能霧霧無明，mā毋免講電腦所運轉ê好好定義ê過程。
 Che會佇 @ref{1.2} 斟酌提起。但是代先lán看一寡其他@code{sqrt} 案例說明ê重點。
 
@@ -4335,7 +4335,7 @@ $$
 @end tex
 which translates readily into the procedure
 
-翻譯做程序就是
+緊緊翻譯做程序就是
 
 @lisp
 (define (expt b n)
@@ -4351,7 +4351,7 @@ equivalent linear iteration:
 
 @noindent
 Che是線性遞迴過程，需要 @math{\Theta(n)} ê手續kap @math{\Theta(n)} ê空間。親像函數，
-lán通規範做等價ê線性反覆：
+lán通容易規範做等價ê線性反覆：
 
 @lisp
 (define (expt b n)
@@ -6008,7 +6008,7 @@ formal parameters.  For example, suppose we wish to compute the function
 
 @noindent
 @code{lambda}ê別款路用是佇建立區域變數。Lán定定佇lán ê程序需要區域變數，除了已經縛做
-正式參數ê。舉例，假使lán想beh算tsit ê函數
+正式參數ê。舉例，假使lán想beh算chit ê函數
 
 @ifinfo
 
@@ -6248,7 +6248,7 @@ definitions of procedures, however.  We will return to this issue in
 但是lán較意愛，佇chit號情形用 @code{let}，kan-ta佇內部程序用內部 @code{define}。
 @footnote{知bat內部定義kah確定程式所指ê是lán所愛伊指ê，需要比lán佇本章所展示ê，
 koh khah用工做ê算值過程ê模型。但是程序ê內部定義無起微妙ê所在。Lán ē佇@ref{4.1.6}
-學習koh較chē算值ê智識了後，轉去看tsit ê議題。}
+學習koh較chē算值ê智識了後，轉去看chit ê議題。}
 
 @quotation
 @strong{@anchor{Exercise 1.34}Exercise 1.34:} Suppose we define the procedure
@@ -6524,7 +6524,7 @@ and we can therefore try to compute square roots as
 
 @noindent
 不動點過程引lâng想起lán佇 @ref{1.1.7} the̍h來chhōe平方根ê過程。兩个lóng起造佇重覆改進所ioh ê，
-直kàu結果滿足一寡標準ê想法。實際上，Lán ē當準備好kā平方根ê計算形式化做不動點ê chhiau-chhōe。
+直kàu結果滿足一寡標準ê想法。實際上，Lán ē當緊緊kā平方根ê計算形式化做不動點ê chhiau-chhōe。
 計算數字 @math{x} ê平方根需要chhōe @math{y}，滿足 @math{y^2 = x}。Kā chit个方程式改寫
 做@math{y = x / y}，lán辨別出lán leh chhōe chit ê函數@footnote{@math{\mapsto}
 （讀做「對應kàu」）是數學家寫 @code{lambda} ê方式。@math{y \mapsto x / y}
@@ -6771,6 +6771,10 @@ significantly enhances the expressive power of our programming language.  We
 can achieve even more expressive power by creating procedures whose returned
 values are themselves procedures.
 
+@noindent
+頂koân ê例展示kā程序當做引數傳入去ê能力，ē án-nóa明顯加強lán ê程式語言ê表達力。Lán
+通創造傳轉來ê值是程序ê程序，及至koh較大ê表現力。
+
 We can illustrate this idea by looking again at the fixed-point example
 described at the end of @ref{1.3.3}.  We formulated a new version of
 the square-root procedure as a fixed-point search, starting with the
@@ -6780,7 +6784,14 @@ Average damping is a useful general technique in itself.  Namely, given a
 function @math{f}, we consider the function whose value at @math{x} is equal to the
 average of @math{x} and @math{f(x)}.
 
+Lán ē當koh看佇 @ref{1.3.3} 落尾ê不動點ê例，來說明chit ê想法。Lán形式化平方根程序ê新版，當
+做不動點ê chhiau-chhōe，對觀察 @math{\sqrt{x}} 是函數 @math{y \mapsto x / y} ê不動點開始，了後lán用
+平均減衰來予近似收斂。平均減衰家kī是有路用ê一般技術。就是，有函數 @math{f}，lán考慮函數，伊
+佇 @math{x} ê值等於 @math{x} kap @math{f(x)} ê平均。
+
 We can express the idea of average damping by means of the following procedure:
+
+Lán ē當用下kha ê程序，表達平均減衰ê想法：
 
 @lisp
 (define (average-damp f)
@@ -6800,6 +6811,15 @@ ability to form such combinations, but that was only a toy example.  Here we
 begin to see the real need for such combinations---when applying a procedure
 that is obtained as the value returned by a higher-order procedure.}
 
+@noindent
+@code{average-damp} 是程序，the̍h 程序 @math{f} 成做引數，傳轉一个程序（由 @code{lambda}所生成）
+，若是chit ê程序應用一个數 @code{x}，產出 @code{x} kap @code{(f x)} ê平均。舉例，應
+用 @code{average-damp} kàu @code{square} 程序，產出程序，伊佇 @math{x} ê值
+是 @math{x} kap @math{x^2} ê平均。應用chit ê結果程序kàu 10，ē傳倒轉10 kap 100 ê平均，就是55：
+@footnote{觀察che是伊ê運算子家kī mā是組合ê組合。@ref{Exercise 1.4} 已經展示予這號組合成形ê能
+力，毋過he kan-ta是chhit-thô物á ê例。Lán佇chia開始看見chit款組合ê真ê需求——佇應用所the̍h著ê，
+是由懸階函數傳轉ê值ê程序。}
+
 @lisp
 ((average-damp square) 10)
 @i{55}
@@ -6808,6 +6828,9 @@ that is obtained as the value returned by a higher-order procedure.}
 @noindent
 Using @code{average-damp}, we can reformulate the square-root procedure as
 follows:
+
+@noindent
+用 @code{average-damp}，lán ē當koh形式化平方根ê程序，若下 kha：
 
 @lisp
 (define (sqrt x)
@@ -6831,18 +6854,34 @@ function @math{y \mapsto x / y^2}, so we can immediately generalize our
 square-root procedure to one that extracts cube roots:@footnote{See
 @ref{Exercise 1.45} for a further generalization.}
 
+@noindent
+注意chit ê形式化佇本方法，予chit三个想法顯明：chhōe不動點、平均減衰kap函
+數@math{y \mapsto x / y}。Kā chit ê平方根法ê形式化kap佇 @ref{1.1.7} ê原版相
+比，通啟發lâng。著記得chiah ê程序表達kâng款ê過程，mā注意當lán用chiah ê抽象，想法ē變做
+gŏa-nī-á清楚。一般來講，有chē-chē方法kā過程形式化做程序。老經驗ê程式設計師知án-nóa揀程
+序ê特別清楚ê形式化，以及過程有路用ê要素，佇tó位ē當拆做分開ê實體，ē當佇別ê應用內重使用。
+做著重使用ê簡單ê例，注意 @math{x} ê立方根是函數 @math{y \mapsto x / y^2} ê不動點，
+án-ne lán ē當liâm-mi kā lán ê平方根程序一般化kàu求立方根ê：@footnote{看
+@ref{Exercise 1.45}，了解koh較深ê一般化。}
+
+
 @lisp
 (define (cube-root x)
   (fixed-point (average-damp (lambda (y) (/ x (square y))))
                1.0))
 @end lisp
 
-@subsubheading Newton's method
+@subsubheading Newton's method Newton ê方法
 
 When we first introduced the square-root procedure, in @ref{1.1.7}, we
 mentioned that this was a special case of @newterm{Newton's method}.  If @math{x
 \mapsto g(x)} is a differentiable function, then a solution of the equation
 @math{g(x) = 0} is a fixed point of the function @math{x \mapsto f(x)}, where
+
+當lán佇 @ref{1.1.7} 代先介紹平方根ê程序，bat提起che是@newterm{Newton ê方法}(Newton's
+method)ê特例。若準講@math{x \mapsto g(x)} 是通微分ê函數，方程式 @math{g(x) = 0} ê解，是函
+數 @math{x \mapsto f(x)} ê 不動點，其中
+
 @ifinfo
 
 @example
@@ -6865,11 +6904,22 @@ g(x_n) / Dg(x_n)}.  Having language for talking about
 processes and using the idea of fixed points simplifies the description of the
 method.}
 
+@noindent
+而且 @math{Dg(x)} 是 @math{g} 佇 @math{x} ê @newterm{導函數}(derivative)。Newton
+ê方法是用lán進前看ê不動點方法，來用chhōe函數@math{f} ê不動點，近似方程式ê解。
+@footnote{基礎微積分ê冊通常用近似ê列@math{x_{n+1} = x_n -
+g(x_n) / Dg(x_n)}，來描述Newton ê方法。有通討論過程kap用不動點ê想法ê語言，ē簡單化chit ê方法ê描述。}
+
 For many functions @math{g} and for sufficiently good initial guesses for @math{x},
 Newton's method converges very rapidly to a solution of @math{g(x) = 0.}@footnote{Newton's method does not always converge to an answer, but it can
 be shown that in favorable cases each iteration doubles the number-of-digits
 accuracy of the approximation to the solution.  In such cases, Newton's method
 will converge much more rapidly than the half-interval method.}
+
+對chē-chē函數 @math{g} kap有夠好ê起頭所ioh ê @math{x}，Newton ê方法快速收
+斂kàu @math{g(x) = 0} ê解。@footnote{Newton ê方法無一定ē收斂kàu答案，毋koh ē當展
+示，佇較好ê例內底，逐擺反覆kā解ê近似值ê精度ê數位加一倍。佇chit號案例，Newton ê方法ē比
+半區間法收斂koh較緊。}
 
 In order to implement Newton's method as a procedure, we must first express the
 idea of derivative.  Note that ``derivative,'' like average damping, is
@@ -6878,6 +6928,12 @@ derivative of the function @math{x \mapsto x^3} is the function @math{x \mapsto 
 In general, if @math{g} is a function and @math{dx} is a small number,
 then the derivative @math{Dg} of @math{g} is the function whose value at any
 number @math{x} is given (in the limit of small @math{dx}) by
+
+Beh kā Newton ê方法實做成做程序，lán定著先表達導函數ê概念。注意「導函數」，像平均減衰，是kā函數轉
+換做別ê函數ê。比如講，函數ê導函數 @math{x \mapsto x^3} 是函數@math{x \mapsto 3x^2}。
+一般來講，若是 @math{g} 是函數，@math{dx} 是較細ê數字，@math{g} ê導函數 @math{Dg}，是
+伊佇任何數 @math{x} ê值，由下kha ê式求（@math{dx} 著愛足細）ê函數：
+
 @ifinfo
 
 @example
@@ -6894,6 +6950,9 @@ $$ {Dg(x)} = {g(x + {\it dx}) - g(x) \over {\it dx}}\,. $$
 Thus, we can express the idea of derivative (taking @math{dx} to be, say,
 0.00001) as the procedure
 
+@noindent
+就án-ne，lán通表達導數ê概念（kā @math{dx} 準做 0.00001），用程序
+
 @lisp
 (define (deriv g)
   (lambda (x) (/ (- (g (+ x dx)) (g x)) dx)))
@@ -6901,6 +6960,9 @@ Thus, we can express the idea of derivative (taking @math{dx} to be, say,
 
 @noindent
 along with the definition
+
+@noindent
+kap chit ê定義
 
 @lisp
 (define dx 0.00001)
@@ -6911,6 +6973,10 @@ Like @code{average-damp}, @code{deriv} is a procedure that takes a procedure as
 argument and returns a procedure as value.  For example, to approximate the
 derivative of @math{x \mapsto x^3} at 5 (whose exact value is 75) we can evaluate
 
+@noindent
+像 @code{average-damp}，@code{deriv} 是一个程序，the̍h一个程序當做引數，傳轉程序當做值。舉例，
+beh近似 @math{x \mapsto x^3} ê引數佇 5 ê值（伊精確ê值是75），lán ē當算
+
 @lisp
 (define (cube x) (* x x x))
 ((deriv cube) 5)
@@ -6920,6 +6986,9 @@ derivative of @math{x \mapsto x^3} at 5 (whose exact value is 75) we can evaluat
 @noindent
 With the aid of @code{deriv}, we can express Newton's method as a fixed-point
 process:
+
+@noindent
+有 @code{deriv} ê幫chān，lán ē當kā Newton ê方法表達做不動點ê過程：
 
 @lisp
 (define (newton-transform g)
@@ -6938,7 +7007,16 @@ square root of @math{x}, we can use Newton's method to find a zero of the functi
 finding square roots, Newton's method converges rapidly to the correct solution
 from any starting point.}
 
+@noindent
+@code{newton-transform} 程序表達佇本節起頭ê公式，@code{newtons-method} 是用che緊緊定義。
+伊ê引數是一个程序（chit ê程序是the̍h來計算lán想beh chhōe伊佇0 ê值ê函數用ê），kap起頭所ioh ê值。
+舉例，beh chhōe @math{x} ê平方根，lán通用Newton ê方法來chhōe 函數 @math{y \mapsto y^2 - x}
+佇0 ê值，起頭所ioh ê值是1。@footnote{對chhōe平方根來講，Newton ê方法ē對任何起
+頭ê點，緊緊收斂kàu正確ê解。}
+
 This provides yet another form of the square-root procedure:
+
+Che提供另外一个平方根程序ê形式：
 
 @lisp
 (define (sqrt x)
@@ -6946,7 +7024,7 @@ This provides yet another form of the square-root procedure:
    (lambda (y) (- (square y) x)) 1.0))
 @end lisp
 
-@subsubheading Abstractions and first-class procedures
+@subsubheading Abstractions and first-class procedures 抽象kap第一級程序
 
 We've seen two ways to express the square-root computation as an instance of a
 more general method, once as a fixed-point search and once using Newton's
@@ -6954,6 +7032,12 @@ method.  Since Newton's method was itself expressed as a fixed-point process,
 we actually saw two ways to compute square roots as fixed points.  Each method
 begins with a function and finds a fixed point of some transformation of the
 function.  We can express this general idea itself as a procedure:
+
+@noindent
+Lán有看見2種表達平方根計算ê方法當做koh較一般ê方法，一个是chhiau-chhōe不動點，一个用
+Newton ê方法。因為Newton ê方法家kī予lâng表達做不動點過程，lán實際上看見kā平方根當
+做不動點來算ê兩款方法。逐ê方法kap函數做伙開始，然後chhōe函數ê變形ê不動點。
+Lán ē當kā chit ê一般ê概念家kī當做程序表達：
 
 @lisp
 (define (fixed-point-of-transform g transform guess)
@@ -6965,9 +7049,16 @@ This very general procedure takes as its arguments a procedure @code{g} that
 computes some function, a procedure that transforms @code{g}, and an initial
 guess.  The returned result is a fixed point of the transformed function.
 
+@noindent
+Chit ê非常一般ê程序所the̍h ê引數，有程序 @code{g}（伊計算函數）、變換 @code{g} ê程序kap起頭所ioh
+ê。傳轉ê結果是轉換ê函數ê不動點。
+
 Using this abstraction, we can recast the first square-root computation from
 this section (where we look for a fixed point of the average-damped version of
 @math{y \mapsto x / y}) as an instance of this general method:
+
+用chit ê抽象，lán通kā本節ê頭一个平方根計算（lán 佇其中chhōe @math{y \mapsto x / y}
+平均減衰版ê不動點）重改做chit ê一般方法ê實例：
 
 @lisp
 (define (sqrt x)
@@ -6979,6 +7070,10 @@ this section (where we look for a fixed point of the average-damped version of
 Similarly, we can express the second square-root computation from this section
 (an instance of Newton's method that finds a fixed point of the Newton
 transform of @math{y \mapsto y^2 - x}) as
+
+@noindent
+Lán kâng款ē當表達本節第二个平方根計算（Newton ê方法ê實例，伊
+chhōe @math{y \mapsto y^2 - x} ê Newton 變換ê不動點）做
 
 @lisp
 (define (sqrt x)
@@ -6993,6 +7088,11 @@ methods of computing as explicit elements in our programming language.  Now
 we've seen how higher-order procedures permit us to manipulate these general
 methods to create further abstractions.
 
+@noindent
+Lán用觀察複合程序是蓋重要ê抽象機制來開始 @ref{1.3}，因為in允准lán佇lán ê程式語
+言kā一般計算概念當做顯明ê要素來表達。Taⁿ lán有看著koân階程序允准lán操作chiah ê一般方法，
+來創造koh較進階ê抽象。
+
 As programmers, we should be alert to opportunities to identify the underlying
 abstractions in our programs and to build upon them and generalize them to
 create more powerful abstractions.  This is not to say that one should always
@@ -7004,6 +7104,12 @@ procedures is that they enable us to represent these abstractions explicitly as
 elements in our programming language, so that they can be handled just like
 other computational elements.
 
+做著程式設計師，lán著對辨別程序內底隱藏ê抽象ê機會警醒，起造in，koh kā in一般化來創造koh較
+有路用ê抽象。Che毋是講lán著一直用上抽象ê可能方式寫程式；出師ê程式設計師知án-nóa揀適合in
+ê工課ê抽象水準。但是ē當用chiah ê抽象思考是真重要，致使lán ē當備辦好勢，佇後文用che。Koân
+階程序ê意義是通予lán kā chiah ê抽象顯明表示做lán ê語言ê要素，致kàu in ē當像別ê計算要
+素kâng款予lâng處理。
+
 In general, programming languages impose restrictions on the ways in which
 computational elements can be manipulated.  Elements with the fewest
 restrictions are said to have @newterm{first-class} status.  Some of the
@@ -7011,20 +7117,32 @@ restrictions are said to have @newterm{first-class} status.  Some of the
 first-class status of programming-language elements is due to the British
 computer scientist Christopher Strachey (1916-1975).}
 
+一般來講，程式語言ē kā計算要素ē當操作ê方法硩限制。要素有上少ê限制ē當講是有@newterm{頭等}
+(first-class) ê狀態。一寡頭等要素ê「權利kap特權」是@footnote{程式語言要素ê頭等狀態，
+是由不列顛ê電腦科學家Christopher Strachey (1916-1975)所推出。}
+
 @itemize @bullet
 
 @item
 They may be named by variables.
 
+In ē當用變數號名
+
 @item
 They may be passed as arguments to procedures.
+
+In ē當當做引數傳入去程序
 
 @item
 They may be returned as the results of procedures.
 
+In ē當當做程序傳轉去ê結果
+
 @item
 They may be included in data structures.@footnote{We'll see examples of this
 after we introduce data structures in @ref{Chapter 2}.}
+
+In ē當包佇資料結構。@footnote{Lán佇@ref{Chapter 2}紹介資料結果了後，ē看著chit ê ê例。}
 
 @end itemize
 
@@ -7038,10 +7156,19 @@ even while the procedure is not executing.  In the Scheme implementation we
 will study in @ref{4.1}, these variables are stored in the procedure's
 environment.}
 
+@noindent
+Lisp無sêng其他通常ê程式語言，程序lóng有頭等地位。Che ē加添有效率實做ê挑戰，毋koh結果ē the̍h著
+極大ê表現力。@footnote{頭等程序ê主要ê實做成本，是允准程序當做值傳轉，就算程序無teh pháng，
+mā需要保留程序ê自由變數ê儲存空間。佇lán beh 佇 @ref{4.1}學習ê Scheme實做，chiah ê
+變數ē tiông佇程序ê環境。}
+
 @quotation
 @strong{@anchor{Exercise 1.40}Exercise 1.40:} Define a procedure @code{cubic}
 that can be used together with the @code{newtons-method} procedure in
 expressions of the form
+
+@strong{Exercise 1.40:}定義程序 @code{cubic}，伊著照下kha ê形式ê表達式，
+hām @code{newtons-method} 做伙用
 
 @lisp
 (newtons-method (cubic a b c) 1)
@@ -7049,6 +7176,9 @@ expressions of the form
 
 @noindent
 to approximate zeros of the cubic @math{x^3 + ax^2 + bx + c}.
+
+來chhōe三次方程式 @math{x^3 + ax^2 + bx + c} ê近似解。
+
 @end quotation
 
 @quotation
@@ -7057,6 +7187,10 @@ that takes a procedure of one argument as argument and returns a procedure that
 applies the original procedure twice.  For example, if @code{inc} is a
 procedure that adds 1 to its argument, then @code{(double inc)} should be a
 procedure that adds 2.  What value is returned by
+
+@strong{Exercise 1.41:} 定義程序 @code{double}，伊the̍h一个單引數程序當做引數，傳轉應用
+原底ê程序兩改ê程序。比如講，若 @code{inc} 是一个kā引數加1 ê程序， @code{(double inc)} 就
+應該是kā引數加2 ê程序。下kha ê表達式ê值是siáⁿ？
 
 @lisp
 (((double (double double)) inc) 5)
@@ -7069,6 +7203,10 @@ one-argument functions.  The @newterm{composition} @math{f} after @math{g} is de
 to be the function @math{x \mapsto f(g(x))}.  Define a procedure
 @code{compose} that implements composition.  For example, if @code{inc} is a
 procedure that adds 1 to its argument,
+
+@strong{Exercise 1.42:} Chia有@math{f} kap @math{g}兩ê單引數程序。@math{f} kap @math{g} ê
+@newterm{合成}(composition)定義做函數 @math{x \mapsto f(g(x))}。請定義實做合成ê程序
+@code{compose}。比如講，若 @code{inc} 是一个kā引數加1 ê程序，就有
 
 @lisp
 ((compose square inc) 6)
@@ -7089,12 +7227,21 @@ inputs a procedure that computes @math{f} and a positive integer @math{n} and re
 the procedure that computes the @math{n^{\mathrm{th}}} repeated application of @math{f}.  Your
 procedure should be able to be used as follows:
 
+@strong{Exercise 1.43:} 若 @math{f} 是數值函數，@math{n} 是正整數，lán ē當kā @math{f} 重覆應
+用 @math{n} 改，伊ē當定義做，伊佇 @math{x} ê值就是 @math{f(f(\dots (f(x))\dots ))}。
+舉例，若 @math{f} 是函數 @math{x \mapsto x + 1}，@math{f} 重覆應用 @math{n} 改就是
+函數 @math{x \mapsto x + n}。若 @math{f} 是平方一个數ê運算子，@math{f} 重覆應用 @math{n} 改
+就是傳轉引數ê @math{2^n} 次方ê函數。寫一个程序，伊ê引數是算 @math{f} ê程序kap正整數 @math{n}，傳轉
+kā @math{f} 重覆應用 @math{n} 改ê程序。Lí ê程序應該ē當án-ne用：
+
 @lisp
 ((repeated square 2) 5)
 @i{625}
 @end lisp
 
 Hint: You may find it convenient to use @code{compose} from @ref{Exercise 1.42}.
+
+提示：Lí可能發現用 @ref{Exercise 1.42} ê @code{compose} 較利便。
 @end quotation
 
 @quotation
@@ -7109,6 +7256,15 @@ repeatedly smooth a function (that is, smooth the smoothed function, and so on)
 to obtain the @newterm{@i{n}-fold smoothed function}.  Show how to generate
 the @i{n}-fold smoothed function of any given function using @code{smooth} and
 @code{repeated} from @ref{Exercise 1.43}.
+
+@strong{Exercise 1.44:} Kā函數@newterm{平滑化}(smoothing)是佇訊號處理內ê重要概念。
+若準講 @math{f} 是函數， @math{dx} 是足細ê數，@math{f} ê平滑化ê版本就是一个函數，伊佇 @math{x}
+點ê值是 @math{f(x - dx)}、@math{f(x)} kap @math{f(x + dx)} ê平均。寫一个程序
+@code{smooth}，伊 the̍h 算 @math{f} 函數ê程序做引數，傳轉算平滑化ê @math{f} 函數ê程序。
+有時仔重覆平滑化一个函數ē有價值（就是，kā平滑化了後ê函數koh一直平滑化），來the̍h
+著@newterm{第@i{n}改平滑化ê函數}(@i{n}-fold smoothed function)。展示án-nóa
+用 @ref{Exercise 1.43} 內底ê @code{smooth} kap @code{repeated}，生成函數ê第@i{n}改
+平滑化ê函數。
 @end quotation
 
 @quotation
@@ -7127,6 +7283,16 @@ Use this to implement a simple procedure for computing
 @math{n^{\mathrm{th}}} roots using @code{fixed-point}, @code{average-damp}, and the
 @code{repeated} procedure of @ref{Exercise 1.43}.  Assume that any arithmetic
 operations you need are available as primitives.
+
+@strong{Exercise 1.45:} Lán佇 @ref{1.3.3} 看見用chhōe @math{y \mapsto x / y}
+ê不動點來試計算平方根bōe收斂，而且ē當用平均減衰解決。Kâng款方法mā ē當用佇chhōe立方根，只要
+求出 @math{y \mapsto x / y^2} ê平均減衰ê不動點。但是chit ê過程佇chhōe四次方根ê時無效——一个平均
+減衰無夠予 @math{y \mapsto x / y^3} ê不動點chhiau-chhōe收斂。另外方面，若是lán平均減衰兩改
+（就是用@math{y \mapsto x / y^3} ê平均減衰ê平均減衰），不動點chhiau-chhōe ē收斂。
+做一寡試驗來確定，beh用重覆平均減衰 kap chhiau-chhōe @math{y \mapsto x / y^{n-1}} ê不動點
+ê方法，來算 @math{n} 次平方根ê過程，平均減衰著愛幾改？用che來實做簡單ê程序，the̍h佇 @ref{Exercise 1.43}
+內底ê @code{fixed-point}、@code{average-damp} kap @code{repeated} ê程序，來算@math{n} 次平方根。
+假使任何lí需要ê任何運算操作lóng是ē當用ê基礎函數。
 @end quotation
 
 @endpage
@@ -7144,9 +7310,19 @@ guess as argument and keeps improving the guess until it is good enough.
 Rewrite the @code{sqrt} procedure of @ref{1.1.7} and the
 @code{fixed-point} procedure of @ref{1.3.3} in terms of
 @code{iterative-improve}.
+
+@strong{Exercise 1.46:} 幾个佇本章描述ê數值方法是極其一般ê，號做@newterm{反覆改善}
+(iterative improvement) ê運算策略ê實例。反覆改善是講，beh算物件，lán先為答案ioh起頭ê值，
+試所ioh ê敢有夠好，若無，改善所ioh ê，koh用改善過ê值準做新ê所ioh ê，來繼續過程。寫程序
+@code{iterative-improve}，伊ê引數是兩个程序：一个判定所ioh ê敢有夠好，kap一个改善
+所ioh ê。@code{iterative-improve}應該傳轉ê值是程序，伊the̍h所ioh ê當做引數，繼續改
+善，直到伊有夠好。用 @code{iterative-improve} 重寫 @ref{1.1.7} ê @code{sqrt}
+程序 kap @ref{1.3.3} ê @code{fixed-point} 程序。
+
+
 @end quotation
 
-@chapter Building Abstractions with Data
+@chapter Building Abstractions with Data 用資料起造抽象
 @node    Chapter 2, Chapter 3, Chapter 1, Top
 
 @quotation
@@ -37963,7 +38139,7 @@ that it has been prepared with the help of a computer.
 @unnumbered 教會白話字kap教育部台羅拼音ê比較
 @node     Romanization Comparison, Colophon, Index, Top
 
-Chit本chheh是kā聖經巴克禮譯本使用ê教會白話字 (Pe̍h-ōe-jī; POJ)規範，當做書寫ê羅馬字(Romanization)標準，伊是chit-má koh teh用ê歷史上
+Chit本chheh是kā聖經巴克禮譯本使用ê教會白話字 (Pe̍h-ōe-jī; POJ)規範，當做書寫ê羅馬字(Romanization)原則，伊是chit-má koh teh用ê歷史上
 久長ê臺語羅馬字系統。因為教育部訂ê台羅拼音(Tâi-lô; TL)標準有參考che，所以有真chē相siâng ê所在。但是為著予對教育部拼音較熟ê讀者較快讀，下kha列出
 2款羅馬字ê差別：
 
@@ -37975,6 +38151,7 @@ chhia\textsuperscript{POJ} = tshia\textsuperscript{TL}。
     \item 白話字ê「oa」就是台羅ê「ua」。Kap台羅kā調號lóng寫佇「a」面頂無kâng，白話字ê「oa」，kā調號寫佇「o」面頂，除非後壁koh有字母，chiah寫佇「a」面頂。比論：góa\textsuperscript{POJ} = guá\textsuperscript{TL}、joa̍h\textsuperscript{POJ} = jua̍h\textsuperscript{TL}、hoâiⁿ~\textsuperscript{POJ} = huâinn\textsuperscript{TL}、koân\textsuperscript{POJ} = kuân\textsuperscript{TL}。
     \item 白話字ê「oe」就是台羅ê「ue」。比論：koe\textsuperscript{POJ} = kue\textsuperscript{TL}、goe̍h\textsuperscript{POJ} = gue̍h\textsuperscript{TL}。
     \item 白話字ê「ui」，Kap台羅kā調號lóng寫佇「i」面頂無kâng，白話字ê「ui」，kā調號lóng寫佇「u」面頂。比論：súi\textsuperscript{POJ} = suí\textsuperscript{TL}。
+    \item 雖bóng聖經巴克禮譯本無記載第九調（高升調，用佇疊字、外來語等特殊ê詞），但是使用白話字ê，有lâng使用撇音符號(diacritic) ê ``breve'' (◌̆)，soah無用教育部台羅ê ``double acute'' (◌̋)代表第九調。本冊用breve標示。比如：hŏng\textsuperscript{POJ}（「予lâng」ê合音） = hőng\textsuperscript{TL}。
 
 \end{enumerate}
 
