@@ -519,7 +519,7 @@ lâng。
 關係書寫形式，本冊使用教會白話字kap漢字lām寫。另外koh附術語表予逐家參
 考。另外為著追求翻譯ê進度kap準確性，gún使用本冊ê非官方日語版本、Rev. J. Macgowan ê
   \textit{English and Chinese Dictionary of Amoy Dialect}等辭典，做參考翻譯來源。
-因為beh予較ē曉教育部台羅拼音熟sāi白話字，冊ê後壁附白話字kap臺羅拼音對照說明
+因為beh予較ē曉教育部台羅拼音ê熟sāi白話字，冊ê後壁附白話字kap臺羅拼音對照說明
 提供參考。
 
 代seng著感謝goán ê pē母，若是無kā chit ê傳統ê祖先語言續予goán，goán無可能做chit ê
@@ -1558,7 +1558,7 @@ environments).@footnote{@ref{Chapter 3} will show that this notion of
 environment is crucial, both for understanding how the interpreter works and
 for implementing interpreters.}
 
-通清楚知影ê是，關聯值kap符號(symbol)了後，koh kā in tshuē出來ê機會，代表直譯器著維持一款記憶體，追蹤名—物件ê對。Chit ê記憶體叫做@newterm{環境}(environment)（講較準就是@newterm{全範圍環境}(global environment)）機率，因為lán較停á會看見，運算可能干涉一寡無kâng ê環境。@footnote{@ref{第3章}會展示chit ê觀念真關鍵，無論是了解直譯器運作ê方法iah是實做直譯器。}
+通清楚知影ê是，關聯值kap符號(symbol)了後，koh kā in tshuē出來ê機會，代表直譯器著維持一款記憶體，追蹤名—物件ê對。Chit ê記憶體叫做@newterm{環境}(environment)（講較準就是@newterm{全域環境}(global environment)）機率，因為lán較停á會看見，運算可能干涉一寡無kâng ê環境。@footnote{@ref{第3章}會展示chit ê觀念真關鍵，無論是了解直譯器運作ê方法iah是實做直譯器。}
 
 @subsection Evaluating Combinations 算組合ê值
 @node	1.1.3, 1.1.4, 1.1.2, 1.1
@@ -7331,6 +7331,9 @@ what the symbols stand for. @dots{}[The mathematician] need not be idle; there
 are many operations which he may carry out with these symbols, without ever
 having to look at the things they stand for.
 
+Lán chit-má來kàu數學抽象上要緊ê階段：lán kā符號所指ê放bē記。[數學家]無需要無代誌；
+chia有真chē伊可能需要用chiah ê符號執行ê操作，無需要看in所指ê物件。
+
 ---Hermann Weyl, @cite{The Mathematical Way of Thinking}
 @end quotation
 
@@ -7349,6 +7352,13 @@ higher-order procedures enhance the power of our language by enabling us to
 manipulate, and thereby to reason in terms of, general methods of computation.
 This is much of the essence of programming.
 
+@noindent
+\lettrine[findent=1pt]{L}{án佇} @ref{Chapter 1} 注意計算過程，kap佇程式設計內底，程序ê角色。
+Lán看見基礎資料（數）kap基礎操作（運算操作）、án-nóa用合成來組合程序來成做複合程序、條件、參數ê使用
+，以及án-nóa用 @code{define} 抽象程序。Lán看見程序ē當看做是過程ê區域展開ê模式，而且分類、推理kap行
+簡單ê一寡chia̍p看ê，收佇程序ê過程ê，模式ê演算法分析。Mā看見koân階函數倚靠予lán ē當操作，就
+án-ne用一般計算ê方法來推理，來giâ-koân lán ê語言ê能力。Che是程式設計ê大部份精華。
+
 In this chapter we are going to look at more complex data.  All the procedures
 in chapter 1 operate on simple numerical data, and simple data are not
 sufficient for many of the problems we wish to address using computation.
@@ -7360,6 +7370,12 @@ to form compound procedures, we turn in this chapter to another key aspect of
 any programming language: the means it provides for building abstractions by
 combining data objects to form @newterm{compound data}.
 
+佇chit章lán beh來看較複雜ê資料，所有佇第一章ê程式lóng操作數值資料，簡單ê資料無夠the̍h來
+予lán beh用計算處理ê問題用，lâng定定著建構有幾个部份運算ê物件，來模型有幾个層面ê現實世界ê
+現象。因此，雖bóng lán佇第一章聚集佇用組合程序成做複合程序，來起造抽象，lán佇chit
+章oat過來看逐ê程式語言另外ê關鍵層面：提供用組合資料物件組成@newterm{複合資料}
+(compound data)，來起造抽象ê方法。
+
 Why do we want compound data in a programming language?  For the same reasons
 that we want compound procedures: to elevate the conceptual level at which we
 can design our programs, to increase the modularity of our designs, and to
@@ -7368,6 +7384,11 @@ procedures enables us to deal with processes at a higher conceptual level than
 that of the primitive operations of the language, the ability to construct
 compound data objects enables us to deal with data at a higher conceptual level
 than that of the primitive data objects of the language.
+
+是án-nóa lán佇程式語言內底beh愛複合資料？Kap lán beh愛複合程序ê原因kâng款：來提升lán ē當
+設計程式ê觀念層，lán增加lán ê設計ê @newterm{module化}(modularity) kap giâ-koân lán ê
+語言ê表達力。就親像定義程序ê能力予lán ē當佇比語言ê基礎運算ê，koh較koân觀念層來處理過程，建構複合
+資料物件予lán ē當佇比語言ê基礎資料物件ê，koh較koân觀念層處理資料。
 
 \enlargethispage{\baselineskip}
 
