@@ -7409,6 +7409,14 @@ could ``glue together'' a numerator and denominator to form a pair---a
 that would be consistent with regarding a rational number as a single
 conceptual unit.
 
+考慮設計系統，來行運算有理數ê任務。Lán通想像一个操作 @code{add-rat} the̍h兩个有理數，
+產出in ê和。用簡單資料，有理數ē當掠做兩个整數：一个分子，一个分母。就án-ne，lán通設計程式，
+內底ê有理數由兩个整數代表（分子kap分母），@code{add-rat}由兩个程序實做（一个生成和ê分子，
+一个生成分母）。毋kú che真gāi-gio̍h，因為lán就著愛顯明追蹤tó一个分母對應kàu tó一个分子。
+佇強調kā chē-chē有理數行真chē操作ê系統，án-ne所詳細記ê，實際上ē舞花程式，koh免講in對lán
+ê心神ê影響。若準lán ē當kā分子kap分母「黏做伙」，成做數對——一个@newterm{複合資料物件}
+(compound data object)，lán ê程式就通操作佇kā有理數當做一个概念單位ê方式。
+
 The use of compound data also enables us to increase the modularity of our
 programs.  If we can manipulate rational numbers directly as objects in their
 own right, then we can separate the part of our program that deals with
@@ -7419,6 +7427,12 @@ a program that deal with how data objects are used is a powerful design
 methodology called @newterm{data abstraction}.  We will see how data
 abstraction makes programs much easier to design, maintain, and modify.
 
+使用複合資料mā予lán增加lán ê程式ê module化。若是lán家kī ē當直接kā有理數當做物件操作，
+就ē當kā處理有理數家kī ê部份程式，對有理數代表做整數對ê，可能ê詳細方法分開。有一个號
+做@newterm{資料抽象化}(data abstraction)一般技術，伊kā處理資料物件表示方式ê程式部
+份，對處理資料物件使用方法ê程式部份孤立起來，mā是有大路用ê設計方法論。Lán ē看見資料抽
+象化án-nóa予程式較快設計、維持kap修改。
+
 The use of compound data leads to a real increase in the expressive
 power of our programming language.  Consider the idea of forming a
 ``linear combination'' @math{ax + by}.  We might like to write
@@ -7426,6 +7440,10 @@ a procedure that would accept @math{a}, @math{b}, @math{x}, and @math{y} as
 arguments and return the value of @math{ax + by}.  This
 presents no difficulty if the arguments are to be numbers, because we
 can readily define the procedure
+
+使用複合資料會予lán ê程式語言ê表現力增加。考慮組一个「線性組合」@math{ax + by}，lán可
+能想beh寫程序，引數有 @math{a}、@math{b}、@math{x} kap @math{y}，傳轉 @math{ax + by}
+ê值。若是引數lóng是數，che無問題，因為lán通緊緊定義chit ê程序
 
 @lisp
 (define (linear-combination a b x y)
@@ -7438,6 +7456,11 @@ express, in procedural terms, the idea that one can form linear combinations
 whenever addition and multiplication are defined---for rational numbers,
 complex numbers, polynomials, or whatever.  We could express this as a
 procedure of the form
+
+@noindent
+毋koh假使lán beh處理ê毋但是數。設使lán想beh用程序ê元素表達，無論是啥物款
+（有理數、複數、多項式，等等）ê加法kap乘法，lóng通組線性組合ê想法。Lán ē當
+用下kha ê程序形式表達che：
 
 @lisp
 (define (linear-combination a b x y)
