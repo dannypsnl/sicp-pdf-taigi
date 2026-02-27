@@ -7495,12 +7495,31 @@ defining an operation such as @code{sum}.  Moreover, insofar as performing the
 summation is concerned, the details of how @code{term} may be constructed from
 more primitive operations are irrelevant.}
 
+@noindent
+其中 @code{add} kap @code{mul} 毋是基礎程序 @code{+} kap @code{*}，毋過是koh較複雜ê物
+，不管lán 傳入ê參數 @code{a}、@code{b}、@code{x} kap @code{y} ê型別是siáⁿ物，lóng ē行
+適當ê操作。關鍵就是，關係 @code{a}、@code{b}、@code{x} kap @code{y}
+，@code{linear-combination} 應該kan-ta知影ê，是程序@code{add} kap @code{mul} ē行適當ê操作。
+對程序 @code{linear-combination} 來講，kap @code{a}、@code{b}、@code{x} kap @code{y}
+無tī-taī，koh較無tī-taī ê就是，in可能拄仔好由koh較基礎ê資料所表示。Chit ê kâng款ê例，展示
+是án-nóa lán ê程式語言提供直接操作複合物件能力真重要：無che，像 @code{linear-combination} ê程序
+無法度毋免知in ê詳細結構，就kā伊ê引數送kah @code{add} kap @code{mul}。@footnote{直接操作程序ê能
+力，siâng款ē增加程式語言ê表現力。舉例，lán佇@ref{1.3.1} kā @code{sum} 程序引入，伊the̍h程序
+ @code{term} 當做引數，計算 @code{term} 佇指定區間ê和ê值。Beh定義 @code{sum}，lán毋免掛慮
+ @code{term} án-nóa ē當用koh較基礎ê操作表示，就通講程序家kī當做實體，是蓋重要。若是lán無「程
+序」ê概念，lán敢有可能想著定義親像 @code{sum} ê操作，chiâⁿ實予lâng giâu疑。此外，對行總和來講
+，@code{term} 表示做koh較基礎ê操作ê，可能ê詳細方法，kap伊無tī-taī。}
+
 We begin this chapter by implementing the rational-number arithmetic system
 mentioned above.  This will form the background for our discussion of compound
 data and data abstraction.  As with compound procedures, the main issue to be
 addressed is that of abstraction as a technique for coping with complexity, and
 we will see how data abstraction enables us to erect suitable
 @newterm{abstraction barriers} between different parts of a program.
+
+Lán對頂懸數提起ê，實做有理數ê運算系統開始chit章。伊ē形成予lán討論複合資料kap資料抽象化ê背景。
+Kap複合程序kâng款，beh處理ê主要問題就是抽象當做應對複雜性ê技術ê抽象化，lán ē看見資料抽象化按怎予
+lán kā佇程式無kâng部份中間ê，適當ê @newterm{抽象化障礙}(abstraction barriers) chhāi起來。
 
 We will see that the key to forming compound data is that a programming
 language should provide some kind of ``glue'' so that data objects can be
@@ -7516,6 +7535,14 @@ data objects, but compound data objects as well.  Another key idea is that
 compound data objects can serve as @newterm{conventional interfaces} for
 combining program modules in mix-and-match ways.  We illustrate some of these
 ideas by presenting a simple graphics language that exploits closure.
+
+Lán ē看見形成複合資料ê關鍵是程式語言應該提供一寡「膠」，來予資料組合組合做koh較複雜ê資
+料物件。膠ê可能ê款式有真chē。Lán ē確實發現án-nóa用無特別ê「資料」操作，干焦用程序，來
+成形複合資料。這ē予「程序」kap「資料」ê區別霧霧無明，kàu第一章落尾伊已經真無明顯ah。Lán ē
+探索一寡傳統ê技術來標示列kap樹。處理複合資料ê一个關鍵概念是@newterm{閉包}(closure)
+——lán the̍h來組合資料物件ê，除了允准lán組合基礎資料物件以外，koh應該允准複合資料物件。另
+外一个關鍵ê想法就是複合資料物件ē當當做@newterm{慣例ê介面}(conventional interfaces)
+，來組合烏白鬥ê程式module。
 
 \enlargethispage{\baselineskip}
 
