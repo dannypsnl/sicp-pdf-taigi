@@ -7557,6 +7557,12 @@ on the time and space requirements of processes that manipulate the data.  We
 will investigate these ideas in the context of symbolic differentiation, the
 representation of sets, and the encoding of information.
 
+了後lán ē引入@newterm{符號表達式}(symbolic expression)——伊ê基本ê部份ē當是任意ê符號，
+毋但是數ê資料，來加強lán ê語言ê寫實力。Lán探索chē-chē項表示物件ê集合ê選擇。Lán ē發現，
+親像數值函數ē當用真chē無kâng ê計算過程計算，有真chē方法，其中資料結構ē當用較簡單ê物件表示
+，表示ê選擇通顯明影響操作資料ê過程所需要ê時間kap空間。Lán ē調查chiah ê想法佇符號差異ê頂
+下文、集合ê表示，kap資訊ê編碼。
+
 Next we will take up the problem of working with data that may be represented
 differently by different parts of a program.  This leads to the need to
 implement @newterm{generic operations}, which must handle many different types
@@ -7571,6 +7577,15 @@ package for performing symbolic arithmetic on polynomials, in which the
 coefficients of the polynomials can be integers, rational numbers, complex
 numbers, and even other polynomials.
 
+Sòa落來lán ē討論操作資料ê問題，其中ê資料ē當用程式ê無kâng部份，做無kâng ê表示。Che致使需
+要@newterm{通用操作}(generic operations)，伊著愛處理真chē無kâng種類ê資料。佇通用操
+作ê頭前，beh維持module化，需要比簡單ê資料抽象化所ē當chhāi ê，koh較有能力ê抽象化障礙，特
+別是，lán引入@newterm{資料引chhōa程式設計}(data-directed programming)當做一个技術，允准個別ê資料表示ē當分離
+設計，了後ē當@newterm{附加}(additively)（就是免修改）組合。Beh說明chit ê系統設計ê方法ê能
+力，lán ē應用學著ê，來實做行運算ê多項式ê符號運算ê @newterm{包裹}(package)，來收soah本章。
+佇包裹內底，多項式ê係數ē當是整數、有理數、複數，甚至是別ê多項式。
+
+
 @menu
 * 2-1::              Introduction to Data Abstraction
 * 2-2::              Hierarchical Data and the Closure Property
@@ -7579,7 +7594,7 @@ numbers, and even other polynomials.
 * 2-5::              Systems with Generic Operations
 @end menu
 
-@section Introduction to Data Abstraction
+@section Introduction to Data Abstraction 介紹資料抽象化
 @node	2.1, 2.2, Chapter 2, Chapter 2
 
 In @ref{1.1.8}, we noted that a procedure used as an element in
@@ -7595,6 +7610,13 @@ abstraction is a methodology that enables us to isolate how a compound data
 object is used from the details of how it is constructed from more primitive
 data objects.
 
+@noindent
+佇 @ref{1.1.8}，lán注意著the̍h來當做要素，來建立koh較複雜ê程序ê程序，毋但ē當掠做特定ê操作ê集
+合，mā通當做程序ê抽象化。就是，程序ê實做方法ê詳細ē當khàm掉，特定ê程序家己ē當予任何有kâng款ê整
+kô行為ê程序替換。就是講，lán通用抽象化，kā程序ê使用方法，對程序án-nóa用koh較基礎ê程序起造ê詳細分
+開。複合資料ê相siâng ê概念號做@newterm{資料抽象化}(data abstraction)。伊是一个方法論，
+予lán kā複合資料ê使用方法，對伊是án-nóa用koh較基礎ê資料物件起造起來ê詳細分離。
+
 The basic idea of data abstraction is to structure the programs that are to use
 compound data objects so that they operate on ``abstract data.'' That is, our
 programs should use data in such a way as to make no assumptions about the data
@@ -7606,6 +7628,13 @@ that implement the abstract data in terms of the concrete representation.  To
 illustrate this technique, we will consider how to design a set of procedures
 for manipulating rational numbers.
 
+資料抽象化ê基本概念是使用複合資料物件建構程式，致使in佇「抽象資料」頂操作。就是，lán ê程式應
+該án-ne用資料，致使lán毋免對毋是行手頭ê工課所必要ê資料提出假設。Siâng時，「具體」(concrete)
+ê資料表示ê定義，kap用chit ê資料ê程式無tī-tāi。佇chit兩个部份中間ê介面是程序ê集合，號做
+@newterm{揀選器}(selectors) kap @newterm{建構器}(constructors)，in用具體表示來實做抽象
+資料。Beh說明chit ê技術，lán ē考慮按怎設計操作有理數ê程序ê集合。
+
+
 @menu
 * 2-1-1::            Example: Arithmetic Operations for Rational Numbers
 * 2-1-2::            Abstraction Barriers
@@ -7613,18 +7642,23 @@ for manipulating rational numbers.
 * 2-1-4::            Extended Exercise: Interval Arithmetic
 @end menu
 
-@subsection Example: Arithmetic Operations@* for Rational Numbers
+@subsection Example: Arithmetic Operations@* for Rational Numbers 例：有理數ê運算操作
 @node	2.1.1, 2.1.2, 2.1, 2.1
 
 Suppose we want to do arithmetic with rational numbers.  We want to be able to
 add, subtract, multiply, and divide them and to test whether two rational
 numbers are equal.
 
+@noindent
+假使lán想beh行有理數運算。Lán想beh ē當kā in加、減、乘kap除，以及試兩个有理數敢相kâng。
+
 Let us begin by assuming that we already have a way of constructing a rational
 number from a numerator and a denominator.  We also assume that, given a
 rational number, we have a way of extracting (or selecting) its numerator and
 its denominator.  Let us further assume that the constructor and selectors are
 available as procedures:
+
+Lán做伙假設lán有對分子kap分母建構有理數ê方法來開始。Lán koh設使，有一个有理數，lán有法度抽出（iah是揀）伊ê分子kap分母。Lán koh進一步設使建構器kap揀選器攏是ē當用ê程序：
 
 @itemize @bullet
 
