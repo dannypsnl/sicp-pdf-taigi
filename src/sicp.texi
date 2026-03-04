@@ -7658,7 +7658,8 @@ rational number, we have a way of extracting (or selecting) its numerator and
 its denominator.  Let us further assume that the constructor and selectors are
 available as procedures:
 
-Lán做伙假設lán有對分子kap分母建構有理數ê方法來開始。Lán koh設使，有一个有理數，lán有法度抽出（iah是揀）伊ê分子kap分母。Lán koh進一步設使建構器kap揀選器攏是ē當用ê程序：
+Lán做伙假設lán有對分子kap分母建構有理數ê方法來開始。Lán koh設使，有一个有理數，lán有法度抽
+出（iah是揀）伊ê分子kap分母。Lán koh進一步設使建構器kap揀選器攏是ē當用ê程序：
 
 @itemize @bullet
 
@@ -7666,13 +7667,20 @@ Lán做伙假設lán有對分子kap分母建構有理數ê方法來開始。Lán
 @math{\hbox{\tt(make-rat}\;\langle{n}\rangle\;\langle{d}\kern0.06em\rangle\hbox{\tt)}} returns the rational number whose numerator is the integer @math{\langle{n}\rangle} and whose denominator is the integer
 @math{\langle{d}\kern0.06em\rangle}.
 
+@math{\hbox{\tt(make-rat}\;\langle{n}\rangle\;\langle{d}\kern0.06em\rangle\hbox{\tt)}} 傳轉分子是整數 @math{\langle{n}\rangle}、分母是整數 @math{\langle{d}\kern0.06em\rangle} ê有理數。
+.
+
 @item
 @math{\hbox{\tt(numer}\;\;\langle{x}\rangle\hbox{\tt)}} returns the numerator of the rational number
 @math{\langle{x}\rangle}.
 
+@math{\hbox{\tt(numer}\;\;\langle{x}\rangle\hbox{\tt)}} 傳轉有理數 @math{\langle{x}\rangle} ê分子。
+
 @item
 @math{\hbox{\tt(denom}\;\;\langle{x}\rangle\hbox{\tt)}} returns the denominator of the rational number
 @math{\langle{x}\rangle}.
+
+@math{\hbox{\tt(denom}\;\;\langle{x}\rangle\hbox{\tt)}} 傳轉有理數 @math{\langle{x}\rangle} ê分母。
 
 @end itemize
 
@@ -7682,6 +7690,12 @@ We haven't yet said how a rational number is represented, or how the procedures
 @code{numer}, @code{denom}, and @code{make-rat} should be implemented.  Even
 so, if we did have these three procedures, we could then add, subtract,
 multiply, divide, and test equality by using the following relations:
+
+@noindent
+Lán佇chia leh用一个有能力ê合成策略：@newterm{向望ê觀察}(wishful thinking)。Lán iáu bōe講
+有理數án-nóa實做，á是程序 @code{numer}、@code{denom} kap @code{make-rat} 應該án-nóa實
+做。就算án-ne，若是lán有chit三个程序，lán通用下kha ê關係，來加、減、乘、除kap試敢有相kâng：
+
 @ifinfo
 
 @example
@@ -7718,6 +7732,9 @@ d_1   d_2
 @noindent
 We can express these rules as procedures:
 
+@noindent
+Lán通用程序表達chiah ê規則：
+
 @lisp
 (define (add-rat x y)
   (make-rat (+ (* (numer x) (denom y))
@@ -7744,7 +7761,11 @@ and constructor procedures @code{numer}, @code{denom}, and @code{make-rat}.
 But we haven't yet defined these.  What we need is some way to glue together a
 numerator and a denominator to form a rational number.
 
-@subsubheading Pairs
+Taⁿ lán有用揀選器kap建構器程序 @code{numer}、@code{denom} kap @code{make-rat} 定義ê有理
+數操作。毋kú lán iáu bōe kā in定義。Lán所需要ê是一个ē當kā分子kap分母相黏，組成有理數ê方法。
+
+
+@subsubheading Pairs 對
 
 To enable us to implement the concrete level of our data abstraction, our
 language provides a compound structure called a @newterm{pair}, which can be
@@ -7760,6 +7781,17 @@ Register'' and @code{cdr} (pronounced ``could-er'') stands for ``Contents of
 Decrement part of Register.''} Thus, we can use @code{cons}, @code{car}, and
 @code{cdr} as follows:
 
+Beh予lán實做lán ê資料抽象化ê具體層，lán ê語言提供號做@newterm{對}(pair) ê複合結構，ē當用基
+礎程序 @code{cons} 建構。Chit ê程序the̍h兩ê引數，傳轉一个複合資料物件，伊包含兩个引數，lóng準
+做伊ê部份。Lán ē當用基礎程序 @code{car} kap @code{cdr} kā伊ê部份抽出來。
+@footnote{@code{cons} chit ê名意思是「建構」(construct)。 @code{car} kap @code{cdr} ê名
+，是對原底佇 @acronym{IBM 704} 機器實做ê Lisp sòa來ê。Hit臺機器有@newterm{確定地址}
+(addressing) ê機制，允准lán指一个記憶體位置ê本地地址 (address) ê部份kap @newterm{遞減}
+(decrement) ê部份。@code{car}是「暫存器ê本地地址部份ê內容」(Contents of Address part
+ of Register) ê簡略；@code{cdr}（讀做 ``could-er''）是「暫存器ê遞減部份ê內容」(Contents of
+Decrement part of Register) ê簡略。}就án-ne，lán通用@code{cons}、@code{car} kap
+@code{cdr}，若下kha：
+
 @lisp
 (define x (cons 1 2))
 (car x)
@@ -7772,6 +7804,10 @@ Decrement part of Register.''} Thus, we can use @code{cons}, @code{car}, and
 Notice that a pair is a data object that can be given a name and manipulated,
 just like a primitive data object.  Moreover, @code{cons} can be used to form
 pairs whose elements are pairs, and so on:
+
+@noindent
+注意對是一个ē當號名kap操作ê資料物件，親像基礎ê資料物件。另外，@code{cons} ē當the̍h來組成
+要素是對ê對，等等：
 
 @lisp
 (define x (cons 1 2))
