@@ -7886,9 +7886,6 @@ We have chosen not to use this style of definition in this book.}
 
 Lán已經選擇mài佇chit本冊用chit款風格定義。}
 
-
-
-
 @lisp
 (define (make-rat n d) (cons n d))
 (define (numer x) (car x))
@@ -7903,6 +7900,12 @@ The Scheme primitive @code{newline} starts a new line for printing.  Neither of
 these procedures returns a useful value, so in the uses of @code{print-rat}
 below, we show only what @code{print-rat} prints, not what the interpreter
 prints as the value returned by @code{print-rat}.}
+
+@noindent
+而且，為著佇展示lán運算ê結果，lán通印有理數做分子、chhoa̍h線kap分子：
+@footnote{@code{display} 是Scheme印資料ê基礎函數。Scheme ê基礎函數 @code{newline}
+開新ê一chōa來印。兩个程序lóng bōe傳轉有路用ê值，所以佇使用下底ê @code{print-rat}，
+lán kan-ta展示@code{print-rat}印siáⁿ物，直譯器無展示@code{print-rat}傳轉去ê值。}
 
 @lisp
 (define (print-rat x)
