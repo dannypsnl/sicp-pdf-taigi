@@ -7827,9 +7827,15 @@ implemented by the procedures @code{cons}, @code{car}, and @code{cdr}, is the
 only glue we need.  Data objects constructed from pairs are called
 @newterm{list-structured} data.
 
+@noindent
+Lán ē佇 @ref{2.2} 看見組合對ê能力代表對ē當the̍h來做@newterm{通用目的}(general-purpose)
+ê建構ê塊，來建立逐款ê複雜ê資料結構。由程序@code{cons}、@code{car} kap @code{cdr} 實
+做ê，孤ê複合資料基礎@newterm{對}(pair)，是lán獨獨需要ê膠。對對建構ê資料物件號
+做@newterm{列單結構}(list-structured) ê資料。
+
 \enlargethispage{\baselineskip}
 
-@subsubheading Representing rational numbers
+@subsubheading Representing rational numbers 表示有理數
 
 Pairs offer a natural way to complete the rational-number system.  Simply
 represent a rational number as a pair of two integers: a numerator and a
@@ -7857,6 +7863,31 @@ want to watch @code{make-rat} being called, but you certainly don't want to
 watch every call to @code{cons}.
 
 We have chosen not to use this style of definition in this book.}
+
+@noindent
+對提供自然ê方法來完成有理數系統。Kā有理數簡單表示做一對整數：分子kap分母。Sòa落來
+@code{make-rat}、 @code{numer} kap @code{denom} ē當緊緊用下kha ê方式實做：
+@footnote{別款定義揀選器kap建構器ê方法是
+
+@lisp
+(define make-rat cons)
+(define numer car)
+(define denom cdr)
+@end lisp
+
+頭一个定義kā 名 @code{make-rat} kap表達式 @code{cons} ê值關聯，伊是建構對ê基礎程序。
+因此 @code{make-rat} kap @code{cons} 是kâng款ê基礎建構器ê無kâng ê名。
+
+Án-ne定義揀選器kap建構器chiâⁿ有效率：毋免予@code{make-rat}「呼叫」@code{cons}，
+@code{make-rat}「就是」@code{cons}，所以當@code{make-rat}呼叫ê時陣，kan-ta呼叫一个
+程序，毋是兩个。另外方面，án-ne做ē予協助除去錯誤ê功能，就是追蹤程序呼叫kap佇程序呼叫
+內khǹg中斷點，失效。Lí hoân-sè想欲看受呼叫ê @code{make-rat}，毋koh lí當然無想beh
+看逐擺呼叫 @code{cons}。
+
+Lán已經選擇mài佇chit本冊用chit款風格定義。}
+
+
+
 
 @lisp
 (define (make-rat n d) (cons n d))
