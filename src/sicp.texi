@@ -7918,6 +7918,9 @@ lán kan-ta展示@code{print-rat}印siáⁿ物，直譯器無展示@code{print-r
 @noindent
 Now we can try our rational-number procedures:
 
+@noindent
+Chit-má lán ē當試lán ê有理數程序：
+
 @lisp
 (define one-half (make-rat 1 2))
 (print-rat one-half)
@@ -7939,6 +7942,11 @@ rational numbers to lowest terms.  We can remedy this by changing
 use @code{gcd} to reduce the numerator and the denominator to lowest terms
 before constructing the pair:
 
+@noindent
+像落尾ê例所展示，lán ê有理數實做無kā有理數變做既約分數（譯註：華語koh號做最簡分數，taⁿ參考
+華日韓共通詞翻）。Lán ē當改@code{make-rat}來修正。若是lán有像佇 @ref{1.2.5} ê
+@code{gcd} 程序，lán通用 @code{gcd} lán 約分分子kap分母kàu既約ê，chiah建構對：
+
 @lisp
 (define (make-rat n d)
   (let ((g (gcd n d)))
@@ -7947,6 +7955,9 @@ before constructing the pair:
 
 @noindent
 Now we have
+
+@noindent
+Taⁿ lán有
 
 @lisp
 (print-rat (add-rat one-third one-third))
@@ -7958,15 +7969,23 @@ as desired.  This modification was accomplished by changing the constructor
 @code{make-rat} without changing any of the procedures (such as @code{add-rat}
 and @code{mul-rat}) that implement the actual operations.
 
+@noindent
+是lán所意愛ê。Chit ê修改是用改建構器 @code{make-rat}，免改任何 @code{add-rat}、
+@code{mul-rat}等實做實際操作ê程序，就達成ah。
+
 @quotation
 @strong{@anchor{Exercise 2.1}Exercise 2.1:} Define a better version of
 @code{make-rat} that handles both positive and negative arguments.
 @code{make-rat} should normalize the sign so that if the rational number is
 positive, both the numerator and denominator are positive, and if the rational
 number is negative, only the numerator is negative.
+
+@strong{Exercise 2.1:} 定義koh較好ê @code{make-rat} 版本，伊處理正kap負ê引數。
+@code{make-rat} 應該kā正負號規範，致使若有理數是正ê，分子分母攏是正ê；若是有理數是
+負ê，kan-ta分子是負ê。
 @end quotation
 
-@subsection Abstraction Barriers
+@subsection Abstraction Barriers 抽象化障礙
 @node	2.1.2, 2.1.3, 2.1.1, 2.1
 
 Before continuing with more examples of compound data and data abstraction, let
@@ -7978,11 +7997,20 @@ a basic set of operations in terms of which all manipulations of data objects
 of that type will be expressed, and then to use only those operations in
 manipulating the data.
 
+@noindent
+佇用koh較chē ê複合資料kap資料抽象化ê例繼續進前，lán做伙考慮有理數ê例chah來ê一寡問題。
+Lán用建構器 @code{make-rat} 以及選擇器@code{numer} kap @code{denom}定義有理數操作。
+一般來講，chhàng佇資料抽象化下kha ê概念是針對逐款ê資料物件，用表達chit款ê資料物件ê逐ê操
+作(manipulations) ê命令(operations)（譯註：翻做che是beh hām ``manipulation''區別），來
+確定命令ê基本集合，了後kan-ta用chiah ê命令來操作資料。
+
 @float
 @anchor{Figure 2.1}
 @ifinfo
 @quotation
 @strong{Figure 2.1:} Data-abstraction barriers in the rational-number package.
+
+@strong{Figure 2.1:} 佇有理數包裹內底ê資料抽象化障礙。
 
 @example
         +------------------------------------+
@@ -8008,7 +8036,7 @@ manipulating the data.
 @sp 0.5
 @center @image{fig/chap2/Fig2.1c,91mm,,,.pdf}
 @sp 0.5
-@center @caption{@strong{Figure 2.1:} Data-abstraction barriers in the rational-number package.}
+@center @caption{@strong{Figure 2.1:} Data-abstraction barriers in the rational-number package. 佇有理數包裹內底ê資料抽象化障礙。}
 @sp 0.6
 @end iftex
 @end float
@@ -8028,6 +8056,16 @@ irrelevant to the rest of the rational-number package so long as pairs can be
 manipulated by the use of @code{cons}, @code{car}, and @code{cdr}.  In effect,
 procedures at each level are the interfaces that define the abstraction
 barriers and connect the different levels.
+
+
+Lán通設想有理數系統ê結構，像@ref{Figure 2.1}所展示。水平線代表@newterm{抽象化障礙}，伊
+kā系統ê無kâng ê「層」分離。佇逐層，障礙分開（頂koân）用資料抽象化ê程式kap（下底）實做資料抽
+象化ê程式。用有理數ê程式kan-ta用有理數包裹提供ê「公用」程序：@code{add-rat}、
+@code{sub-rat}、@code{mul-rat}、@code{div-rat} kap @code{equal-rat?}等操作in。Chiah ê
+程序，sòa落來，kan-ta用建構器kap選擇器（@code{make-rat}、@code{numer} kap @code{denom}）
+實做，chit三个程序用對實做。對ê詳細實做方法kap有理數包裹chhun ê無tī-taī，只要對ē當用
+@code{cons}、@code{car} kap @code{cdr} 操作。實際上，佇逐層，程序攏是定義抽象化障礙 kap
+聯絡無kâng層ê介面。
 
 This simple idea has many advantages.  One advantage is that it makes programs
 much easier to maintain and to modify.  Any complex data structure can be
