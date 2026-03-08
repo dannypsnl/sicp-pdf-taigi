@@ -7999,7 +7999,7 @@ manipulating the data.
 
 @noindent
 佇用koh較chē ê複合資料kap資料抽象化ê例繼續進前，lán做伙考慮有理數ê例chah來ê一寡問題。
-Lán用建構器 @code{make-rat} 以及選擇器@code{numer} kap @code{denom}定義有理數操作。
+Lán用建構器 @code{make-rat} 以及揀選器@code{numer} kap @code{denom}定義有理數操作。
 一般來講，chhàng佇資料抽象化下kha ê概念是針對逐款ê資料物件，用表達chit款ê資料物件ê逐ê操
 作(manipulations) ê命令(operations)（譯註：翻做che是beh hām ``manipulation''區別），來
 確定命令ê基本集合，了後kan-ta用chiah ê命令來操作資料。
@@ -8062,7 +8062,7 @@ Lán通設想有理數系統ê結構，像@ref{Figure 2.1}所展示。水平線�
 kā系統ê無kâng ê「層」分離。佇逐層，障礙分開（頂koân）用資料抽象化ê程式kap（下底）實做資料抽
 象化ê程式。用有理數ê程式kan-ta用有理數包裹提供ê「公用」程序：@code{add-rat}、
 @code{sub-rat}、@code{mul-rat}、@code{div-rat} kap @code{equal-rat?}等操作in。Chiah ê
-程序，sòa落來，kan-ta用建構器kap選擇器（@code{make-rat}、@code{numer} kap @code{denom}）
+程序，sòa落來，kan-ta用建構器kap揀選器（@code{make-rat}、@code{numer} kap @code{denom}）
 實做，chit三个程序用對實做。對ê詳細實做方法kap有理數包裹chhun ê無tī-taī，只要對ē當用
 @code{cons}、@code{car} kap @code{cdr} 操作。實際上，佇逐層，程序攏是定義抽象化障礙 kap
 聯絡無kâng層ê介面。
@@ -8077,10 +8077,18 @@ task could be time-consuming and expensive in the case of large programs unless
 the dependence on the representation were to be confined by design to a very
 few program modules.
 
+Chit ê簡單ê想法有真chē好處。一个是伊予程式較好維持kap修改。任何複雜ê資料結構ē當用程式語言提
+供ê基礎資料結構，表達做chē-chē款形式。當然，表示ê選擇影響操作伊ê程式；就án-ne，若是表示佇以
+後有修改，所有chiah ê程式可能著配合修改。佇大程式內底，chit ê工課ē開真chē時間，代價mā真
+koân，除非表示ê依賴予設計限制kah真少ê程式module。
+
 For example, an alternate way to address the problem of reducing rational
 numbers to lowest terms is to perform the reduction whenever we access the
 parts of a rational number, rather than when we construct it.  This leads to
 different constructor and selector procedures:
+
+舉例，處理kā有理數約分做既約分數ê別款方法是，lán佇@newterm{接近使用}(access) 有理
+數ê部份，毋是佇lán建構伊ê時，chiah kā約分。Che產生無kâng ê建構器kap揀選器程序：
 
 @lisp
 (define (make-rat n d) (cons n d))
@@ -8102,6 +8110,11 @@ the @code{gcd}.  In any case, when we change from one representation to the
 other, the procedures @code{add-rat}, @code{sub-rat}, and so on do not have to
 be modified at all.
 
+Chit ê實做kap進前ê ê無kâng佇當lán算 @code{gcd} ê時陣。若是佇lán典型使用有理數ê時陣，lán
+接近使用仝款ê有理數ê分子kap分母足chē改，佇建構有理數ê時算 @code{gcd}
+ē較好。A̍h無，若準講lán改變表示kàu別款，程序 @code{add-rat}、@code{sub-rat} 等等毋免
+tòe咧修改。
+
 Constraining the dependence on the representation to a few interface procedures
 helps us design programs as well as modify them, because it allows us to
 maintain the flexibility to consider alternate implementations.  To continue
@@ -8110,6 +8123,11 @@ we can't decide initially whether to perform the @code{gcd} at construction
 time or at selection time.  The data-abstraction methodology gives us a way to
 defer that decision without losing the ability to make progress on the rest of
 the system.
+
+限制表示ê依賴kàu真少ê界面程序，幫chān lán設計kap修改程式，因為伊予lán保持考慮別款實做ê靈活
+性。Beh用lán ê簡單ê例繼續，假使lán leh設計有理數包裹，koh lán tú開始bōe當決定行
+@code{gcd} 佇建構ê時iah是選擇ê時。資料抽象化ê方法論予lán有方法，毋免停止寫別位ê程式，mā會
+使延chhiân決定。
 
 @quotation
 @strong{@anchor{Exercise 2.2}Exercise 2.2:} Consider the problem of
@@ -8124,6 +8142,14 @@ Finally, using your selectors and constructors, define a procedure
 @code{midpoint-segment} that takes a line segment as argument and returns its
 midpoint (the point whose coordinates are the average of the coordinates of the
 endpoints).  To try your procedures, you'll need a way to print points:
+
+@strong{Exercise 2.2:} 考慮表示平面頂ê線段ê問題。逐段由一對點所表示：開始點kap中止點。
+定義一个建構器 @code{make-@/segment} kap揀選器 @code{start-segment} 以及
+ @code{end-segment}，in用點定義線段ê表示。進一步，點ē當用一對數來表示：@math{x} 座標
+kap @math{y} 座標。因此，koh指定建構器 @code{make-@/point} kap揀選器 @code{x-point}
+以及 @code{y-point} 來定義chit款表示。落尾，用汝ê揀選器kap建構器，定義程序
+@code{midpoint-segment}，伊the̍h一个線段當做引數，傳轉伊ê中點（就是座標是端點座標平均ê
+點）。Beh試汝ê程序，汝需要印出點ê方法：
 
 @endpage
 @lisp
@@ -8145,9 +8171,14 @@ perimeter and the area of a given rectangle.  Now implement a different
 representation for rectangles.  Can you design your system with suitable
 abstraction barriers, so that the same perimeter and area procedures will work
 using either representation?
+
+@strong{Exercise 2.3:} 實做平面頂表示四角形ê方法（提示：汝可能想欲
+用 @ref{Exercise 2.2}。）用lí ê建構器kap揀選器，來建立算四角形ê周長kap面積ê程序。
+Chit-má實做無kâng ê四角形表示。汝敢ē當用適當ê抽象化障礙設計汝ê系統，致使仝款ê周長kap面積
+ê程序就算用別款表示，猶原ē當運作？
 @end quotation
 
-@subsection What Is Meant by Data?
+@subsection What Is Meant by Data? 資料ê意思是siáⁿ物？
 @node	2.1.3, 2.1.4, 2.1.2, 2.1
 
 We began the rational-number implementation in @ref{2.1.1} by
@@ -8156,6 +8187,12 @@ so on in terms of three unspecified procedures: @code{make-rat}, @code{numer},
 and @code{denom}.  At that point, we could think of the operations as being
 defined in terms of data objects---numerators, denominators, and rational
 numbers---whose behavior was specified by the latter three procedures.
+
+@noindent
+Lán佇 @ref{2.1.1} 使用三个無指明ê程序（@code{make-rat}、@code{numer} kap
+@code{denom}），實做有理數操作比如 @code{add-rat}、@code{sub-rat} 等等，來開始有理數實
+做。佇hit點，lán通想著chiah ê操作是用資料物件（分子、分母kap有理數）所定義，in ê行為是由
+tú開始hit三个程序所特定。
 
 But exactly what is meant by @newterm{data}?  It is not enough to say
 ``whatever is implemented by the given selectors and constructors.''  Clearly,
