@@ -8204,6 +8204,14 @@ dividing them should yield the same result as dividing @code{n} by @code{d}.
 In other words, @code{make-rat}, @code{numer}, and @code{denom} must satisfy
 the condition that, for any integer @code{n} and any non-zero integer @code{d},
 if @code{x} is @code{(make-rat n d)}, then
+
+毋koh @newterm{資料}(data)正港ê意思是siáⁿ物？講「揀選器kap建構器所實做ê」mā無夠。講予清，
+毋是任何三个程式ē當當做有理數適當ê實做基礎。Lán著愛保證，若是lán對整數@code{n} kap
+@code{d} ê對，建構有理數 @code{x}，抽出 @code{x} ê @code{number} kap @code{denom}，
+koh kā in相除ê結果，應該hām @code{n} 予 @code{d}除ê結果kâng款。別句話講，
+@code{make-rat}、@code{numer} kap @code{denom} 著滿足chit ê條件，就是對任何整數 @code{n}
+kap毋是0 ê整數@code{d}，若 @code{x}是 @code{(make-rat n d)}，就會有
+
 @ifinfo
 
 @example
@@ -8239,6 +8247,20 @@ of an abstract algebraic system whose behavior is specified by axioms that
 correspond to our ``conditions,'' and uses the techniques of abstract algebra
 to check assertions about data objects.  Both methods are surveyed in the paper
 by @ref{Liskov and Zilles (1975)}.}
+
+實際上，che是為著beh形成有理數表示ê適當ê基礎，@code{make-rat}、@code{numer} kap
+@code{denom}著符合ê唯一ê條件。一般來講，lán通kā資料掠做由揀選器kap建構器ê集合，以及
+chiah ê程序定著滿足，予表示合規定ê指定ê條件。@footnote{預料外ê是，chit ê想法真oh嚴格
+形式化。有兩个方法來kā形式化。一个是號做@newterm{抽象模型}(abstract models) ê方法，由
+C. A. R. @ref{Hoare (1972)}代先提出。伊形式化「程序+條件」ê規範，像頂koân有理數ê例所
+大概講ê。注意有理數表示ê chit ê條件是用關係整數ê事實（相等性kap除法）所表示ê。一般來講，
+抽象模型用進前定義ê資料物件ê類型，來定義資料物件ê新ê款。關係資料物件ê @newterm{表明}
+(assertions)因此ē當用縮小in kàu關係進前定義ê資料物件ê表明來檢查。另外一个方法，由
+@acronym{MIT} ê Zilles紹介，由 @acronym{IBM} ê Goguen、Thatcher、Wagner kap
+Wright（看@ref{Thatcher et al. 1978}），以及Toronto ê Guttag（看 @ref{Guttag 1977}）
+所提出，號做@newterm{代數規範}(algebraic specification)。伊kā「程序」當做抽象代數系統ê
+要素，系統ê行為由對應kàu lán ê「條件」ê公理來規範，用抽象代數ê技術來檢查資料物件ê表明。兩个
+方法lóng佇 @ref{Liskov and Zilles (1975)} ê 論文受審視。}
 
 This point of view can serve to define not only ``high-level'' data objects,
 such as rational numbers, but lower-level objects as well.  Consider the notion
