@@ -8279,6 +8279,16 @@ that we could implement @code{cons}, @code{car}, and @code{cdr} without using
 any data structures at all but only using procedures.  Here are the
 definitions:
 
+Chit ê觀點毋但ē當the̍h來定義「koân階」ê資料物件，比如有理數，mā ē使定義kē階ê物件。考慮
+對ê概念，lán the̍h che來定義有理數。Lán實際毋捌講對是siáⁿ物，kan-ta講語言提供程序
+@code{cons}、@code{car} kap @code{cdr} 來操作對。毋過關係chit三个操作lán獨獨需要知
+影ê是，若是lán kā兩个物件用 @code{cons} 黏做伙，lán通用 @code{car} kap @code{cdr} kā
+物件the̍h轉去。就是操作滿足chit ê條件，就是對任何物件@code{x} kap @code{y}，@code{z} 若
+是 @code{(cons x y)}，@code{(car z)} 就是 @code{x} ， @code{(cdr z)} 就是 @code{y}。
+Lán的確捌提起chit三个程序lóng當做基礎函數包佇lán ê語言。是講，任何三个一組ê程序，若是滿足頂
+懸ê條件，lóng ē當用做實做對ê基礎。Chit點ē當用chit ê事實大大說明，就是lán ē當毋免用任何資料
+結構，反轉kan-ta用程序實做@code{cons}、@code{car}、and @code{cdr}。定義佇下kha：
+
 @lisp
 (define (cons x y)
   (define (dispatch m)
@@ -8295,6 +8305,10 @@ This use of procedures corresponds to nothing like our intuitive notion of what
 data should be.  Nevertheless, all we need to do to show that this is a valid
 way to represent pairs is to verify that these procedures satisfy the condition
 given above.
+
+@noindent
+Chit ê程序ê使用無對應kàu任何相siâng lán對資料應該是siáⁿ物ê直覺概念ê。毋koh，所有lán所需要
+來展示che是合規定ê，表示對ê方法ê，是驗證chiah ê程序滿足頂懸ê條件。
 
 The subtle point to notice is that the value returned by @code{(cons x y)} is a
 procedure---namely the internally defined procedure @code{dispatch}, which
