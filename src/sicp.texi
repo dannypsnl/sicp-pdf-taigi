@@ -8323,6 +8323,15 @@ valid implementation, and if we access pairs using only @code{cons},
 @code{car}, and @code{cdr} we cannot distinguish this implementation from one
 that uses ``real'' data structures.
 
+著注意ê微妙ê點是，@code{(cons x y)} 傳轉ê值是程序——就是內部定義ê程序 @code{dispatch}，
+伊the̍h一个引數，照引數ê值是0 iah是1，來傳轉 @code{x} iah是 @code{y} ê值。對應ê是，
+@code{(car z)}定義做kā 0 應用kàu @code{z}。因此，若是 @code{z} 是由 @code{(cons x
+y)} 所建構 ê程式，kā 0 應用kàu @code{z} ē the̍h著 @code{x}。就án-ne，lán已經展示
+@code{(car (cons x y))} 得著 @code{x}，照lán所意愛ê。@code{(cdr
+(cons x y))} siâng款ē kā 1 應用kàu @code{(cons x y)} 所傳轉ê程序，伊ê kā @code{y}
+傳轉去。就án-ne，chit ê對ê程序實做是合法ê實做，若是lán kan-ta用 @code{cons}、
+@code{car} kap @code{cdr} 接近使用對，lán bōe當kā chit ê實做hām用真ê資料結構ê區別。
+
 The point of exhibiting the procedural representation of pairs is not that our
 language works this way (Scheme, and Lisp systems in general, implement pairs
 directly, for efficiency reasons) but that it could work this way.  The
@@ -8335,6 +8344,13 @@ will play a central role in our programming repertoire.  This style of
 programming is often called @newterm{message passing}, and we will be using it
 as a basic tool in @ref{Chapter 3} when we address the issues of modeling and
 simulation.
+
+展示對ê程序表示ê重點，毋是lán ê語言án-ne運作（Scheme kap一般ê Lisp系統，因為效率ê緣故，就
+直接實做對），卻是伊ē當án-ne做。雖bóng程序表示oh理解，毋koh是完美koh夠額ê方法來表示對，因
+為伊滿足對需要滿足ê必要條件。Chit ê例mā展示kā程序當做物件操作ê能力，ē自動提供表示複合資料ê
+能力。Che假若看起來真稀奇，毋koh資料ê程序表示，ē佇lán ê程式設計ê戲文中扮中心ê角色。Chit ê
+程式設計ê風格定定號做 @newterm{message passing}，lán ē佇@ref{Chapter 3}，當lán處
+理@newterm{起造模型}(modeling) kap模擬ê問題ê時，kā當做是基礎ê家私來使用。
 
 @quotation
 @strong{@anchor{Exercise 2.4}Exercise 2.4:} Here is an alternative procedural
