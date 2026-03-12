@@ -8357,6 +8357,8 @@ simulation.
 representation of pairs.  For this representation, verify that @code{(car (cons
 x y))} yields @code{x} for any objects @code{x} and @code{y}.
 
+@strong{Exercise 2.4:} Che是別ê對ê程序表示。對chit ê表示，請驗證對任何物件 @code{x} kap
+@code{y}，@code{(car (cons x y))} 得著 @code{x}。
 @lisp
 (define (cons x y)
   (lambda (m) (m x y)))
@@ -8366,6 +8368,8 @@ x y))} yields @code{x} for any objects @code{x} and @code{y}.
 
 What is the corresponding definition of @code{cdr}? (Hint: To verify that this
 works, make use of the substitution model of @ref{1.1.5}.)
+
+@code{cdr} 對應ê定義是siáⁿ物？（提示：若beh驗證che有效，用 @ref{1.1.5} ê取代模型）
 @end quotation
 
 @quotation
@@ -8374,6 +8378,10 @@ nonnegative integers using only numbers and arithmetic operations if we
 represent the pair @math{a} and @math{b} as the integer that is the product @math{2^a 3^b}.
 Give the corresponding definitions of the procedures @code{cons},
 @code{car}, and @code{cdr}.
+
+@strong{Exercise 2.5:} 展示lán ē當kan-ta用數字kap運算操作，來表示毋是負ê整數ê對，若是lán kā
+非負整數 @math{a} kap @math{b} ê對表示做整數 @math{2^a 3^b} ê積。請提供程序
+@code{cons}、@code{car} kap @code{cdr} ê對應ê定義。
 @end quotation
 
 @quotation
@@ -8382,6 +8390,9 @@ procedures wasn't mind-boggling enough, consider that, in a language that can
 manipulate procedures, we can get by without numbers (at least insofar as
 nonnegative integers are concerned) by implementing 0 and the operation of
 adding 1 as
+
+@strong{Exercise 2.6:} 若準講用程序表達對無夠驚-{}-lâng，考慮下kha ê，佇ē當操作程
+序ê語言，lán毋免數（上無毋是負ê整數），mā ē當勉強運作，只要實做0 kap加1 ê操作，若下kha：
 
 @lisp
 (define zero (lambda (f) (lambda (x) x)))
@@ -8392,13 +8403,20 @@ adding 1 as
 This representation is known as @newterm{Church numerals}, after its inventor,
 Alonzo Church, the logician who invented the λ-calculus.
 
+Chit ê表示方法號做@newterm{Church數}(Church numerals)，照發明伊ê Alonzo Church，就是
+發明λ運算ê邏輯學家號ê名。
+
 Define @code{one} and @code{two} directly (not in terms of @code{zero} and
 @code{add-1}).  (Hint: Use substitution to evaluate @code{(add-1 zero)}).  Give
 a direct definition of the addition procedure @code{+} (not in terms of
 repeated application of @code{add-1}).
+
+請直接定義@code{one} kap @code{two}（毋是用 @code{zero} kap @code{add-1}）。
+（提示：用取代來擴展 @code{(add-1 zero)}）。請提供加法程序 @code{+} ê直接ê定義（毋
+是重覆應用@code{add-1}）。
 @end quotation
 
-@subsection Extended Exercise: Interval Arithmetic
+@subsection Extended Exercise: Interval Arithmetic 擴展ê練習：區間運算
 @node	2.1.4,  , 2.1.3, 2.1
 
 Alyssa P. Hacker is designing a system to help people solve engineering
