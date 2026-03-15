@@ -8425,10 +8425,18 @@ manipulate inexact quantities (such as measured parameters of physical devices)
 with known precision, so that when computations are done with such approximate
 quantities the results will be numbers of known precision.
 
+@noindent
+Alyssa P. Hacker leh設計系統來幫tsān lâng解決工程問題。一个伊想欲佇in系統提供ê特點是，操作
+知影ê精確度ê無精確ê數量（比論實體設備所量ê參數），致使使用án-ne ê近似量計算了後，伊ê結果
+是所知ê精確度ê數。
+
 Electrical engineers will be using Alyssa's system to compute electrical
 quantities.  It is sometimes necessary for them to compute the value of a
 parallel equivalent resistance @math{R_p} of two resistors @math{R_1}, @math{R_2}
 using the formula
+
+電子工程師ē用Alyssa ê系統來計算電學ê量。In有時仔需要用chit ê公式計
+算@newterm{電阻器}(resistor) @math{R_1} kap @math{R_2} @newterm{並列}(parallel) ê電阻值
 @ifinfo
 
 @example
@@ -8450,11 +8458,21 @@ resistance of the combination can range from about 2.58 ohms (if the two
 resistors are at the lower bounds) to about 2.97 ohms (if the two resistors are
 at the upper bounds).
 
+電阻值常常受知影佇電阻器ê生產廠商標示ê誤差內底。比如講，若是汝買標「6.8 ohm，誤差10%」
+ê電阻，lí kan-ta ē當確定電阻器ê電阻值佇 @math{6.8 - 0.68 = 6.12} kap
+@math{6.8 + 0.68 = 7.48} ohm 之間。就án-ne，若汝有6.8 ohm，誤差 10% ê電阻器，kap
+4.7 ohm，誤差 5% ê電阻器並列，組合ê電阻值ê範圍是 2.58 ohm（若2粒lóng佇底限）
+kap 2.97 ohm（若2粒lóng佇上限）。
+
 Alyssa's idea is to implement ``interval arithmetic'' as a set of arithmetic
 operations for combining ``intervals'' (objects that represent the range of
 possible values of an inexact quantity).  The result of adding, subtracting,
 multiplying, or dividing two intervals is itself an interval, representing the
 range of the result.
+
+Alyssa ê想法是實做「@newterm{區間運算}」(interval arithmetic)，當做運算組合「區間」
+ê操作ê集合，其中區間是表示無精確ê量ê可能值ê範圍ê物件。加、減、乘、除兩个區間結果家kī mā
+是區間，代表結果ê範圍。
 
 Alyssa postulates the existence of an abstract object called an ``interval''
 that has two endpoints: a lower bound and an upper bound.  She also presumes
