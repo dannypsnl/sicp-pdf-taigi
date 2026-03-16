@@ -8482,6 +8482,10 @@ adding two intervals.  She reasons that the minimum value the sum could be is
 the sum of the two lower bounds and the maximum value it could be is the sum of
 the two upper bounds:
 
+Alyssa設使有號做「區間」ê抽象物件佇leh，伊有兩个端點：底限kap上限。伊koh假使，若是有區間ê端
+點，伊就ē當用資料建構器 @code{make-interval} 建構區間。Alyssa代先寫程序來加兩个區間。伊
+推論和ê可能ê上細ê值，是兩个底限ê和；可能ê上大ê值，是兩个上限ê和：
+
 @lisp
 (define (add-interval x y)
   (make-interval (+ (lower-bound x) (lower-bound y))
@@ -8493,6 +8497,10 @@ Alyssa also works out the product of two intervals by finding the minimum and
 the maximum of the products of the bounds and using them as the bounds of the
 resulting interval.  (@code{min} and @code{max} are primitives that find the
 minimum or maximum of any number of arguments.)
+
+@noindent
+Alyssa mā用chhōe底（上）限相乘ê所有結果ê上細值kap上大值，來算出兩个區間ê積。（@code{min}
+kap @code{max}是chhōe任何數ê引數ê上細iah是上大ê值ê基礎函數）
 
 @lisp
 (define (mul-interval x y)
@@ -8509,6 +8517,10 @@ To divide two intervals, Alyssa multiplies the first by the reciprocal of the
 second.  Note that the bounds of the reciprocal interval are the reciprocal of
 the upper bound and the reciprocal of the lower bound, in that order.
 
+@noindent
+Alyssa用第二个區間ê倒數乘頭一个，來除兩个區間。注意區間ê倒數ê底（上）限是上限ê倒數kap底限ê倒數，
+照chit順序。
+
 @lisp
 (define (div-interval x y)
   (mul-interval
@@ -8522,12 +8534,17 @@ the upper bound and the reciprocal of the lower bound, in that order.
 because she has not specified the implementation of the interval abstraction.
 Here is a definition of the interval constructor:
 
+@strong{Exercise 2.7:} Alyssa ê程式無完成，因為伊無指定區間抽象化ê實做。下kha是區間
+建構器ê一个定義：
+
 @lisp
 (define (make-interval a b) (cons a b))
 @end lisp
 
 Define selectors @code{upper-bound} and @code{lower-bound} to complete the
 implementation.
+
+定義揀選器 @code{upper-bound} kap @code{lower-bound} 來完成chit ê實做。
 @end quotation
 
 @quotation
