@@ -8551,6 +8551,9 @@ implementation.
 @strong{@anchor{Exercise 2.8}Exercise 2.8:} Using reasoning analogous to
 Alyssa's, describe how the difference of two intervals may be computed.  Define
 a corresponding subtraction procedure, called @code{sub-interval}.
+
+@strong{Exercise 2.8:} 使用kap Alyssa ê思考kâng款ê推論，描述兩个區間ê差ē當án-nuá計算。
+定義對應ê減法程序，伊號做@code{sub-interval}。
 @end quotation
 
 @quotation
@@ -8563,6 +8566,11 @@ width of the combination is not a function of the widths of the argument
 intervals.  Show that the width of the sum (or difference) of two intervals is
 a function only of the widths of the intervals being added (or subtracted).
 Give examples to show that this is not true for multiplication or division.
+
+@strong{Exercise 2.9:} 區間ê @newterm{幅度}(width)是上限kap底限ê差ê一半。幅度是區間
+所指定ê數ê無確定程度ê判斷值。對一寡運算操作，組合兩个區間ê結果ê幅度是，kan-ta是引數區間ê
+幅度ê函數；對其他ê操作，組合ê幅度毋是引數區間ê幅度ê函數。展示兩个區間ê和（iah是差）ê幅度，
+是一个kan-ta是beh加（iah是減）ê區間ê幅度ê函數。Koh舉例來展示對乘法iah是除法，che毋是真ê。
 @end quotation
 
 @quotation
