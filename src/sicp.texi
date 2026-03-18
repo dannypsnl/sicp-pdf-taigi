@@ -8578,6 +8578,10 @@ Give examples to show that this is not true for multiplication or division.
 programmer, looks over Alyssa's shoulder and comments that it is not clear what
 it means to divide by an interval that spans zero.  Modify Alyssa's code to
 check for this condition and to signal an error if it occurs.
+
+@strong{Exercise 2.10:} Ben Bitdiddle，伊是系統程式設計ê專家，對Alyssa後壁看程式碼，
+建議講，用幅度是0 ê區間除ê意思無清楚。請修改Alyssa ê程式碼來檢查這狀況，若是出現，請送出
+錯誤。
 @end quotation
 
 @quotation
@@ -8587,12 +8591,21 @@ possible to break @code{mul-interval} into nine cases, only one of which
 requires more than two multiplications.''  Rewrite this procedure using Ben's
 suggestion.
 
+@strong{Exercise 2.11} Ben順sòa秘密提出建議：「用試區間ê端點ê正負號，有可能kā
+@code{mul-interval} 拆做九个例，kan-ta其中一个需要兩改以上ê乘法。」用Ben ê建議來
+改chit ê程序。
+
 After debugging her program, Alyssa shows it to a potential user, who complains
 that her program solves the wrong problem.  He wants a program that can deal
 with numbers represented as a center value and an additive tolerance; for
 example, he wants to work with intervals such as @math{3.5 \pm 0.15} rather than
 [3.35, 3.65].  Alyssa returns to her desk and fixes this problem by supplying
 an alternate constructor and alternate selectors:
+
+Kā Alyssa ê程序除去錯誤了後，Alyssa kā展示予可能ê用者看，毋過伊怨講伊ê程式解決無正確
+ê問題。伊beh愛一个程序，ē當處理用中值kap誤差表示ê數；舉例，伊想beh處理寫做若
+@math{3.5 \pm 0.15} ê區間，毋是[3.35, 3.65]。Alyssa轉去伊ê桌仔頭前，用提供別ê建構器kap
+揀選器，來解決chit ê問題：
 
 @lisp
 (define (make-center-width c w)
@@ -8608,6 +8621,10 @@ situations usually involve measurements with only a small uncertainty, measured
 as the ratio of the width of the interval to the midpoint of the interval.
 Engineers usually specify percentage tolerances on the parameters of devices,
 as in the resistor specifications given earlier.
+
+Alyssa ê程式ê大部份用者，不幸lóng是工程師。真正ê工程狀況定定干涉有kan-ta一屑仔無確
+定ê測量值，伊用區間ê幅度kap區間ê中點ê比例來量。工程師定定kā設備ê參數指定誤差百分比例，親像
+頂懸所列ê電阻規格。
 @end quotation
 
 @quotation
@@ -8616,6 +8633,10 @@ as in the resistor specifications given earlier.
 produces the desired interval.  You must also define a selector @code{percent}
 that produces the percentage tolerance for a given interval.  The @code{center}
 selector is the same as the one shown above.
+
+@strong{Exercise 2.12:} 定義建構器 @code{make-center-percent}，伊the̍h中值kap誤差
+百分比例，產出beh愛ê區間。汝mā定著愛定義揀選器 @code{percent}，產出區間ê誤差百分比例。
+@code{center} 揀選器kap頂懸ê kâng款。
 @end quotation
 
 @quotation
@@ -8625,11 +8646,19 @@ percentage tolerance of the product of two intervals in terms of the tolerances
 of the factors.  You may simplify the problem by assuming that all numbers are
 positive.
 
+@strong{Exercise 2.13:} 展示佇細細ê誤差百分比例ê假設，有一个簡單ê公式，用誤差係數，來
+近似兩个區間ê乘積ê誤差百分比例。汝通假設逐ê數lóng是正數，來簡化問題。
+
 After considerable work, Alyssa P. Hacker delivers her finished system.
 Several years later, after she has forgotten all about it, she gets a frenzied
 call from an irate user, Lem E. Tweakit.  It seems that Lem has noticed that
 the formula for parallel resistors can be written in two algebraically
 equivalent ways:
+
+佇大工程以後，Alyssa P. Hacker 交出所完成ê系統。幾若冬以後，伊bōe記得任何關係che ê代誌
+ê時陣，伊接著一通氣phuh-phuh ê電話，對心狂火著ê用者 Lem E. Tweakit khà來。Lem假若注意著
+並列ê電阻ê公式通寫做兩个代數上kâng款ê方式：
+
 @ifinfo
 
 @example
@@ -8659,6 +8688,8 @@ $$ {1 \over 1 / R_1 + 1 / R_2}. $$
 He has written the following two programs, each of which computes the
 parallel-resistors formula differently:
 
+伊有寫下kha兩ê程式，任何一个算並列電阻ê公式lóng無kâng：
+
 @lisp
 (define (par1 r1 r2)
   (div-interval (mul-interval r1 r2)
@@ -8676,6 +8707,8 @@ parallel-resistors formula differently:
 
 Lem complains that Alyssa's program gives different answers for the two ways of
 computing. This is a serious complaint.
+
+Lem怨講Alyssa ê程式用兩ê算法，ē得著無kâng ê答案。Che是嚴重ê投訴。
 @end quotation
 
 @quotation
