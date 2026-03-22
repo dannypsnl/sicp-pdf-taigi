@@ -8718,6 +8718,11 @@ expressions. Make some intervals @math{A} and @math{B}, and use them in computin
 expressions @math{A / A} and @math{A / B}.  You will get the most insight by
 using intervals whose width is a small percentage of the center value. Examine
 the results of the computation in center-percent form (see @ref{Exercise 2.12}).
+
+@strong{Exercise 2.14:} 展示Lem講著。用多樣ê運算表達式調查系統ê行為。創造一寡區間
+@math{A} kap @math{B}，用in運算表達式 @math{A / A} kap @math{A / B}。汝用幅度是
+中值ê細細比例ê區間，就ē當深深了解。用中值—比例ê形式測試計算ê結果（看
+@ref{Exercise 2.12}）。
 @end quotation
 
 @quotation
@@ -8728,6 +8733,12 @@ Alyssa's system will produce tighter error bounds if it can be written in such
 a form that no variable that represents an uncertain number is repeated.  Thus,
 she says, @code{par2} is a ``better'' program for parallel resistances than
 @code{par1}.  Is she right?  Why?
+
+@strong{Exercise 2.15:} Eva Lu Ator，另外一个用者，mā有注意無kâng soah 代
+數上@newterm{等價}(equivalent) ê表達式，ē算出無kâng ê結果。伊講，方程式若ē當寫做，所
+有表達無確定ê數ê變數lóng無重覆出現ê形式，án-ne用Alyssa ê系統計算有區間ê方程式，ē產
+生koh較細ê誤差界。因此，伊講，對算並列電阻，@code{par2} 是比 @code{par1}「較
+好」ê程式。伊敢講有著？是án-nóa？
 @end quotation
 
 @quotation
@@ -8735,10 +8746,14 @@ she says, @code{par2} is a ``better'' program for parallel resistances than
 equivalent algebraic expressions may lead to different answers.  Can you devise
 an interval-arithmetic package that does not have this shortcoming, or is this
 task impossible?  (Warning: This problem is very difficult.)
+
+@strong{Exercise 2.16:} 解說一般來講，等價ê代數表達式是án-nóa算出無kâng ê答案。汝
+敢ē當設計一个區間運算ê包裹，無chit ê瑕疵？抑是chit ê任務敢無可能？（警告：Chit ê問題足困
+難）
 @end quotation
 
 
-@section Hierarchical Data and the Closure Property
+@section Hierarchical Data and the Closure Property 階層資料kap閉包性質
 @node	2.2, 2.3, 2.1, Chapter 2
 
 As we have seen, pairs provide a primitive ``glue'' that we can use to
@@ -8750,6 +8765,13 @@ contains a representation of the object.  For example, the box for a number
 contains a numeral.  The box for a pair is actually a double box, the left part
 containing (a pointer to) the @code{car} of the pair and the right part
 containing the @code{cdr}.
+
+@noindent
+親像lán所看著ê，對提供基礎ê「膠」，Lán ē當the̍h來建構複合ê資料物件。@ref{Figure 2.2} 展示
+標準ê方法來圖示對——佇chit ê例，對由 @code{(cons 1 2)} 建立。佇chit ê表達式，號
+做@newterm{盒仔—指標表示法} (box-and-pointer notation)，逐ê物件展示做指盒仔ê
+@newterm{指標}(pointer)。Té基礎物件盒仔包含物件ê表示。比如講，Té數字ê盒仔包數值。包對箱
+仔是雙層ê箱仔，倒pêng ê部份包（指標指kàu）數對ê @code{car}，正pêng ê包 @code{cdr}。
 
 We have already seen that @code{cons} can be used to combine not only numbers
 but pairs as well.  (You made use of this fact, or should have, in doing
@@ -8763,6 +8785,8 @@ numbers 1, 2, 3, and 4.
 @anchor{Figure 2.2}
 @ifinfo
 @strong{Figure 2.2:} Box-and-pointer representation of @code{(cons 1 2)}.
+
+@code{(cons 1 2)} ê盒仔—指標表示法
 
 @example
      +---+---+     +---+
@@ -8779,7 +8803,7 @@ numbers 1, 2, 3, and 4.
 @sp 0.3
 @center @image{fig/chap2/Fig2.2c,34mm,,,.pdf}
 @sp 0.6
-@center @caption{@strong{Figure 2.2:} Box-and-pointer representation of @code{(cons 1 2)}.}
+@center @caption{@strong{Figure 2.2:} Box-and-pointer representation of @code{(cons 1 2)}. @code{(cons 1 2)} ê盒仔—指標表示法。}
 @sp 1
 @end iftex
 @end quotation
@@ -8789,7 +8813,9 @@ numbers 1, 2, 3, and 4.
 @quotation
 @anchor{Figure 2.3}
 @ifinfo
-@strong{Figure 2.3:} Two ways to combine 1, 2, 3, and 4 using pairs.
+@strong{Figure 2.3:} Two ways to combine 1, 2, 3, and 4 using pairs. 
+
+兩款用對組合1、2、3 kap 4 ê方法。
 
 @example
      +---+---+     +---+---+         +---+---+     +---+
@@ -8815,7 +8841,8 @@ numbers 1, 2, 3, and 4.
 @sp 0.3
 @center @image{fig/chap2/Fig2.3c,96mm,,,.pdf}
 @sp 0.6
-@center @caption{@strong{Figure 2.3:} Two ways to combine 1, 2, 3, and 4 using pairs.}
+@center @caption{@strong{Figure 2.3:} Two ways to combine 1, 2, 3, and 4 using pairs. 兩款用對組合1、2、3 kap 4 ê方法。}
+
 @sp 0.7
 @end iftex
 @end quotation
@@ -8836,6 +8863,16 @@ do not use the word ``closure'' in this second sense in this book.  } Closure
 is the key to power in any means of combination because it permits us to create
 @newterm{hierarchical} structures---structures made up of parts, which
 themselves are made up of parts, and so on.
+
+建立「要素是對ê對」ê能力，是列單結構ē當做代表性家私ê重要ê精華。Lán指chit ê能力做 @code{cons}
+ê @newterm{閉包性} (closure property)。一般來講，若是用一个操作組合物件ê結果ē當用
+kâng款ê操作來組合，tsit ê組合資料物件ê操作滿足閉包性。@footnote{佇chia，「閉包」chit ê
+詞ê使用是對抽象代數來ê，其中元素ê集合若是應用一个操作kàu chit ê集合ê元素，ē產出一个mā是
+chit ê集合ê元素，chit ê集合ê元素就通講是對chit ê操作是@newterm{封閉ê}(closed)。Lisp社
+里（不幸）mā使用「閉包」chit字來描述全然無tī-tāi ê概念：一个閉包是實做表示有自由變數ê程序ê
+科技。佇本冊ê「閉包」lán bōe指第二ê用法。}閉包是kā任何組合方法提供能力ê關鍵，因為伊容允lán
+建立@newterm{階層}(hierarchical)結構——用部份組立ê結構，其中部份是由部份所組立，照án-ne推
+論。
 
 From the outset of @ref{Chapter 1}, we've made essential use of closure in
 dealing with procedures, because all but the very simplest programs rely on the
