@@ -8897,6 +8897,18 @@ inhibits and penalizes casual cooperation.  It is better to have 100 functions
 operate on one data structure than to have 10 functions operate on 10 data
 structures.''}
 
+Ùi @ref{Chapter 1} tú開始，lán佇處理程序ê時陣有必要使用閉包性，因為除了上簡單ê，程式lóng
+倚靠chit ê事實，就是組合ê要素家kī mā ē當是要素。佇chit節，lán使用複合資料ê閉包性ê結果。
+Lán描述一寡使用對來代表列kap樹ê傳統ê技術，koh展示一个鮮明說明閉包性ê圖形語言。
+@footnote{組合ê方法應該滿足閉包性ê概念是直接ê想法。佇chē-chē流行ê程式語言提供ê資料組合器
+無滿足閉包性，iáu是予閉包性傷過pūn-tshiâng無好用。佇Fortran iah是 Basic，lâng一般kā資料
+元素tàu入去@newterm{陣列}(array)，來組合in——毋koh bōe當組元素是陣列ê陣列。Pascal kap C
+接納元素是結構ê結構。但是，che著愛程式設計師明顯操作指標，而且束縛佇結構ê逐ê欄位kan-ta通包含
+代先指定ê形式ê元素ê限制。無像Lisp kap伊ê對，chiah ê語言無內底就有ê通用用途ê膠，予用統一ê方式操作
+資料較容易。Chit ê限制是Alan Perlis佇本冊ê序內底ê建議ê背景：「佇Pascal，傷chē通宣告ê資料
+結構致使佇函數內底ê專門化，伊壓制，koh不利無正式ê合作。有100 ê函數操作佇一个資料結構，較贏有10
+ê函數操作佇10 ê資料結構。」}
+
 @menu
 * 2-2-1::            Representing Sequences
 * 2-2-2::            Hierarchical Structures
