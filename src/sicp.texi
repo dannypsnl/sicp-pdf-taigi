@@ -8931,6 +8931,13 @@ represented in box-and-pointer diagrams as a diagonal line and in programs as
 the value of the variable @code{nil}.  The entire sequence is constructed by
 nested @code{cons} operations:
 
+一个lán ē當用對起造ê有路用ê結構是@newterm{列}(sequence)——一个有排順序ê資料物件ê集合。當然
+有真chē方法用對來表示列。一个特別直接ê表示，由 @ref{Figure 2.4} 說明，其中列1、2、3、4是表示
+做對ê鏈。逐ê對ê @code{car} 是鏈內底對應ê項目，對ê @code{cdr} 是鏈內底ê後一个對。
+上尾ê對ê @code{cdr} 用指kàu一个毋是對ê區別ê值，來代表列ê尾溜，佇盒仔—指標表示法ê圖，表示做
+對角線，佇程式表達做變數 @code{nil} ê值。規个列是由岫á形ê @code{cons} 操作組成：
+
+
 @lisp
 (cons 1
       (cons 2
@@ -8942,7 +8949,7 @@ nested @code{cons} operations:
 @quotation
 @anchor{Figure 2.4}
 @ifinfo
-@strong{Figure 2.4:} The sequence 1, 2, 3, 4 represented as a chain of pairs.
+@strong{Figure 2.4:} The sequence 1, 2, 3, 4 represented as a chain of pairs. 列1、2、3、4表達做對ê鏈。
 
 @example
      +---+---+     +---+---+     +---+---+     +---+---+
@@ -8959,7 +8966,7 @@ nested @code{cons} operations:
 @sp 0.2
 @center @image{fig/chap2/Fig2.4c,76mm,,,.pdf}
 @sp 0.5
-@center @caption{@strong{Figure 2.4:} The sequence 1, 2, 3, 4 represented as a chain of pairs.}
+@center @caption{@strong{Figure 2.4:} The sequence 1, 2, 3, 4 represented as a chain of pairs. 列1、2、3、4表達做對ê鏈。}
 @sp 0.8
 @end iftex
 @end quotation
