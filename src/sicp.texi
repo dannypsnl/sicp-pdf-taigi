@@ -8931,6 +8931,7 @@ represented in box-and-pointer diagrams as a diagonal line and in programs as
 the value of the variable @code{nil}.  The entire sequence is constructed by
 nested @code{cons} operations:
 
+@noindent
 一个lán ē當用對起造ê有路用ê結構是@newterm{列}(sequence)——一个有排順序ê資料物件ê集合。當然
 有真chē方法用對來表示列。一个特別直接ê表示，由 @ref{Figure 2.4} 說明，其中列1、2、3、4是表示
 做對ê鏈。逐ê對ê @code{car} 是鏈內底對應ê項目，對ê @code{cdr} 是鏈內底ê後一个對。
@@ -8980,12 +8981,20 @@ chain of pairs terminated by the end-of-list marker.  In contrast, the term
 just to lists.}  The above sequence could be produced by @code{(list 1 2 3 4)}.
 In general,
 
+Chit款用岫á形ê @code{cons} 組成ê對ê列，號做@newterm{列單}(list)，Scheme提供基礎函數
+@code{list}來幫chān建立in。@footnote{佇chit本冊，lán用@newterm{列單}來指由end-of-list標記
+收soah ê對ê列。Kah伊比較，術語「@newterm{列單結構}」(list structure)指用對做ê任何資料結構，
+毋但列單。}頂懸ê列ē當用 @code{(list 1 2 3 4)} 產出。一般來講，
+
 @lisp
 (list @math{\langle}@var{a}@math{_{\mono{1}}\rangle} @math{\langle}@var{a}@math{_{\mono{2}}\rangle} @dots{} @math{\langle}@var{a}@math{_{\monoit{n}}\rangle})
 @end lisp
 
 @noindent
 is equivalent to
+
+@noindent
+kap下kha ê等價
 
 @lisp
 (cons @math{\langle}@var{a}@math{_{\mono{1}}\rangle}
@@ -9000,6 +9009,10 @@ Lisp systems conventionally print lists by printing the sequence of elements,
 enclosed in parentheses.  Thus, the data object in @ref{Figure 2.4} is printed
 as @code{(1 2 3 4)}:
 
+@noindent
+Lisp系統傳統上用印出元素ê列，閣用括弧kā in包起來，來印出列單。就án-ne，佇
+@ref{Figure 2.4} ê資料物件，hŏng印做 @code{(1 2 3 4)}：
+
 @lisp
 (define one-through-four (list 1 2 3 4))
 one-through-four
@@ -9012,6 +9025,11 @@ Be careful not to confuse the expression @code{(list 1 2 3 4)} with the list
 evaluated.  Attempting to evaluate the expression @code{(1 2 3 4)} will signal
 an error when the interpreter tries to apply the procedure @code{1} to
 arguments @code{2}, @code{3}, and @code{4}.
+
+@noindent
+著注意毋通kā表達式 @code{(list 1 2 3 4)} kap 列單 @w{@code{(1 2 3 4)}} 舞花去，
+後壁ê是chit ê表達式ê值算出來得著ê結果。試算表達式 @code{(1 2 3 4)} ê值ē得著錯誤，因為
+直譯器試kā引數 @code{2}、@code{3} kap @code{4}，應用kàu程序 @code{1}。
 
 We can think of @code{car} as selecting the first item in the list, and of
 @code{cdr} as selecting the sublist consisting of all but the first item.
