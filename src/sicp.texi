@@ -9050,6 +9050,20 @@ combinations like @code{cadr} are pronounceable.} The constructor @code{cons}
 makes a list like the original one, but with an additional item at the
 beginning.
 
+Lán ē當kā @code{car} 掠做揀列單ê頭一个項目，kā @code{cdr} 掠做是揀kiáⁿ列單，包含除了
+頭一个ê所有ê項目。@code{car} kap @code{cdr} ê岫á形ê應用ē當用來抽出列單ê第二ê、第三ê，
+kah落尾ê項目。@footnote{因為岫á形ê @code{car} kap @code{cdr} ê應用真oh寫，Lisp方言
+提供in ê簡略——舉例，
+
+@lisp
+(cadr @math{\langle}@var{arg}@math{\rangle}) = (car (cdr @math{\langle}@var{arg}@math{\rangle}))
+@end lisp
+
+所有chit款程序ê名lóng是 @code{c} 起頭 @code{r} 收soah。中間ê逐ê @code{a} 指 @code{car} ê操
+作，@code{d} 指 @code{cdr} ê操作，應用ê順序kap in佇名內底ê順序仝款。@code{car} kap @code{cdr}
+ê名保持，因為像 @code{cadr} ê簡單ê組合ē當發音。}建構器 @code{cons} 建構一个列單，像原本ê，毋過佇
+起頭加添項目。
+
 @lisp
 (car one-through-four)
 @i{1}
