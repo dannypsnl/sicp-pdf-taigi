@@ -9093,6 +9093,16 @@ standardization brawls, would like to avoid the entire issue.  Once we have
 introduced quotation in @ref{2.3}, we will denote the empty list as
 @code{'()} and dispense with the variable @code{nil} entirely.}
 
+@noindent
+用來收soah對ê鏈ê @code{nil} ê值，ē當掠做無元素ê列，@newterm{空ê列單}(empty list)。
+@newterm{nil} chit ê詞是拉丁語指「無物件」ê詞 @emph{nihil} ê簡稱。@footnote{佇Lisp
+方言ê標準化中，對字面上「無物件」ê爭論所開ê氣力不止仔大：@code{nil} kám應該是一般ê名？
+@code{nil} ê值kám應該是符號？Kám應該是列單？Kám應該是對？佇Scheme，@code{nil}是一般
+ê名，lán佇本節ē當用來做變數，伊ê值是end-of-list標記（就親像@code{true}是一般ê變數，伊有真
+ê值）。其他ê Lisp方言，包含Common Lisp，kā @code{nil}當做特殊ê符號。Chit本冊ê作者，已經吞
+忍傷chē語言標準化ê冤家，想beh走閃kui个議題。Lán一下佇 @ref{2.3} 紹介quotation，ē kā空列
+單用@code{'()}表示，全部提供予變數 @code{nil}。}
+
 @subsubheading List operations
 
 The use of pairs to represent sequences of elements as lists is accompanied by
