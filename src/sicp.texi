@@ -9103,7 +9103,7 @@ introduced quotation in @ref{2.3}, we will denote the empty list as
 忍傷chē語言標準化ê冤家，想beh走閃kui个議題。Lán一下佇 @ref{2.3} 紹介quotation，ē kā空列
 單用@code{'()}表示，全部提供予變數 @code{nil}。}
 
-@subsubheading List operations
+@subsubheading List operations 列單操作
 
 The use of pairs to represent sequences of elements as lists is accompanied by
 conventional programming techniques for manipulating lists by successively
@@ -9112,14 +9112,23 @@ takes as arguments a list and a number @math{n} and returns the @math{n^{\mathrm
 the list.  It is customary to number the elements of the list beginning with 0.
 The method for computing @code{list-ref} is the following:
 
+@noindent
+使用對來kā元素ê列表示做列單，是kap傳統ê，用連sòa kā列單「@code{cdr}落去」ê操作列單ê程
+式設計技術做伙。比論講，程序@code{list-ref} ê引數是列單kap數字@math{n}，伊傳倒轉列單ê第
+@math{n} ê元素。Lán-lâng慣勢kā列單ê元素對0開始算。算@code{list-ref} ê方法佇下kha：
+
 @itemize @bullet
 
 @item
 For @math{n = 0}, @code{list-ref} should return the @code{car} of the list.
 
+若是 @math{n = 0}，@code{list-ref}應該傳轉列單ê @code{car}。
+
 @item
 Otherwise, @code{list-ref} should return  the @math{(n - 1)}-st item of the
 @code{cdr} of the list.
+
+A̍h無，@code{list-ref}應該傳轉列單ê @code{cdr} ê第 @math{(n - 1)} ê元素。
 
 @end itemize
 
