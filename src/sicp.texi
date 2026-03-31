@@ -9244,7 +9244,7 @@ Otherwise, @code{append} the @code{cdr} of @code{list1} and @code{list2}, and
 @code{cons} the @code{car} of @code{list1} onto the result:
 
 A̍h無，@code{append} @code{list1} ê @code{cdr} kap @code{list2}，koh kā伊ê結果
- kap @code{list1} ê @code{car} @code{cons}做伙： 
+ kap @code{list1} ê @code{car} @code{cons}做伙：
 @end itemize
 
 @lisp
