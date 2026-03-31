@@ -9113,7 +9113,7 @@ the list.  It is customary to number the elements of the list beginning with 0.
 The method for computing @code{list-ref} is the following:
 
 @noindent
-使用對來kā元素ê列表示做列單，是kap傳統ê，用連sòa kā列單「@code{cdr}落去」ê操作列單ê程
+使用對來kā元素ê列表示做列單，是kap傳統ê，用kā列單連sòa「@code{cdr}落去」ê操作列單ê程
 式設計技術做伙。比論講，程序@code{list-ref} ê引數是列單kap數字@math{n}，伊傳倒轉列單ê第
 @math{n} ê元素。Lán-lâng慣勢kā列單ê元素對0開始算。算@code{list-ref} ê方法佇下kha：
 
@@ -9148,6 +9148,10 @@ primitive predicate @code{null?}, which tests whether its argument is the empty
 list.  The procedure @code{length}, which returns the number of items in a
 list, illustrates this typical pattern of use:
 
+@noindent
+Lán通常ē kā kui條列單 @code{cdr} 落去。為著幫chān che，Scheme包基礎謂詞函數@code{null?}
+，測試伊ê引數敢是空ê列單。程序 @code{length}，伊傳轉列單ê項目數，說明使用ê一般模式：
+
 @lisp
 (define (length items)
   (if (null? items)
@@ -9162,26 +9166,39 @@ list, illustrates this typical pattern of use:
 The @code{length} procedure implements a simple recursive plan. The reduction
 step is:
 
+@noindent
+@code{length} 程序實做簡單ê遞迴計畫，縮小ê手續是：
+
 @itemize @bullet
 
 @item
 The @code{length} of any list is 1 plus the @code{length} of the @code{cdr} of
 the list.
 
+任何列單ê @code{length} 是 @math{1+}chit ê列單ê @code{cdr} ê @code{length}。
+
 @end itemize
 
 @noindent
 This is applied successively until we reach the base case:
+
+@noindent
+Che ē連sòa應用，直kàu lán kàu基本ê案例：
 
 @itemize @bullet
 
 @item
 The @code{length} of the empty list is 0.
 
+空ê列單ê @code{length} 是0。
+
 @end itemize
 
 @noindent
 We could also compute @code{length} in an iterative style:
+
+@noindent
+Lán mā ē當用反覆ê風格算@code{length}：
 
 @lisp
 (define (length items)
@@ -9197,6 +9214,10 @@ Another conventional programming technique is to ``@code{cons} up'' an answer
 list while @code{cdr}ing down a list, as in the procedure @code{append}, which
 takes two lists as arguments and combines their elements to make a new list:
 
+@noindent
+另外一个傳統ê程式設計技術是佇kā列單「@code{cdr}落去」ê時陣，kā答案列單「@code{cons} 起去」
+，像程序 @code{append}，伊the̍h兩ê列單當做引數，組合in ê元素，成做新ê列單：
+
 @lisp
 (append squares odds)
 @i{(1 4 9 16 25 1 3 5 7)}
@@ -9208,15 +9229,22 @@ takes two lists as arguments and combines their elements to make a new list:
 @code{append} is also implemented using a recursive plan.  To @code{append}
 lists @code{list1} and @code{list2}, do the following:
 
+@noindent
+@code{append} mā用遞迴ê計畫實做。Beh @code{append} 列單 @code{list1} kap
+@code{list2}，就照下kha行：
 @itemize @bullet
 
 @item
 If @code{list1} is the empty list, then the result is just @code{list2}.
 
+@code{list1}若是空ê列單，結果就是 @code{list2}。
+
 @item
 Otherwise, @code{append} the @code{cdr} of @code{list1} and @code{list2}, and
 @code{cons} the @code{car} of @code{list1} onto the result:
 
+A̍h無，@code{append} @code{list1} ê @code{cdr} kap @code{list2}，koh kā伊ê結果
+ kap @code{list1} ê @code{car} @code{cons}做伙： 
 @end itemize
 
 @lisp
