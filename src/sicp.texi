@@ -9259,6 +9259,9 @@ A̍h無，@code{append} @code{list1} ê @code{cdr} kap @code{list2}，koh kā伊
 @code{last-pair} that returns the list that contains only the last element of a
 given (nonempty) list:
 
+@strong{Exercise 2.17:} 定義程序 @code{last-pair}，伊傳轉kan-ta包含傳入去（koh
+毋是空）ê列單ê，上尾ê元素ê列單：
+
 @lisp
 (last-pair (list 23 72 149 34))
 @i{(34)}
@@ -9269,6 +9272,9 @@ given (nonempty) list:
 @strong{@anchor{Exercise 2.18}Exercise 2.18:} Define a procedure @code{reverse}
 that takes a list as argument and returns a list of the same elements in
 reverse order:
+
+@strong{Exercise 2.18:} 定義程序 @code{reverse}，伊the̍h列單當做引數，傳轉一个列單，
+內容是原列單所有元素顛倒排：
 
 @lisp
 (reverse (list 1 4 9 16 25))
@@ -9286,9 +9292,18 @@ knowledge of the currency is distributed partly into the procedure
 (which knows that there are five kinds of U.S. coins).  It would be nicer to be
 able to supply a list of coins to be used for making change.
 
+@strong{Exercise 2.19:}考慮 @ref{1.2.2} ê找錢ê程式。若是ē當較快換程式所用貨幣
+ē較好，致使lán ē當算不列顛pound ê找錢方法數（譬論講）。當程式寫出來ê時，
+貨幣sài-suh ê智識分散佇程序 @code{first-denomination} kap 程序
+@code{count-change}（伊知影美國ê銀角仔有五款）。若是ē當提供ē當換錢ê銀角仔ê面額ê列單
+ē koh較好。
+
 We want to rewrite the procedure @code{cc} so that its second argument is a
 list of the values of the coins to use rather than an integer specifying which
 coins to use.  We could then have lists that defined each kind of currency:
+
+Lán beh重寫程序 @code{cc}，予伊ê第二ê引數是銀角仔ê面額ê列單，毋是指示用tó一个銀角ê整
+數。Lán ē當有定義逐款貨幣面額ê列單：
 
 @lisp
 (define us-coins (list 50 25 10 5 1))
@@ -9296,6 +9311,8 @@ coins to use.  We could then have lists that defined each kind of currency:
 @end lisp
 
 We could then call @code{cc} as follows:
+
+了後lán ē當呼叫 @code{cc}，像下kha：
 
 @lisp
 (cc 100 us-coins)
@@ -9305,6 +9322,9 @@ We could then call @code{cc} as follows:
 To do this will require changing the program @code{cc} somewhat.  It will still
 have the same form, but it will access its second argument differently, as
 follows:
+
+Beh做che，著愛改變程序 @code{cc}。伊iáu是ē有siâng款ê形，但是伊接近使用第二ê引數ê方式ē無
+仝，像下kha：
 
 @lisp
 (define (cc amount coin-values)
@@ -9324,6 +9344,11 @@ Define the procedures @code{first-denomination},
 @code{except-first-denomination}, and @code{no-more?} in terms of primitive
 operations on list structures.  Does the order of the list @code{coin-values}
 affect the answer produced by @code{cc}?  Why or why not?
+
+請用列單結構ê基礎操作，來定義程序@code{first-denomination}、
+@code{except-first-denomination} kap @code{no-more?}。列單 @code{coin-values}
+ê順序敢會影響 @code{cc} 所產出ê答案？是按怎（bōe）？
+
 @end quotation
 
 @quotation
