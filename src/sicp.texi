@@ -9361,6 +9361,12 @@ initial parameters (if any) will have as values the initial arguments, as
 usual, but the final parameter's value will be a @newterm{list} of any
 remaining arguments.  For instance, given the definition
 
+@strong{Exercise 2.20:} 程序 @code{+}、@code{*} kap @code{list} the̍h任何數量ê
+引數。一款定義án-ne ê程序ê方法是用@code{define} kap @newterm{尾liu有點ê表示法}
+(dotted-tail notation)。佇程序ê定義內底，上尾ê參數進前有點ê參數列單表示，當程序呼叫ê
+時，點進前ê參數（若是有），ē當做起初ê引數ê值，kap以早kâng款，毋koh上尾ê參數值ē
+是chhun ê引數ê@newterm{列單}。譬論講，有定義
+
 @lisp
 (define (f x y . z) @math{\langle}@var{body}@math{\rangle})
 @end lisp
@@ -9368,6 +9374,9 @@ remaining arguments.  For instance, given the definition
 @noindent
 the procedure @code{f} can be called with two or more arguments.  If we
 evaluate
+
+@noindent
+程序 @code{f} ē當用兩个以上ê引數呼叫。Lán若是計算
 
 @lisp
 (f 1 2 3 4 5 6)
@@ -9377,6 +9386,11 @@ evaluate
 then in the body of @code{f}, @code{x} will be 1, @code{y} will be 2, and
 @code{z} will be the list @w{@code{(3 4 5 6)}}.  Given the definition
 
+
+@noindent
+佇 @code{f} ê本體，@code{x} 就ē是1，@code{y} 是2，@code{z}ē是列
+單@w{@code{(3 4 5 6)}}。有定義
+
 @lisp
 (define (g . w) @math{\langle}@var{body}@math{\rangle})
 @end lisp
@@ -9385,14 +9399,23 @@ then in the body of @code{f}, @code{x} will be 1, @code{y} will be 2, and
 the procedure @code{g} can be called with zero or more arguments.  If we
 evaluate
 
+@noindent
+程序 @code{g} ē當用零个以上ê引數呼叫。Lán若是計算
+
 @lisp
 (g 1 2 3 4 5 6)
 @end lisp
 
 @noindent
 then in the body of @code{g}, @code{w} will be the list @code{(1 2 3 4 5
-6)}.@footnote{To define @code{f} and @code{g} using @code{lambda} we would
+6)}.
+
+佇 @code{g} ê本體，@code{w} ē是列單 @code{(1 2 3 4 5 6)}。
+
+@footnote{To define @code{f} and @code{g} using @code{lambda} we would
 write
+
+Beh 用 @code{lambda} 定義 @code{f} kap @code{g}，lán ē寫做
 
 @lisp
 (define f (lambda (x y . z) @math{\langle}@var{body}@math{\rangle}))
@@ -9403,6 +9426,9 @@ write
 Use this notation to write a procedure @code{same-parity} that takes one or
 more integers and returns a list of all the arguments that have the same
 even-odd parity as the first argument.  For example,
+
+用chit ê表示法寫程序 @code{same-parity}，伊the̍h一个以上ê整數，傳轉一个列單，若是
+頭一个引數是奇數，伊ê元素是所有奇數ê引數；若頭一个引數是雙數，伊ê元素是所有雙數ê引數。
 
 @lisp
 (same-parity 1 2 3 4 5 6 7)
