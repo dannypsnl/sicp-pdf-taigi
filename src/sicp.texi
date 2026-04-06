@@ -9438,11 +9438,14 @@ even-odd parity as the first argument.  For example,
 @end lisp
 @end quotation
 
-@subsubheading Mapping over lists
+@subsubheading Mapping over lists Map過列單
 
 One extremely useful operation is to apply some transformation to each element
 in a list and generate the list of results.  For instance, the following
 procedure scales each number in a list by a given factor:
+
+一个極其有路用ê操作是應用轉換kàu列單ê逐ê元素，了後生成結果ê列單。舉例，下kha ê程
+序用一个係數來chhun-kiu列單ê逐ê數字：
 
 @lisp
 (define (scale-list items factor)
@@ -9466,6 +9469,27 @@ is more general than the one described here.  This more general @code{map}
 takes a procedure of @math{n} arguments, together with @math{n} lists, and applies
 the procedure to all the first elements of the lists, all the second elements
 of the lists, and so on, returning a list of the results.  For example:
+
+
+@lisp
+(map + (list 1 2 3) (list 40 50 60) (list 700 800 900))
+@i{(741 852 963)}
+(map (lambda (x y) (+ x (* 2 y)))
+     (list 1 2 3)
+     (list 4 5 6))
+@i{(9 12 15)}
+@end lisp
+}
+
+
+@noindent
+Lán ē當抽象chit ê一般ê想法，kā掠做通常ê模式，伊表示做koân階程序，像佇 @ref{1.3}。佇chia，
+chit ê koân階程序號做 @code{map}。@code{map} the̍h單引數函數kap列單做引數，傳轉應用
+程序kàu列單ê逐ê元素，所得著ê結果ê列單：
+
+@footnote{Scheme 標準提供ê @code{map} 程序，伊比佇chia描述ê koh較一般化。Chit ê
+koh較一般ê @code{map} the̍h @math{n} ê引數ê程序 kap @math{n} ê列單做伙成做引數，應用
+程序kàu 逐ê列單ê頭一个元素、逐ê ê第二ê元素，等等，落尾傳轉結果ê列單。譬論講：
 
 @lisp
 (map + (list 1 2 3) (list 40 50 60) (list 700 800 900))
@@ -9492,6 +9516,9 @@ of the lists, and so on, returning a list of the results.  For example:
 @noindent
 Now we can give a new definition of @code{scale-list} in terms of @code{map}:
 
+@noindent
+Chit-má lán通用 @code{map} kā @code{scale-list} koh再定義：
+
 @lisp
 (define (scale-list items factor)
   (map (lambda (x) (* x factor))
@@ -9515,6 +9542,16 @@ flexibility to change the low-level details of how sequences are implemented,
 while preserving the conceptual framework of operations that transform
 sequences to sequences.  @ref{2.2.3} expands on this use of sequences
 as a framework for organizing programs.
+
+@noindent
+@code{map} 是重要ê建構，毋但因為伊掠通常ê模式，koh因為伊佇處理列單ê範圍，設立koh較koân ê
+抽象。佇起頭ê @code{scale-list} ê定義，程式ê遞迴結構ē吸收lâng注意kàu列單一个koh一个元素
+ê操作。用 @code{map} 定義 @code{scale-list} teh掉hit層ê詳細，強調chhun-kiu改變元素ê列單
+kàu結果ê列單。Chit兩ê定義ê無kâng，毋是電腦行無kâng ê過程（其實是kâng ê），反轉是lán對程序ê思
+考無kâng。照結果來講，@code{map} 幫chān lán成立抽象化障礙，自列單ê元素án-nóa抽出kap組合ê詳
+細，孤立出轉換列單ê程序ê實做。像 @ref{Figure 2.1} 展示ê障礙，chit ê抽象佇保存轉換列kàu列ê操
+作ê概念框殼ê時陣，mā予lán靈活性來改變列án-nóa實做ê底層詳細。@ref{2.2.3} 擴展chit款列ê使用，
+當做組織程式ê框殼。
 
 @quotation
 @strong{@anchor{Exercise 2.21}Exercise 2.21:} The procedure @code{square-list}
