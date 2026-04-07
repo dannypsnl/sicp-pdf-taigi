@@ -9558,6 +9558,9 @@ kàu結果ê列單。Chit兩ê定義ê無kâng，毋是電腦行無kâng ê過�
 takes a list of numbers as argument and returns a list of the squares of those
 numbers.
 
+@strong{Exercise 2.21:} 程序 @code{square-list} the̍h數字ê列單當做引數，傳
+轉chiah ê列單ê平方。
+
 @lisp
 (square-list (list 1 2 3 4))
 @i{(1 4 9 16)}
@@ -9565,6 +9568,8 @@ numbers.
 
 Here are two different definitions of @code{square-list}.  Complete both of
 them by filling in the missing expressions:
+
+Chia是 @code{square-list} ê兩个無仝款ê定義。用添欠缺ê表達式，來完成in兩个。
 
 @lisp
 (define (square-list items)
@@ -9581,6 +9586,9 @@ them by filling in the missing expressions:
 the first @code{square-list} procedure of @ref{Exercise 2.21} so that it
 evolves an iterative process:
 
+@strong{Exercise 2.22:} Louis Reasoner 試重頭寫 @ref{Exercise 2.21} ê 頭一个
+@code{square-list} 程序，致使伊展開做反覆ê過程：
+
 @lisp
 (define (square-list items)
   (define (iter things answer)
@@ -9595,7 +9603,11 @@ evolves an iterative process:
 Unfortunately, defining @code{square-list} this way produces the answer list in
 the reverse order of the one desired.  Why?
 
+Án-ne定義 @code{square-list}，不幸ē kā結果列單內底ê內容顛倒排。是án-nóa？
+
 Louis then tries to fix his bug by interchanging the arguments to @code{cons}:
+
+Louis koh用交換 @code{cons} ê引數來試修正chit ê bug：
 
 @lisp
 (define (square-list items)
@@ -9609,6 +9621,8 @@ Louis then tries to fix his bug by interchanging the arguments to @code{cons}:
 @end lisp
 
 This doesn't work either.  Explain.
+
+Che mā無效。請解說。
 @end quotation
 
 @quotation
