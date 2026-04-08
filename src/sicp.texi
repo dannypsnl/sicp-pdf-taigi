@@ -9545,7 +9545,7 @@ as a framework for organizing programs.
 
 @noindent
 @code{map} 是重要ê建構，毋但因為伊掠通常ê模式，koh因為伊佇處理列單ê範圍，設立koh較koân ê
-抽象。佇起頭ê @code{scale-list} ê定義，程式ê遞迴結構ē吸收lâng注意kàu列單一个koh一个元素
+抽象。佇起頭ê @code{scale-list} ê定義，程式ê遞迴結構ē吸收lâng注意kàu列單一个一个元素
 ê操作。用 @code{map} 定義 @code{scale-list} teh掉hit層ê詳細，強調chhun-kiu改變元素ê列單
 kàu結果ê列單。Chit兩ê定義ê無kâng，毋是電腦行無kâng ê過程（其實是kâng ê），反轉是lán對程序ê思
 考無kâng。照結果來講，@code{map} 幫chān lán成立抽象化障礙，自列單ê元素án-nóa抽出kap組合ê詳
@@ -9634,6 +9634,11 @@ The values returned by applying the procedure to the elements are not used at
 all---@code{for-each} is used with procedures that perform an action, such as
 printing.  For example,
 
+@strong{Exercise 2.23:} 程序 @code{for-each} kap @code{map} 相siâng。伊the̍h程
+序kap元素ê列單當做引數。毋koh，毋是組成結果ê列單，@code{for-each} 顛倒是kan-ta kā程序
+對倒pîng kàu正pîng，一个一个應用kàu逐ê元素。應用程序kàu所有ê元素了後傳轉ê值lóng無使用——
+@code{for-each} 是the̍h來kap行動作ê程序（親像印出）做伙用。比論講：
+
 @lisp
 (for-each (lambda (x)
             (newline)
@@ -9647,15 +9652,22 @@ printing.  For example,
 The value returned by the call to @code{for-each} (not illustrated above) can
 be something arbitrary, such as true.  Give an implementation of
 @code{for-each}.
+
+呼叫 @code{for-each}（頂koân無說明）所傳轉ê值ē當是隨意ê，親像true（真）。請寫出
+@code{for-each} ê實做。
 @end quotation
 
 @endpage
-@subsection Hierarchical Structures
+@subsection Hierarchical Structures 階層結構
 @node	2.2.2, 2.2.3, 2.2.1, 2.2
 
 The representation of sequences in terms of lists generalizes naturally to
 represent sequences whose elements may themselves be sequences.  For example,
 we can regard the object @code{((1 2) 3 4)} constructed by
+
+@noindent
+用列單來表示列，自然ē當推廣kàu表示元素本身ē當是列ê列。舉例，lán ē當kā物件
+@code{((1 2) 3 4)}掠做由下kha ê表達式組成：
 
 @lisp
 (cons (list 1 2) (list 3 4))
@@ -9667,11 +9679,15 @@ Indeed, this is suggested by the form in which the result is printed by the
 interpreter.  @ref{Figure 2.5} shows the representation of
 this structure in terms of pairs.
 
+@noindent
+做著一个有三ê元素ê列單，伊ê頭一个元素是列單 @code{(1 2)}。實際上，直譯器印出結果所用ê格式
+推薦che。@ref{Figure 2.5} 展示án-nóa用對表示chit ê結構。
+
 @float
 @quotation
 @anchor{Figure 2.5}
 @ifinfo
-@strong{Figure 2.5:} Structure formed by @code{(cons (list 1 2) (list 3 4))}.
+@strong{Figure 2.5:} Structure formed by @code{(cons (list 1 2) (list 3 4))}. 由 @code{(cons (list 1 2) (list 3 4))} 組成ê結構。
 
 @example
                                           (3 4)
@@ -9696,7 +9712,7 @@ this structure in terms of pairs.
 @sp 0.2
 @center @image{fig/chap2/Fig2.5c,91mm,,,.pdf}
 @sp 0.5
-@center @caption{@strong{Figure 2.5:} Structure formed by @code{(cons (list 1 2) (list 3 4))}.}
+@center @caption{@strong{Figure 2.5:} Structure formed by @code{(cons (list 1 2) (list 3 4))}. 由 @code{(cons (list 1 2) (list 3 4))} 組成ê結構。}
 @sp 0.7
 @end iftex
 @end quotation
