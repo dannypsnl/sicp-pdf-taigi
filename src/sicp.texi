@@ -9723,11 +9723,14 @@ Another way to think of sequences whose elements are sequences is as
 and @w{elements} that are themselves sequences are subtrees.  @ref{Figure 2.6}
 shows @w{the structure} in @ref{Figure 2.5} viewed as a tree.
 
+別ê思考元素是列ê列方法是親像@newterm{樹á} (trees)。列ê元素是樹á ê樹椏，koh家己是列ê
+@w{元素}是kiáⁿ樹。@ref{Figure 2.6} kā @ref{Figure 2.5} ê @w{結構}展示做樹á。
+
 @float
 @quotation
 @anchor{Figure 2.6}
 @ifinfo
-@strong{Figure 2.6:} The list structure in @ref{Figure 2.5} viewed as a tree.
+@strong{Figure 2.6:} The list structure in @ref{Figure 2.5} viewed as a tree. @ref{Figure 2.5} ê列單結構用樹á形展示。
 
 @example
  ((1 2) 3 4)
@@ -9742,7 +9745,7 @@ shows @w{the structure} in @ref{Figure 2.5} viewed as a tree.
 @sp 0.2
 @center @image{fig/chap2/Fig2.6a,22mm,,,.pdf}
 @sp 0.5
-@center @caption{@strong{Figure 2.6:} The list structure in @ref{Figure 2.5} viewed as a tree.}
+@center @caption{@strong{Figure 2.6:} The list structure in @ref{Figure 2.5} viewed as a tree. @ref{Figure 2.5} ê列單結構用樹á形展示。}
 @sp 0.0
 @end iftex
 @end quotation
@@ -9754,6 +9757,11 @@ in turn to operations on the branches of the branches, and so on, until we
 reach the leaves of the tree.  As an example, compare the @code{length}
 procedure of @ref{2.2.1} with the @code{count-leaves} procedure, which
 returns the total number of leaves of a tree:
+
+遞迴是處理樹結構ê自然ê家私，因為lán 定定ē當kā操作樹á縮小kàu操作in ê樹椏，
+操作in ê分支ē一个一个縮小kàu 操作樹椏ê樹椏，等等，直到lán kàu樹á ê葉。The̍h一个例，
+比較 @ref{2.2.1} ê @code{length} 程序kap @code{count-leaves} 程序，伊傳轉
+樹ê葉á ê總數：
 
 @lisp
 (define x (cons (list 1 2) (list 3 4)))
@@ -9773,24 +9781,35 @@ returns the total number of leaves of a tree:
 To implement @code{count-leaves}, recall the recursive plan for computing
 @code{length}:
 
+@noindent
+若beh實做 @code{count-leaves}，請想起算 @code{length} ê遞迴計畫：
+
 @itemize @bullet
 
 @item
 @code{length} of a list @code{x} is 1 plus @code{length} of the
 @code{cdr} of @code{x}.
 
+列單 @code{x} ê @code{length} 是 1+ @code{x} ê @code{cdr} ê
+@code{length}。
+
 @item
 @code{length} of the empty list is 0.
 
+空列單 ê @code{length} 是0。
 @end itemize
 
 @noindent
 @code{count-leaves} is similar.  The value for the empty list is the same:
 
+@noindent
+@code{count-leaves} mā相siâng。空列單ê值mā kâng款：
 @itemize @bullet
 
 @item
 @code{count-leaves} of the empty list is 0.
+
+空列單ê @code{count-leaves} 是0。
 
 @end itemize
 
@@ -9799,11 +9818,18 @@ But in the reduction step, where we strip off the @code{car} of the list, we
 must take into account that the @code{car} may itself be a tree whose leaves we
 need to count.  Thus, the appropriate reduction step is
 
+@noindent
+毋koh佇縮小ê手續，其中lán剝掉列單ê @code{car}，lán愛考慮著 @code{car} 家己可能是樹á，伊ê葉á
+lán著愛算。就án-ne，適當ê縮小手續是：
+
 @itemize @bullet
 
 @item
 @code{count-leaves} of a tree @code{x} is @code{count-leaves} of the @code{car}
 of @code{x} plus @code{count-leaves} of the @code{cdr} of @code{x}.
+
+樹á @code{x} ê @code{count-leaves} 是 @code{x} ê @code{car} ê
+@code{count-leaves} + @code{x} ê @code{cdr} ê @code{count-leaves}。
 
 @end itemize
 
@@ -9811,10 +9837,15 @@ of @code{x} plus @code{count-leaves} of the @code{cdr} of @code{x}.
 Finally, by taking @code{car}s we reach actual leaves, so we need another base
 case:
 
+@noindent
+落尾，倚靠the̍h逐ê @code{car}，lán及至實際ê葉á，所以lán著愛另外一个基本情況：
+
 @itemize @bullet
 
 @item
 @code{count-leaves} of a leaf is 1.
+
+葉á ê @code{count-leaves} 是1。
 
 @end itemize
 
@@ -9824,6 +9855,11 @@ predicate @code{pair?}, which tests whether its argument is a pair.  Here is
 the complete procedure:@footnote{The order of the first two clauses in the
 @code{cond} matters, since the empty list satisfies @code{null?} and also is
 not a pair.}
+
+@noindent
+為著幫chān寫操作樹á ê遞迴程序，Scheme提供基礎謂詞 @code{pair?}，伊試伊ê引數敢是對。全部
+ê程序佇chia：@footnote{佇 @code{cond} 內底頭兩个kiáⁿ句ê順序有要緊，因為空ê列單滿足
+@code{null?}，mā毋是對。}
 
 @lisp
 (define (count-leaves x)
