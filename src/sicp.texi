@@ -1394,7 +1394,7 @@ notation has several advantages, however.  One of them is that it can
 accommodate procedures that may take an arbitrary number of arguments, as in
 the following examples:
 
-Kā運算元khǹg佇運算數倒pîng ê習慣，叫做@newterm{前置表示法}(chiân-tì piáu-sī-hoat, prefix notation)，頭一改看，可能會點á霧sà-sà，因為明顯離開慣勢ê數學傳統。但是前置表示法有幾項好處。其中一个是會當容允程序接受任何數量ê引數，親像下kha ê例：
+Kā運算元khǹg佇運算數倒pêng ê習慣，叫做@newterm{前置表示法}(chiân-tì piáu-sī-hoat, prefix notation)，頭一改看，可能會點á霧sà-sà，因為明顯離開慣勢ê數學傳統。但是前置表示法有幾項好處。其中一个是會當容允程序接受任何數量ê引數，親像下kha ê例：
 
 
 
@@ -9636,7 +9636,7 @@ printing.  For example,
 
 @strong{Exercise 2.23:} 程序 @code{for-each} kap @code{map} 相siâng。伊the̍h程
 序kap元素ê列單當做引數。毋koh，毋是組成結果ê列單，@code{for-each} 顛倒是kan-ta kā程序
-對倒pîng kàu正pîng，一个一个應用kàu逐ê元素。應用程序kàu所有ê元素了後傳轉ê值lóng無使用——
+對倒pêng kàu正pêng，一个一个應用kàu逐ê元素。應用程序kàu所有ê元素了後傳轉ê值lóng無使用——
 @code{for-each} 是the̍h來kap行動作ê程序（親像印出）做伙用。比論講：
 
 @lisp
@@ -9874,12 +9874,18 @@ not a pair.}
 expression @code{(list 1 (list 2 (list 3 4)))}.  Give the result printed by the
 interpreter, the corresponding box-and-pointer structure, and the
 interpretation of this as a tree (as in @ref{Figure 2.6}).
+
+@strong{Exercise 2.24:}假使lán算表達式@code{(list 1 (list 2 (list 3 4)))}，
+請提供直譯器所印ê結構，對應ê盒仔—指標結構，kap當做樹á ê解
+說（像 @ref{Figure 2.6}）。
 @end quotation
 
 @quotation
 @strong{@anchor{Exercise 2.25}Exercise 2.25:} Give combinations of @code{car}s
 and @code{cdr}s that will pick 7 from each of the following lists:
 
+@strong{Exercise 2.25:}提供ē當kā 7對下kha ê列單the̍h出來ê， @code{car}
+kap @code{cdr} ê組合：
 @lisp
 (1 3 (5 7) 9)
 ((7))
@@ -9891,6 +9897,8 @@ and @code{cdr}s that will pick 7 from each of the following lists:
 @strong{@anchor{Exercise 2.26}Exercise 2.26:} Suppose we define @code{x} and
 @code{y} to be two lists:
 
+@strong{Exercise 2.26:} 假使lán kā @code{x} kap @code{y} 定義做下kha ê列單：
+
 @lisp
 (define x (list 1 2 3))
 (define y (list 4 5 6))
@@ -9898,6 +9906,8 @@ and @code{cdr}s that will pick 7 from each of the following lists:
 
 What result is printed by the interpreter in response to evaluating each of the
 following expressions:
+
+直譯器算下kha逐ê表達式了後印出來ê結果是siáⁿ物：
 
 @lisp
 (append x y)
@@ -9911,6 +9921,10 @@ following expressions:
 procedure of @ref{Exercise 2.18} to produce a @code{deep-reverse} procedure
 that takes a list as argument and returns as its value the list with its
 elements reversed and with all sublists deep-reversed as well.  For example,
+
+@strong{Exercise 2.27:}改汝佇 @ref{Exercise 2.18} ê @code{reverse} 程序，來
+產出 @code{deep-reverse} 程序，伊the̍h列單當做引數，傳轉ê值是列單，伊ê元素kap所有ê
+kiáⁿ列單內底ê元素lóng顛倒排。比論講：
 
 @lisp
 (define x (list (list 1 2) (list 3 4)))
@@ -9929,6 +9943,9 @@ that takes as argument a tree (represented as a list) and returns a list whose
 elements are all the leaves of the tree arranged in left-to-right order.  For
 example,
 
+@strong{Exercise 2.28:} 寫程序 @code{fringe}，伊the̍h樹á當做引數（用列單表示），傳轉
+列單，伊ê元素是所有樹á ê葉á，對倒pêng kàu正pêng排。譬論講：
+
 @lisp
 (define x (list (list 1 2) (list 3 4)))
 (fringe x)
@@ -9945,6 +9962,10 @@ length, from which hangs either a weight or another binary mobile.  We can
 represent a binary mobile using compound data by constructing it from two
 branches (for example, using @code{list}):
 
+@strong{Exercise 2.29:} @newterm{二元平衡裝飾}(binary mobile)包含兩个分支，倒pêng ê
+kap正pêng ê。逐ê分支是一定長度ê棍á，吊一个磅子iah是另外ê二元平行裝飾。Lán通the̍h複合資
+料，用對兩个分支建構伊ê方法，kā二元平衡裝飾表示（舉例，用 @code{list}）：
+
 @lisp
 (define (make-mobile left right)
   (list left right))
@@ -9953,6 +9974,9 @@ branches (for example, using @code{list}):
 A branch is constructed from a @code{length} (which must be a number) together
 with a @code{structure}, which may be either a number (representing a simple
 weight) or another mobile:
+
+分支是用 @code{length}（伊定著是數）kap ē當是數（表示簡單ê磅子重量）iah 是別ê裝飾ê
+@code{structure}，做伙建構ê：
 
 @lisp
 (define (make-branch length structure)
@@ -9966,9 +9990,14 @@ Write the corresponding selectors @code{left-branch} and @code{right-@/branch},
 which return the branches of a mobile, and @code{branch-@/length} and
 @code{branch-structure}, which return the components of a branch.
 
+寫對應ê揀選器 @code{left-branch} 以及 @code{right-@/branch}，in傳轉裝飾ê分支，kap
+@code{branch-@/length} 以及 @code{branch-structure}，in傳轉分支ê組件。
+
 @item
 Using your selectors, define a procedure @code{total-weight} that returns the
 total weight of a mobile.
+
+用汝ê揀選器，定義程序 @code{total-weight} ，伊傳轉裝飾ê總重量。
 
 @item
 A mobile is said to be @newterm{balanced} if the torque applied by its top-left
@@ -9978,8 +10007,14 @@ corresponding product for the right side) and if each of the submobiles hanging
 off its branches is balanced. Design a predicate that tests whether a binary
 mobile is balanced.
 
+上頂懸ê倒pêng分支ê力矩kap上頂懸ê正pêng ê若相kâng（就是講，若是倒pêng棍仔ê長度乘以所吊ê
+ê重量kap正pêng ê 相乘結果相kâng），而且所有分支所吊ê kiáⁿ裝飾lóng平衡，就通講裝飾是平
+衡ê。設計一个謂詞，伊試二元平衡裝飾敢有平衡。
+
 @item
 Suppose we change the representation of mobiles so that the constructors are
+
+設使lán改變裝飾ê表示，致kàu建構器變做
 
 @lisp
 (define (make-mobile left right) (cons left right))
@@ -9990,10 +10025,12 @@ Suppose we change the representation of mobiles so that the constructors are
 How much do you need to change your programs to convert to the new
 representation?
 
+汝著kā汝ê程式改gōa chē來轉換kàu新ê表示？
+
 @end enumerate
 @end quotation
 
-@subsubheading Mapping over trees
+@subsubheading Mapping over trees Map過樹á
 
 Just as @code{map} is a powerful abstraction for dealing with sequences,
 @code{map} together with recursion is a powerful abstraction for dealing with
