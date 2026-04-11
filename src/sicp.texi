@@ -10040,6 +10040,13 @@ and a tree whose leaves are numbers.  It returns a tree of the same shape,
 where each number is multiplied by the factor.  The recursive plan for
 @code{scale-tree} is similar to the one for @code{count-leaves}:
 
+@noindent
+就因為 @code{map} 是有能力處理列ê抽象，@code{map} kap 遞迴做伙是有能力處理樹á ê抽象。
+舉例，@code{scale-tree} 程序，kap @ref{2.2.1} ê @code{scale-list} 相
+siâng，the̍h係數kap 葉á是數ê樹á當做引數。伊傳轉kâng款形ê樹á，其中逐ê數lóng予係數乘。
+@code{scale-tree} ê遞迴計畫kap @code{count-leaves} ê相siâng：
+
+
 @lisp
 (define (scale-tree tree factor)
   (cond ((null? tree) nil)
@@ -10056,6 +10063,11 @@ of sub-trees and use @code{map}.  We map over the sequence, scaling each
 sub-tree in turn, and return the list of results.  In the base case, where the
 tree is a leaf, we simply multiply by the factor:
 
+@noindent
+別款實做 @code{scale-tree} ê方法是，kā樹á準做kiáⁿ樹ê列，koh用 @code{map}。Lán map
+過列，一欉一欉kiáⁿ樹lóng chhun-kiu，傳轉結果ê列單。佇基礎ê情況，其中樹á是葉，lán就簡
+單用係數乘：
+
 @lisp
 (define (scale-tree tree factor)
   (map (lambda (sub-tree)
@@ -10069,10 +10081,16 @@ tree is a leaf, we simply multiply by the factor:
 Many tree operations can be implemented by similar combinations of sequence
 operations and recursion.
 
+@noindent
+Chē-chē操作ē當用相siâng ê列操作kap遞迴ê組合來實做。
+
 @quotation
 @strong{@anchor{Exercise 2.30}Exercise 2.30:} Define a procedure
 @code{square-tree} analogous to the @code{square-@/list} procedure of
 @ref{Exercise 2.21}.  That is, @code{square-tree} should behave as follows:
+
+@strong{Exercise 2.30:} 定義程序 @code{square-tree}，伊kap @ref{Exercise 2.21} ê 
+@code{square-@/list} 程序相siâng。Che就是，@code{square-tree} 著有下kha ê行為：
 
 @lisp
 (square-tree
@@ -10084,12 +10102,17 @@ operations and recursion.
 
 Define @code{square-tree} both directly (i.e., without using any higher-order
 procedures) and also by using @code{map} and recursion.
+
+請直接（無用任何koân階程序）定義，koh用 @code{map} kap遞迴定義 @code{square-tree}。
 @end quotation
 
 @quotation
 @strong{@anchor{Exercise 2.31}Exercise 2.31:} Abstract your answer to
 @ref{Exercise 2.30} to produce a procedure @code{tree-map} with the property
 that @code{square-tree} could be defined as
+
+@strong{Exercise 2.31:} 抽象化汝ê答案kàu @ref{Exercise 2.30}，來產出程序
+@code{tree-map}，伊有性質是，@code{square-tree} 通定義做
 
 @lisp
 (define (square-tree tree) (tree-map square tree))
@@ -10104,6 +10127,11 @@ all subsets is @code{(() (3) (2) (2 3) (1) (1 3) (1 2) (1 2 3))}.  Complete the
 following definition of a procedure that generates the set of subsets of a set
 and give a clear explanation of why it works:
 
+@strong{Exercise 2.32:} Lán ē當表示集合做有無kâng元素ê列單，mā ē當表示chit ê集合ê
+kiáⁿ集合ê集合，做列單ê列單。譬論講，若是集合是 @code{(1 2 3)}，kiáⁿ集合ê集合是
+@code{(() (3) (2) (2 3) (1) (1 3) (1 2) (1 2 3))}。請完成下kha ê程序ê定義，伊產出
+一个集合ê kiáⁿ集合ê集合，koh請清楚解說伊是án-nóa運作：
+
 @lisp
 (define (subsets s)
   (if (null? s)
@@ -10113,7 +10141,7 @@ and give a clear explanation of why it works:
 @end lisp
 @end quotation
 
-@subsection Sequences as Conventional Interfaces
+@subsection Sequences as Conventional Interfaces 列當做傳統ê界面
 @node	2.2.3, 2.2.4, 2.2.2, 2.2
 
 In working with compound data, we've stressed how data abstraction permits us
