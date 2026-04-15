@@ -10183,6 +10183,10 @@ On the surface, this procedure is very different from the following one, which
 constructs a list of all the even Fibonacci numbers @math{{\rm Fib}(k)}, where
 @math{k} is less than or equal to a given integer @math{n}:
 
+@noindent
+表面上，chit ê程式kap下kha ê程序無kâng，下kha ê程序建構列出雙數ê Fibonacci數
+@math{{\rm Fib}(k)} ê列單，其中 @math{k}無比整數 @math{n} 較大：
+
 @lisp
 (define (even-fibs n)
   (define (next k)
@@ -10200,39 +10204,62 @@ Despite the fact that these two procedures are structurally very different, a
 more abstract description of the two computations reveals a great deal of
 similarity.  The first program
 
+@noindent
+雖然chit兩个程序結構上非常無kâng，毋koh對chit兩个計算ê koh較抽象ê敘述，
+顯明蓋chē相siâng ê所在。頭一个程式
+
 @itemize @bullet
 
 @item
 enumerates the leaves of a tree;
 
+列舉樹á ê葉；
+
 @item
 filters them, selecting the odd ones;
+
+過濾in，揀奇數ê；
 
 @item
 squares each of the selected ones; and
 
+kā所揀ê平方；koh
+
 @item
 accumulates the results using @code{+}, starting with 0.
+
+ùi 0起，用 @code{+} 累積結果。
 
 @end itemize
 
 @noindent
 The second program
 
+@noindent
+第二ê程式
+
 @itemize @bullet
 
 @item
 enumerates the integers from 0 to @math{n};
 
+ùi 0 kàu @math{n} 列舉整數；
+
 @item
 computes the Fibonacci number for each integer;
+
+算逐ê整數ê Fibonacci數；
 
 @item
 filters them, selecting the even ones; and
 
+過濾in，揀雙數ê；koh
+
 @item
 accumulates the results using @code{cons},  starting with the
 empty list.
+
+ùi空ê列單開始，用 @code{cons} khioh 結果。
 
 @end itemize
 
@@ -10242,7 +10269,10 @@ empty list.
 @quotation
 @strong{Figure 2.7:} The signal-flow plans for the
 procedures @code{sum-odd-squares} (top) and @code{even-fibs} (bottom) reveal
-the commonality between the two programs.
+the commonality between the two programs. 程序 @code{sum-odd-squares}（頂koân）kap
+ @code{even-fibs}（下底）ê訊號流圖(signal-flow plans)顯明兩个程式ê共通點。
+
+
 
 @example
 +-------------+   +-------------+   +-------------+   +-------------+
@@ -10263,7 +10293,7 @@ the commonality between the two programs.
 @c 187mm
 @sp 0.4
 @quotation
-@caption{@strong{Figure 2.7:} The signal-flow plans for the procedures @code{sum-@/odd-@/squares} (top) and @code{even-fibs} (bottom) reveal the commonality between the two programs.}
+@caption{@strong{Figure 2.7:} The signal-flow plans for the procedures @code{sum-@/odd-@/squares} (top) and @code{even-fibs} (bottom) reveal the commonality between the two programs. 程序 @code{sum-odd-squares}（頂koân）kap @code{even-fibs}（下底）ê @newterm{訊號流圖}(signal-flow plans)顯明兩个程式ê共通點。}
 @end quotation
 @sp 0.7
 @end iftex
