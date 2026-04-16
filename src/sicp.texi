@@ -10312,6 +10312,15 @@ output of the map is then fed to an @newterm{accumulator}, which combines the
 elements using @code{+}, starting from an initial 0.  The plan for
 @code{even-fibs} is analogous.
 
+@noindent
+訊號處理ê工程師會發現用通過一koāⁿ階段ê訊號流動，來概念化chiah ê程序真自然，其中逐ê階段
+實做程式計畫ê一部份，展示佇 @ref{Figure 2.7}。佇 @code{sum-odd-squares} ，lán ùi
+@newterm{列舉器}(enumerator) 開始，伊產生包含樹á ê所有葉á ê「訊號」。Chit ê訊號soà
+kàu @newterm{過濾器} (filter)，伊kā除了奇數ê要素lóng排除。結果ê訊號一个一个送過
+@newterm{map}，伊是kā @code{square} 程序應用kàu逐ê要素ê @newterm{變換器}。
+Map ê輸出了後送kah @newterm{累積器}(accumulator)，伊用 @code{+} 組合要素，起初
+ê值是0。@code{even-fibs} ê計畫mā相siâng。
+
 Unfortunately, the two procedure definitions above fail to exhibit this
 signal-flow structure.  For instance, if we examine the @code{sum-odd-squares}
 procedure, we find that the enumeration is implemented partly by the
