@@ -10334,7 +10334,14 @@ the map, the filter, and the accumulation.  If we could organize our programs
 to make the signal-flow structure manifest in the procedures we write, this
 would increase the conceptual clarity of the resulting code.
 
-@subsubheading Sequence Operations
+頂懸chit兩个程序ê定義不幸lóng bōe當展現chit ê訊號流結構。舉例，若是lán檢查
+@code{sum-odd-squares} 程序，lán ē發現列舉部份是由@code{null?} kap @code{pair?}
+測試實做，部份是由程序ê樹遞迴結構實做。Kâng款，累積功能部份佇測試，部份是佇遞迴內底ê加法。
+一般來講，兩个程序lóng無明確部份，通對應kàu資訊流ê敘述要素。Lán ê兩个程序用無kâng方法
+分解計算，擴展列舉遍佈規个程式，mā kap map、過濾器、累積器lām做伙。若準講lán通組織lán ê
+程式，予訊號流結構表明佇lán寫ê程序，che ē予結果ê原始碼ê概念koh較清楚。
+
+@subsubheading Sequence Operations 列操作
 
 The key to organizing programs so as to more clearly reflect the signal-flow
 structure is to concentrate on the ``signals'' that flow from one stage in the
