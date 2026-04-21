@@ -10413,7 +10413,7 @@ of elements to be processed.  For @code{even-fibs}, we need to generate the
 sequence of integers in a given range, which we can do as follows:
 
 @noindent
-實做訊號流圖ê手續，干焦tshun列舉beh處理ê要素ê列。對 @code{even-fibs}，lán著產生指定
+實做訊號流圖ê手續，干焦chhun列舉beh處理ê要素ê列。對 @code{even-fibs}，lán著產生指定
 範圍ê整數ê列，ē當用下kha ê來實現：
 
 @lisp
@@ -10431,6 +10431,10 @@ precisely the @code{fringe} procedure from @ref{Exercise 2.28}.  Here we've
 renamed it to emphasize that it is part of a family of general
 sequence-manipulation procedures.}
 
+@noindent
+Beh列舉樹á ê葉，lán通用@footnote{Che實際上的確是 @ref{Exercise 2.28} ê
+@code{fringe} 。佇chia lán有kā重號名，來強調che是一般ê列操作程序家族ê一部份。}
+
 @lisp
 (define (enumerate-tree tree)
   (cond ((null? tree) nil)
@@ -10447,6 +10451,11 @@ signal-flow diagrams.  For @code{sum-odd-squares}, we enumerate the sequence of
 leaves of the tree, filter this to keep only the odd numbers in the sequence,
 square each element, and sum the results:
 
+@noindent
+Taⁿ lán通用像訊號流圖ê方式來重頭起造@code{sum-odd-squares} kap @code{even-fibs}。
+針對 @code{sum-odd-squares}，lán列舉樹á ê葉ê列，過濾che，來予列kan-ta chhun奇數，
+koh kā平方，落尾合計結果：
+
 @lisp
 (define (sum-odd-squares tree)
   (accumulate
@@ -10457,6 +10466,10 @@ square each element, and sum the results:
 For @code{even-fibs}, we enumerate the integers from 0 to @math{n}, generate the
 Fibonacci number for each of these integers, filter the resulting sequence to
 keep only the even elements, and accumulate the results into a list:
+
+@noindent
+對 @code{even-fibs}，lán列舉對0 kàu @math{n} ê整數，生成逐ê整數ê Fibonacci數，
+過濾結果ê列，予kan-ta chhun雙數ê要素，落尾kā結果累積kàu列單內底：
 
 @lisp
 (define (even-fibs n)
