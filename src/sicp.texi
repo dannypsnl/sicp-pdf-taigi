@@ -10486,6 +10486,10 @@ combining relatively independent pieces.  We can encourage modular design by
 providing a library of standard components together with a conventional
 interface for connecting the components in flexible ways.
 
+@noindent
+Kā程式表達做列操作ê價值是，伊幫chān行module化ê程式設計，就是由組合相對獨立ê部份來建構ê設計。
+Lán通用提供標準部件ê函式庫，以及用靈活方式the̍h來相接部件ê慣例介面，來鼓勵module化設計。
+
 Modular construction is a powerful strategy for controlling complexity in
 engineering design.  In real signal-processing applications, for example,
 designers regularly build systems by cascading elements selected from
@@ -10494,6 +10498,12 @@ operations provide a library of standard program elements that we can mix and
 match.  For instance, we can reuse pieces from the @code{sum-odd-squares} and
 @code{even-fibs} procedures in a program that constructs a list of the squares
 of the first @math{n + 1} Fibonacci numbers:
+
+Module化建構是對佇工程設計內底控制複雜性，有能力ê策略。譬論講，佇現實ê訊號處理ê應用程式，
+設計者定定用對標準化ê過濾器kap變換器家族所揀ê@newterm{相連sòa ê} (cascading)要素，來起
+造系統。Siâng款，列操作提供lán ē當相lām kap配對ê標準程式要素ê函式庫。舉例，lán ē當佇
+建構頭 @math{n + 1} ê Fibonacci 數 ê平方ê列單ê程式，重用@code{sum-odd-squares}
+kap @code{even-fibs} 程序內底ê程式碼節á：
 
 @lisp
 (define (list-fib-squares n)
