@@ -10519,6 +10519,9 @@ kap @code{even-fibs} 程序內底ê程式碼節á：
 We can rearrange the pieces and use them in computing the product of the squares of the odd
 integers in a sequence:
 
+@noindent
+Lán通重排列程式節á，佇算列內底ê奇數ê平方ê乘積用in：
+
 @lisp
 (define (product-of-squares-of-odd-elements sequence)
   (accumulate * 1 (map square (filter odd? sequence))))
@@ -10533,6 +10536,11 @@ want to find the salary of the highest-paid programmer.  Assume that we have a
 selector @code{salary} that returns the salary of a record, and a predicate
 @code{programmer?} that tests if a record is for a programmer.  Then we can
 write
+
+@noindent
+Lán mā ē當用列操作形式化傳統ê資料處理應用。假使lán有員工記錄ê列，koh想beh chhōe著薪水
+上koân ê程式設計師ê薪水。設使lán有揀選器 @code{salary}，伊傳轉記錄ê薪水部份，koh有
+謂詞 @code{programmer?}，測試記錄敢是程式設計師ê。Lán就ē使寫
 
 @lisp
 (define (salary-of-highest-paid-programmer records)
