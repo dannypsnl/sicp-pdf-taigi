@@ -10560,6 +10560,13 @@ language APL owes much of its power and appeal to a similar choice. In APL all
 data are represented as arrays, and there is a universal and convenient set of
 generic operators for all sorts of array operations.}
 
+Chiah ê例不過是大量ê，ē當表達做列操作ê處理ê一部份。@footnote{Richard
+@ref{Waters (1979)}開發一个程式，自動分析傳統ê Fortran程式，用map、過濾器kap累積器ê方式
+來kā in看。伊發現佇Fortran Scientific Subroutine Package ê程式碼，90%貼貼完全符合chit
+ê模範(paradigm)。做著一个程式語言，Lisp成功ê原因之一是，列單提供標準ê媒介，來表達有序ê集合，
+致使in ē當用koân階函數操作。程式語言APL ê能力kap魅力ê大部份，mā因為相siâng ê選擇。佇APL，
+逐筆資料，lóng用陣列表示，mā有通用koh方便ê，一般ê運算子ê集合，來操作逐款ê陣列操作。}
+
 Sequences, implemented here as lists, serve as a conventional interface that
 permits us to combine processing modules.  Additionally, when we uniformly
 represent structures as sequences, we have localized the data-structure
