@@ -1431,7 +1431,7 @@ There is no limit (in principle) to the depth of such nesting and to the
 overall complexity of the expressions that the Lisp interpreter can evaluate.
 It is we humans who get confused by still relatively simple expressions such as
 
-（原則上）無限制siū ê深度，Lisp ê直譯器通算出ê，整kô表達式ê複雜度，mā（原則上）無制限。毋過lán lâng mā是會予相對簡單ê表達式舞bōe清楚，比如
+（原則上）無限制siū ê深度，Lisp ê直譯器通算出ê，整個表達式ê複雜度，mā（原則上）無制限。毋過lán lâng mā是會予相對簡單ê表達式舞bōe清楚，比如
 
 @lisp
 (+ (* 3 (+ (* 2 4) (+ 3 5))) (+ (- 10 7) 6))
@@ -3584,7 +3584,7 @@ Scheme requires that Scheme implementations be tail-recursive.}
 Scheme ê實做無chit ê缺點。伊會佇固定空間執行反覆過程，就算反覆過程予遞迴程序描述。有chit ê特點ê
 實做號做@newterm{尾遞迴}(tail-recursive)。有尾遞迴實做，反覆會當用一般ê程序呼叫ê機制表達，致kàu
 特殊ê反覆建構kan-ta佇做語法糖ê時chiah有路用。@footnote{尾遞迴長久予lâng掠做是編譯器最佳化ê手路。
-尾遞迴整kô ê語義基礎，是由Carl提供@ref{Hewitt (1977)}，伊用「sòa訊息」(message-passing)ê
+尾遞迴整個ê語義基礎，是由Carl提供@ref{Hewitt (1977)}，伊用「sòa訊息」(message-passing)ê
 計算模型（Lán會佇@ref{第3章}討論）解說。Gerald Jay Sussman kap Guy Lewis Steele Jr.
 （看@ref{Steele and Sussman 1975}）予伊啟發，建立一个尾遞迴ê Scheme 直譯器。Steele 以後展示
 尾遞迴an-nóa是自然ê方法，來編譯程序呼叫ê結果（@ref{Steele 1977}）。佇Scheme ê @acronym{IEEE}
@@ -10563,7 +10563,7 @@ generic operators for all sorts of array operations.}
 Chiah ê例不過是大量ê，ē當表達做列操作ê處理ê一部份。@footnote{Richard
 @ref{Waters (1979)}開發一个程式，自動分析傳統ê Fortran程式，用map、過濾器kap累積器ê方式
 來kā in看。伊發現佇Fortran Scientific Subroutine Package ê程式碼，90%貼貼完全符合chit
-ê模範(paradigm)。做著一个程式語言，Lisp成功ê原因之一是，列單提供標準ê媒介，來表達有序ê集合，
+ê @newterm{模範}(paradigm)。做著一个程式語言，Lisp成功ê原因之一是，列單提供標準ê媒介，來表達有序ê集合，
 致使in ē當用koân階函數操作。程式語言APL ê能力kap魅力ê大部份，mā因為相siâng ê選擇。佇APL，
 逐筆資料，lóng用陣列表示，mā有通用koh方便ê，一般ê運算子ê集合，來操作逐款ê陣列操作。}
 
@@ -10575,6 +10575,12 @@ changing these, we can experiment with alternative representations of
 sequences, while leaving the overall design of our programs intact.  We will
 exploit this capability in @ref{3.5}, when we generalize the
 sequence-processing paradigm to admit infinite sequences.
+
+佇chia實做做列單ê列，當做慣例介面，允准lán組合逐ê處理ê module。此外，當lán kā結構統一
+表示做列ê時，lán就佇lán ê程式，kā資料結構@newterm{所倚靠ê} (dependencies)，
+限制kàu幾个列操作。用改變chiah ê，lán ē當用列ê別ê表達式實驗，同時予lán ê程式ê整個毋免
+改變。Lán ē佇@ref{3.5}，當lán kā列操作ê模範普及kàu允准無限ê列ê時陣，充分利用chit ê
+能力。
 
 @quotation
 @strong{@anchor{Exercise 2.33}Exercise 2.33:} Fill in the missing expressions
