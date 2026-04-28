@@ -10587,6 +10587,9 @@ sequence-processing paradigm to admit infinite sequences.
 to complete the following definitions of some basic list-manipulation
 operations as accumulations:
 
+@strong{Exercise 2.33:} 添ka-la̍uh ê表達式，來完成下kha一寡基礎ê，當做是
+累積器ê列單操作ê定義：
+
 @lisp
 (define (map p sequence)
   (accumulate (lambda (x y) @math{\langle}??@math{\rangle}) nil sequence))
