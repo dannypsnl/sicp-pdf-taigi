@@ -5470,8 +5470,8 @@ procedures by filling in slots in the same template:
 
 @noindent
 Chit 3 ê程序清楚分享隱藏ê模式。In大部份lóng kâng款，kan-ta無kâng佇程序ê名、the̍h來算beh加
-起來ê項ê @code{a} ê函數，kap提供@code{a} ê後一个值ê函數。Lán通用添kâng形ê枋模ê框á，來生成
-個別ê程序：
+起來ê項ê @code{a} ê函數，kap提供@code{a} ê後一个值ê函數。Lán通用添kâng形ê
+@newterm{枋模}(template)ê框á，來生成個別ê程序：
 
 @lisp
 (define (@math{\langle}@var{name}@math{\rangle} a b)
@@ -10604,6 +10604,9 @@ operations as accumulations:
 @strong{@anchor{Exercise 2.34}Exercise 2.34:} Evaluating a polynomial in @math{x}
 at a given value of @math{x} can be formulated as an accumulation.  We evaluate
 the polynomial
+
+@strong{Exercise 2.34:}算@math{x} ê多項式佇@math{x}是某物值ê值，ē當用累積器來形式化。Lán
+用出名ê演算法，號做 @newterm{Horner法則}(Horner's rule)，算下kha ê多項式ê值
 @ifinfo
 
 @example
@@ -10617,6 +10620,8 @@ $$ a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 $$
 @noindent
 using a well-known algorithm called @newterm{Horner's rule}, which structures
 the computation as
+
+chit ê演算法kā計算式排做
 @ifinfo
 
 @example
@@ -10645,9 +10650,22 @@ multiplications was proved by V. Y. Pan in 1966.  The book by @ref{Borodin and M
 provides an overview of these and other results about optimal
 algorithms.}
 
+換一款講法，lán對@math{a_n}開始，予 @math{x} 乘，koh加@math{a_{n-1}}，予 @math{x}
+乘，直到@math{a_0}。@footnote{根據 @ref{Knuth 1981}，chit ê法則是由W. G. Horner佇
+十九世紀早期形式化，毋kú chit ê方法實際上佇超過100年進前Newton就使用ah。Horner法則算多
+項式ê值，比直接先算@math{a_n x^n}，koh算@math{a_{n-1}x^{n-1}}等等ê方法，需要koh較少ê
+加法kap乘法。實際上，ē當證明所有算任何演算法ê值，定著用上少kap Horner法則平chē ê加
+法kap乘法。因此Horner法則是算多項式ê值ê最佳演算法。Che由A. M. Ostrowski證明（加法數ê部
+份），刊佇1954年ê論文，伊起造現代研究最佳化演算法ê基礎。乘法數ê相siâng ê表示是由V. Y.
+Pan佇1966年所證明。@ref{Borodin and Munro (1975)} ê冊提供chiah ê kap其他關係最佳化
+演算法ê結果ê概觀。}
+
 Fill in the following template to produce a procedure that evaluates a
 polynomial using Horner's rule.  Assume that the coefficients of the polynomial
 are arranged in a sequence, from @math{a_0} through @math{a_n}.
+
+添下kha ê @newterm{枋模}，來產出用Horner法則算多項式ê程序。假設多項式ê係數排做列，ùi
+@math{a_0} kàu @math{a_n}。
 
 @lisp
 (define (horner-eval x coefficient-sequence)
@@ -10658,6 +10676,8 @@ are arranged in a sequence, from @math{a_0} through @math{a_n}.
 
 For example, to compute @math{1 + 3x + 5x^3 + x^5} at @math{x = 2} you
 would evaluate
+
+譬論講，beh算@math{1 + 3x + 5x^3 + x^5} 佇 @math{x = 2} ê值，lí ē算下kha ê：
 
 @lisp
 (horner-eval 2 (list 1 3 0 5 0 1))
