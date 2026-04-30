@@ -10688,6 +10688,8 @@ would evaluate
 @strong{@anchor{Exercise 2.35}Exercise 2.35:} Redefine @code{count-leaves} from
 @ref{2.2.2} as an accumulation:
 
+@strong{Exercise 2.35:} Kā @ref{2.2.2} ê @code{count-leaves} 用累積器ê方式重頭定義。
+
 @lisp
 (define (count-leaves t)
   (accumulate @math{\langle}??@math{\rangle} @math{\langle}??@math{\rangle} (map @math{\langle}??@math{\rangle} @math{\langle}??@math{\rangle})))
@@ -10697,6 +10699,23 @@ would evaluate
 @quotation
 @strong{@anchor{Exercise 2.36}Exercise 2.36:} The procedure @code{accumulate-n}
 is similar to @code{accumulate} except that it takes as its third argument a
+sequence of sequences, which are all assumed to have the same number of
+elements.  It applies the designated accumulation procedure to combine all the
+first elements of the sequences, all the second elements of the sequences, and
+so on, and returns a sequence of the results.  For instance, if @code{s} is a
+sequence containing four sequences, @code{((1 2 3) (4 5 6) (7 8 9) (10 11
+12)),} then the value of @code{(accumulate-n + 0 s)} should be the sequence
+@code{(22 26 30)}.  Fill in the missing expressions in the following definition
+of @code{accumulate-n}:
+
+@strong{Exercise 2.36:} 程序 @code{accumulate-n} kap @code{accumulate} 相siâng，
+除了伊the̍h列ê列當做第三个引數。Chit ê引數內底，逐列ê元素額lóng平chē。伊應用指定ê累積器程
+序來組合逐列ê頭一个元素、逐列ê第二个引數，等等，傳轉列ê所有結果。譬論講，@code{s}若是包含
+四个列ê列@code{((1 2 3) (4 5 6) (7 8 9) (10 11 12))}，@code{(accumulate-n + 0 s)}
+ê值就應該是列@code{(22 26 30)}。添下kha @code{accumulate-n} ê定義內底ka-la̍uh ê表達
+式：
+
+except that it takes as its third argument a
 sequence of sequences, which are all assumed to have the same number of
 elements.  It applies the designated accumulation procedure to combine all the
 first elements of the sequences, all the second elements of the sequences, and
