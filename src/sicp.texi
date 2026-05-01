@@ -4172,10 +4172,10 @@ proportional to the number of elementary machine operations performed.
 
 予 @math{n} 當做量問題sài-suh ê參數，@math{R(n)}當做過程處理sài-suh是 @math{n}問題需
 要ê資源量。佇lán進前ê例，lán the̍h @math{n} 當做是函數所算ê次數，但是koh有其他可能。比如講，
-若是lán ê目標是算一个數ê平方根ê近似值，lán可能掠 @math{n} 做需要ê精確數位。對矩陣運算，lán可能
-掠 @math{n}做矩陣ê列數。一般來講，有關係問題特性ê數，分析過程用che真理想。仝款，@math{R(n)} 可能
-the̍h來量內部儲存暫存器所用ê量、基本機器操作次數，等等。佇一改kan-ta做固定操作量ê電腦，需要ê時間會
-hām所行ê基本機器操作量成比例關係。
+若是lán ê目標是算一个數ê平方根ê近似值，lán可能掠 @math{n} 做需要ê精確數位。對@newterm{矩陣}
+(matrix)乘法，lán可能掠 @math{n}做矩陣ê列數。一般來講，有關係問題特性ê數，分析過程用che真理
+想。仝款，@math{R(n)} 可能the̍h來量內部儲存暫存器所用ê量、基本機器操作次數，等等。佇一改
+kan-ta做固定操作量ê電腦，需要ê時間會hām所行ê基本機器操作量成比例關係。
 
 
 We say that @math{R(n)} has order of growth @math{\Theta(f(n))}, written
@@ -10729,6 +10729,10 @@ of @code{accumulate-n}:
 Suppose we represent vectors @math{\hbox{\bf v} = (v_i)} as sequences of numbers, and
 matrices @math{\hbox{\bf m} = (m_{i\!j})} as sequences of vectors (the rows of the
 matrix).  For example, the matrix
+
+假使lán kā @newterm{向量}(vector) @math{\hbox{\bf v} = (v_i)} 表示做數ê列，kā矩陣
+@math{\hbox{\bf m} = (m_{i\!j})} 表示做向量（矩陣ê列）ê列。比論講，矩陣
+
 @ifinfo
 
 @example
@@ -10756,6 +10760,11 @@ is represented as the sequence @code{((1 2 3 4) (4 5 6 6) (6 7 8 9))}.  With
 this representation, we can use sequence operations to concisely express the
 basic matrix and vector operations.  These operations (which are described in
 any book on matrix algebra) are the following:
+
+表示做列 @code{((1 2 3 4) (4 5 6 6) (6 7 8 9))} 。用chit款表示法，lán通用列操作來
+簡單表示基本ê矩陣kap向量操作。Chiah ê操作（佇任何矩陣代數ê冊有描述）佇下kha：
+
+
 @ifinfo
 
 @example
@@ -10778,18 +10787,20 @@ any book on matrix algebra) are the following:
 @tex
 $$
 \begin{array}{rl}
-	\hbox{\tt (dot-product v w)} 		& {\rm returns\;the\;sum\;} \Sigma_i v_i w_i; \\
-	\hbox{\tt (matrix-*-vector m v)} 	& {\rm returns\;the\;vector\;} \hbox{\bf t},  \\
+	\hbox{\tt (dot-product v w)} 		& {\rm returns\;the\;sum\; (\text{傳轉和})} \Sigma_i v_i w_i; \\
+	\hbox{\tt (matrix-*-vector m v)} 	& {\rm returns\;the\;vector\; (\text{傳轉向量})} \hbox{\bf t},  \\
 		& {\rm where\;} t_i = \Sigma_{\kern-0.1em j} m_{i\!j} v_{\kern-0.1em j};      \\
-	\hbox{\tt (matrix-*-matrix m n)} 	& {\rm returns\;the\;matrix\;} \hbox{\bf p},  \\
-		& {\rm where\;} p_{i\!j} = \Sigma_k m_{ik} n_{k\!j};                          \\
-	\hbox{\tt (transpose m)} 		& {\rm returns\;the\;matrix\;} \hbox{\bf n},  \\
-		& {\rm where\;} n_{i\!j} = m_{\kern-0.1em ji}.
+	\hbox{\tt (matrix-*-matrix m n)} 	& {\rm returns\;the\;matrix\; (\text{傳轉矩陣})} \hbox{\bf p},  \\
+		& {\rm where\; (\text{其中})} p_{i\!j} = \Sigma_k m_{ik} n_{k\!j};                          \\
+	\hbox{\tt (transpose m)} 		& {\rm returns\;the\;matrix\; (\text{傳轉矩陣})} \hbox{\bf n},  \\
+		& {\rm where\; (\text{其中})} n_{i\!j} = m_{\kern-0.1em ji}.
 \end{array}
 $$
 @end tex
 We can define the dot product as@footnote{This definition uses the extended
 version of @code{map} described in @ref{Footnote 12}.}
+
+Lán ē當定義內積做@footnote{Chit ê定義用佇 @ref{Footnote 12} 描述ê @code{map} ê擴展版本。}
 
 @lisp
 (define (dot-product v w)
@@ -10799,6 +10810,9 @@ version of @code{map} described in @ref{Footnote 12}.}
 Fill in the missing expressions in the following procedures for computing the
 other matrix operations.  (The procedure @code{accumulate-n} is defined in
 @ref{Exercise 2.36}.)
+
+添下kha ê程序內底ê ka-la̍uh ê表達式，來計算其他ê矩陣操作（程序 @code{accumulate-n}
+定義佇 @ref{Exercise 2.36}）。
 
 @lisp
 (define (matrix-*-vector m v)
