@@ -10832,6 +10832,10 @@ the sequence with the result of combining all the elements to the right.  There
 is also a @code{fold-left}, which is similar to @code{fold-right}, except that
 it combines elements working in the opposite direction:
 
+@strong{Exercise 2.38:} @code{accumulate} 程序mā號做 @code{fold-right}，因為伊
+組合列ê頭一个元素kap kā伊正pêng逐ê元素組合ê結果。Mā有 @code{fold-left}，kap 
+@code{fold-right} 相siâng，除了伊組合元素ê方向對反：
+
 @lisp
 (define (fold-left op initial sequence)
   (define (iter result rest)
@@ -10844,6 +10848,8 @@ it combines elements working in the opposite direction:
 
 What are the values of
 
+下kha ê表達式ê值是siáⁿ？
+
 @lisp
 (fold-right / 1 (list 1 2 3))
 (fold-left / 1 (list 1 2 3))
@@ -10854,12 +10860,19 @@ What are the values of
 Give a property that @code{op} should satisfy to guarantee that
 @code{fold-right} and @code{fold-left} will produce the same values for any
 sequence.
+
+寫出一个 @code{op} 著滿足ê特性，來保證對所有ê列，@code{fold-right} kap
+@code{fold-left} ē產出kâng款ê值。
 @end quotation
 
 @quotation
 @strong{@anchor{Exercise 2.39}Exercise 2.39:} Complete the following
 definitions of @code{reverse} (@ref{Exercise 2.18}) in terms of
 @code{fold-right} and @code{fold-left} from @ref{Exercise 2.38}:
+
+@strong{Exercise 2.39:} 用 @ref{Exercise 2.38} ê @code{fold-right} kap
+@code{fold-left}，來完成下kha ê @code{reverse} (@ref{Exercise 2.18}) ê定
+義：
 
 @lisp
 (define (reverse sequence)
@@ -10869,7 +10882,7 @@ definitions of @code{reverse} (@ref{Exercise 2.18}) in terms of
 @end lisp
 @end quotation
 
-@subsubheading Nested Mappings
+@subsubheading Nested Mappings 岫á形ê Map
 
 We can extend the sequence paradigm to include many computations that are
 commonly expressed using nested loops.@footnote{This approach to nested
@@ -10881,6 +10894,15 @@ sequences.} Consider this problem: Given a positive integer @math{n}, find all
 ordered pairs of distinct positive integers @math{i} and @math{j}, where
 @math{1 \le j < i \le n}, such that @math{i + j} is prime.  For example, if @math{n} is 6,
 then the pairs are the following:
+
+@noindent
+Lán通擴展列ê模範，來包含chē-chē通常用岫á形ê loop表達ê計算。@footnote{Chit ê對岫á形
+ê map ê方法是由David Turner展示予goán，伊使用ê KRC kap Miranda語言提供優雅ê形式，
+來處理chit款概念。佇chit節ê例（請看 @ref{Exercise 2.42}）是ùi @ref{Turner 1981}
+摘ê。佇 @ref{3.5.3}，lán ē看見chit ê方法án-nóa擴展kàu無限ê列。}考慮chit ê問題：有
+正整數 @math{n}，chhōe逐ê無kâng ê正整數 @math{i} kap @math{j} ê @newterm{順序
+對}(ordered pair)，其中 @math{1 \le j < i \le n}，koh滿足 @math{i + j} 是質
+數。比論講， @math{n} 若是 6，下kha是所有ê對：
 @ifinfo
 
 @example
