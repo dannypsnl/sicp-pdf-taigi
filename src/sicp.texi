@@ -10937,6 +10937,10 @@ ordered pairs of positive integers less than or equal to @math{n}, filter to
 select those pairs whose sum is prime, and then, for each pair @math{(i, j)}
 that passes through the filter, produce the triple @math{(i, j, i + j)}.
 
+一个自然組織chit ê計算ê方法，是生成所有無超過 @math{n} ê正整數ê順序對ê列，用過濾器揀出和
+是質數ê對了後，對所有通過過濾器ê對@math{(i, j)}，產出@newterm{三元組}(triple)
+@math{(i, j, i + j)}。
+
 Here is a way to generate the sequence of pairs: For each integer @math{i \le n},
 enumerate the integers @math{j < i}, and for each such @math{i} and @math{j}
 generate the pair @math{(i, j)}.  In terms of sequence operations, we map along
