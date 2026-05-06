@@ -10953,6 +10953,14 @@ sequence of pairs:@footnote{We're representing a pair here as a list of two
 elements rather than as a Lisp pair.  Thus, the ``pair'' @math{(i, j)} is
 represented as @code{(list i j)}, not @code{(cons i j)}.}
 
+Chia是一款生成對ê列ê方法：對所有ê正整數 @math{i \le n}，列舉整數 @math{j < i}，而且對
+所有ê @math{i} kap @math{j}，生成對 @math{(i, j)}。用列操作ê方式，lán順著列
+@code{(enumerate-interval 1 n)} 來map。對chit ê列內底ê逐ê @math{i}，lán順著列
+@code{(enumerate-interval 1 (- i 1))} 來map。對所有 @math{i}，組合逐ê列（藉
+@code{append} 來累積），產出所需要ê列ê對：@footnote{Lán leh用兩个元素ê列單，soah毋是用
+Lisp ê對，佇chia來表示對。就án-ne，「對」@math{(i,j)}表示做 @code{(list i j)}，
+毋是 @code{(cons i j)}。}
+
 @lisp
 (accumulate
  append nil (map (lambda (i)
@@ -10965,6 +10973,10 @@ represented as @code{(list i j)}, not @code{(cons i j)}.}
 The combination of mapping and accumulating with @code{append} is so common in
 this sort of program that we will isolate it as a separate procedure:
 
+@noindent
+Map kap用 @code{append} 累積ê組合，佇chit款程式chiâⁿ chia̍p用，致使lán kā孤立做分
+開ê程序：
+
 @lisp
 (define (flatmap proc seq)
   (accumulate append nil (map proc seq)))
@@ -10975,6 +10987,10 @@ Now filter this sequence of pairs to find those whose sum is prime. The filter
 predicate is called for each element of the sequence; its argument is a pair
 and it must extract the integers from the pair.  Thus, the predicate to apply
 to each element in the sequence is
+
+@noindent
+Taⁿ過濾chit ê對ê列來chhōe和是質數ê。對列ê逐个元素，過濾ê謂詞lóng ē呼叫；伊ê引數是對，
+mā定著對對來抽出整數。就án-ne，應用kàu列ê逐ê元素ê謂詞是
 
 @lisp
 (define (prime-sum? pair)
