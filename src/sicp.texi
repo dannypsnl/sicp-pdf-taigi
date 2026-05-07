@@ -11002,6 +11002,10 @@ Finally, generate the sequence of results by mapping over the filtered pairs
 using the following procedure, which constructs a triple consisting of the two
 elements of the pair along with their sum:
 
+@noindent
+落尾，倚靠kā過濾好ê對，用下kha ê 程序map，來生成結果ê列。下kha ê程序建構包含對ê兩个元素，
+kap in ê和ê三元組：
+
 @lisp
 (define (make-pair-sum pair)
   (list (car pair) (cadr pair) (+ (car pair) (cadr pair))))
@@ -11035,6 +11039,19 @@ permutations of @math{S}:@footnote{Semicolons in Scheme code are used to introdu
 @newterm{comments}.  Everything from the semicolon to the end of the line is
 ignored by the interpreter.  In this book we don't use many comments; we try to
 make our programs self-documenting by using descriptive names.}
+
+@noindent
+除了列舉區間ê ê以外，岫á形ê map mā對列來講誠有路用。設使lán向望生成集合 @math{S} ê所有排
+列形式，就是集合內底ê項目所有ê排順序ê方法。舉例，@math{\{1, 2, 3\}} 所有ê排列形式是
+@math{\{1, 2, 3\}}, @math{\{1, 3, 2\}}, @math{\{2, 1, 3\}}, @math{\{2, 3, 1\}},
+@math{\{3, 1, 2\}}, and @math{\{3, 2, 1\}}。生成 @math{S} ê排列形式ê計畫佇chia：
+對逐ê佇 @math{S} ê項目 @math{x}，遞迴生成 @math{S - x} ê排列ê列，@footnote{集合
+@math{S - x} 是所有 @math{S} ê元素，扣掉 @math{x} ê集合。}koh kā @math{x}接
+kàu逐ê排列ê頭前。對所有佇 @math{S} ê @math{x}，che ê the̍h著 @math{S} ê，起頭是
+@math{x} ê排列形式。組合chia所有無kâng @math{x} 起頭ê列，ē得著所有 @math{S} ê排列
+方式：@footnote{佇Scheme ê程式碼，分號用來表示@newterm{註kha}(comments)。Ùi分
+號kàu chōa尾ê所有文字，編譯器lóng ē忽略。佇本冊lán bōe用足chē註kha。Lán用描述
+性ê名來予lán ê程式碼ē當說明家kī。}
 
 @lisp
 (define (permutations s)
