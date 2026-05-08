@@ -11073,6 +11073,12 @@ nil)}, which is a sequence with one item, namely the set with no elements.  The
 given sequence except for a given item.  This can be expressed as a simple
 filter:
 
+@noindent
+請注意chit ê策略án-nóa縮小生成 @math{S} ê排列問題kàu生成有比 @math{S} 較少要素集合
+ê排列ê。佇上尾ê情形，lán一步一步處理kàu空列單，伊代表無元素ê集合。對che，lán生成
+@code{(list nil)}，he是有一个項目ê列，就是無元素ê集合。佇 @code{permutations} 所用ê
+@code{remove} 程序，傳轉列內底ê逐ê項目，除了指定ê元素。Che ē當用一个過濾器表達：
+
 @lisp
 (define (remove item sequence)
   (filter (lambda (x) (not (= x item)))
@@ -11084,12 +11090,21 @@ filter:
 @code{unique-pairs} that, given an integer @math{n}, generates the sequence of
 pairs @math{(i, j)} with @math{1 \le j < i \le n}.  Use @code{unique-pairs}
 to simplify the definition of @code{prime-sum-pairs} given above.
+
+@strong{Exercise 2.40:} 定義程序 @code{unique-pairs}，伊the̍h整數 @math{n}，生成對
+@math{(i, j)} ê列，其中 @math{1 \le j < i \le n}。用@code{unique-pairs}來kā
+頂懸 @code{prime-sum-pairs} ê定義變簡單。
 @end quotation
 
 @quotation
 @strong{@anchor{Exercise 2.41}Exercise 2.41:} Write a procedure to find all
 ordered triples of distinct positive integers @math{i}, @math{j}, and @math{k} less than
 or equal to a given integer @math{n} that sum to a given integer @math{s}.
+
+@strong{Exercise 2.41:} 寫程序chhōe逐ê無kâng正整數 @math{i}、@math{j} kap
+@math{k} ê，照順序排ê三元組。其中@math{i}、@math{j} kap @math{k} 無超過指定ê
+整數 @math{n}，in三个ê和是指定ê整數 @math{s}。
+
 @end quotation
 
 @quotation
