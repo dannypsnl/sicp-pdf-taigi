@@ -11125,6 +11125,15 @@ respect to the other queens.  This produces the sequence of all ways to place
 @math{k} queens in the first @math{k} columns.  By continuing this process, we will
 produce not only one solution, but all solutions to the puzzle.
 
+@strong{Exercise 2.42:} 「八王后問題」是問án-nóa khǹg西洋棋王后ê棋仔佇棋盤頂，予所有王后
+lóng bōe hŏng 將軍（就是無兩个王后佇kâng一个行、列，或者是對角線）。一个可能ê改展示佇
+@ref{Figure 2.8}。一个解chit ê問題ê方法是佇kui个棋盤ê逐行khǹg lóng一粒皇后。Lán一下khǹg好
+@math{k - 1} ê王后，就定著khǹg 第 @math{k} 粒皇后佇伊bē予其他ê皇后將軍。Lán通用遞迴形式化
+chit ê方法：假使lán有生成所有可能ê方法，來kā @math{k - 1} 粒皇后khǹg佇棋盤ê頭 @math{k - 1}
+行。對逐ê方法，用khǹg一粒皇后佇第 @math{k} 行ê逐列，來生成擴充ê位置ê集合。Chit-má過濾chiah
+ê，保留予佇第 @math{k} 行ê皇后bōe hŏng將軍ê位置。Che產出逐款kā @math{k} 粒皇后khǹg佇頭
+@math{k} 行ê方法ê列。繼續chit ê過程，lán通產出毋但一个解，koh有chit ê問題ê逐个解。
+
 @float
 @anchor{Figure 2.8}
 @ifinfo
@@ -11154,7 +11163,7 @@ produce not only one solution, but all solutions to the puzzle.
 @sp 0.0
 @center @image{fig/chap2/Fig2.8c,48mm,,,.pdf}      @c 73mm
 @sp 0.3
-@center @caption{@strong{Figure 2.8:} A solution to the eight-queens puzzle.}
+@center @caption{@strong{Figure 2.8:} A solution to the eight-queens puzzle. 八王后問題ê一个解。}
 @sp 0.0
 @end iftex
 @end float
@@ -11164,6 +11173,10 @@ sequence of all solutions to the problem of placing @math{n} queens on an
 @math{n \times n} chessboard.  @code{queens} has an internal procedure
 @code{queen-cols} that returns the sequence of all ways to place queens in the
 first @math{k} columns of the board.
+
+Lán kā chit ê改法實做做程序 @code{queens}，伊傳轉一个列，包含kā @math{n} 粒皇
+后khǹg佇@math{n \times n} ê棋盤ê所有解。@code{queens} 有內部程序
+@code{queen-cols}，伊傳轉一个列，包含kā皇后khǹg佇棋盤頭 @math{k} 行ê所有方法。
 
 @lisp
 
@@ -11193,6 +11206,13 @@ You must also write the procedure @code{safe?}, which determines for a set of
 positions, whether the queen in the @math{k^{\mathrm{th}}} column is safe with respect to the
 others.  (Note that we need only check whether the new queen is safe---the
 other queens are already guaranteed safe with respect to each other.)
+
+佇chit ê程序內底，@code{rest-of-queens}，是khǹg @math{k - 1} 粒皇后佇頭 @math{k - 1}
+行ê一个方法，@code{new-row}是提案來khǹg第 @math{k} 行ê皇后ê列。用實做棋盤位置ê集合ê表達方
+法，包含程序 @code{adjoin-position} ，伊相接新ê @newterm{列—行位置}(row-column
+position) kàu位置ê集合，kap @code{empty-board}，伊表示位置ê空集合。來完成chit ê程序。
+汝mā著寫程序 @code{safe?}，伊對位置ê集合，決定佇 @math{k} 行ê皇后kám安全。（注意lán
+kan-ta需要檢查新ê皇后kám安全——其他皇后代先lóng有保證安全ah。）
 @end quotation
 
 @quotation
