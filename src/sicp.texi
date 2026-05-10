@@ -11223,6 +11223,11 @@ enough for it to solve even the @math{6\times6} case.)  When Louis asks Eva Lu A
 help, she points out that he has interchanged the order of the nested mappings
 in the @code{flatmap}, writing it as
 
+@strong{Exercise 2.43:} Louis Reasoner佇寫 @ref{Exercise 2.42} ê時無歡喜。伊ê
+@code{queens} 程序假若ē當走，毋過極其慢。（連解  @math{6\times6} ê案例，Louis都忍bōe牢。）
+當Louis問Eva Lu Ator kám通幫chān，伊指明Louis有佇 @code{flatmap}內，交換岫á形ê map ê順序，
+kā寫做
+
 @lisp
 (flatmap
  (lambda (new-row)
@@ -11235,9 +11240,12 @@ in the @code{flatmap}, writing it as
 Explain why this interchange makes the program run slowly.  Estimate how long
 it will take Louis's program to solve the eight-queens puzzle, assuming that
 the program in @ref{Exercise 2.42} solves the puzzle in time @math{T}.
+
+請解說是án-nóa án-ne交換予程序pháng kah足慢。估計Louis ê程式解八王后ê問題著開gōa chē
+時間，設使佇 @ref{Exercise 2.42} ê程序解chit ê問題需要時間 @math{T}。
 @end quotation
 
-@subsection Example: A Picture Language
+@subsection Example: A Picture Language 例：圖片語言
 @node	2.2.4,  , 2.2.3, 2.2
 
 This section presents a simple language for drawing pictures that illustrates
@@ -11254,6 +11262,15 @@ structure.  Just as @code{cons}, which satisfies the closure property, allowed
 us to easily build arbitrarily complicated list structure, the operations in
 this language, which also satisfy the closure property, allow us to easily
 build arbitrarily complicated patterns.
+
+Chit節展示簡單ê畫圖片ê語言，伊說明資料抽象kap閉包ê能力，koh照必要ê方式用koân階程序。
+Chit ê語言hŏng設計來予實驗像佇 @ref{Figure 2.9} ê模式較快，hiah ê模式是由重覆ê，
+sóa動kap chhun-kiu元素所組成。@footnote{Chit ê圖片語言是chhāi佇Peter Henderson創造
+ê語言，來建構像 M.C. Escher ê「Square Limit」柴版畫ê圖（看 @ref{Henderson 1982}）。
+Chit幅柴版畫包含重覆koh chhun-kiu ê模式，kap佇本節用@code{square-limit}所畫ê排列相
+siâng。}佇Chit ê語言，beh組合ê資料物件是用程序表示，毋是列單結構。就親像 @code{cons}，
+伊滿足閉包ê特性，予lán較快起造任意ê複雜列單結構，佇chit ê語言ê操作，伊mā滿足閉包特性，
+允准lán較快起造任意ê複雜模式。
 
 
 @subsubheading The picture language
