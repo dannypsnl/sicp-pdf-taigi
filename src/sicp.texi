@@ -11273,12 +11273,16 @@ siâng。}佇Chit ê語言，beh組合ê資料物件是用程序表示，毋是�
 允准lán較快起造任意ê複雜模式。
 
 
-@subsubheading The picture language
+@subsubheading The picture language 圖片語言
 
 When we began our study of programming in @ref{1.1}, we emphasized the
 importance of describing a language by focusing on the language's primitives,
 its means of combination, and its means of abstraction.  We'll follow that
 framework here.
+
+@noindent
+當lán佇 @ref{1.1} 開始研究程式ê時陣，lán強調用注神佇語言ê基礎函數、組合ê方法kap抽象ê方
+法，來描述語言ê重要。Lán佇chia ē跟tòe chit ê框殼。
 
 @float
 @quotation
@@ -11293,7 +11297,7 @@ framework here.
 @sp 0.2
 @center @image{fig/chap2/Fig2.9-bigger,111mm,48mm,,.png}
 @sp 0.6
-@center @caption{@strong{Figure 2.9:} Designs generated with the picture language.}
+@center @caption{@strong{Figure 2.9:} Designs generated with the picture language. 用圖片語言生成ê設計}
 @sp 0.6
 @end iftex
 @end float
@@ -11312,7 +11316,7 @@ lines, are not part of the images.
 @sp 0.5
 @center @image{fig/chap2/Fig2.10,50mm,,,.pdf}
 @sp 0.6
-@caption{@strong{Figure 2.10:} Images produced by the @code{wave} painter, with respect to four different frames.  The frames, shown with dotted lines, are not part of the images.}
+@caption{@strong{Figure 2.10:} Images produced by the @code{wave} painter, with respect to four different frames.  The frames, shown with dotted lines, are not part of the images. 畫圖器 @code{wave} 產出ê圖片，關係四个無kâng ê框殼。框殼，用點線表示，毋是圖片ê一部份。}
 @sp 0.0
 @end iftex
 @end quotation
@@ -11381,6 +11385,52 @@ the very part and act of public duty.
 @end quotation
 } The four images in figure 2.11 are drawn with respect to the same four
 frames as the @code{wave} images in figure 2.10.
+
+Chit ê圖片語言ê優雅，一部份是，kan-ta有chit款要素，號做@newterm{畫圖器}(painter)。畫
+圖器畫chit幅圖，伊受sóa振動kap chhun-kiu，來tàu入去設計好ê平行四角形框殼。比如講，有基
+礎ê畫圖器，lán ē kā號做 @code{wave}，伊畫@newterm{原油線}(crude line)，像佇
+@ref{Figure 2.10} 所展示ê。畫圖ê實際ê形由框殼決定——所有佇 Figure 2.10 ê四幅圖，是
+由kâng款ê @code{wave} 畫圖器產出，毋kú限制佇四个無kâng ê框殼。畫圖器ē當比che koh較
+幼路：號做 @code{rogers} 基礎ê畫圖器畫 @acronym{MIT} ê創辦人ê像，展示佇
+@ref{Figure 2.11}。@footnote{William Barton Rogers (1804-1882) 是 @acronym{MIT}
+ê創辦人kap頭任校長。做著一位地質學家kap有才情ê老師，伊佇 William and Mary 學院kap
+Virginia大學教冊。1859年伊搬kàu Boston，佇hia有較chē時間通好研究，骨力佇成立「理工學
+院」ê計畫，koh擔任Massachusetts ê頭一个gà-suh表州檢察官。
+
+當 @acronym{MIT} 佇1861年成立ê時，Rogers受選做頭一任校長。Rogers thīn「實用ê學習」
+ê理想，hām hit時ê傷強調古典ê大學教育無kâng，像伊所寫：「擋牢較闊、較koân kap較應用性ê
+自然kap社會科學ê教學kap學問。」Chit ê教育mā kâng款hām e̍h ê貿易學校教育無kâng。若
+Roger所講：
+
+@quotation
+世界硬加ê，佇應用ê工lâng kap科學ê ê區別是全然無彩工，現代ê kui个經驗證明伊lóng總無價值ah。
+@end quotation
+
+Rogers擔任 @acronym{MIT} ê校長直到1870年，hit時因為健康無好chiah辭職。1878年，
+@acronym{MIT} ê第二任校長 John Runkle 因為@newterm{1873年ê經濟懍neh} (Panic of
+1873)引起ê財務危機kap對抗Harvard大學併掉 @acronym{MIT} ê壓力辭職。Rogers轉去hoāⁿ
+校長室直kàu 1881年。
+
+Rogers佇1882年 @acronym{MIT} 大學部畢業典禮致詞ê時倒去soah過身。Runkle佇kâng年ê追思
+會致詞，引用Rogers ê遺言：
+
+@quotation
+「當我khiā 佇chia，看見學院是怎樣，……我想起科學ê起頭。我記得一百五十年前，Stephen Hales
+出版關係照明氣體ê冊仔，其中伊表示伊ê研究展示128 grain ê瀝青塗炭——」「瀝青塗炭」是伊佇世上
+上尾所講ê。佇chia伊àⁿ落，假若beh確認伊頭前ê筆記，了後ta̍uh-ta̍uh-á恢復khiā leh，giâ起雙
+手，對伊ê地上勞動kap勝利ê場面，受chhōa kàu「死亡ê明á-chài」，其中性命ê奧秘受解破，對肉體
+解放ê靈魂，佇深思無限未來ê，新koh猶原不可測ê奧秘內底，chhōe著bōe soah ê滿足。
+@end quotation
+
+Francis A. Walker（@acronym{MIT} ê第三任校長）講：
+
+@quotation
+
+伊家己擔ê人生，lóng是上忠實，mā若英雄。伊像騎士誠實向望ê，佇工課中，佇伊ê職位，koh佇公務
+職責ê當中過身。
+
+@end quotation
+}佇 Figure 2.11 ê四幅圖，mā照 Figure 2.10 內底 @code{wave} ê圖所用ê框殼來畫。
 
 @float
 @quotation
