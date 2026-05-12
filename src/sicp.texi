@@ -11447,7 +11447,7 @@ permission of the @acronym{MIT} Museum).
 @sp 0.2
 @center @image{fig/chap2/Fig2.11,48mm,,,.pdf}
 @sp 0.4
-@caption{@strong{Figure 2.11:} Images of William Barton Rogers, founder and first president of @acronym{MIT}, painted with respect to the same four frames as in @ref{Figure 2.10} (original image from Wikimedia Commons).}
+@caption{@strong{Figure 2.11:} Images of William Barton Rogers, founder and first president of @acronym{MIT}, painted with respect to the same four frames as in @ref{Figure 2.10} (original image from Wikimedia Commons). @acronym{MIT} ê創辦人kap頭任校長 William Barton Rogers ê像，用佇 @ref{Figure 2.10} siâng款ê四个框殼來畫（原圖對Wikimedia Commons來）。}
 @sp 0.8
 @end iftex
 @end quotation
@@ -11464,8 +11464,18 @@ example, @code{flip-vert} takes a painter and produces a painter that draws its
 image upside-down, and @code{flip-horiz} produces a painter that draws the
 original painter's image left-to-right reversed.
 
+Beh組合圖片，lán使用對有ê畫圖器起造新ê畫圖器ê chē-chē操作。比論講，@code{beside}操作the̍h
+兩个畫圖器，產出新ê複合畫圖器，伊畫頭一个畫圖器ê圖ê圖佇框殼ê倒半pêng，koh畫第二个畫圖器ê圖
+佇框殼ê正半pêng。Siâng款，@code{below} the̍h兩个畫圖器，產出新ê複合畫圖器，伊畫頭一个畫圖
+器ê圖佇第二个ê圖下底。一寡操作轉換孤个畫圖器，來生成新ê畫圖器。舉例，@code{flip-vert}
+the̍h一个畫圖器，產出kā伊ê圖頂下倒反來畫ê畫圖器，@code{flip-horiz} 產出kā原來ê畫圖器ê圖
+左右倒反來畫ê畫圖器。
+
 @ref{Figure 2.12} shows the drawing of a painter called
 @code{wave4} that is built up in two stages starting from @code{wave}:
+
+@ref{Figure 2.12}展示號做 @code{wave4} ê畫圖器所畫ê，伊起造佇對 @code{wave} 開始
+ê兩个階段：
 
 @lisp
 (define wave2 (beside wave (flip-vert wave)))
@@ -11490,7 +11500,7 @@ from the @code{wave} painter of @ref{Figure 2.10}.
 @sp 0.3
 @center @image{fig/chap2/Fig2.12,50mm,,,.pdf}
 @sp 0.4
-@caption{@strong{Figure 2.12:} Creating a complex figure, starting from the @code{wave} painter of @ref{Figure 2.10}.}
+@caption{@strong{Figure 2.12:} Creating a complex figure, starting from the @code{wave} painter of @ref{Figure 2.10}. 建立複雜ê ang仔，伊ê基礎是 @ref{Figure 2.10} ê @code{wave}畫圖器。}
 @sp 0.7
 @end iftex
 @end quotation
