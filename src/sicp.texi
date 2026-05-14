@@ -11514,6 +11514,11 @@ up list structure using @code{cons}, the closure of our data under the means of
 combination is crucial to the ability to create complex structures while using
 only a few operations.
 
+用chit款手路起造複雜ê圖ê時陣，lán leh利用畫圖器佇語言ê組合手段下底包起來ê事實。兩个畫圖器ê
+@code{beside} iah是 @code{below} 家kī嘛是畫圖器；因此，lán ē當kā伊用做製造較複雜ê畫
+圖器ê元素。像用 @code{cons} 起造列單結構kâng款，lán佇組合手段下底ê資料閉包，對佇用少
+少操作ê時，建立複雜結構ê能力蓋重要。
+
 Once we can combine painters, we would like to be able to abstract typical
 patterns of combining painters.  We will implement the painter operations as
 Scheme procedures.  This means that we don't need a special abstraction
@@ -11521,6 +11526,11 @@ mechanism in the picture language: Since the means of combination are ordinary
 Scheme procedures, we automatically have the capability to do anything with
 painter operations that we can do with procedures.  For example, we can
 abstract the pattern in @code{wave4} as
+
+Lán若ē當建立閉包，lán就想beh ē當抽象化典型ê組合畫圖器ê模式。Lán ē kā畫圖器操作實做做
+Scheme程序。Che意思是lán佇圖片語言，無需要特殊ê抽象機制：因為組合手段是一般ê Scheme
+程序，lán就自動有能力用畫圖器，行任何lán ē當用程序做ê。舉例，lán ē當kā @code{wave4} ê
+模式抽象做
 
 @lisp
 (define (flipped-pairs painter)
