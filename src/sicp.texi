@@ -11541,6 +11541,9 @@ Scheme程序。Che意思是lán佇圖片語言，無需要特殊ê抽象機制�
 @noindent
 and define @code{wave4} as an instance of this pattern:
 
+@noindent
+koh kā @code{wave4} 定義做下kha ê模式ê實例：
+
 @lisp
 (define wave4 (flipped-pairs wave))
 @end lisp
@@ -11574,7 +11577,7 @@ and define @code{wave4} as an instance of this pattern:
 @sp 0.7
 @center @image{fig/chap2/Fig2.13a,111mm,,,.pdf}
 @sp 0.5
-@center @caption{@strong{Figure 2.13:} Recursive plans for @code{right-split} and @code{corner-split}. }@short
+@center @caption{@strong{Figure 2.13:} Recursive plans for @code{right-split} and @code{corner-split}. @code{right-split} kap @code{corner-split} ê遞迴計畫。}@short
 @sp 0.7
 @end iftex
 @end float
