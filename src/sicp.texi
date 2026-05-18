@@ -11587,6 +11587,9 @@ We can also define recursive operations.  Here's one that makes painters split
 and branch towards the right as shown in @ref{Figure 2.13}
 and @ref{Figure 2.14}:
 
+@noindent
+Lán mā 會定義遞迴操作。予畫圖器向正pêng分開koh分oe ê佇chia，顯示佇 @ref{Figure 2.13}：
+
 @lisp
 (define (right-split painter n)
   (if (= n 0)
@@ -11598,6 +11601,10 @@ and @ref{Figure 2.14}:
 @noindent
 We can produce balanced patterns by branching upwards as well as towards the
 right (see exercise @ref{Exercise 2.44} and figures @ref{Figure 2.13} and @ref{Figure 2.14}):
+
+@noindent
+Lán通用向面頂kap向正pêng分oe，來產出平衡ê模式（看練習 @ref{Exercise 2.44} kap圖片
+@ref{Figure 2.13} kap @ref{Figure 2.14}）：
 
 @lisp
 (define (corner-split painter n)
