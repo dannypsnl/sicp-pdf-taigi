@@ -11588,7 +11588,7 @@ and branch towards the right as shown in @ref{Figure 2.13}
 and @ref{Figure 2.14}:
 
 @noindent
-Lán mā 會定義遞迴操作。予畫圖器向正pêng分開koh分oe ê佇chia，顯示佇 @ref{Figure 2.13}：
+Lán mā ē當定義遞迴操作。予畫圖器向正pêng分開koh分oe ê佇chia，顯示佇 @ref{Figure 2.13}：
 
 @lisp
 (define (right-split painter n)
@@ -11624,6 +11624,11 @@ By placing four copies of a @code{corner-split} appropriately, we obtain a
 pattern called @code{square-limit}, whose application to @code{wave} and
 @code{rogers} is shown in @ref{Figure 2.9}:
 
+@noindent
+倚靠適當khǹg @code{corner-split} ê四份khóo-pih，lán the̍h著號做
+@code{square-limit} ê模式，伊應用kàu @code{wave} kap @code{rogers} ê結果
+顯示佇 @ref{Figure 2.9}：
+
 @lisp
 (define (square-limit painter n)
   (let ((quarter (corner-split painter n)))
@@ -11636,6 +11641,10 @@ pattern called @code{square-limit}, whose application to @code{wave} and
 @code{up-split} used by @code{corner-@/split}.  It is similar to
 @code{right-split}, except that it switches the roles of @code{below} and
 @code{beside}.
+
+@strong{Exercise 2.44:} 定義予 @code{corner-@/split} 用ê程序
+@code{up-split}。伊kap @code{right-split} 相siâng，除了伊kā
+@code{below} kap @code{beside} ê角色相換。
 @end quotation
 
 @float[tbp]
@@ -11660,7 +11669,7 @@ pattern called @code{square-limit}, whose application to @code{wave} and
 @sp 0.2
 @center @image{fig/chap2/Fig2.14b,91mm,,,.pdf}
 @sp 0.4
-@caption{@strong{Figure 2.14:} The recursive operations @code{right-split} and @code{corner-@/split} applied to the painters @code{wave} and @code{rogers}.  Combining four @code{corner-split} figures produces symmetric @code{square-limit} designs as shown in @ref{Figure 2.9}.}
+@caption{@strong{Figure 2.14:} The recursive operations @code{right-split} and @code{corner-@/split} applied to the painters @code{wave} and @code{rogers}.  Combining four @code{corner-split} figures produces symmetric @code{square-limit} designs as shown in @ref{Figure 2.9}. 遞迴操作 @code{right-split} kap @code{corner-@/split} 應用kàu畫圖器 @code{wave} kap @code{rogers} ê結果。組合四幅 @code{corner-split} ê圖片，ē產出對thīn ê @code{square-limit} 設計，像佇 @ref{Figure 2.9} 所展示ê。}
 @sp 0.0
 @end iftex
 @end quotation
