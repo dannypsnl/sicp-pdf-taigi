@@ -8866,7 +8866,7 @@ themselves are made up of parts, and so on.
 
 建立「要素是對ê對」ê能力，是列單結構ē當做代表性家私ê重要ê精華。Lán指chit ê能力做 @code{cons}
 ê @newterm{閉包性} (closure property)。一般來講，若是用一个操作組合物件ê結果ē當用
-kâng款ê操作來組合，tsit ê組合資料物件ê操作滿足閉包性。@footnote{佇chia，「閉包」chit ê
+kâng款ê操作來組合，chit ê組合資料物件ê操作滿足閉包性。@footnote{佇chia，「閉包」chit ê
 詞ê使用是對抽象代數來ê，其中元素ê集合若是應用一个操作kàu chit ê集合ê元素，ē產出一个mā是
 chit ê集合ê元素，chit ê集合ê元素就通講是對chit ê操作是@newterm{封閉ê}(closed)。Lisp社
 里（不幸）mā使用「閉包」chit字來描述全然無tī-tāi ê概念：一个閉包是實做表示有自由變數ê程序ê
@@ -11675,13 +11675,18 @@ pattern called @code{square-limit}, whose application to @code{wave} and
 @end quotation
 @end float
 
-@subsubheading Higher-order operations
+@subsubheading Higher-order operations koân階操作
 
 In addition to abstracting patterns of combining painters, we can work at a
 higher level, abstracting patterns of combining painter operations.  That is,
 we can view the painter operations as elements to manipulate and can write
 means of combination for these elements---procedures that take painter
 operations as arguments and create new painter operations.
+
+@noindent
+除了抽象化組合畫圖器ê模式，lán通佇較koân ê水準，行抽象化組合畫圖器ê模式ê操作。就是，
+lán通kā畫圖器操作看做元素來操作，而且ē當寫組合chiah ê元素ê手段——the̍h畫圖器操作做引
+數，koh建立新ê畫圖器操作ê程序。
 
 For example, @code{flipped-pairs} and @code{square-limit} each arrange four
 copies of a painter's image in a square pattern; they differ only in how they
@@ -11692,6 +11697,13 @@ four operations and arranges the results in a square.  @code{tl}, @code{tr},
 @code{bl}, and @code{br} are the transformations to apply to the top left copy,
 the top right copy, the bottom left copy, and the bottom right copy,
 respectively.
+
+比論講，@code{flipped-pairs} kap @code{square-limit} 逐ê排列畫圖器ê圖ê四份khóo-pih
+，做一个正四角形ê模式；in kan-ta佇確定khóo-pih ê方向無kâng。一个抽象chit ê畫圖器組合ê
+模式ê方法就是用下kha ê程序，伊the̍h四个單引數畫圖器ê操作，產出一个畫圖器ê操作，chit ê畫
+圖器ê操作用chit四个操作轉換輸入ê畫圖器，排列結果做正四角形。@code{tl}、@code{tr}、
+@code{bl} kap@code{br} 分別是應用kàu倒pêng頂koân、正pêng頂koân、倒pêng下底kap
+正pêng下底ê khóo-pih ê轉換。
 
 @lisp
 (define (square-of-four tl tr bl br)
