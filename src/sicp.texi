@@ -11764,6 +11764,9 @@ procedure from @ref{Exercise 1.42}.}
 @code{up-split} can be expressed as instances of a general splitting operation.
 Define a procedure @code{split} with the property that evaluating
 
+@strong{Exercise 2.45:} @code{right-split} kap @code{up-split} ē當用一般ê分割操
+作ê實例來表示。定義程序 @code{split}，伊有算下kha ê程式碼ê性質：
+
 @lisp
 (define right-split (split beside below))
 (define up-split (split below beside))
@@ -11774,7 +11777,7 @@ produces procedures @code{right-split} and @code{up-split} with the same
 behaviors as the ones already defined.
 @end quotation
 
-@subsubheading Frames
+@subsubheading Frames 框殼
 
 Before we can show how to implement painters and their means of combination, we
 must first consider frames.  A frame can be described by three vectors---an
@@ -11783,6 +11786,12 @@ the frame's origin from some absolute origin in the plane, and the edge vectors
 specify the offsets of the frame's corners from its origin.  If the edges are
 perpendicular, the frame will be rectangular.  Otherwise the frame will be a
 more general parallelogram.
+
+@noindent
+佇lán ē當展示án-nóa實做畫圖器，kap in ê組合手段進前，lán著先考慮框殼。框殼ē當用三个向量
+表示——一个@newterm{原點向量}(origin vector) kap兩个@newterm{邊向量}(edge vector)。
+原點向量指定對平面ê絕對原點kàu框殼ê偏差量，邊向量指定原點kàu框á角ê偏差量。若是邊是垂直
+ê，框殼ē是長方形。A̍h無框殼ē是koh較一般ê平行四角形。
 
 @ref{Figure 2.15} shows a frame and its associated vectors.
 In accordance with data abstraction, we need not be specific yet about how
