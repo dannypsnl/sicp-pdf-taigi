@@ -11800,6 +11800,11 @@ frames are represented, other than to say that there is a constructor
 corresponding selectors @code{origin-frame}, @code{edge1-frame}, and
 @code{edge2-frame} (see @ref{Exercise 2.47}).
 
+@ref{Figure 2.15} 展示一个框殼kap相關ê向量。照資料抽象化，lán猶原無需要指定框殼
+án-nóa抽象化，kan-ta講有建構器 @code{make-frame}，伊the̍h三个向量，產出一个框
+殼，kap三个對應ê選擇器@code{origin-frame}、@code{edge1-frame} kap
+@code{edge2-frame}（看 @ref{Exercise 2.47}）。
+
 @float
 @quotation
 @anchor{Figure 2.15}
@@ -11826,9 +11831,9 @@ vector    \    __--        edge1
 @end ifinfo
 @iftex
 @sp 0.2
-@center @image{fig/chap2/Fig2.15a,51mm,,,.pdf}
+@center @image{fig/chap2/Fig2.15a,76.5mm,,,.pdf}
 @sp 0.2
-@caption{@strong{Figure 2.15:} A frame is described by three vectors --- an origin and two edges.}
+@caption{@strong{Figure 2.15:} A frame is described by three vectors --- an origin and two edges. 框殼由三个向量描述——一个原點ê kap兩个邊ê。}
 @sp 0.6
 @end iftex
 @end quotation
