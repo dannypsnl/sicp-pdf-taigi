@@ -11844,6 +11844,11 @@ images.  With each frame, we associate a @newterm{frame coordinate map}, which
 will be used to shift and scale images to fit the frame.  The map transforms
 the unit square into the frame by mapping the vector @math{\hbox{\bf v} = (x, y)} to
 the vector sum
+
+Lán ē用單位正四角形 @math{(0 \le x, y \le 1)} ê座標來指定圖片。Lán kā逐ê框殼kap
+@newterm{框殼座標地圖}(frame coordinate map)相關聯，框殼座標地圖ē the̍h來kā圖片
+sóa位kap chhun-kiu圖片，來符合框殼ê款。Map用kā
+@math{\hbox{\bf v} = (x, y)} map kàu下kha ê向量和，來kā單位正四角形轉換做框殼：
 @ifinfo
 
 @example
@@ -11863,6 +11868,13 @@ in @ref{Exercise 2.46} below, which we assume have been implemented using some
 representation for vectors.  Because of data abstraction, it doesn't matter
 what this vector representation is, so long as the vector operations behave
 correctly.}
+
+@noindent
+比論講， (0, 0) 受map kàu框殼ê原點， (1, 1)受map kàu 原點ê chhoa̍h對角ê點，(0.5, 0.5)
+受map kàu框殼ê中心。Lán通用下kha ê程序，建立框殼ê座標map：
+@footnote{@code{frame-coord-map} 用下kha @ref{Exercise 2.46} ê描述ê向量操作，
+lán設使伊有予lâng用一款向量ê表示法來實做。因為資料抽象化，只要向量操作ê行為正確，向量
+表示法choáⁿ樣lóng無要緊。}
 
 @lisp
 (define (frame-coord-map frame)
