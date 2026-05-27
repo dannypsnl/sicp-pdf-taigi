@@ -11890,12 +11890,19 @@ Observe that applying @code{frame-coord-map} to a frame returns a procedure
 that, given a vector, returns a vector.  If the argument vector is in the unit
 square, the result vector will be in the frame.  For example,
 
+@noindent
+觀察kā @code{frame-coord-map} 應用kàu框殼，就ē傳轉一个程序，伊輸入一个向量，傳轉一个向量。
+若是引數向量佇單位正四角形內底，輸出ê向量ē佇框殼內底。舉例，
+
 @lisp
 ((frame-coord-map a-frame) (make-vect 0 0))
 @end lisp
 
 @noindent
 returns the same vector as
+
+@noindent
+傳轉kap 下kha ê kâng款ê向量
 
 @lisp
 (origin-frame a-frame)
@@ -11910,6 +11917,13 @@ vectors by giving a constructor @code{make-vect} and corresponding selectors
 constructor, implement procedures @code{add-vect}, @code{sub-vect}, and
 @code{scale-@/vect} that perform the operations vector addition, vector
 subtraction, and multiplying a vector by a scalar:
+
+@strong{Exercise 2.46:}對原點kàu某物點ê二度向量 @math{\hbox{\bf v}}，通表示做包含
+@math{x} 座標kap @math{y} 座標ê對。請用提供建構器 @code{make-vect} kap對應ê揀選器
+@code{xcor-vect} kap @code{ycor-vect}，來實做向量ê資料抽象化。Koh用汝ê揀選器kap建構
+器，實做程序@code{add-vect}、@code{sub-vect} kap @code{scale-@/vect}，in個別行向
+量加法、減法，以及kā向量用@newterm{純量}(scalar)乘ê操作：
+
 @ifinfo
 
 @example
