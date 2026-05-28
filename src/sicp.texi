@@ -11947,6 +11947,8 @@ $$
 @strong{@anchor{Exercise 2.47}Exercise 2.47:} Here are two possible
 constructors for frames:
 
+@strong{Exercise 2.47:} Chia有兩个可能ê框殼建構器：
+
 @lisp
 (define (make-frame origin edge1 edge2)
   (list origin edge1 edge2))
@@ -11956,14 +11958,23 @@ constructors for frames:
 
 For each constructor supply the appropriate selectors to produce an
 implementation for frames.
+
+@noindent
+請kā逐ê建構器，提供適當ê揀選器來產出框殼ê實做。
+
 @end quotation
 
-@subsubheading Painters
+@subsubheading Painters 畫圖器
 
 A painter is represented as a procedure that, given a frame as argument, draws
 a particular image shifted and scaled to fit the frame.  That is to say, if
 @code{p} is a painter and @code{f} is a frame, then we produce @code{p}'s image
 in @code{f} by calling @code{p} with @code{f} as argument.
+
+@noindent
+畫圖器是由程序表示，chit ê程序掠框殼做引數，畫特定ê圖，koh用sóa位kap chhun-kiu ê方式，
+予伊符合框殼。Mā就是講，若 @code{p} 是畫圖器，@code{f} 是框殼，lán用呼叫 @code{p}
+kap 引數 @code{f}，就產出tàu入去 @code{f} ê，@code{p} ê圖片。
 
 The details of how primitive painters are implemented depend on the particular
 characteristics of the graphics system and the type of image to be drawn.  For
