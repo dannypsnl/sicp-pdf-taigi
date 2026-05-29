@@ -11985,6 +11985,12 @@ line segments as follows:@footnote{@code{segments->painter} uses the
 representation for line segments described in @ref{Exercise 2.48} below.  It
 also uses the @code{for-each} procedure described in @ref{Exercise 2.23}.}
 
+基礎ê畫圖器實做方法ê詳細，倚靠佇圖形系統ê特定特徵kap beh畫ê圖ê款。舉例，假使lán有程序
+@code{draw-line}，伊佇螢幕頂畫一條連接特定兩點ê線。了後lán就通對線段ê列單來建立畫
+線ê畫圖器，比如佇 @ref{Figure 2.10} ê @code{wave} 畫圖器，若下kha：
+@footnote{@code{segments->painter}用佇下kha @ref{Exercise 2.48} 描述ê
+線段ê表示法。伊mā用佇 @ref{Exercise 2.23} 描述ê @code{for-each} 程序。}
+
 @lisp
 (define (segments->painter segment-list)
   (lambda (frame)
