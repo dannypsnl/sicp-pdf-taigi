@@ -12009,6 +12009,10 @@ The segments are given using coordinates with respect to the unit square.  For
 each segment in the list, the painter transforms the segment endpoints with the
 frame coordinate map and draws a line between the transformed points.
 
+@noindent
+線段由用單位正四角形做基準ê座標提供。對列單內ê逐線段，畫圖器用框殼ê座標map，來轉換線段ê
+端點，而且佇轉換過ê點之間ê畫連線。
+
 Representing painters as procedures erects a powerful abstraction barrier in
 the picture language.  We can create and intermix all sorts of primitive
 painters, based on a variety of graphics capabilities. The details of their
