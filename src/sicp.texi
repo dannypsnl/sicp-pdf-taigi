@@ -12030,6 +12030,16 @@ way at all, so long as it draws something in the designated frame.
 @ref{2.1.3} also showed how pairs could be implemented as procedures.  Painters
 are our second example of a procedural representation for data.}
 
+Kā畫圖器表達做程序，ē佇圖片語言chhāi起有能力ê抽象化障礙。Lán ē當佇khiā起佇chē樣ê圖形
+能力，來建立kap相濫逐種ê基礎畫圖器。In ê實做詳細無要緊。佇「程序通the̍h框殼做引數，
+畫一寡chhun-kiu出來ê影像，來符合框殼」ê條件之下，逐ê程序通當做畫圖器。@footnote{比論
+講，@ref{Figure 2.11} ê @code{rogers} 畫圖器是對 @newterm{phú色層}(grey-level) ê
+影像建立ê。對框殼內底ê逐點，@code{rogers}畫圖器決定佇框殼座標map之下，受map kàu伊ê，影
+像內底ê點，然後適當kā影畫起去。用允准無kâng款畫圖器，lán leh利用佇 @ref{2.1.3} 討論ê抽
+象化資料ê想法，其中lán論證有理數ē當是符合適當條件ê所有物件。佇chia lán teh用chit ê事
+實，就是畫圖器ē當用逐款手段實做，只要伊佇指定ê框殼畫物件。@ref{2.1.3} mā展示對án-nóa
+實做做程序。畫圖器是lán第二个用程序表示資料ê例。}
+
 @quotation
 @strong{@anchor{Exercise 2.48}Exercise 2.48:} A directed line segment in the
 plane can be represented as a pair of vectors---the vector running from the
