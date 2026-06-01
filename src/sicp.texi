@@ -12047,31 +12047,46 @@ origin to the start-point of the segment, and the vector running from the
 origin to the end-point of the segment.  Use your vector representation from
 @ref{Exercise 2.46} to define a representation for segments with a constructor
 @code{make-segment} and selectors @code{start-segment} and @code{end-segment}.
+
+@strong{Exercise 2.48:}平面頂ê有向線段ē當用向量ê對表示——對原點kàu線段ê起點ê向量，以及
+對線段ê起點kàu線段ê終點ê。用汝佇 @ref{Exercise 2.46} ê向量表示法來定義線段表示法，以
+及建構器 @code{make-segment} kap揀選器 @code{start-segment} hām
+@code{end-segment}。
 @end quotation
 
 @quotation
 @strong{@anchor{Exercise 2.49}Exercise 2.49:} Use @code{segments->painter}
 to define the following primitive painters:
 
+@strong{Exercise 2.49:} 用 @code{segments->painter}來定義下kha ê基礎畫圖器：
+
 @enumerate a.
 
 @item
 The painter that draws the outline of the designated frame.
 
+畫指定框殼ê框仔ê畫圖器。
+
 @item
 The painter that draws an ``X'' by connecting opposite corners of the frame.
+
+用kā框殼ê一雙chhoa̍h對角連線，來畫「X」形ê畫圖器。
 
 @item
 The painter that draws a diamond shape by connecting the midpoints of the sides
 of the frame.
 
+用相接框殼四邊ê中點，來畫出@newterm{麻芳chhoa̍h} (diamond shape) ê畫圖器。
+
 @item
 The @code{wave} painter.
+
+@code{wave} 畫圖器。
 
 @end enumerate
 @end quotation
 
-@subsubheading Transforming and combining painters
+@subsubheading Transforming and combining painters 變換kap組合畫圖器
 
 An operation on painters (such as @code{flip-vert} or @code{beside}) works by
 creating a painter that invokes the original painters with respect to frames
