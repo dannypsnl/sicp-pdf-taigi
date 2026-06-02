@@ -12095,6 +12095,12 @@ have to know how a painter works in order to flip it---it just has to know how
 to turn a frame upside down: The flipped painter just uses the original
 painter, but in the inverted frame.
 
+@noindent
+佇畫圖器面頂ê操作（比如@code{flip-vert} iah是 @code{beside}）是用建立一个畫圖器來行，
+chit ê畫圖器照派生對引數框殼ê框殼，呼叫原本ê畫圖器操作。因此，比論講，@code{flip-vert}
+beh péng一个畫圖器，毋免知影伊án-nóa運作——伊kan-ta著需要知影án-nóa kā框殼頂下倒反：
+péng過ê畫圖器kan-ta使用原底ê畫圖器，毋koh佇倒反ê框殼。
+
 Painter operations are based on the procedure @code{transform-painter}, which
 takes as arguments a painter and information on how to transform a frame and
 produces a new painter.  The transformed painter, when called on a frame,
