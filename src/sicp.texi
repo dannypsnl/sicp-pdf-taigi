@@ -12111,6 +12111,12 @@ first point specifies the new frame's origin and the other two specify the ends
 of its edge vectors.  Thus, arguments within the unit square specify a frame
 contained within the original frame.
 
+@newterm{印刷器}(printer)操作是chhāi佇程序@code{transform-painter}頂，伊the̍h印刷器
+kap án-nóa轉換框殼ê資訊當做引數，傳轉一个新ê印刷器。變換ê印刷器，當佇框殼頂呼叫ê時，ē轉換
+框殼，koh佇轉換過ê框殼呼叫原底ê印刷器。傳予@code{transform-painter} ê引數是一寡點（用向
+量表示），in指定新ê框殼ê角：當map kàu新ê框殼ê時，頭一个點指定新ê框殼ê原點，另外兩个指定伊ê
+邊向量ê終點。就án-ne，佇單位正四角形內底ê引數，指定包含佇原底ê框殼內底ê框殼。
+
 @lisp
 (define (transform-painter painter origin corner1 corner2)
   (lambda (frame)
