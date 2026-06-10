@@ -12131,6 +12131,9 @@ kap án-nóa轉換框殼ê資訊當做引數，傳轉一个新ê印刷器。變�
 @noindent
 Here's how to flip painter images vertically:
 
+@noindent
+Kā印刷機ê圖片頂下對反ê方法佇chia：
+
 @lisp
 (define (flip-vert painter)
   (transform-painter painter
@@ -12144,6 +12147,10 @@ Using @code{transform-painter}, we can easily define new transformations.
 For example, we can define a painter that shrinks its image to the
 upper-right quarter of the frame it is given:
 
+@noindent
+用@code{transform-painter}，lán通容易定義新ê轉換。舉例，lán ē當定義一个印刷機，伊
+收縮伊ê影像kàu指定框殼ê正爿頂懸ê，四分一ê sài-suh：
+
 @lisp
 (define (shrink-to-upper-right painter)
   (transform-painter
@@ -12155,6 +12162,11 @@ upper-right quarter of the frame it is given:
 Other transformations rotate images counterclockwise by 90
 degrees@footnote{@code{rotate90} is a pure rotation only for square frames,
 because it also stretches and shrinks the image to fit into the rotated frame.}
+
+@noindent
+其他kā影像反時針倒se̍h 90圖ê轉換@footnote{@code{rotate90}是正四角形ê框殼專用ê純ê轉se̍h，
+因為伊iā giú開kap縮小影像來符合轉se̍h過ê框殼。}
+
 
 @lisp
 (define (rotate90 painter)
@@ -12168,6 +12180,11 @@ because it also stretches and shrinks the image to fit into the rotated frame.}
 or squash images towards the center of the frame:@footnote{The diamond-shaped
 images in @ref{Figure 2.10} and @ref{Figure 2.11} were created with
 @code{squash-inwards} applied to @code{wave} and @code{rogers}.}
+
+@noindent
+或者是kā影像seh入去框殼ê中央：@footnote{佇@ref{Figure 2.10} kap @ref{Figure 2.11} ê
+麻芳chhoa̍h ê影像，是由@code{squash-inwards}應用kàu @code{wave} kap @code{rogers} 所
+建立ê。}
 
 @lisp
 (define (squash-inwards painter)
