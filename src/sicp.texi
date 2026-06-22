@@ -12203,6 +12203,12 @@ is given a frame, it calls the first transformed painter to paint in the left
 half of the frame and calls the second transformed painter to paint in the
 right half of the frame:
 
+@noindent
+框殼轉換mā是定義組合兩个以上ê畫圖器ê手段ê關鍵。比論講，@code{beside}程序the̍h兩个畫圖器，轉
+換in來個別佇引數框殼ê倒半pêng kap正半pêng畫，koh產出新ê，複合ê畫圖器。當複合畫圖器收著框
+殼ê時，伊呼叫頭一个受轉換ê畫圖器，佇框殼ê倒半pêng畫，koh呼叫第二个受轉換ê畫圖器，佇框殼ê
+正半pêng畫：
+
 @lisp
 (define (beside painter1 painter2)
   (let ((split-point (make-vect 0.5 0.0)))
@@ -12230,10 +12236,18 @@ of painters as procedures, makes @code{beside} easy to implement.  The
 component painters other than that each painter will draw something in its
 designated frame.
 
+@noindent
+觀察畫圖器ê資料抽象化，特別是kā畫圖器當做函數ê表示，án-nóa予 @code{beside} chiah快實
+做。@code{beside}程序除了逐ê畫圖器ē佇伊所指定ê框殼畫物件以外，無需要知影一切複合畫圖器ê
+詳細。
+
 @quotation
 @strong{@anchor{Exercise 2.50}Exercise 2.50:} Define the transformation
 @code{flip-horiz}, which flips painters horizontally, and transformations that
 rotate painters counterclockwise by 180 degrees and 270 degrees.
+
+@strong{Exercise 2.50:}定義kā畫圖器左右對反ê轉換@code{flip-horiz}，以及kā畫圖器
+逆向（反時針）轉se̍h 180度kap 270度ê轉換。
 @end quotation
 
 @quotation
@@ -12244,9 +12258,14 @@ and with the second painter in the top.  Define @code{below} in two different
 ways---first by writing a procedure that is analogous to the @code{beside}
 procedure given above, and again in terms of @code{beside} and suitable
 rotation operations (from @ref{Exercise 2.50}).
+
+@strong{Exercise 2.51:} 定義予畫圖器ê @code{below} 操作。@code{below} the̍h兩个畫圖
+器當做引數。伊輸出ê畫圖器，若指定一个框殼，會佇框殼ê底用頭一个畫圖器畫圖，佇框殼頂用第二个畫
+圖。用兩款無kâng ê方法定義@code{below}——代先寫kap面頂 @code{beside} 相siâng ê程
+序，然後用 @code{beside} kap（@ref{Exercise 2.50} ê）適當ê轉se̍h操作來寫。
 @end quotation
 
-@subsubheading Levels of language for robust design
+@subsubheading Levels of language for robust design 勇健設計ê語言水準
 
 The picture language exercises some of the critical ideas we've introduced
 about abstraction with procedures and data.  The fundamental data abstractions,
