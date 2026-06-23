@@ -12275,6 +12275,12 @@ means of combination satisfy the closure property, which permits us to easily
 build up complex designs.  Finally, all the tools for abstracting procedures
 are available to us for abstracting means of combination for painters.
 
+@noindent
+圖片語言運用lán捌紹介關係用程序kap資料來抽象化ê關鍵觀念。基本ê資料抽象化，畫圖器，是用程序
+表示實做ê，伊予chit个語言佇統一ê方式，處理無kâng ê基礎畫圖能力。組合ê手段滿足閉包特性，允
+准lán較快起造複雜ê設計。落尾，所有the̍h來抽象化程序ê家私lán lóng ē當用，做抽象化畫圖器
+組合ê手段。
+
 We have also obtained a glimpse of another crucial idea about languages and
 program design.  This is the approach of @newterm{stratified design}, the
 notion that a complex system should be structured as a sequence of levels that
@@ -12283,6 +12289,12 @@ combining parts that are regarded as primitive at that level, and the parts
 constructed at each level are used as primitives at the next level.  The
 language used at each level of a stratified design has primitives, means of
 combination, and means of abstraction appropriate to that level of detail.
+
+Lán mā有kā關係語言kap程式設計ê另外一个重大ê概念影一下。就是@newterm{分層設計}
+(stratified design)ê方法，分層設計就是複雜ê系統應該愛結構化做層級ê列ê觀念，其中層
+級ê列用語言ê列描述。逐ê層級是由kā佇chit層掠做是@newterm{基礎}(primitives) ê部份
+組合所建構，而且建構佇逐層ê部份，佇後一層當做基礎來使用。佇分層設計ê每一層所用ê語言，
+有基礎、組合手段，kap適合chit个層級ê詳細ê抽象手段。
 
 Stratified design pervades the engineering of complex systems.  For example, in
 computer engineering, resistors and transistors are combined (and described
