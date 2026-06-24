@@ -12292,9 +12292,9 @@ combination, and means of abstraction appropriate to that level of detail.
 
 Lán mā有kā關係語言kap程式設計ê另外一个重大ê概念影一下。就是@newterm{分層設計}
 (stratified design)ê方法，分層設計就是複雜ê系統應該愛結構化做層級ê列ê觀念，其中層
-級ê列用語言ê列描述。逐ê層級是由kā佇chit層掠做是@newterm{基礎}(primitives) ê部份
-組合所建構，而且建構佇逐層ê部份，佇後一層當做基礎來使用。佇分層設計ê每一層所用ê語言，
-有基礎、組合手段，kap適合chit个層級ê詳細ê抽象手段。
+級ê列用語言ê列描述。逐ê層級是由kā佇chit層掠做是@newterm{基礎要件}(primitives) ê部件
+組合所建構，而且建構佇逐層ê部件，佇後一層當做基礎要件來使用。佇分層設計ê每一層所用ê語言，
+有基礎要件、組合手段，kap適合chit个層級ê詳細ê抽象手段。
 
 Stratified design pervades the engineering of complex systems.  For example, in
 computer engineering, resistors and transistors are combined (and described
@@ -12305,6 +12305,12 @@ are combined to build processors, bus structures, and memory systems, which are
 in turn combined to form computers, using languages appropriate to computer
 architecture.  Computers are combined to form distributed systems, using
 languages appropriate for describing network interconnections, and so on.
+
+分層設計充滿佇複雜系統ê工程。比論講，佇電腦工程，電阻kap電晶體受組合（koh用類比電路ê語
+言）來產出像 @newterm{AND門}(and-gates) kap @newterm{OR門}(or-gates)部件，伊成形
+數位電路ê語言@footnote{@ref{3.3.4} 描述一个chit款ê語言。}ê基礎要件。Chiah ê部件受組
+合，用適合計算機結構ê語言，來起造計算機。電腦受組合，用適合描述網路相連結ê語言，來成形
+分散式系統，等等。
 
 As a tiny example of stratification, our picture language uses primitive
 elements (primitive painters) that are created using a language that specifies
