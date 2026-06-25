@@ -12323,6 +12323,13 @@ combining these primitives, using geometric combiners such as @code{beside} and
 such as @code{square-@/of-@/four}, capture common patterns of combining geometric
 combiners.
 
+做著細細ê分層化ê例，lán ê圖片語言使用基礎要素（基礎畫圖器），in是用一款語言創造，chit款
+語言指定點kap線，成做線段ê列單，提供予@code{segments@/->@/painter} ê，iah是成做陰影ê詳
+細，予像@code{rogers} ê畫圖器。Lán對圖片語言ê大量描述專注佇組合chiah ê要素，使用親像
+@code{beside} kap @code{below} ê幾何ê組合器。Lán mā佇較koân ê層次操作，kā
+@code{beside} kap @code{below} 當做是通佇一種語言操作ê基礎要素，chit ê語言ê操作，
+比如@code{square-@/of-@/four}，表現kā幾何組合器組合ê一般模式。
+
 Stratified design helps make programs @newterm{robust}, that is, it makes it
 likely that small changes in a specification will require correspondingly small
 changes in the program.  For instance, suppose we wanted to change the image
