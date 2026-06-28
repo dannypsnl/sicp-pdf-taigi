@@ -12323,7 +12323,7 @@ combining these primitives, using geometric combiners such as @code{beside} and
 such as @code{square-@/of-@/four}, capture common patterns of combining geometric
 combiners.
 
-做著細細ê分層化ê例，lán ê圖片語言使用基礎要素（基礎畫圖器），in是用一款語言創造，chit款
+做著細細ê分層ê例，lán ê圖片語言使用基礎要素（基礎畫圖器），in是用一款語言創造，chit款
 語言指定點kap線，成做線段ê列單，提供予@code{segments@/->@/painter} ê，iah是成做陰影ê詳
 細，予像@code{rogers} ê畫圖器。Lán對圖片語言ê大量描述專注佇組合chiah ê要素，使用親像
 @code{beside} kap @code{below} ê幾何ê組合器。Lán mā佇較koân ê層次操作，kā
@@ -12341,10 +12341,20 @@ work at the middle level to change the way @code{corner-split} replicates the
 level of a stratified design provides a different vocabulary for expressing the
 characteristics of the system, and a different kind of ability to change it.
 
+分層設計幫chān予程式@newterm{粗勇}(robust)，就是伊予規格ê小寡改變，ē需要小寡改變對應ê程式
+成做可能。比論講，假使lán beh改變起造佇@ref{Figure 2.9} ê @code{wave}頂ê圖。Lán
+通佇上底層操作來改 @code{wave} 要素ê詳細ê外觀；lán通佇中層操作來改變
+@code{corner-split}重覆@code{wave} ê方法；lán通佇上頂層來改@code{square-limit}
+安排角ê四个khóo-pih ê方法。一般來講，分層設計ê逐層提供無kâng ê詞語來表示系統ê特徵，以及
+無kâng款ê，kā伊改變ê能力。
+
 @quotation
 @strong{@anchor{Exercise 2.52}Exercise 2.52:} Make changes to the square limit
 of @code{wave} shown in @ref{Figure 2.9} by working at each of the levels
 described above.  In particular:
+
+@strong{Exercise 2.52:}用佇頂懸描述ê逐層操作，來改變佇 @ref{Figure 2.9} 展示ê
+@code{wave} 正四角形限制(square limit)。特別是：
 
 @enumerate a.
 
@@ -12352,15 +12362,23 @@ described above.  In particular:
 Add some segments to the primitive @code{wave} painter of @ref{Exercise 2.49}
 (to add a smile, for example).
 
+加添一寡線段kàu @ref{Exercise 2.49} ê基礎要件 @code{wave} 畫圖器（舉例：加笑面）
+
 @item
 Change the pattern constructed by @code{corner-split} (for example, by using
 only one copy of the @code{up-split} and @code{right-split} images instead of
 two).
 
+改變@code{corner-split}所建構ê模式（舉例，用kan-ta改@code{up-split} kap
+@code{right-split} ê一个khóo-pih，毋是改兩个）
+
 @item
 Modify the version of @code{square-limit} that uses @code{square-of-four} so as
 to assemble the corners in a different pattern.  (For example, you might make
 the big Mr. Rogers look outward from each corner of the square.)
+
+改@code{square-limit} ê版本，伊用@code{square-of-four}，來用無kâng ê模式kā角組立。
+（舉例，汝可能予Rogers大先生，自正四角形ê逐个角看出外面。）
 
 @end enumerate
 @end quotation
