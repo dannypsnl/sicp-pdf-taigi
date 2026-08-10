@@ -12458,9 +12458,21 @@ star is Venus.''  However, given that ``John knows that the evening star is
 Venus'' we cannot infer that ``John knows that the morning star is Venus.''}
 
 @noindent
-為著操作符號，lán佇lán ê語言需要一个新ê要素：@newterm{引用}(quote)資料物件ê能力。
-
-//等待補充//
+為著操作符號，lán佇lán ê語言需要一个新ê要素：@newterm{引用}(quote)資料物件ê能力。假使
+lán想beh建構列單@code{(a b)}。Lán bōe當用@code{(list a b)}完成che，因為chit ê表達
+式建構一个 @code{a} kap @code{b} ê @newterm{值} (values) ê，反轉毋是符號家己ê列單。
+Chit ê議題佇自然語言誠出名，其中字kap句ē當掠做語義實體或者是字元ê @newterm{串}(string)
+（句法實體）。佇自然語言，通常ê作法就是用引號來指示一个詞iah是句敢愛直接當做字元ê串。
+譬論講，「John」ê頭一个字母的確是「J.」。若準lán kā某物lâng「大聲講出lí ê名」，lán向望
+聽著hit个lâng ê名。毋過，若準講lán kā伊講「大聲講出『lí ê名』」，lán向望通聽見「lí ê
+名」。注意lán hŏng要求愛用岫á形ê引號，來描述別lâng通講ê。@footnote{佇語言內底允准引
+號，ē予用簡單ê @newterm{項}(term)來推論語言產生大混亂，因為伊毀壞相等ê通用相等ê替代ê
+概念。比論講，三是一加二，但是「三」hit字毋是片語「一加二」。引用有能力，因為伊予lán方法
+來起造操作別个表達式ê表達式（lán ē佇 @ref{Chapter 4} 寫直譯器ê時陣看見）。毋koh允准語
+言ê @newterm{句}(statement)講起hit个語言ê別ê句，會予維持任何「相等ê通用相等ê替代」所
+應該指ê ê一貫性ê原則蓋困難。比論講，若準lán知影長庚是啟明星，了後自chit句「長庚是金星」
+就通演繹出「啟明星是金星」。但是，若是有「約翰知影長庚是金星」，lán無法度推論出「約翰知
+影啟明星是金星」。}
 
 We can follow this same practice to identify lists and symbols that are to be
 treated as data objects rather than as expressions to be evaluated.  However,
@@ -12473,6 +12485,12 @@ single quote is different from the double quote we have been using to enclose
 character strings to be printed.  Whereas the single quote can be used to
 denote lists or symbols, the double quote is used only with character strings.
 In this book, the only use for character strings is as items to be printed.}
+
+
+//等待補充
+@footnote{單引號kap lán the̍h
+來包beh印ê字串無相kâng。其中單引號通the̍h來表列單iáu是符號，雙引號kan-ta用佇字串。佇chit
+本冊，字元ê串獨獨當做beh印出來ê項目niâ。}
 
 Now we can distinguish between symbols and their values:
 
