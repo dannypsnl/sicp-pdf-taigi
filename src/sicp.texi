@@ -12487,12 +12487,16 @@ denote lists or symbols, the double quote is used only with character strings.
 In this book, the only use for character strings is as items to be printed.}
 
 
-//等待補充
-@footnote{單引號kap lán the̍h
-來包beh印ê字串無相kâng。其中單引號通the̍h來表列單iáu是符號，雙引號kan-ta用佇字串。佇chit
-本冊，字元ê串獨獨當做beh印出來ê項目niâ。}
+Lán通跟tòe kâng款ê做法來辨別beh予lâng掠做資料物件，毋是beh算ê表達式ê列單kap符號。毋
+koh，lán引用ê形式kap自然語言ê無kâng，lán kan-ta佇beh引用ê物件頭前下引號（傳統是單引號
+@code{'}）。L因為lán倚靠空白kap括弧來斷開物件，lán通佇Scheme ê語法bóng用che。就
+án-ne，單引號字元ê意義是引用後一个物件。@footnote{單引號kap lán the̍h來包beh印ê字串無
+相kâng。其中單引號通the̍h來表列單iáu是符號，雙引號kan-ta用佇字串。佇chit本冊，字元ê串獨
+獨當做beh印出來ê項目niâ。}
 
 Now we can distinguish between symbols and their values:
+
+Taⁿ lán通辨別符號kap in ê值：
 
 @lisp
 (define a 1)
