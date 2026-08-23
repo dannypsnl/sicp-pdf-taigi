@@ -12525,6 +12525,21 @@ interpreter can be manipulated as a data object.  For instance, we could
 construct the expression @code{(car '(a b c))}, which is the same as @code{(car
 (quote (a b c)))}, by evaluating @code{(list 'car (list 'quote '(a b c)))}.}
 
+@noindent
+引用mā允准lán佇複合物件內底輸入，用列單ê傳統印出ê表示法：
+@footnote{嚴嚴來講，lán ê引號ê用法違背逐ê複合表達式佇lán ê語言內底應該用括弧區分，mā
+著看起來像列單ê一般規則。/以下等待翻譯/We can recover this
+consistency by introducing a special form @code{quote}, which serves the same
+purpose as the quotation mark.  Thus, we would type @code{(quote a)} instead of
+@code{'a}, and we would type @code{(quote (a b c))} instead of @code{'(a b c)}.
+This is precisely how the interpreter works.  The quotation mark is just a
+single-character abbreviation for wrapping the next complete expression with
+@code{quote} to form @math{\hbox{\ttfamily(quote}\;\langle\kern0.06em\hbox{\ttfamily\slshape expression}\kern0.08em\rangle\hbox{\ttfamily)}}.  This is
+important because it maintains the principle that any expression seen by the
+interpreter can be manipulated as a data object.  For instance, we could
+construct the expression @code{(car '(a b c))}, which is the same as @code{(car
+(quote (a b c)))}, by evaluating @code{(list 'car (list 'quote '(a b c)))}.}
+
 @lisp
 (car '(a b c))
 @i{a}
